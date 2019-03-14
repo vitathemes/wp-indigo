@@ -1,0 +1,29 @@
+{
+  "name": "wp-indigo",
+  "version": "1.0.0",
+  "description": "WordPress Version of Indigo Minimalist Jekyll Template",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "sass": "gulp sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veronalabs/wp-indigo.git"
+  },
+  "keywords": [
+    "wp-indigo"
+  ],
+  "author": "Verona Labs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/veronalabs/wp-indigo/issues"
+  },
+  "homepage": "https://github.com/veronalabs/wp-indigo#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
+  }
+}
