@@ -1,5 +1,10 @@
 <?php
 
+//Show Profile
+function indigo_show_profile() {
+	get_template_part("template-parts/profile");
+}
+
 // Menu Generator
 function indigo_show_menu() {
 

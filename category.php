@@ -1,5 +1,8 @@
 <?php
 get_header();
+
+indigo_show_profile();
+
 ?>
 
 	<section class="blog category">

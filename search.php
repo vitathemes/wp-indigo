@@ -5,11 +5,9 @@ indigo_show_profile();
 
 ?>
 
-	<section class="blog tag">
+	<section class="blog search">
 
-		<?php
-		the_archive_title('<h1>' , '</h1>');
-		?>
+		<h1>Search: <?php the_search_query(); ?></h1>
 
 		<div class="list">
 			<?php if ( have_posts() ) : ?><?php
