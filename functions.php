@@ -1,13 +1,90 @@
 <?php
 
-include('includes/customizer.php');
-include ('includes/fields.php');
+// Set global $theme_url
+$theme_url = get_template_directory_uri();
 
-// Template url
-$theme_url = get_Template_directory_uri();
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
+ */
+function indigo_setup() {
 
+	/*
+	 * Make theme available for translation.
+	 * Translations can be filed in the /languages/ directory.
+	 * If you're building a theme based on _s, use a find and replace
+	 * to change 'sector' to the name of your theme in all the template files.
+	 */
+	load_theme_textdomain( 'indigo', get_template_directory() . '/languages' );
+
+	// Add default posts and comments RSS feed links to head.
+	add_theme_support( 'automatic-feed-links' );
+
+	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
+	add_theme_support( 'title-tag' );
+
+	/*
+	 * Enable support for Post Thumbnails on posts and pages.
+	 *
+	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	 */
+	add_theme_support( 'post-thumbnails' );
+
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus( array(
+		'primary-menu' => esc_html__( 'Primary' ),
+	) );
+
+	/*
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	) );
+
+	// Set up the WordPress core custom background feature.
+	add_theme_support( 'custom-background', apply_filters( 'custom_background_args', array(
+		'default-color' => 'ffffff',
+		'default-image' => '',
+	) ) );
+
+	// Add theme support for selective refresh for widgets.
+	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	/**
+	 * Add support for core custom logo.
+	 *
+	 * @link https://codex.wordpress.org/Theme_Logo
+	 */
+	add_theme_support( 'custom-logo', array(
+		'height'      => 250,
+		'width'       => 250,
+		'flex-width'  => true,
+		'flex-height' => true,
+	) );
+}
+
+add_action( 'after_setup_theme', 'indigo_setup' );
+
+
+/**
+ * Enqueue scripts and styles.
+ */
 // External Assets
-function scripts() {
+function indigo_scripts() {
 	wp_enqueue_style( 'sector-style', get_template_directory_uri() . '/assets/css/style.css' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -15,33 +92,11 @@ function scripts() {
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'scripts' );
+add_action( 'wp_enqueue_scripts', 'indigo_scripts' );
 
-// Navigation
-register_nav_menus( array(
-	'primary-menu' => esc_html__( 'Primary' ),
-) );
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
 
-// Menu Generator
-function show_menu( $menu_name ) {
-	$menu_items = wp_get_nav_menu_items( $menu_name );
-	if ( $menu_items ) {
-	foreach ($menu_items as $menu_item) {
-		echo '<li class="item">
-              <a class="link" href="'. $menu_item->url . '">'. $menu_item->title .'</a>
-              </li>';
-	}
-	}
-}
-
-// Show Post Tags
-
-function show_tags() {
-	$post_tags = get_the_tags();
-	if ($post_tags) {
-		foreach($post_tags as $tag) {
-			echo '<a href="'; echo bloginfo('url');
-			echo '/?tag=' . $tag->slug . '" class="item">' . $tag->name . '</a>';
-		}
-	}
-}
+require get_template_directory() . '/inc/template-functions.php';

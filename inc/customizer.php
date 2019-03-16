@@ -1,7 +1,7 @@
 <?php
-add_action( 'customize_register', 'customizer_settings' );
+add_action( 'customize_register', 'indigo_customizer_settings' );
 
-function customizer_settings( $wp_customize ) {
+function indigo_customizer_settings( $wp_customize ) {
 	// Profile section
 	$wp_customize->add_section( 'profile-section' , array(
 		'title'      => 'Profile',
@@ -97,21 +97,21 @@ function customizer_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'social-mail', array(
 		'label'        => 'Mail',
-		'default'       => 'https://mail.com',
 		'type'        => 'url',
 		'section'    => 'social-section',
+		'input_attrs' => array(
+			'placeholder' => __( 'mailto:youremail@domain.com', 'indigo' ),
+		)
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'social-facebook', array(
 		'label'        => 'Facebook',
-		'default'       => 'https://facebook.com',
 		'type'        => 'url',
 		'section'    => 'social-section',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'social-twitter', array(
 		'label'        => 'Twitter',
-		'default'       => 'https://twitter.com',
 		'type'        => 'url',
 		'section'    => 'social-section',
 	) ) );

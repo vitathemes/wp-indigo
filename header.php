@@ -44,7 +44,7 @@ if( !is_front_page() ) : ?>
 <nav class="nav">
     <ul class="list">
 	    <?php
-            show_menu('primary-menu');
+            indigo_show_menu('primary-menu');
 	    ?>
     </ul>
 </nav>
