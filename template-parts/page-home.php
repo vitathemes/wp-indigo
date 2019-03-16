@@ -3,7 +3,7 @@ get_header(); ?>
 
 <?php
 get_template_part( 'template-parts/content', 'intro' );
-get_template_part( 'template-parts/content', 'navigation' );
+indigo_show_menu();
 ?>
 
 <?php get_footer(); ?>

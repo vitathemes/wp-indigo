@@ -42,7 +42,7 @@ if( !is_front_page() ) : ?>
 
 
 	    <?php
-            indigo_show_menu('primary-menu');
+	        indigo_show_menu();
 	    ?>
 
 <?php
