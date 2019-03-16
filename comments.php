@@ -6,12 +6,12 @@ $default_avatar = 'http://zacvineyard.com/blog/wp-content/themes/zac/images/defa
 <?php if($comments) : ?>
 	<ol class="comments">
 		<?php foreach($comments as $comment) : ?>
-			<li id="comment-<?php comment_ID(); ?>" class="<?php if ($comment->user_id == 1) echo "authcomment";?>">
+			<li id="comment-<?php comment_ID(); ?>" class="comment <?php if ($comment->user_id == 1) echo "authcomment";?>">
 				<?php if ($comment->comment_approved == '0') : ?>
 					<p>Your comment is awaiting approval</p>
 				<?php endif; ?>
 				<?php echo get_avatar(get_comment_author_email(), 48, $default_avatar); ?>
-				<cite><h3><?php comment_author_link(); ?></h3> on <small><?php comment_date(); ?></small></cite><br />
+				<div class="comment-info"><h3 class="comment-author"><?php comment_author_link(); ?></h3> on <small class="comment-date"><?php comment_date(); ?></small></div>
 				<?php comment_text(); ?>
 			</li>
 		<?php endforeach; ?>

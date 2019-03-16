@@ -18,9 +18,11 @@ gulp.task('serve' , function(){
 
 // Sass
 gulp.task('sass', function () {
-    return gulp.src('./assets/sass/style.scss')
+    return gulp.src('./assets/sass/style.sass')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(gulp.dest('./assets/css'));
+        .pipe(gulp.dest('./assets/css'))
+        .pipe(browserSync.stream())
+        .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 // Sass Watch
@@ -31,6 +33,7 @@ gulp.task('sass:watch', function () {
 
 gulp.task('watch', function () {
     browserSync.watch("*/*.php").on("change", browserSync.reload);
+    browserSync.watch("*.php").on("change", browserSync.reload);
 });
 // Watch for php files
 
