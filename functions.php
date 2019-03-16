@@ -3,9 +3,6 @@
 include('includes/customizer.php');
 include ('includes/fields.php');
 
-
-
-
 // Template url
 $theme_url = get_Template_directory_uri();
 
