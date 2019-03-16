@@ -5,9 +5,13 @@ indigo_show_profile();
 
 ?>
 
+	<section class="blog category">
 
-    <section class="blog">
-        <div class="list">
+		<?php
+		the_archive_title('<h1>' , '</h1>');
+		?>
+
+		<div class="list">
 			<?php if ( have_posts() ) : ?><?php
 				/* Start the Loop */
 				while ( have_posts() ) :
@@ -34,7 +38,7 @@ indigo_show_profile();
 
 			endif;
 			?>
-        </div>
-    </section>
+		</div>
+	</section>
 <?php
 get_footer();

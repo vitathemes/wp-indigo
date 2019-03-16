@@ -5,9 +5,11 @@ indigo_show_profile();
 
 ?>
 
+	<section class="blog search">
 
-    <section class="blog">
-        <div class="list">
+		<h1>Search: <?php the_search_query(); ?></h1>
+
+		<div class="list">
 			<?php if ( have_posts() ) : ?><?php
 				/* Start the Loop */
 				while ( have_posts() ) :
@@ -34,7 +36,7 @@ indigo_show_profile();
 
 			endif;
 			?>
-        </div>
-    </section>
+		</div>
+	</section>
 <?php
 get_footer();
