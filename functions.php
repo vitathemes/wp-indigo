@@ -24,16 +24,15 @@ register_nav_menus( array(
 
 // Menu Generator
 function show_menu( $menu_name ) {
-
 	$menu_items = wp_get_nav_menu_items( $menu_name );
-
+	if ( $menu_items ) {
 	foreach ($menu_items as $menu_item) {
 		echo '<li class="item">
-                  <a class="link" href="'. $menu_item->url . '">'. $menu_item->title .'</a>
-                  </li>';
+              <a class="link" href="'. $menu_item->url . '">'. $menu_item->title .'</a>
+              </li>';
+	}
 	}
 }
-
 
 // Show Post Tags
 
