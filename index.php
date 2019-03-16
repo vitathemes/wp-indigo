@@ -2,7 +2,6 @@
 get_header();
 ?>
 
-<?php get_template_part( "template-parts/components/intro" ) ?>
     <section class="blog">
         <div class="list">
 			<?php if ( have_posts() ) : ?><?php
