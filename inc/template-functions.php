@@ -1,15 +1,31 @@
 <?php
 
 // Menu Generator
-function indigo_show_menu( $menu_name ) {
-	$menu_items = wp_get_nav_menu_items( $menu_name );
-	if ( $menu_items ) {
-		foreach ( $menu_items as $menu_item ) {
-			echo '<li class="item">
-              <a class="link" href="' . $menu_item->url . '">' . $menu_item->title . '</a>
-              </li>';
-		}
+function indigo_show_menu() {
+
+	$menu_args = array(
+		'menu' => 'primary-menu',
+		'menu_class' => 'list',
+		'container' => 'div',
+		'container_class' => 'nav-home'
+	);
+
+	if( !is_front_page() ) {
+		$menu_args['container_class'] = 'nav';
 	}
+
+	wp_nav_menu( $menu_args );
+
+
+
+//	$menu_items = wp_get_nav_menu_items( $menu_name );
+//	if ( $menu_items ) {
+//		foreach ( $menu_items as $menu_item ) {
+//			echo '<li class="item">
+//              <a class="link" href="' . $menu_item->url . '">' . $menu_item->title . '</a>
+//              </li>';
+//		}
+//	}
 }
 
 // Show Post Tags

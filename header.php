@@ -41,13 +41,10 @@
 if( !is_front_page() ) : ?>
 
 
-<nav class="nav">
-    <ul class="list">
 	    <?php
             indigo_show_menu('primary-menu');
 	    ?>
-    </ul>
-</nav>
+
 <?php
 endif;
 ?>
