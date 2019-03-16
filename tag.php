@@ -2,10 +2,10 @@
 get_header();
 ?>
 
-	<section class="blog archive">
+	<section class="blog tag">
 
 		<?php
-			the_archive_title('<h1>' , '</h1>');
+		the_archive_title('<h1>' , '</h1>');
 		?>
 
 		<div class="list">
