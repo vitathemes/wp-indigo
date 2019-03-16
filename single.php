@@ -20,6 +20,9 @@
 			endif;
 			?>
         </div>
+        <?php
+        comments_template();
+       ?>
     </div>
     <script>
         function get_text(el) {

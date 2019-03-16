@@ -25,12 +25,16 @@ gulp.task('sass', function () {
 
 // Sass Watch
 gulp.task('sass:watch', function () {
-    gulp.watch('./assets/sass/**/*.scss', ['sass']);
+    gulp.watch('./assets/sass/**/*.sass', ['sass']);
 });
 
+
+gulp.task('watch', function () {
+    browserSync.watch("*/*.php").on("change", browserSync.reload);
+});
 // Watch for php files
-browserSync.watch("*/*.php").on("change", browserSync.reload);
+
 
 
 // Default Gulp Command
-gulp.task('default' , ['sass' , 'serve' , 'watch']);
+gulp.task('default' , ['sass' , 'serve' , 'watch' , 'sass:watch']);
