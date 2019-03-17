@@ -2,70 +2,53 @@
 
 //Show Profile
 function indigo_show_profile() {
-	get_template_part("template-parts/profile");
+	get_template_part( "template-parts/profile" );
 }
 
 // Menu Generator
 function indigo_show_menu() {
 
-	$menu_args = array(
-		'menu' => 'primary-menu',
-		'menu_class' => 'list',
-		'container' => 'div',
-		'container_class' => 'nav-home'
-	);
+	if ( has_nav_menu( 'primary-menu' ) ) {
+		$menu_args = array(
+			'menu'            => 'primary-menu',
+			'menu_class'      => 'list',
+			'container'       => 'div',
+			'container_class' => 'nav-home'
+		);
 
-	if( !is_front_page() ) {
-		$menu_args['container_class'] = 'nav';
+		if ( ! is_front_page() ) {
+			$menu_args['container_class'] = 'nav';
+		}
+
+		wp_nav_menu( $menu_args );
 	}
-
-	wp_nav_menu( $menu_args );
-
-
-
-//	$menu_items = wp_get_nav_menu_items( $menu_name );
-//	if ( $menu_items ) {
-//		foreach ( $menu_items as $menu_item ) {
-//			echo '<li class="item">
-//              <a class="link" href="' . $menu_item->url . '">' . $menu_item->title . '</a>
-//              </li>';
-//		}
-//	}
 }
 
 // Show Post Tags
 function indigo_show_tags() {
-	$post_tags = get_the_tags();
-	if ( $post_tags ) {
-		foreach ( $post_tags as $tag ) {
-			echo '<a href="';
-			echo bloginfo( 'url' );
-			echo '/?tag=' . $tag->slug . '" class="item">' . $tag->name . '</a>';
-		}
-	}
+	the_tags( '', ' ', '');
 }
 
 // Show Name Field
 function indigo_show_avatar() {
 	if ( get_theme_mod( 'avatar' ) != "" ) {
 		echo '<img class="selfie" src="' . get_theme_mod( 'avatar' ) . '" />';
+	} else {
+		global $theme_url;
+		echo '<img class="selfie" src="' . $theme_url . '/assets/images/profile.jpg" />';
 	}
 }
 
 
 // Show Name Field
 function indigo_show_name() {
-	if ( get_theme_mod( 'name' ) != "" ) {
-		echo get_theme_mod( 'name' );
-	}
+	echo get_theme_mod( 'name', 'John Doe' );
 }
 
 
 // Show Name Field
 function indigo_show_bio() {
-	if ( get_theme_mod( 'bio' ) != "" ) {
-		echo get_theme_mod( 'bio' );
-	}
+	echo get_theme_mod( 'bio', 'A Man who travels the world eating noodles' );
 }
 
 // Show Name Field
