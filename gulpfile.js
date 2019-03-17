@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 sass.compiler = require('node-sass');
+var rtlcss = require('gulp-rtlcss');
 
 // Browsersync
 gulp.task('serve' , function(){
@@ -11,13 +12,12 @@ gulp.task('serve' , function(){
         ui: false,
         injectChanges: true,
         proxy: "localhost",
-
         ws: true
     });
 });
 
 // Sass
-gulp.task('sass', function () {
+gulp.task('sass', ['rtlcss'], function () {
     return gulp.src('./assets/sass/style.sass')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest('./assets/css'))
@@ -37,6 +37,13 @@ gulp.task('watch', function () {
 });
 // Watch for php files
 
+
+// RTL Css
+gulp.task('rtlcss', function () {
+    return gulp.src('assets/css/style.css')
+        .pipe(rtlcss())
+        .pipe(gulp.dest(''));
+});
 
 
 // Default Gulp Command
