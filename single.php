@@ -3,26 +3,24 @@
         <div id="content-area" class="post">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><?php the_title( sprintf( '<h1 class="title">', esc_url( get_permalink() ) ), '</h1>' ); ?>
                 <span class="date">
-                <time datetime="<?php echo get_the_date( "d-m-Y" ); ?>"><?php echo get_the_date(); ?></time> - <span id="reading-time" class="reading-time" title="Estimated read time">0 mins</span>
+                    <time datetime="<?php echo get_the_date( "d-m-Y" ); ?>"><?php echo get_the_date(); ?></time> - <span id="reading-time" class="reading-time" title="Estimated read time">0 mins</span>
 				</span>
 
                 <div class="post-tags">
-					<?php
-					indigo_show_tags();
-					?>
+					<?php indigo_show_tags(); ?>
                 </div>
 
 				<?php the_content(); ?>
 
-			<?php endwhile; ?><?php
+			<?php endwhile; ?>
+
+            <?php
 			else :
 				get_template_part( 'template-parts/content', 'none' );
 			endif;
 			?>
         </div>
-        <?php
-        comments_template();
-       ?>
+        <?php comments_template(); ?>
     </div>
     <script>
         function get_text(el) {

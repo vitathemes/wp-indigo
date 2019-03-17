@@ -11,8 +11,8 @@
             </a>
 
             <p class="extra">
-                <a class="link" href="https://github.com/sergiokopplin/indigo">Indigo theme</a> by
-                <a class="link" href="https://github.com/sergiokopplin/indigo">Kopplin</a>
+                <a target="_blank" class="link" href="https://github.com/sergiokopplin/indigo">Indigo theme</a> by
+                <a target="_blank" title="WordPress Solutions to Meet Your Needs and Help You Grow" class="link" href="https://veronalabs.com/">VeronaLabs</a>
             </p>
         </footer>
 
