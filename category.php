@@ -5,7 +5,7 @@
 		<?php the_archive_title( '<h1>', '</h1>' ); ?>
 
         <div class="list">
-			<?php if ( have_posts() ) : ?><?php
+			<?php if ( have_posts() ) :
 				/* Start the Loop */
 				while ( have_posts() ) :
 					the_post();
