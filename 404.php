@@ -9,7 +9,7 @@
 
     <meta name=description content="A Man who travels the world eating noodles">
     <meta name=author content="John Doe">
-    <meta property="og:image" content="http://localhost:4000/assets/images/profile.jpg">
+    <meta property="og:image" content="/assets/images/profile.jpg">
     <meta property="og:type" content="profile">
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
@@ -19,14 +19,14 @@
     <meta property="og:locale" content="en_US"/>
     <meta name="description" content="A blog about technology and stuff related"/>
     <meta property="og:description" content="A blog about technology and stuff related"/>
-    <link rel="canonical" href="http://localhost:4000/404.html"/>
-    <meta property="og:url" content="http://localhost:4000/404.html"/>
+    <link rel="canonical" href="/404.html"/>
+    <meta property="og:url" content="/404.html"/>
     <meta property="og:site_name" content="John Doe"/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@"/>
     <script type="application/ld+json">
         {
-            "url": "http://localhost:4000/404.html",
+            "url": "/404.html",
             "headline": "John Doe",
             "description": "A blog about technology and stuff related",
             "@type": "WebPage",
@@ -35,19 +35,19 @@
     <!-- End Jekyll SEO tag -->
 
 
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-57x57.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-114x114.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-72x72.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-144x144.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-60x60.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-120x120.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-76x76.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-152x152.png"/>
-    <link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-196x196.png" sizes="196x196"/>
-    <link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-96x96.png" sizes="96x96"/>
-    <link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-32x32.png" sizes="32x32"/>
-    <link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-16x16.png" sizes="16x16"/>
-    <link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-128.png" sizes="128x128"/>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/images/favicon/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/favicon/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/favicon/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/favicon/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/assets/images/favicon/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/images/favicon/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/images/favicon/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/images/favicon/apple-touch-icon-152x152.png"/>
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-196x196.png" sizes="196x196"/>
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-128.png" sizes="128x128"/>
     <meta name="application-name" content="&nbsp;"/>
     <meta name="msapplication-TileColor" content="#FFFFFF"/>
     <meta name="msapplication-TileImage" content="mstile-144x144.png"/>
@@ -57,8 +57,8 @@
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png"/>
 
 
-    <link rel="canonical" href="http://localhost:4000/404.html">
-    <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml"/>
+    <link rel="canonical" href="/404.html">
+    <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml"/>
 
     <style>
 
@@ -1858,7 +1858,7 @@
         <section class="lost-container">
             <h1>Uh oh!</h1>
             <div class="link">
-                <img class="selfie" alt="John Doe" src="http://localhost:4000/assets/images/error.gif"/>
+                <img class="selfie" alt="John Doe" src="/assets/images/error.gif"/>
             </div>
             <br/>
             <br/>

@@ -26,7 +26,7 @@ function indigo_show_menu() {
 
 // Show Post Tags
 function indigo_show_tags() {
-	the_tags( '', ' ', '');
+	the_tags( '', ' ', '' );
 }
 
 // Show Name Field
