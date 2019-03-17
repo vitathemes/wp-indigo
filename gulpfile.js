@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
@@ -16,9 +16,16 @@ gulp.task('serve' , function(){
     });
 });
 
+// RTL Css
+gulp.task('rtlcss', function () {
+    return gulp.src('assets/css/rtl.css')
+        .pipe(rtlcss())
+        .pipe(gulp.dest(''));
+});
+
 // Sass
 gulp.task('sass', ['rtlcss'], function () {
-    return gulp.src('./assets/sass/style.sass')
+    return gulp.src('./assets/sass/*.sass')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest('./assets/css'))
         .pipe(browserSync.stream())
@@ -38,12 +45,6 @@ gulp.task('watch', function () {
 // Watch for php files
 
 
-// RTL Css
-gulp.task('rtlcss', function () {
-    return gulp.src('assets/css/style.css')
-        .pipe(rtlcss())
-        .pipe(gulp.dest(''));
-});
 
 
 // Default Gulp Command
