@@ -1,11 +1,5 @@
-<?php
-get_header();
-
-indigo_show_profile();
-
-?>
-
-
+<?php get_header(); ?>
+<?php indigo_show_profile(); ?>
     <section class="blog">
         <div class="list">
 			<?php if ( have_posts() ) : ?><?php
@@ -36,5 +30,4 @@ indigo_show_profile();
 			?>
         </div>
     </section>
-<?php
-get_footer();
+<?php get_footer(); ?>

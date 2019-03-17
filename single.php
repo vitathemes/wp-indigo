@@ -46,4 +46,4 @@
             document.getElementById('reading-time').innerHTML = Math.round(mins) + " MINS";
         }
     </script>
-<?php get_footer();
+<?php get_footer(); ?>
