@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  */
-global $theme_url; ?>
+ ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
