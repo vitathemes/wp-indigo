@@ -202,5 +202,6 @@ function indigo_is_comment_by_post_author( $comment = null ) {
 			return $comment->user_id === $post->post_author;
 		}
 	}
+
 	return false;
 }
