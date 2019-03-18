@@ -16,7 +16,7 @@ function indigo_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on _s, use a find and replace
-	 * to change 'sector' to the name of your theme in all the template files.
+	 * to change 'indigo' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'indigo', get_template_directory() . '/languages' );
 
@@ -85,7 +85,7 @@ add_action( 'after_setup_theme', 'indigo_setup' );
  */
 // External Assets
 function indigo_scripts() {
-	wp_enqueue_style( 'sector-style', get_template_directory_uri() . '/assets/css/style.css' );
+	wp_enqueue_style( 'indigo-style', get_template_directory_uri() . '/assets/css/style.css' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -7,76 +7,119 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
+ * @package WordPress
+ * @subpackage Twenty_Nineteen
+ * @since 1.0.0
  */
-if ( post_password_required() ){
-    return;
-    }
+
+/*
+ * If the current post is protected by a password and
+ * the visitor has not yet entered the password we will
+ * return early without loading the comments.
+*/
+if ( post_password_required() ) {
+	return;
+}
+
+$discussion = indigo_get_discussion_data();
 ?>
 
-<div id="comments" class="comments-area">
-
-    <?php if ( have_comments() ) : ?>
+<div id="comments" class="<?php echo comments_open() ? 'comments-area' : 'comments-area comments-closed'; ?>">
+    <div class="<?php echo $discussion->responses > 0 ? 'comments-title-wrap' : 'comments-title-wrap no-responses'; ?>">
         <h2 class="comments-title">
-            <?php
-                printf( _nx( 'One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'comments title', 'indigo' ),
-                    number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-            ?>
-        </h2>
+			<?php
+			if ( comments_open() ) {
+				if ( have_comments() ) {
+					_e( 'Join the Conversation', 'indigo' );
+				} else {
+					_e( 'Leave a comment', 'indigo' );
+				}
+			} else {
+				if ( '1' == $discussion->responses ) {
+					/* translators: %s: post title */
+					printf( _x( 'One reply on &ldquo;%s&rdquo;', 'comments title', 'indigo' ), get_the_title() );
+				} else {
+					printf(
+					/* translators: 1: number of comments, 2: post title */
+						_nx(
+							'%1$s reply on &ldquo;%2$s&rdquo;',
+							'%1$s replies on &ldquo;%2$s&rdquo;',
+							$discussion->responses,
+							'comments title',
+							'indigo'
+						),
+						number_format_i18n( $discussion->responses ),
+						get_the_title()
+					);
+				}
+			}
+			?>
+        </h2><!-- .comments-title -->
+		<?php
+		// Only show discussion meta information when comments are open and available.
+		if ( have_comments() && comments_open() ) {
+			get_template_part( 'template-parts/post/discussion', 'meta' );
+		}
+		?>
+    </div><!-- .comments-title-flex -->
+	<?php
+	if ( have_comments() ) :
 
+		// Show comment form at top if showing newest comments at the top.
+		if ( comments_open() ) {
+			indigo_comment_form( 'desc' );
+		}
+
+		?>
         <ol class="comment-list comments">
-            <?php
-                wp_list_comments( array(
-                    'style'       => 'ol',
-                    'short_ping'  => true,
-                    'avatar_size' => 64,
-                ) );
-            ?>
+			<?php
+			wp_list_comments(
+				array(
+					'walker'      => new Indigo_Walker_Comment(),
+					'avatar_size' => 60,
+					'short_ping'  => true,
+					'style'       => 'ol',
+				)
+			);
+			?>
         </ol><!-- .comment-list -->
+		<?php
 
-        <?php
-            // Are there comments to navigate through?
-            if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
-        ?>
-        <nav class="navigation comment-navigation" role="navigation">
-            <h1 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'indigo' ); ?></h1>
-            <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'indigo' ) ); ?></div>
-            <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'indigo' ) ); ?></div>
-        </nav><!-- .comment-navigation -->
-        <?php endif; // Check for comment navigation ?>
+		// Show comment navigation
+		if ( have_comments() ) :
+			$comments_text = __( 'Comments', 'indigo' );
+			the_comments_navigation(
+				array(
+					'prev_text' => sprintf( ' <span class="nav-prev-text"> < <span class="secondary-text">%s</span></span>', __( 'Previous', 'indigo' )),
+					'next_text' => sprintf( '<span class="nav-next-text"><span class="primary-text">%s</span> > </span> ', __( 'Next', 'indigo' )),
+				)
+			);
+		endif;
 
-        <?php if ( ! comments_open() && get_comments_number() ) : ?>
-        <p class="no-comments"><?php _e( 'Comments are closed.' , 'indigo' ); ?></p>
-        <?php endif; ?>
+		// Show comment form at bottom if showing newest comments at the bottom.
+		if ( comments_open() && 'asc' === strtolower( get_option( 'comment_order', 'asc' ) ) ) :
+			?>
+            <div class="comment-form-flex">
+                <h2 class="comments-title" aria-hidden="true"><?php _e( 'Leave a comment', 'indigo' ); ?></h2>
+				<?php indigo_comment_form( 'asc' ); ?>
+            </div>
+		<?php
+		endif;
 
-    <?php endif; // have_comments() ?>
-<?php if(comments_open()) : ?>
-	<h2>Add Your Comment</h2>
-	<?php if(get_option('comment_registration') && !$user_ID) : ?>
-		<p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p><?php else : ?>
-		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
-			<?php if($user_ID) : ?>
-				<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Log out &raquo;</a></p>
-			<?php else : ?>
-				<p>
-					<input placeholder="Name" type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
-				</p>
-				<p>
-					<input placeholder="Email" type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
-				</p>
-				<p>
-					<input placeholder="Website" type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-				</p>
-			<?php endif; ?>
-			<p>
-				<textarea placeholder="Comment" name="comment" id="comment" rows="10" tabindex="4"></textarea>
-			</p>
-			<?php //show_subscription_checkbox(); ?>
-			<p>
-				<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
-				<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></p>
-			<?php do_action('comment_form', $post->ID); ?>
-		</form>
-	<?php endif; ?>
-<?php else : ?>
-	<p>The comments are closed.</p>
-<?php endif; ?>
+		// If comments are closed and there are comments, let's leave a little note, shall we?
+		if ( ! comments_open() ) :
+			?>
+            <p class="no-comments">
+				<?php _e( 'Comments are closed.', 'indigo' ); ?>
+            </p>
+		<?php
+		endif;
+
+	else :
+
+		// Show comment form.
+		indigo_comment_form( true );
+
+	endif; // if have_comments();
+	?>
+</div><!-- #comments -->

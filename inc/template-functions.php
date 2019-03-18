@@ -1,4 +1,5 @@
 <?php
+require "classes/indigo_Walker_Comment.php";
 
 //Show Profile
 function indigo_show_profile() {
@@ -140,4 +141,66 @@ function indigo_show_socials() {
 			<svg class="icon icon-facebook"><use xlink:href="' . $theme_url . '/assets/images/defs.svg#icon-mail"></use></svg>
 		</a>';
 	}
+}
+
+
+//
+function indigo_get_discussion_data() {
+	static $discussion, $post_id;
+
+	$current_post_id = get_the_ID();
+	if ( $current_post_id === $post_id ) {
+		return $discussion; /* If we have discussion information for post ID, return cached object */
+	} else {
+		$post_id = $current_post_id;
+	}
+
+	$comments = get_comments(
+		array(
+			'post_id' => $current_post_id,
+			'orderby' => 'comment_date_gmt',
+			'order'   => get_option( 'comment_order', 'asc' ), /* Respect comment order from Settings » Discussion. */
+			'status'  => 'approve',
+			'number'  => 20, /* Only retrieve the last 20 comments, as the end goal is just 6 unique authors */
+		)
+	);
+
+	$authors = array();
+	foreach ( $comments as $comment ) {
+		$authors[] = ( (int) $comment->user_id > 0 ) ? (int) $comment->user_id : $comment->comment_author_email;
+	}
+
+	$authors    = array_unique( $authors );
+	$discussion = (object) array(
+		'authors'   => array_slice( $authors, 0, 6 ),           /* Six unique authors commenting on the post. */
+		'responses' => get_comments_number( $current_post_id ), /* Number of responses. */
+	);
+
+	return $discussion;
+}
+
+
+//
+function indigo_comment_form( $order ) {
+	if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
+
+		comment_form(
+			array(
+				'logged_in_as' => null,
+				'title_reply'  => null,
+			)
+		);
+	}
+}
+
+//
+function indigo_is_comment_by_post_author( $comment = null ) {
+	if ( is_object( $comment ) && $comment->user_id > 0 ) {
+		$user = get_userdata( $comment->user_id );
+		$post = get_post( $comment->comment_post_ID );
+		if ( ! empty( $user ) && ! empty( $post ) ) {
+			return $comment->user_id === $post->post_author;
+		}
+	}
+	return false;
 }
