@@ -1,4 +1,12 @@
-<?php get_header(); ?><?php indigo_show_profile(); ?>
+<?php
+/**
+ * The template for displaying search results pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ *
+ */
+get_header();
+indigo_show_profile(); ?>
 
     <section class="blog search">
 

@@ -1,9 +1,17 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying all single posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ */
+get_header(); ?>
 <div class="wrapper-normal">
     <div id="content-area" class="post">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><?php the_title( sprintf( '<h1 class="title">', esc_url( get_permalink() ) ), '</h1>' ); ?>
             <span class="date">
-                    <time datetime="<?php echo get_the_date( get_option( 'date_format' ) ); ?>"><?php echo get_the_date(); ?></time> - <span id="reading-time" class="reading-time" title="Estimated read time">0 mins</span>
+                    <time datetime="<?php echo get_the_date( get_option( 'date_format' ) ); ?>"><?php echo get_the_date(); ?></time> - <span
+                        id="reading-time" class="reading-time" title="Estimated read time">0 mins</span>
 				</span>
 
             <div class="post-tags">
