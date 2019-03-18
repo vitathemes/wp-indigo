@@ -1,18 +1,19 @@
 <?php
+/**
+ * The template for displaying Tag pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ */
 get_header();
+indigo_show_profile(); ?>
 
-indigo_show_profile();
+    <section class="blog tag">
 
-?>
+		<?php the_archive_title( '<h1>', '</h1>' ); ?>
 
-	<section class="blog tag">
-
-		<?php
-		the_archive_title('<h1>' , '</h1>');
-		?>
-
-		<div class="list">
-			<?php if ( have_posts() ) : ?><?php
+        <div class="list">
+			<?php if ( have_posts() ) :
 				/* Start the Loop */
 				while ( have_posts() ) :
 					the_post();
@@ -28,8 +29,8 @@ indigo_show_profile();
 
 				the_posts_pagination( array(
 					'mid_size'  => 2,
-					'prev_text' => __( 'Previous' ),
-					'next_text' => __( 'Next' ),
+					'prev_text' => __( 'Previous', 'indigo' ),
+					'next_text' => __( 'Next', 'indigo' ),
 				) );
 
 			else :
@@ -38,7 +39,6 @@ indigo_show_profile();
 
 			endif;
 			?>
-		</div>
-	</section>
-<?php
-get_footer();
+        </div>
+    </section>
+<?php get_footer(); ?>

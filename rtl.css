@@ -1,0 +1,7 @@
+.home > .list aside, .blog > .list aside, .projects > .list aside {
+  float: left;
+}
+
+.pagination {
+  direction: ltr;
+}

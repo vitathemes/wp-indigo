@@ -1,11 +1,17 @@
 <?php
-get_header();
-
-indigo_show_profile();
-
-?>
-
-
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ */
+get_header(); ?>
+<?php indigo_show_profile(); ?>
     <section class="blog">
         <div class="list">
 			<?php if ( have_posts() ) : ?><?php
@@ -23,9 +29,10 @@ indigo_show_profile();
 				endwhile;
 
 				the_posts_pagination( array(
-					'mid_size'  => 2,
-					'prev_text' => __( 'Previous' ),
-					'next_text' => __( 'Next' ),
+					'screen_reader_text' => ' ',
+					'mid_size'           => 2,
+					'prev_text'          => __( 'Previous', 'indigo' ),
+					'next_text'          => __( 'Next', 'indigo' ),
 				) );
 
 			else :
@@ -36,5 +43,4 @@ indigo_show_profile();
 			?>
         </div>
     </section>
-<?php
-get_footer();
+<?php get_footer(); ?>

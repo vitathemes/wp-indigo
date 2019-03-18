@@ -1,15 +1,23 @@
 <?php
+/**
+ * The template for displaying search results pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ *
+ */
 get_header();
+indigo_show_profile(); ?>
 
-indigo_show_profile();
+    <section class="blog search">
 
-?>
+        <h1>
+			<?php
+			/* translators: %s: search query. */
+			printf( esc_html__( 'Search Results for: %s', 'indigo' ), get_search_query() );
+			?>
+        </h1>
 
-	<section class="blog search">
-
-		<h1>Search: <?php the_search_query(); ?></h1>
-
-		<div class="list">
+        <div class="list">
 			<?php if ( have_posts() ) : ?><?php
 				/* Start the Loop */
 				while ( have_posts() ) :
@@ -26,8 +34,8 @@ indigo_show_profile();
 
 				the_posts_pagination( array(
 					'mid_size'  => 2,
-					'prev_text' => __( 'Previous' ),
-					'next_text' => __( 'Next' ),
+					'prev_text' => __( 'Previous', 'indigo' ),
+					'next_text' => __( 'Next', 'indigo' ),
 				) );
 
 			else :
@@ -36,7 +44,6 @@ indigo_show_profile();
 
 			endif;
 			?>
-		</div>
-	</section>
-<?php
-get_footer();
+        </div>
+    </section>
+<?php get_footer(); ?>
