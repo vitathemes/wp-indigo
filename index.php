@@ -29,9 +29,10 @@ get_header(); ?>
 				endwhile;
 
 				the_posts_pagination( array(
-					'mid_size'  => 2,
-					'prev_text' => __( 'Previous', 'indigo' ),
-					'next_text' => __( 'Next', 'indigo' ),
+					'screen_reader_text' => ' ',
+					'mid_size'           => 2,
+					'prev_text'          => __( 'Previous', 'indigo' ),
+					'next_text'          => __( 'Next', 'indigo' ),
 				) );
 
 			else :
