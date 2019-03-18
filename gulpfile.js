@@ -25,7 +25,7 @@ gulp.task('rtlcss', function () {
 // Sass - Sass Files Compile Here
 gulp.task('sass', ['rtlcss'], function () {
     return gulp.src('./assets/sass/*.sass')
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./assets/css'))
         .pipe(browserSync.stream())
         .pipe(browserSync.stream({match: '**/*.css'}));
