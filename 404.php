@@ -15,7 +15,12 @@ get_header();
         </div>
         <br/>
         <br/>
-        <a href="/">Take me home!</a>
+        <h2>Page Not Found - 404</h2>
+        <p>This page not found (deleted or never exists). try a phrase in search box or back to home and start again.</p>
+        <a href="<?php echo site_url(); ?>">Take me home!</a>
+        <br>
+        <br>
+        <?php get_search_form(); ?>
     </section>
 <?php
 get_footer();
