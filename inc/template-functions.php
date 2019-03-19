@@ -11,7 +11,7 @@ function indigo_show_menu() {
 
 	if ( has_nav_menu( 'primary-menu' ) ) {
 		$menu_args = array(
-			'menu'            => 'primary-menu',
+			'theme_location'            => 'primary-menu',
 			'menu_class'      => 'list',
 			'container'       => 'div',
 			'container_class' => 'nav-home'

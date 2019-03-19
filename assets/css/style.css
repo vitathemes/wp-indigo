@@ -892,9 +892,37 @@ textarea {
   list-style: none;
   margin: 0;
   padding: 0 13px 0; }
-  .nav > .list > li,
-  .nav-home > .list > li {
-    display: inline-block; }
+  .nav > .list li,
+  .nav-home > .list li {
+    display: inline-block;
+    position: relative; }
+    .nav > .list li:hover > ul.sub-menu,
+    .nav-home > .list li:hover > ul.sub-menu {
+      display: block; }
+    .nav > .list li ul.sub-menu,
+    .nav-home > .list li ul.sub-menu {
+      display: none;
+      position: absolute;
+      list-style: none;
+      box-shadow: 0 0 10px -6px gray;
+      border-radius: 3px;
+      padding: 0 10px;
+      background: white;
+      z-index: 99;
+      right: 0; }
+      .nav > .list li ul.sub-menu li,
+      .nav-home > .list li ul.sub-menu li {
+        display: block; }
+        .nav > .list li ul.sub-menu li ul,
+        .nav-home > .list li ul.sub-menu li ul {
+          right: 100%;
+          top: 5px; }
+      .nav > .list li ul.sub-menu li a,
+      .nav-home > .list li ul.sub-menu li a {
+        white-space: nowrap;
+        display: block;
+        text-decoration: none;
+        padding: 5px; }
   .nav > .list > li > a,
   .nav-home > .list > li > a {
     display: inline-block;
