@@ -110,7 +110,7 @@ $discussion = indigo_get_discussion_data();
 		if ( ! comments_open() ) :
 			?>
             <h3 class="no-comments">
-				<?php _e( 'Comments are closed.', 'indigo' ); ?>
+				<?php _e( 'Comments are disabled.', 'indigo' ); ?>
             </h3>
 		<?php
 		endif;
