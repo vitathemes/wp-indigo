@@ -16,14 +16,14 @@ gulp.task('serve' , function(){
 });
 
 // RTLCss - Create a rtl version of your styles
-gulp.task('rtlcss', function () {
-    return gulp.src('assets/css/rtl.css')
-        .pipe(rtlcss())
-        .pipe(gulp.dest(''));
-});
+// gulp.task('rtlcss', function () {
+//     return gulp.src('assets/css/rtl.css')
+//         .pipe(rtlcss())
+//         .pipe(gulp.dest(''));
+// });
 
 // Sass - Sass Files Compile Here
-gulp.task('sass', ['rtlcss'], function () {
+gulp.task('sass', function () {
     return gulp.src('./assets/sass/*.sass')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./assets/css'))
