@@ -1,13 +1,3 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- */
-global $theme_url; ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

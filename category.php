@@ -29,7 +29,7 @@ indigo_show_profile(); ?>
 
 				the_posts_pagination( array(
 					'mid_size'  => 2,
-					'prev_text' => __( 'Previous' ),
+					'prev_text' => __( 'Previous', 'indigo' ),
 					'next_text' => __( 'Next', 'indigo' ),
 				) );
 
