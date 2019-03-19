@@ -1,4 +1,7 @@
 @charset "UTF-8";
+html {
+  position: relative; }
+
 body, html {
   font-size: 62.5%; }
 
@@ -52,6 +55,7 @@ ol li {
   font-weight: 300;
   color: #666; }
 
+figure,
 img,
 pre,
 iframe {
