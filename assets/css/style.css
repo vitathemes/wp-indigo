@@ -955,8 +955,7 @@ textarea {
       padding: 7px 15px;
       margin: 0;
       border-radius: 4%;
-      transition: all .4s ease-in-out;
-      width: 70px; }
+      transition: all .4s ease-in-out; }
       .nav-home > .list > li > a:hover {
         color: #666; }
 
