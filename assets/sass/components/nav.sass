@@ -1,46 +1,76 @@
 .nav,
 .nav-home
-    > .list
-        list-style: none
-        margin: 0
-        padding: 0 13px 0
+ > .list
+  list-style: none
+  margin: 0
+  padding: 0 13px 0
 
-        > li
-            display: inline-block
+  li
+   display: inline-block
+   position: relative
 
-        > li > a
-            display: inline-block
-            font-weight: 300
-            font-size: 1.4rem
-            padding: 20px 10px
-            text-decoration: none
+   &:hover
+    & > ul.sub-menu
+     display: block
+
+   ul.sub-menu
+    display: none
+    position: absolute
+    list-style: none
+    box-shadow: 0 0 10px -6px gray
+    border-radius: 3px
+    padding: 0 10px
+    background: white
+    z-index: 99
+    right: 0
+
+
+    li
+     display: block
+
+     ul
+      right: 100%
+      top: 5px
+
+    li a
+     white-space: nowrap
+     display: block
+     text-decoration: none
+     padding: 5px
+
+
+  > li > a
+   display: inline-block
+   font-weight: 300
+   font-size: 1.4rem
+   padding: 20px 10px
+   text-decoration: none
 
 .nav
-    position: absolute
-    right: 0
-    top: 0
+ position: absolute
+ right: 0
+ top: 0
 
-    > .list
-        padding: 0 13px 0
+ > .list
+  padding: 0 13px 0
 
-        > li > a
-            font-size: 1.4rem
-            padding: 20px 10px
+  > li > a
+   font-size: 1.4rem
+   padding: 20px 10px
 
 .nav-home
-    margin-top: 40px
-    text-align: center
+ margin-top: 40px
+ text-align: center
 
-    > .list
-        padding: 0
+ > .list
+  padding: 0
 
-        > li > a
-            font-size: 2rem
-            padding: 7px 15px
-            margin: 0
-            border-radius: 4%
-            transition: all .4s ease-in-out
-            width: 70px
+  > li > a
+   font-size: 2rem
+   padding: 7px 15px
+   margin: 0
+   border-radius: 4%
+   transition: all .4s ease-in-out
 
-            &:hover
-                color: $alpha
+   &:hover
+    color: $alpha

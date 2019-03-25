@@ -11,6 +11,7 @@ get_header(); ?>
         <div class="list">
 			<?php
 			$args = array(
+				'post_status'    => 'publish',
 				'posts_per_page' => get_option( 'posts_per_page' ),
 				'paged'          => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
 			);
@@ -38,8 +39,8 @@ get_header(); ?>
 							'end_size'           => 1,
 							'mid_size'           => 2,
 							'prev_next'          => true,
-							'prev_text'          => __( 'Previous' , 'indigo'),
-							'next_text'          => __( 'Next' , 'indigo'),
+							'prev_text'          => __( 'Previous', 'indigo' ),
+							'next_text'          => __( 'Next', 'indigo' ),
 							'type'               => 'plain',
 							'add_args'           => false,
 							'add_fragment'       => '',

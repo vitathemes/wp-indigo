@@ -49,7 +49,6 @@ function indigo_customizer_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'social-twitter', array(
 		'transport' => 'refresh',
-		'default'   => 'https://twitter.com',
 	) );
 	$wp_customize->add_setting( 'social-instagram', array(
 		'transport' => 'refresh',
