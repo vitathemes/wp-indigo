@@ -11,7 +11,7 @@ gulp.task('serve' , function(){
     browserSync.init({
         ui: false,  // Disable ui of BrowserSync
         injectChanges: true,  // Allow to inject style changes to browser without reloading page
-        proxy: "localhost",  // Where is your Project? changes proxy to your project url
+        proxy: "free-themes.local",  // Where is your Project? changes proxy to your project url
     });
 });
 

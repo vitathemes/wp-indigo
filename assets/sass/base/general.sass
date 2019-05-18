@@ -5,19 +5,20 @@ body, html
 
 body
 	line-height: 1
-	font: 16px $fontSans
+	font: 16px $fontOverpass
 	color: $alpha
 
 h1, h2, h3, h4
-	font-family: $fontSans
-	color: $beta
+	font-family: $fontOverpass
+	color: $dark
 	-webkit-font-smoothing: antialiased
 	text-rendering: optimizeLegibility
+	font-weight: 400
 
 h1
 	font-size: 3rem
 	letter-spacing: -1px
-	color: $beta
+	color: $dark
 	font-weight: 700
 
 h2
@@ -34,7 +35,7 @@ a
 	text-decoration: underline
 
 p
-	line-height: 1.7
+	line-height: 1.8
 	color: $alpha
 	font-weight: 300
 	margin-bottom: 20px
@@ -74,7 +75,7 @@ figcaption
 	width: 100%
 	text-align: center
 	font-size: 1.3rem
-	color: $gama
+	color: $gray
 	font-weight: 300
 
 	@media #{$mobile}
