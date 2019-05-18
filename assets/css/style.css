@@ -7,19 +7,20 @@ body, html {
 
 body {
   line-height: 1;
-  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #666; }
+  font: 16px "Overpass", sans-serif;
+  color: #646666; }
 
 h1, h2, h3, h4 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
+  font-family: "Overpass", sans-serif;
+  color: #1A1A1A;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  font-weight: 400; }
 
 h1 {
   font-size: 3rem;
   letter-spacing: -1px;
-  color: #222;
+  color: #1A1A1A;
   font-weight: 700; }
 
 h2 {
@@ -36,8 +37,8 @@ a {
   text-decoration: underline; }
 
 p {
-  line-height: 1.7;
-  color: #666;
+  line-height: 1.8;
+  color: #646666;
   font-weight: 300;
   margin-bottom: 20px;
   letter-spacing: 0.4px; }
@@ -53,7 +54,7 @@ ul li,
 ol li {
   line-height: 2.4rem;
   font-weight: 300;
-  color: #666; }
+  color: #646666; }
 
 figure,
 img,
@@ -75,7 +76,7 @@ figcaption {
   width: 100%;
   text-align: center;
   font-size: 1.3rem;
-  color: #aaa;
+  color: #979A9A;
   font-weight: 300; }
   @media only screen and (max-width: 400px) {
     figcaption {
@@ -745,6 +746,42 @@ textarea {
   color: #999;
   background-color: #EAF2F5; }
 
+/* latin-ext */
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local("Overpass Light"), local("Overpass-Light"), url(https://fonts.gstatic.com/s/overpass/v3/qFdA35WCmI96Ajtm81kOcc7D4howig.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local("Overpass Light"), local("Overpass-Light"), url(https://fonts.gstatic.com/s/overpass/v3/qFdA35WCmI96Ajtm81kOcc7N4ho.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Overpass Regular"), local("Overpass-Regular"), url(https://fonts.gstatic.com/s/overpass/v3/qFdH35WCmI96Ajtm81GrU9vyww.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Overpass Regular"), local("Overpass-Regular"), url(https://fonts.gstatic.com/s/overpass/v3/qFdH35WCmI96Ajtm81GlU9s.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
 .author {
   padding: 3rem 0;
   border-bottom: 1px solid #ededed;
@@ -760,7 +797,7 @@ textarea {
     display: inline-block; }
   .author > .toright > .name {
     font-size: 1.5rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Overpass", sans-serif;
     font-weight: 500;
     margin: 6px 0 0; }
     @media only screen and (max-width: 400px) {
@@ -772,9 +809,9 @@ textarea {
         width: 100%;
         display: block; } }
   .author > .toright > .bio {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Overpass", sans-serif;
     font-weight: 300;
-    color: #aaa;
+    color: #979A9A;
     font-size: 1.3rem;
     text-align: justify;
     line-height: 1.5;
@@ -818,10 +855,10 @@ textarea {
 
 .footer-main {
   border-top: 1px solid #ededed;
-  padding: 40px 0;
+  padding: 45px 0;
   margin: 40px 0 0;
-  font-size: 1.3rem;
-  color: #aaa;
+  font-size: 1.8rem;
+  color: #979A9A;
   font-weight: 300;
   text-align: center;
   position: relative; }
@@ -842,7 +879,7 @@ textarea {
     display: inline; }
     .footer-main > .link > .icon {
       width: 15px !important;
-      fill: #aaa !important;
+      fill: #979A9A !important;
       transition: ease-in-out all .3s;
       position: relative;
       top: 3px;
@@ -851,16 +888,16 @@ textarea {
       .footer-main > .link > .icon:hover {
         fill: #4b0082 !important; }
   .footer-main > .extra {
-    color: #aaa;
-    margin-top: 0; }
+    color: #1A1A1A;
+    margin-top: 10px; }
     .footer-main > .extra > .link {
-      color: #222;
+      color: #1A1A1A;
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: ease-in-out all .3s;
       padding-bottom: 1px; }
       .footer-main > .extra > .link:hover {
-        border-color: #aaa; }
+        border-color: #979A9A; }
 
 .header-home {
   display: block;
@@ -869,23 +906,23 @@ textarea {
   position: relative;
   z-index: 99; }
   .header-home > .link > .selfie {
-    width: 125px;
+    width: 106px;
     margin-bottom: 25px;
     border-radius: 100%;
     transition: all .2s;
-    box-shadow: 0;
+    box-shadow: none;
     opacity: 1; }
     .header-home > .link > .selfie:hover {
       box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.18), 0 0px 12px 0 rgba(0, 0, 0, 0.15);
       opacity: .8; }
   .header-home > .title {
-    font-size: 4rem;
+    font-size: 3.6rem;
     margin: 0 0 13px; }
   .header-home > .description {
-    font-size: 1.85rem;
+    font-size: 1.8rem;
     font-weight: 300;
     font-style: normal;
-    color: #aaa;
+    color: #979A9A;
     width: 70%;
     margin: 0 auto 30px; }
     .header-home > .description a {
@@ -926,24 +963,36 @@ textarea {
         white-space: nowrap;
         display: block;
         text-decoration: none;
-        padding: 5px; }
+        padding: 5px;
+        color: #1A1A1A; }
   .nav > .list > li > a,
   .nav-home > .list > li > a {
     display: inline-block;
     font-weight: 300;
     font-size: 1.4rem;
     padding: 20px 10px;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #1A1A1A; }
 
 .nav {
   position: absolute;
-  right: 0;
-  top: 0; }
+  left: 0;
+  top: 25px;
+  display: flex;
+  width: 100%; }
   .nav > .list {
+    margin: 0 auto;
     padding: 0 13px 0; }
     .nav > .list > li > a {
       font-size: 1.4rem;
-      padding: 20px 10px; }
+      padding: 0;
+      margin: 0 15px;
+      color: #1A1A1A;
+      font-weight: 400; }
+      .nav > .list > li > a:hover {
+        border-bottom: 2px solid #C4C4C4; }
+    .nav > .list > li.current-menu-item > a {
+      border-bottom: 2px solid #C4C4C4; }
 
 .nav-home {
   margin-top: 40px;
@@ -951,13 +1000,15 @@ textarea {
   .nav-home > .list {
     padding: 0; }
     .nav-home > .list > li > a {
-      font-size: 2rem;
+      font-size: 1.8rem;
       padding: 7px 15px;
       margin: 0;
       border-radius: 4%;
-      transition: all .4s ease-in-out; }
+      transition: all .4s ease-in-out;
+      color: #1A1A1A;
+      font-weight: 400; }
       .nav-home > .list > li > a:hover {
-        color: #666; }
+        color: #646666; }
 
 .evidence {
   background-image: linear-gradient(to bottom, rgba(39, 243, 106, 0.15), rgba(39, 243, 106, 0.15));
@@ -1011,7 +1062,7 @@ textarea {
     width: 100%;
     text-align: center;
     display: block;
-    color: #aaa;
+    color: #979A9A;
     letter-spacing: 4px;
     position: relative;
     top: -8px; }
@@ -1025,16 +1076,22 @@ textarea {
   text-align: center; }
   .pagination .nav-links > .page-numbers {
     display: inline-block;
-    font-size: 1.3rem; }
+    font-size: 1.4rem;
+    color: #1A1A1A;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: 300;
+    vertical-align: middle; }
   .pagination .nav-links > .prev,
   .pagination .nav-links > .next {
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     position: relative;
-    top: 1px;
-    padding: 1px 9px; }
+    top: 1px; }
   .pagination .nav-links > .hidden {
     visibility: hidden; }
+  .pagination .nav-links > .current {
+    color: #979A9A; }
 
 .related {
   margin: 10rem 0 0rem; }
@@ -1133,7 +1190,7 @@ textarea {
       margin: 0 auto;
       font-size: 13px;
       padding: 3px 10px;
-      background: #222;
+      background: #1A1A1A;
       color: #fff;
       border-radius: 2px;
       height: 22px;
@@ -1151,7 +1208,7 @@ textarea {
       height: 0;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
-      border-bottom: 6px solid #222;
+      border-bottom: 6px solid #1A1A1A;
       opacity: 0;
       transition: opacity 150ms linear, transform 150ms linear, -webkit-transform 150ms linear;
       transform: translate3d(0, -8px, 0);
@@ -1240,7 +1297,7 @@ ol.children {
 .home,
 .blog,
 .projects {
-  margin-top: 125px; }
+  margin-top: 50px; }
   .home > .list,
   .blog > .list,
   .projects > .list {
@@ -1301,14 +1358,14 @@ ol.children {
   width: 25%;
   float: right;
   font-weight: 300;
-  color: #aaa;
+  color: #979A9A;
   text-align: right;
   transition: all ease-in-out .2s; }
 
 .home > .list .item:hover .url aside,
 .blog > .list .item:hover .url aside,
 .projects > .list .item:hover .url aside {
-  color: #666; }
+  color: #979A9A; }
 
 .blog > .list > .item > .url > .title,
 .projects > .list > .item > .url > .title {
@@ -1323,9 +1380,14 @@ ol.children {
 
 .page {
   margin-top: 125px; }
-  .page > h1 {
+  .page h1 {
     text-align: center;
-    margin-bottom: 6rem; }
+    margin-bottom: 6rem;
+    color: #1A1A1A;
+    font-size: 3.6rem; }
+  .page h2 {
+    line-height: 37px;
+    font-size: 2.4rem; }
 
 .about img {
   width: 50%;
@@ -1339,7 +1401,7 @@ ol.children {
     margin-bottom: 3rem; }
   .post > .date,
   .post > .post-tags {
-    color: #aaa;
+    color: #646666;
     font-weight: 300;
     font-size: 1.4rem;
     text-transform: uppercase;
@@ -1356,7 +1418,7 @@ ol.children {
     border-radius: 3px;
     font-size: 1.1rem;
     background: #ededed;
-    color: #666;
+    color: #646666;
     letter-spacing: 1px;
     margin: 3px 1px;
     text-decoration: none;
@@ -1418,7 +1480,7 @@ ol.children {
   border-radius: 3px;
   font-size: 1.3rem;
   background: #ededed;
-  color: #666;
+  color: #646666;
   letter-spacing: 1px;
   margin: 0 0.5rem 1rem;
   text-decoration: none;
@@ -1451,9 +1513,9 @@ ol.children {
     width: 25%;
     float: right;
     font-weight: 300;
-    color: #aaa;
+    color: #979A9A;
     text-align: right;
     transition: all ease-in-out .2s;
     font-size: 1.6rem; }
   .tag-list > .list .item:hover .url aside {
-    color: #666; }
+    color: #646666; }
