@@ -55,6 +55,10 @@ $discussion = indigo_get_discussion_data();
 			}
 			?>
         </h2><!-- .comments-title -->
+        <?php
+        // Show comment form.
+        indigo_comment_form( 'asc' );
+        ?>
 		<?php
 		// Only show discussion meta information when comments are open and available.
 		if ( have_comments() && comments_open() ) {
@@ -68,6 +72,8 @@ $discussion = indigo_get_discussion_data();
 		// Show comment form at top if showing newest comments at the top.
 		if ( comments_open() ) {
 			indigo_comment_form( 'desc' );
+
+			echo "<h3>Comments</h3>";
 		}
 
 		?>
@@ -95,17 +101,6 @@ $discussion = indigo_get_discussion_data();
 				)
 			);
 		endif;
-
-		// Show comment form at bottom if showing newest comments at the bottom.
-		if ( comments_open() && 'asc' === strtolower( get_option( 'comment_order', 'asc' ) ) ) :
-			?>
-            <div class="comment-form-flex">
-                <h2 class="comments-title" aria-hidden="true"><?php _e( 'Leave a comment', 'indigo' ); ?></h2>
-				<?php indigo_comment_form( 'asc' ); ?>
-            </div>
-		<?php
-		endif;
-
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
@@ -116,9 +111,6 @@ $discussion = indigo_get_discussion_data();
 		endif;
 
 	else :
-
-		// Show comment form.
-		indigo_comment_form( true );
 
 	endif; // if have_comments();
 	?>
