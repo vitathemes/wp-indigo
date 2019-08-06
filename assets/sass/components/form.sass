@@ -1,12 +1,19 @@
 form
 
  input[type=submit]
-  margin-top: 15px
+  padding: 6px 36px
+  background-color: #1A1A1A
+  border-radius: 0
+  color: #fff
+  display: inline-block
+  width: auto
+  border-color: #1A1A1A
+  transition: .1s
 
  input[type=submit]:hover , input[type=submit]:focus
   cursor: pointer
-  background: #dddddd
-  border-color: #dddddd
+  background: #000
+  border-color: #000
 
  input , textarea
   padding: 5px 10px
@@ -26,3 +33,30 @@ input[type=checkbox]
  display: inline-block
  width: auto
  margin: 5px 10px
+
+
+
+.comments-title
+ font-size: 20px !important
+ line-height: 31px
+ margin-bottom: 30px
+
+.comment-form
+ display: flex
+ flex-direction: column
+ margin-bottom: 50px
+
+ p
+  margin: 0 0 30px
+
+ .comment-form-author
+  order: 1
+
+ .comment-form-email
+   order: 2
+
+ .comment-form-comment
+  order: 3
+
+ .form-submit
+  order: 4
