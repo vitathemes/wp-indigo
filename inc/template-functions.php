@@ -186,10 +186,31 @@ function indigo_get_discussion_data() {
 function indigo_comment_form( $order ) {
 	if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
 
+		$fields = array(
+
+			'author' =>
+				'<p class="comment-form-author">' .
+				'<input placeholder="Your Name" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+				'" size="30"' . $aria_req . ' /></p>',
+
+			'email' =>
+				'<p class="comment-form-email">'.
+				'<input placeholder="Your Email" id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) .
+				'" size="30"' . $aria_req . ' /></p>',
+
+			'url' => '',
+
+			'cookies' => ''
+		);
+
 		comment_form(
 			array(
-				'logged_in_as' => null,
-				'title_reply'  => null,
+				'logged_in_as'         => null,
+				'title_reply'          => null,
+				'comment_notes_before' => false,
+				'label_submit'         => 'Submit',
+				'fields'               => $fields,
+				'comment_field' => '<p class="comment-form-comment"><textarea placeholder="Write your comment" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
 			)
 		);
 	}
@@ -206,4 +227,16 @@ function indigo_is_comment_by_post_author( $comment = null ) {
 	}
 
 	return false;
+}
+
+
+// Remove unnecessary fields from comment form
+add_filter( 'comment_form_default_fields', 'website_field_remove' );
+function website_field_remove( $fields ) {
+	if ( isset( $fields['url'] ) ) {
+		unset( $fields['url'] );
+		unset( $fields['cookies'] );
+	}
+
+	return $fields;
 }

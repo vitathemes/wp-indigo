@@ -10,24 +10,51 @@ get_header(); ?>
     <div id="content-area" class="post">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><?php the_title( sprintf( '<h1 class="title">', esc_url( get_permalink() ) ), '</h1>' ); ?>
             <span class="date">
-                    <time datetime="<?php echo get_the_date( get_option( 'date_format' ) ); ?>"><?php echo get_the_date(); ?></time> - <span
-                        id="reading-time" class="reading-time" title="Estimated read time">0 mins</span>
+                    <time datetime="<?php echo get_the_date( get_option( 'date_format' ) ); ?>"><?php echo get_the_date(); ?></time> - <span id="reading-time" class="reading-time" title="Estimated read time">0 mins</span>
 				</span>
 
             <div class="post-tags">
 				<?php indigo_show_tags(); ?>
             </div>
-
-			<?php the_content(); ?>
+            <div class="single-content-area">
+				<?php the_content(); ?>
+            </div>
 
 		<?php endwhile; ?>
 
-		<?php
+			<?php
 		else :
 			get_template_part( 'template-parts/content', 'none' );
 		endif;
 		?>
     </div>
+
+    <div class="social-share">
+        <div class="social-share-title">
+            <span>Share this post:</span>
+        </div>
+        <div class="social-share-links">
+	        <?php
+	        $linkedin_url = "https://www.linkedin.com/shareArticle?mini=true&url=". get_permalink() ."&title=". get_the_title() ."&summary=". get_the_excerpt();
+	        $twitter_url = "https://twitter.com/intent/tweet?url=". get_permalink() ."&text=". get_the_excerpt() ."&hashtags=wp_sms_pro,veronalabs,wordpress";
+	        $facebook_url = "https://www.facebook.com/sharer.php?u=" . get_permalink();
+	        ?>
+
+            <a target="_blank" href="<?php echo $facebook_url; ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.svg" alt="Share on facebook" />
+            </a>
+
+            <a target="_blank" href="<?php echo $twitter_url; ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.svg" alt="Share on facebook" />
+            </a>
+
+            <a target="_blank" href="<?php echo $linkedin_url; ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.svg" alt="Share on facebook" />
+            </a>
+
+        </div>
+    </div>
+
 	<?php comments_template(); ?>
 </div>
 <script>
