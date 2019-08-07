@@ -1588,6 +1588,11 @@ ol.children {
     margin: 3px 1px;
     text-decoration: none;
     display: inline-block; }
+  .post .post-thumbnail {
+    margin-bottom: 30px;
+    width: 100%; }
+    .post .post-thumbnail img {
+      width: 100%; }
   .post > h2,
   .post > h3,
   .post > h4 {

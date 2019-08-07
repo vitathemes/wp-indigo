@@ -22,11 +22,10 @@ get_header(); ?>
             </span>
             </div>
 
-
-            <div class="post-tags">
-				<?php indigo_show_tags(); ?>
-            </div>
             <div class="single-content-area">
+                <div class="post-thumbnail">
+                    <?php the_post_thumbnail('full'); ?>
+                </div>
 				<?php the_content(); ?>
             </div>
 
