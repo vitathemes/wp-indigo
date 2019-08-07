@@ -190,13 +190,11 @@ function indigo_comment_form( $order ) {
 
 			'author' =>
 				'<p class="comment-form-author">' .
-				'<input placeholder="Your Name" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-				'" size="30"' . $aria_req . ' /></p>',
+				'<input placeholder="Your Name" id="author" name="author" type="text" size="30" /></p>',
 
 			'email' =>
 				'<p class="comment-form-email">'.
-				'<input placeholder="Your Email" id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) .
-				'" size="30"' . $aria_req . ' /></p>',
+				'<input placeholder="Your Email" id="email" name="email" type="text" value="" size="30" /></p>',
 
 			'url' => '',
 
