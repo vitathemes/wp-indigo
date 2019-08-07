@@ -6,7 +6,7 @@
  *
  */
 get_header(); ?>
-<div class="wrapper-normal">
+
     <div id="content-area" class="post">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><?php the_title( sprintf( '<h1 class="title">', esc_url( get_permalink() ) ), '</h1>' ); ?><?php
 			$avatar = get_avatar_url( $post->post_author );
@@ -65,7 +65,7 @@ get_header(); ?>
     </div>
 
 	<?php comments_template(); ?>
-</div>
+
 <script>
     function get_text(el) {
         ret = "";
