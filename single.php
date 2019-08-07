@@ -8,10 +8,20 @@
 get_header(); ?>
 <div class="wrapper-normal">
     <div id="content-area" class="post">
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><?php the_title( sprintf( '<h1 class="title">', esc_url( get_permalink() ) ), '</h1>' ); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><?php the_title( sprintf( '<h1 class="title">', esc_url( get_permalink() ) ), '</h1>' ); ?><?php
+			$avatar = get_avatar_url( $post->post_author );
+			?>
+            <div class="meta">
+                <div class="author-meta">
+                    <img class="author-avatar" src="<?php echo $avatar; ?>" alt="author avatar"/>
+                    <h4 class="author-name"><?php echo  get_the_author_meta( 'display_name' ); ?></h4>
+                </div>
+                <span class="separator spacer"></span>
             <span class="date">
-                    <time datetime="<?php echo get_the_date( get_option( 'date_format' ) ); ?>"><?php echo get_the_date(); ?></time> - <span id="reading-time" class="reading-time" title="Estimated read time">0 mins</span>
-				</span>
+                <time datetime="<?php echo get_the_date( get_option( 'date_format' , $post->post_author ) ); ?>"><?php echo get_the_date(); ?></time>
+            </span>
+            </div>
+
 
             <div class="post-tags">
 				<?php indigo_show_tags(); ?>
@@ -34,22 +44,22 @@ get_header(); ?>
             <span>Share this post:</span>
         </div>
         <div class="social-share-links">
-	        <?php
-	        $linkedin_url = "https://www.linkedin.com/shareArticle?mini=true&url=". get_permalink() ."&title=". get_the_title() ."&summary=". get_the_excerpt();
-	        $twitter_url = "https://twitter.com/intent/tweet?url=". get_permalink() ."&text=". get_the_excerpt() ."&hashtags=wp_sms_pro,veronalabs,wordpress";
-	        $facebook_url = "https://www.facebook.com/sharer.php?u=" . get_permalink();
-	        ?>
+			<?php
+			$linkedin_url = "https://www.linkedin.com/shareArticle?mini=true&url=" . get_permalink() . "&title=" . get_the_title() . "&summary=" . get_the_excerpt();
+			$twitter_url  = "https://twitter.com/intent/tweet?url=" . get_permalink() . "&text=" . get_the_excerpt() . "&hashtags=wp_sms_pro,veronalabs,wordpress";
+			$facebook_url = "https://www.facebook.com/sharer.php?u=" . get_permalink();
+			?>
 
             <a target="_blank" href="<?php echo $facebook_url; ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.svg" alt="Share on facebook" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.svg" alt="Share on facebook"/>
             </a>
 
             <a target="_blank" href="<?php echo $twitter_url; ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.svg" alt="Share on facebook" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.svg" alt="Share on facebook"/>
             </a>
 
             <a target="_blank" href="<?php echo $linkedin_url; ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.svg" alt="Share on facebook" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.svg" alt="Share on facebook"/>
             </a>
 
         </div>

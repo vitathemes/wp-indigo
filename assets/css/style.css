@@ -1537,7 +1537,33 @@ ol.children {
   margin-top: 125px; }
   .post > .title {
     text-align: center;
-    margin-bottom: 3rem; }
+    line-height: 55px;
+    margin: 0 0 20px 0; }
+  .post > .meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px; }
+    .post > .meta > .author-meta {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .post > .meta > .author-meta .author-avatar {
+        width: 32px;
+        height: 32px;
+        vertical-align: middle;
+        border-radius: 16px; }
+      .post > .meta > .author-meta .author-name {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+        color: #979A9A;
+        margin: 0 0 0 10px; }
+    .post > .meta > .date {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 21px;
+      color: #979A9A; }
   .post > .date,
   .post > .post-tags {
     color: #646666;
@@ -1623,6 +1649,15 @@ table tr td, table tr th {
     min-width: 12px;
     min-height: 14px;
     vertical-align: middle; }
+
+.separator {
+  width: 7px;
+  height: 7px;
+  background: #FFFFFF;
+  border: 1px solid #ECF0F1;
+  border-radius: 4px; }
+  .separator.spacer {
+    margin: 0 30px; }
 
 .tags {
   margin-top: 125px; }
