@@ -44,8 +44,8 @@ get_header(); ?>
         </div>
         <div class="social-share-links">
 			<?php
-			$linkedin_url = "https://www.linkedin.com/shareArticle?mini=true&url=" . get_permalink() . "&title=" . get_the_title() . "&summary=" . get_the_excerpt();
-			$twitter_url  = "https://twitter.com/intent/tweet?url=" . get_permalink() . "&text=" . get_the_excerpt() . "&hashtags=wp_sms_pro,veronalabs,wordpress";
+			$linkedin_url = "https://www.linkedin.com/shareArticle?mini=true&url=" . get_permalink() . "&title=" . get_the_title();
+			$twitter_url  = "https://twitter.com/intent/tweet?url=" . get_permalink() . "&title=" . get_the_title() ;
 			$facebook_url = "https://www.facebook.com/sharer.php?u=" . get_permalink();
 			?>
 
