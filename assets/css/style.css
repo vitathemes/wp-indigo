@@ -1075,7 +1075,7 @@ textarea {
 .nav {
   position: absolute;
   left: 0;
-  top: 25px;
+  top: 45px;
   display: flex;
   width: 100%; }
   .nav > .list {
@@ -1518,12 +1518,18 @@ ol.children {
   margin-right: 10px; }
 
 .page {
-  margin-top: 125px; }
+  margin-top: 195px; }
+  @media screen and (max-width: 567px) {
+    .page {
+      margin-top: 140px; } }
   .page h1 {
     text-align: center;
     margin-bottom: 6rem;
     color: #1A1A1A;
     font-size: 3.6rem; }
+    @media screen and (max-width: 567px) {
+      .page h1 {
+        font-size: 2.8rem; } }
   .page h2 {
     line-height: 37px;
     font-size: 2.4rem; }
@@ -1534,10 +1540,42 @@ ol.children {
   display: block; }
 
 .post {
-  margin-top: 125px; }
+  margin-top: 195px; }
+  @media screen and (max-width: 567px) {
+    .post {
+      margin-top: 140px; } }
   .post > .title {
     text-align: center;
-    margin-bottom: 3rem; }
+    line-height: 55px;
+    margin: 0 0 20px 0; }
+    @media screen and (max-width: 567px) {
+      .post > .title {
+        font-size: 2.8rem; } }
+  .post > .meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px; }
+    .post > .meta > .author-meta {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .post > .meta > .author-meta .author-avatar {
+        width: 32px;
+        height: 32px;
+        vertical-align: middle;
+        border-radius: 16px; }
+      .post > .meta > .author-meta .author-name {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+        color: #979A9A;
+        margin: 0 0 0 10px; }
+    .post > .meta > .date {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 21px;
+      color: #979A9A; }
   .post > .date,
   .post > .post-tags {
     color: #646666;
@@ -1562,6 +1600,11 @@ ol.children {
     margin: 3px 1px;
     text-decoration: none;
     display: inline-block; }
+  .post .post-thumbnail {
+    margin-bottom: 30px;
+    width: 100%; }
+    .post .post-thumbnail img {
+      width: 100%; }
   .post > h2,
   .post > h3,
   .post > h4 {
@@ -1623,6 +1666,15 @@ table tr td, table tr th {
     min-width: 12px;
     min-height: 14px;
     vertical-align: middle; }
+
+.separator {
+  width: 7px;
+  height: 7px;
+  background: #FFFFFF;
+  border: 1px solid #ECF0F1;
+  border-radius: 4px; }
+  .separator.spacer {
+    margin: 0 30px; }
 
 .tags {
   margin-top: 125px; }

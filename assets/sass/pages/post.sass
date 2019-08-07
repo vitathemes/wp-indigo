@@ -1,9 +1,47 @@
 .post
-    margin-top: 125px
+    margin-top: 195px
+
+    @media screen and (max-width: 567px)
+        margin-top: 140px
 
     > .title
         text-align: center
-        margin-bottom: 3rem
+        line-height: 55px
+        margin: 0 0 20px 0
+
+        @media screen and (max-width: 567px)
+            font-size: 2.8rem
+
+
+    > .meta
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 50px
+
+        > .author-meta
+            display: flex
+            justify-content: center
+            align-items: center
+
+            .author-avatar
+                width: 32px
+                height: 32px
+                vertical-align: middle
+                border-radius: 16px
+
+            .author-name
+                font-weight: 300
+                font-size: 14px
+                line-height: 21px
+                color: $gray
+                margin: 0 0 0 10px
+
+        > .date
+            font-weight: 300
+            font-size: 14px
+            line-height: 21px
+            color: $gray
 
     > .date,
     > .post-tags
@@ -31,6 +69,15 @@
         margin: 3px 1px
         text-decoration: none
         display: inline-block
+
+
+    .post-thumbnail
+        margin-bottom: 30px
+        width: 100%
+
+        img
+            width: 100%
+
 
     // general style
     > h2,
@@ -102,3 +149,13 @@ table
         min-width: 12px
         min-height: 14px
         vertical-align: middle
+
+.separator
+    width: 7px
+    height: 7px
+    background: #FFFFFF
+    border: 1px solid #ECF0F1
+    border-radius: 4px
+
+    &.spacer
+        margin: 0 30px

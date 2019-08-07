@@ -11,7 +11,6 @@
  *
  */
 get_header(); ?>
-<div class="wrapper-normal">
     <div class="page">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 
@@ -24,5 +23,4 @@ get_header(); ?>
 		endif;
 		?>
     </div>
-</div>
 <?php get_footer(); ?>
