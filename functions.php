@@ -66,8 +66,8 @@ function indigo_setup() {
 	 * @link https://codex.wordpress.org/Theme_Logo
 	 */
 	add_theme_support( 'custom-logo', array(
-		'height'      => 250,
-		'width'       => 250,
+		'height'      => 100,
+		'width'       => 100,
 		'flex-width'  => true,
 		'flex-height' => true,
 	) );
@@ -83,8 +83,8 @@ add_action( 'after_setup_theme', 'indigo_setup' );
 function indigo_scripts() {
 	wp_enqueue_style( 'indigo-style', get_template_directory_uri() . '/assets/css/style.css' );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	if ( is_singular() && comments_open() ) {
+		//wp_enqueue_script( 'comment-reply' );
 	}
 }
 
