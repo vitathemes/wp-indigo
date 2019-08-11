@@ -36,6 +36,7 @@
         display: block
         padding: 20px 0
         text-decoration: none
+        border-bottom: 0
 
     > .item > .url > .title
         margin: 0
@@ -44,6 +45,9 @@
         transition: all ease-in-out .2s
         line-height: 28px
         font-size: 18px
+
+    > .item:hover > .url
+        border-bottom: 0
 
     > .item:hover > .url > .title
         color: $delta

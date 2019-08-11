@@ -12,8 +12,8 @@ form
 
  input[type=submit]:hover , input[type=submit]:focus
   cursor: pointer
-  background: #000
-  border-color: #000
+  background: $delta
+  border-color: $delta
 
  input , textarea
   padding: 5px 10px
@@ -23,7 +23,16 @@ form
   box-sizing: border-box
 
   &:focus
-   border-color: #a0a0a0
+   background-color: #FBFBFF
+   border-color: $delta
+   color: $dark
+
+  &:active
+   border-color: $delta
+
+  &:invalid
+   background-color: #FFEFEF
+   border-color: #F25555
 
 
 textarea

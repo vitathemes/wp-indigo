@@ -181,7 +181,7 @@ function indigo_comment_form( $order ) {
 
 			'email' =>
 				'<p class="comment-form-email">' .
-				'<input placeholder="Your Email" id="email" name="email" type="text" value="" size="30" /></p>',
+				'<input placeholder="Your Email" id="email" name="email" type="email" value="" size="30" /></p>',
 
 			'url' => '',
 
