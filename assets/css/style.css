@@ -7,7 +7,7 @@ body, html {
 
 body {
   line-height: 1;
-  font: 18px "Roboto Mono", sans-serif;
+  font: 16px "Roboto Mono", sans-serif;
   color: #646666; }
 
 h1, h2, h3, h4 {
@@ -18,16 +18,16 @@ h1, h2, h3, h4 {
   font-weight: 400; }
 
 h1 {
-  font-size: 3rem;
+  font-size: 1.6rem;
   letter-spacing: -1px;
   color: #1A1A1A;
   font-weight: 700; }
 
 h2 {
-  font-size: 2.2rem; }
+  font-size: 2.0rem; }
 
 h3 {
-  font-size: 2rem; }
+  font-size: 1.8rem; }
 
 h4 {
   font-size: 1.6rem; }
@@ -44,7 +44,7 @@ a {
     color: #3F51B5; }
 
 p {
-  line-height: 1.8;
+  line-height: 1.6;
   color: #646666;
   font-weight: 300;
   margin-bottom: 20px;
@@ -311,7 +311,7 @@ dfn {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2em;
+  font-size: 2.6rem;
   margin: 0.67em 0; }
 
 /**
@@ -959,7 +959,7 @@ textarea {
   font-weight: 300;
   text-align: center;
   position: relative;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 28px; }
   .footer-main:before {
     display: block;
@@ -1008,6 +1008,9 @@ textarea {
   text-align: center;
   position: relative;
   z-index: 99; }
+  .header-home .custom-logo-link:hover {
+    text-decoration: none;
+    border: 0; }
   .header-home .selfie img {
     width: 100px;
     margin-bottom: 25px;
@@ -1021,11 +1024,11 @@ textarea {
   .header-home > .title-link {
     text-decoration: none; }
     .header-home > .title-link > .title {
-      font-size: 3.6rem;
+      font-size: 2.6rem;
       line-height: 55px;
       margin: 0 0 13px; }
   .header-home > .description {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 300;
     font-style: normal;
     color: #979A9A;
@@ -1091,7 +1094,7 @@ textarea {
     margin: 0 auto;
     padding: 0 13px 0; }
     .nav > .list > li > a {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       padding: 4px 8px;
       margin: 0 15px;
       color: #1A1A1A;
@@ -1114,7 +1117,7 @@ textarea {
     .nav-home > .list > li {
       margin: 0 18px; }
     .nav-home > .list > li > a {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       padding: 4px 8px;
       margin: 0;
       border-radius: 0;
@@ -1360,7 +1363,9 @@ form input[type=submit] {
   display: inline-block;
   width: auto;
   border-color: #1A1A1A;
-  transition: .1s; }
+  transition: .1s;
+  font-size: 1.6rem;
+  font-weight: 400; }
 
 form input[type=submit]:hover, form input[type=submit]:focus {
   cursor: pointer;
@@ -1372,7 +1377,8 @@ form input, form textarea {
   width: 100%;
   border-radius: 3px;
   border: 1px solid #ececec;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 1.3rem; }
   form input:focus, form textarea:focus {
     background-color: #FBFBFF;
     border-color: #3F51B5;
@@ -1502,7 +1508,7 @@ ol.children {
   font-weight: 500;
   transition: all ease-in-out .2s;
   line-height: 28px;
-  font-size: 18px; }
+  font-size: 16px; }
 
 .home > .list > .item:hover > .url,
 .blog > .list > .item:hover > .url,
@@ -1554,13 +1560,14 @@ ol.children {
     text-align: center;
     margin-bottom: 6rem;
     color: #1A1A1A;
-    font-size: 3.6rem; }
+    font-size: 2.6rem;
+    line-height: 3rem; }
     @media screen and (max-width: 567px) {
       .page h1.single-title {
-        font-size: 2.8rem; } }
+        font-size: 2rem; } }
   .page h2 {
     line-height: 37px;
-    font-size: 2.4rem; }
+    font-size: 2rem; }
 
 .about img {
   width: 50%;
@@ -1673,7 +1680,7 @@ table tr td, table tr th {
   margin: 50px 0; }
 
 .social-share-title {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 25px;
   color: #979A9A; }
 
