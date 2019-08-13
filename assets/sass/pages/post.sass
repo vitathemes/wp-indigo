@@ -108,7 +108,7 @@
 
 .single-content-area
     *
-        font-family: 'Merriweather', 'Overpass', sans-serif
+        font-family: $fontRoboto
     dl , dl * , ul * , ol *
         line-height: 32px
 
@@ -123,7 +123,7 @@ table
     margin: 50px 0
 
 .social-share-title
-    font-size: 16px
+    font-size: 14px
     line-height: 25px
     color: #979A9A
 
@@ -134,15 +134,15 @@ table
     a
         text-decoration: none
         margin-left: 25px
-        border-bottom: 1px solid transparent
         text-align: center
         padding: 0 2px 5px 2px
+        filter: brightness(0)
 
         &:first-child
             margin-left: 0
 
         &:hover
-            border-color: #C4C4C4
+            filter: brightness(1)
 
 
     img

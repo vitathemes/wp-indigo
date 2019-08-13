@@ -9,11 +9,13 @@ form
   width: auto
   border-color: #1A1A1A
   transition: .1s
+  font-size: 1.6rem
+  font-weight: 400
 
  input[type=submit]:hover , input[type=submit]:focus
   cursor: pointer
-  background: #000
-  border-color: #000
+  background: $delta
+  border-color: $delta
 
  input , textarea
   padding: 5px 10px
@@ -21,9 +23,19 @@ form
   border-radius: 3px
   border: 1px solid #ececec
   box-sizing: border-box
+  font-size: 1.3rem
 
   &:focus
-   border-color: #a0a0a0
+   background-color: #FBFBFF
+   border-color: $delta
+   color: $dark
+
+  &:active
+   border-color: $delta
+
+  &:invalid
+   background-color: #FFEFEF
+   border-color: #F25555
 
 
 textarea

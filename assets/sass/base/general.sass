@@ -5,37 +5,46 @@ body, html
 
 body
 	line-height: 1
-	font: 18px $fontOverpass
+	font: 16px $fontRoboto
 	color: $alpha
 
 h1, h2, h3, h4
-	font-family: $fontOverpass
+	font-family: $fontRoboto
 	color: $dark
 	-webkit-font-smoothing: antialiased
 	text-rendering: optimizeLegibility
 	font-weight: 400
 
 h1
-	font-size: 3rem
+	font-size: 1.6rem
 	letter-spacing: -1px
 	color: $dark
 	font-weight: 700
 
 h2
-	font-size: 2.2rem
+	font-size: 2.0rem
 
 h3
-	font-size: 2rem
+	font-size: 1.8rem
 
 h4
 	font-size: 1.6rem
 
 a
-	color: $delta
-	text-decoration: underline
+	color: $dark
+	text-decoration: none
+	border-bottom: 1px solid transparent
+	padding-bottom: 2px
+
+	&:hover
+		border-color: $delta
+		color: $delta
+
+	&:visited
+		color: $delta
 
 p
-	line-height: 1.8
+	line-height: 1.6
 	color: $alpha
 	font-weight: 300
 	margin-bottom: 20px

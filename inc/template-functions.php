@@ -34,29 +34,16 @@ function indigo_show_tags() {
 
 // Show Name Field
 function indigo_show_avatar() {
-	if ( get_theme_mod( 'avatar' ) != "" ) {
-		echo '<img class="selfie" src="' . get_theme_mod( 'avatar' ) . '" />';
+	if ( has_custom_logo() ) {
+		the_custom_logo();
 	} else {
-
-		echo '<img class="selfie" src="' . get_bloginfo( 'template_url' ) . '/assets/images/profile.jpg" />';
+		echo '<img src="' . get_bloginfo( 'template_url' ) . '/assets/images/profile.jpg" />';
 	}
 }
 
 
 // Show Name Field
-function indigo_show_name() {
-	echo get_theme_mod( 'name', 'John Doe' );
-}
-
-
-// Show Name Field
-function indigo_show_bio() {
-	echo get_theme_mod( 'bio', 'A Man who travels the world eating noodles' );
-}
-
-// Show Name Field
 function indigo_show_socials() {
-
 
 	if ( get_theme_mod( 'social-facebook' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-facebook' ) . '" href="' . get_theme_mod( 'social-facebook' ) . '" target="_blank">
@@ -193,8 +180,8 @@ function indigo_comment_form( $order ) {
 				'<input placeholder="Your Name" id="author" name="author" type="text" size="30" /></p>',
 
 			'email' =>
-				'<p class="comment-form-email">'.
-				'<input placeholder="Your Email" id="email" name="email" type="text" value="" size="30" /></p>',
+				'<p class="comment-form-email">' .
+				'<input placeholder="Your Email" id="email" name="email" type="email" value="" size="30" /></p>',
 
 			'url' => '',
 
@@ -208,7 +195,7 @@ function indigo_comment_form( $order ) {
 				'comment_notes_before' => false,
 				'label_submit'         => 'Submit',
 				'fields'               => $fields,
-				'comment_field' => '<p class="comment-form-comment"><textarea placeholder="Write your comment" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
+				'comment_field'        => '<p class="comment-form-comment"><textarea placeholder="Write your comment" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
 			)
 		);
 	}
@@ -238,3 +225,11 @@ function website_field_remove( $fields ) {
 
 	return $fields;
 }
+
+
+function xtreme_enqueue_comments_reply() {
+	if( get_option( 'thread_comments' ) )  {
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+add_action( 'comment_form_before', 'xtreme_enqueue_comments_reply' );

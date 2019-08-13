@@ -66,26 +66,4 @@ get_header(); ?>
 
 	<?php comments_template(); ?>
 
-<script>
-    function get_text(el) {
-        ret = "";
-        var length = el.childNodes.length;
-        for (var i = 0; i < length; i++) {
-            var node = el.childNodes[i];
-            if (node.nodeType != 8) {
-                ret += node.nodeType != 1 ? node.nodeValue : get_text(node);
-            }
-        }
-        return ret;
-    }
-
-    var words = get_text(document.getElementById('content-area'));
-    var count = words.split(' ').length;
-    var mins = (count * 0.4) / 60;
-    if (mins < 1) {
-        document.getElementById('reading-time').innerHTML = "<1 MIN";
-    } else {
-        document.getElementById('reading-time').innerHTML = Math.round(mins) + " MINS";
-    }
-</script>
 <?php get_footer(); ?>

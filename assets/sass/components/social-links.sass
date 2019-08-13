@@ -10,20 +10,21 @@
         width: 35px
 
         &:hover
+            border-bottom: 0
             > .icon
                 fill: $delta
 
-        &:hover:before
+        &:hover::before
             opacity: 1
             display: inline-block
             transform: translate3d(0,0,0)
             white-space: nowrap
 
-        &:before
+        &::before
             content: attr(data-title)
             display: none
             position: absolute
-            bottom: -34px
+            bottom: -32px
             left: -6px
             margin: 0 auto
             font-size: 13px

@@ -2,40 +2,6 @@
 add_action( 'customize_register', 'indigo_customizer_settings' );
 
 function indigo_customizer_settings( $wp_customize ) {
-	// Profile section
-	$wp_customize->add_section( 'profile-section', array(
-		'title'    => 'Profile',
-		'priority' => 30,
-	) );
-	$wp_customize->add_setting( 'name', array(
-		'default'   => 'John Dou',
-		'transport' => 'refresh',
-	) );
-	$wp_customize->add_setting( 'bio', array(
-		'default'   => 'John Dou bio goes here',
-		'transport' => 'refresh',
-	) );
-	$wp_customize->add_setting( 'avatar', array(
-		'default'   => get_template_directory_uri() . '/assets/images/profile.jpg',
-		'transport' => 'refresh',
-	) );
-	$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'profile_avatar', array(
-		'label'    => 'Avatar',
-		'section'  => 'profile-section',
-		'settings' => 'avatar',
-	) ) );
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'profile_name', array(
-		'label'    => 'Name',
-		'section'  => 'profile-section',
-		'settings' => 'name',
-	) ) );
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'profile_bio', array(
-		'label'    => 'Bio',
-		'type'     => 'textarea',
-		'section'  => 'profile-section',
-		'settings' => 'bio',
-	) ) );
-	// Profile section
 	// Social Networks section
 	$wp_customize->add_section( 'social-section', array(
 		'title'    => 'Social Networks',
