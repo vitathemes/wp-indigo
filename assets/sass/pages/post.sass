@@ -1,161 +1,170 @@
 .post
-    margin-top: 195px
+  margin-top: 225px
+
+  @media screen and (max-width: 567px)
+    margin-top: 140px
+
+  > .title
+    text-align: center
+    line-height: 30px
+    margin: 0 0 20px 0
 
     @media screen and (max-width: 567px)
-        margin-top: 140px
+      font-size: 2.8rem
 
-    > .title
-        text-align: center
-        line-height: 55px
-        margin: 0 0 20px 0
+  > .meta
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 50px
 
-        @media screen and (max-width: 567px)
-            font-size: 2.8rem
+    @media screen and (max-width: 567px)
+      flex-direction: column
 
 
-    > .meta
-        display: flex
-        justify-content: center
-        align-items: center
-        margin-bottom: 50px
+    > .author-meta
+      display: flex
+      justify-content: center
+      align-items: center
 
-        > .author-meta
-            display: flex
-            justify-content: center
-            align-items: center
+      .author-avatar
+        border-radius: 50%
+        position: relative
+        box-shadow: inset 0 0 10px #ECF0F1
 
-            .author-avatar
-                width: 32px
-                height: 32px
-                vertical-align: middle
-                border-radius: 16px
+      .author-avatar-img
+        width: 32px
+        height: 32px
+        vertical-align: middle
+        border-radius: 16px
+        position: relative
+        z-index: -2
 
-            .author-name
-                font-weight: 300
-                font-size: 14px
-                line-height: 21px
-                color: $gray
-                margin: 0 0 0 10px
-
-        > .date
-            font-weight: 300
-            font-size: 14px
-            line-height: 21px
-            color: $gray
-
-    > .date,
-    > .post-tags
-        color: $alpha
+      .author-name
         font-weight: 300
-        font-size: 1.4rem
-        text-transform: uppercase
-        text-align: center
-        display: block
-        margin-bottom: 6rem
-        letter-spacing: 1px
-        -webkit-font-smoothing: antialiased
-        text-rendering: optimizeLegibility
+        font-size: 14px
+        line-height: 21px
+        color: $gray
+        margin: 0 0 0 10px
 
     > .date
-        margin-bottom: 2rem
+      font-weight: 300
+      font-size: 14px
+      line-height: 21px
+      color: $gray
 
-    > .post-tags > a
-        padding: 2px 8px
-        border-radius: 3px
-        font-size: 1.1rem
-        background: $epsilon
-        color: $alpha
-        letter-spacing: 1px
-        margin: 3px 1px
-        text-decoration: none
-        display: inline-block
+  > .date,
+  > .post-tags
+    color: $alpha
+    font-weight: 300
+    font-size: 1.4rem
+    text-transform: uppercase
+    text-align: center
+    display: block
+    margin-bottom: 6rem
+    letter-spacing: 1px
+    -webkit-font-smoothing: antialiased
+    text-rendering: optimizeLegibility
 
+  > .date
+    margin-bottom: 2rem
 
-    .post-thumbnail
-        margin-bottom: 30px
-        width: 100%
+  > .post-tags > a
+    padding: 2px 8px
+    border-radius: 3px
+    font-size: 1.1rem
+    background: $epsilon
+    color: $alpha
+    letter-spacing: 1px
+    margin: 3px 1px
+    text-decoration: none
+    display: inline-block
 
-        img
-            width: 100%
-
-
-    // general style
-    > h2,
-    > h3,
-    > h4
-        margin-top: 40px
-
-        a
-            text-decoration: none
-
-    > .title-image
-        max-height: 120px
-        display: block
-        margin: 0 auto
-
-    > .blog-navigation
-        font-size: 1.4rem
-        display: block
-        width: auto
-        overflow: hidden
-        a
-            display: block
-            width: 50%
-            float: left
-            margin: 1em 0
-        .next
-            text-align: right
-
-.single-content-area
-    *
-        font-family: $fontRoboto
-    dl , dl * , ul * , ol *
-        line-height: 32px
-
-table
-    tr td, tr th
-        padding: 5px
-
-
-.social-share
-    display: flex
-    justify-content: space-between
-    margin: 50px 0
-
-.social-share-title
-    font-size: 14px
-    line-height: 25px
-    color: #979A9A
-
-.social-share-links
-    display: flex
-    align-items: center
-
-    a
-        text-decoration: none
-        margin-left: 25px
-        text-align: center
-        padding: 0 2px 5px 2px
-        filter: brightness(0)
-
-        &:first-child
-            margin-left: 0
-
-        &:hover
-            filter: brightness(1)
-
+  .post-thumbnail
+    margin-bottom: 30px
+    width: 100%
 
     img
-        min-width: 12px
-        min-height: 14px
-        vertical-align: middle
+      width: 100%
+
+  // general style
+  > h2,
+  > h3,
+  > h4
+    margin-top: 40px
+
+    a
+      text-decoration: none
+
+  > .title-image
+    max-height: 120px
+    display: block
+    margin: 0 auto
+
+  > .blog-navigation
+    font-size: 1.4rem
+    display: block
+    width: auto
+    overflow: hidden
+    a
+      display: block
+      width: 50%
+      float: left
+      margin: 1em 0
+    .next
+      text-align: right
+
+.single-content-area
+  *
+    font-family: $fontRoboto
+  dl, dl *, ul *, ol *
+    line-height: 32px
+
+table
+  tr td, tr th
+    padding: 5px
+
+.social-share
+  display: flex
+  justify-content: space-between
+  margin: 50px 0
+
+.social-share-title
+  font-size: 14px
+  line-height: 25px
+  color: #979A9A
+
+.social-share-links
+  display: flex
+  align-items: center
+
+  a
+    text-decoration: none
+    margin-left: 25px
+    text-align: center
+    padding: 0 2px 5px 2px
+    filter: brightness(0)
+
+    &:first-child
+      margin-left: 0
+
+    &:hover
+      filter: brightness(1)
+
+  img
+    min-width: 12px
+    min-height: 14px
+    vertical-align: middle
 
 .separator
-    width: 7px
-    height: 7px
-    background: #FFFFFF
-    border: 1px solid #ECF0F1
-    border-radius: 4px
+  width: 7px
+  height: 7px
+  background: #FFFFFF
+  border: 1px solid #ECF0F1
+  border-radius: 4px
 
-    &.spacer
-        margin: 0 30px
+  &.spacer
+    margin: 0 30px
+
+    @media screen and (max-width: 567px)
+      margin: 15px 0
