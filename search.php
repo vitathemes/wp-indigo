@@ -10,13 +10,6 @@ indigo_show_profile(); ?>
 
     <section class="blog search">
 
-        <h1>
-			<?php
-			/* translators: %s: search query. */
-			printf( esc_html__( 'Search Results for: %s', 'indigo' ), get_search_query() );
-			?>
-        </h1>
-
         <div class="list">
 			<?php if ( have_posts() ) : ?><?php
 				/* Start the Loop */

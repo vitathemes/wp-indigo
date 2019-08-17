@@ -1415,6 +1415,20 @@ input[type=checkbox] {
   .comment-form .form-submit {
     order: 4; }
 
+.search-form {
+  display: flex;
+  margin-top: 30px; }
+  .search-form .search-submit {
+    margin-left: 10px; }
+    .search-form .search-submit .search-field {
+      height: 100%; }
+  .search-form label {
+    display: flex;
+    flex-grow: 1;
+    align-items: center; }
+    .search-form label span {
+      white-space: nowrap; }
+
 .comments {
   list-style: none;
   padding: 0; }
