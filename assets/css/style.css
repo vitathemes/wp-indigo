@@ -8,7 +8,7 @@ body, html {
 body {
   line-height: 1;
   font: 16px "Roboto Mono", sans-serif;
-  color: #646666; }
+  color: #1A1A1A; }
 
 h1, h2, h3, h4 {
   font-family: "Roboto Mono", sans-serif;
@@ -45,7 +45,7 @@ a {
 
 p {
   line-height: 1.6;
-  color: #646666;
+  color: #1A1A1A;
   font-weight: 300;
   margin-bottom: 20px;
   letter-spacing: 0.4px;
@@ -62,7 +62,7 @@ ul li,
 ol li {
   line-height: 2.4rem;
   font-weight: 300;
-  color: #646666; }
+  color: #1A1A1A; }
 
 figure,
 img,
@@ -960,7 +960,7 @@ textarea {
   text-align: center;
   position: relative;
   font-size: 14px;
-  line-height: 28px; }
+  line-height: 16px; }
   .footer-main:before {
     display: block;
     content: " ";
@@ -992,13 +992,13 @@ textarea {
     line-height: 28px;
     font-size: 13px; }
     .footer-main > .extra > .link {
-      font-size: 14px;
+      font-size: 13px;
       color: #1A1A1A;
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: ease-in-out all .3s;
       padding-bottom: 1px;
-      line-height: 28px; }
+      line-height: 15px; }
       .footer-main > .extra > .link:hover {
         border-color: #979A9A; }
 
@@ -1019,19 +1019,18 @@ textarea {
     box-shadow: none;
     opacity: 1; }
     .header-home .selfie img:hover {
-      box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.18), 0 0px 12px 0 rgba(0, 0, 0, 0.15);
-      opacity: .8; }
+      opacity: .9; }
   .header-home > .title-link {
     text-decoration: none; }
     .header-home > .title-link > .title {
       font-size: 2.6rem;
-      line-height: 55px;
-      margin: 0 0 13px; }
+      line-height: 30px;
+      margin: 0 0 30px; }
   .header-home > .description {
     font-size: 1.6rem;
     font-weight: 300;
     font-style: normal;
-    color: #979A9A;
+    color: #666;
     width: 70%;
     margin: 0 auto 30px;
     line-height: 28px; }
@@ -1375,8 +1374,7 @@ form input[type=submit]:hover, form input[type=submit]:focus {
 form input, form textarea {
   padding: 5px 10px;
   width: 100%;
-  border-radius: 3px;
-  border: 1px solid #ececec;
+  border: 1px solid #C4C4C4;
   box-sizing: border-box;
   font-size: 1.3rem; }
   form input:focus, form textarea:focus {
@@ -1498,7 +1496,10 @@ ol.children {
   display: block;
   padding: 20px 0;
   text-decoration: none;
-  border-bottom: 0; }
+  border-bottom: 0;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-between; }
 
 .home > .list > .item > .url > .title,
 .blog > .list > .item > .url > .title,
@@ -1551,8 +1552,14 @@ ol.children {
   top: -4px;
   margin-right: 10px; }
 
+.blog .item-image {
+  width: 100%;
+  padding-top: 40px; }
+  .blog .item-image img {
+    width: 100%; }
+
 .page {
-  margin-top: 195px; }
+  margin-top: 225px; }
   @media screen and (max-width: 567px) {
     .page {
       margin-top: 140px; } }
@@ -1575,13 +1582,13 @@ ol.children {
   display: block; }
 
 .post {
-  margin-top: 195px; }
+  margin-top: 225px; }
   @media screen and (max-width: 567px) {
     .post {
       margin-top: 140px; } }
   .post > .title {
     text-align: center;
-    line-height: 55px;
+    line-height: 30px;
     margin: 0 0 20px 0; }
     @media screen and (max-width: 567px) {
       .post > .title {
@@ -1591,15 +1598,24 @@ ol.children {
     justify-content: center;
     align-items: center;
     margin-bottom: 50px; }
+    @media screen and (max-width: 567px) {
+      .post > .meta {
+        flex-direction: column; } }
     .post > .meta > .author-meta {
       display: flex;
       justify-content: center;
       align-items: center; }
       .post > .meta > .author-meta .author-avatar {
+        border-radius: 50%;
+        position: relative;
+        box-shadow: inset 0 0 10px #ECF0F1; }
+      .post > .meta > .author-meta .author-avatar-img {
         width: 32px;
         height: 32px;
         vertical-align: middle;
-        border-radius: 16px; }
+        border-radius: 16px;
+        position: relative;
+        z-index: -2; }
       .post > .meta > .author-meta .author-name {
         font-weight: 300;
         font-size: 14px;
@@ -1710,6 +1726,9 @@ table tr td, table tr th {
   border-radius: 4px; }
   .separator.spacer {
     margin: 0 30px; }
+    @media screen and (max-width: 567px) {
+      .separator.spacer {
+        margin: 15px 0; } }
 
 .tags {
   margin-top: 125px; }

@@ -13,7 +13,9 @@ get_header(); ?>
 			?>
             <div class="meta">
                 <div class="author-meta">
-                    <img class="author-avatar" src="<?php echo $avatar; ?>" alt="author avatar"/>
+                    <div class="author-avatar">
+                        <img class="author-avatar-img" src="<?php echo $avatar; ?>" alt="author avatar"/>
+                    </div>
                     <h4 class="author-name"><?php echo  get_the_author_meta( 'display_name' ); ?></h4>
                 </div>
                 <span class="separator spacer"></span>
