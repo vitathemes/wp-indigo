@@ -1,0 +1,8 @@
+{
+    "require": {
+        "aristath/kirki": "^3.0"
+    },
+    "autoload": {
+        "files": ["vendor/aristath/kirki/kirki.php"]
+    }
+}

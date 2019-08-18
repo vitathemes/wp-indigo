@@ -228,8 +228,117 @@ function website_field_remove( $fields ) {
 
 
 function xtreme_enqueue_comments_reply() {
-	if( get_option( 'thread_comments' ) )  {
+	if ( get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
 add_action( 'comment_form_before', 'xtreme_enqueue_comments_reply' );
+
+
+// Add config
+Kirki::add_config( 'indigo', array(
+	'option_type' => 'theme_mod'
+) );
+
+// Add panel
+Kirki::add_panel( 'theme_options', array(
+	'priority'    => 10,
+	'title'       => esc_html__( 'Theme Options', 'indigo' ),
+	'description' => esc_html__( 'My panel description', 'indigo' ),
+) );
+
+// Add sections
+Kirki::add_section( 'branding', array(
+	'title'    => esc_html__( 'Branding', 'indigo' ),
+	'panel'    => 'theme_options',
+	'priority' => 160,
+) );
+
+Kirki::add_section( 'typography', array(
+	'title'    => esc_html__( 'Typography', 'indigo' ),
+	'panel'    => 'theme_options',
+	'priority' => 160,
+) );
+
+// Add Branding fields
+
+// -- Branding Fields --
+Kirki::add_field( 'indigo', [
+	'type'      => 'background',
+	'settings'  => 'branding_background',
+	'label'     => esc_html__( 'Background', 'indigo' ),
+	'section'   => 'branding',
+	'default'   => [
+		'background-color'      => 'fff',
+		'background-image'      => '',
+		'background-repeat'     => 'repeat',
+		'background-position'   => 'center center',
+		'background-size'       => 'cover',
+		'background-attachment' => 'scroll',
+	],
+	'transport' => 'auto',
+	'output'    => [
+		[
+			'element' => 'body',
+		],
+	],
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'color',
+	'settings' => 'branding_primary_color',
+	'label'    => __( 'Primary Color', 'indigo' ),
+	'section'  => 'branding',
+	'default'  => '#3F51B5',
+] );
+
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'color',
+	'settings' => 'branding_secondary_color',
+	'label'    => __( 'Secondary Color', 'indigo' ),
+	'section'  => 'branding',
+	'default'  => '#A1A1A1',
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'color',
+	'settings' => 'branding_tertiary_color',
+	'label'    => __( 'Tertiary Color', 'indigo' ),
+	'section'  => 'branding',
+	'default'  => '#666666',
+] );
+
+
+// -- Typography Fields --
+
+Kirki::add_field( 'theme_config_id', [
+	'type'     => 'typography',
+	'settings' => 'typography_main',
+	'label'    => esc_html__( 'Main Typography', 'indigo' ),
+	'section'  => 'typography',
+	'default'  => [
+		'font-family'    => 'Roboto',
+		'variant'        => 'regular',
+		'font-size'      => '14px',
+		'line-height'    => '1.5',
+		'letter-spacing' => '0',
+		'color'          => '#333333',
+		'text-transform' => 'none',
+		'text-align'     => 'left',
+	],
+	'choices'  => [
+		'fonts' => [
+			'standard' => array( 'serif', 'sans-serif' ),
+		],
+		'variant' => array('regular','italic','700','700italic'),
+	],
+	'priority'  => 10,
+	'transport' => 'auto',
+	'output'    => [
+		[
+			'element' => 'body',
+		],
+	],
+] );

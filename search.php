@@ -10,13 +10,6 @@ indigo_show_profile(); ?>
 
     <section class="blog search">
 
-        <h1>
-			<?php
-			/* translators: %s: search query. */
-			printf( esc_html__( 'Search Results for: %s', 'indigo' ), get_search_query() );
-			?>
-        </h1>
-
         <div class="list">
 			<?php if ( have_posts() ) : ?><?php
 				/* Start the Loop */
@@ -28,7 +21,7 @@ indigo_show_profile(); ?>
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					 */
-					get_template_part( 'template-parts/content', get_post_type() );
+					get_template_part( 'template-parts/content', 'search' );
 
 				endwhile;
 
