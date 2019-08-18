@@ -255,8 +255,15 @@ Kirki::add_section( 'branding', array(
 	'priority' => 160,
 ) );
 
+Kirki::add_section( 'typography', array(
+	'title'    => esc_html__( 'Typography', 'indigo' ),
+	'panel'    => 'theme_options',
+	'priority' => 160,
+) );
+
 // Add Branding fields
 
+// -- Branding Fields --
 Kirki::add_field( 'indigo', [
 	'type'      => 'background',
 	'settings'  => 'branding_background',
@@ -270,6 +277,64 @@ Kirki::add_field( 'indigo', [
 		'background-size'       => 'cover',
 		'background-attachment' => 'scroll',
 	],
+	'transport' => 'auto',
+	'output'    => [
+		[
+			'element' => 'body',
+		],
+	],
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'color',
+	'settings' => 'branding_primary_color',
+	'label'    => __( 'Primary Color', 'indigo' ),
+	'section'  => 'branding',
+	'default'  => '#3F51B5',
+] );
+
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'color',
+	'settings' => 'branding_secondary_color',
+	'label'    => __( 'Secondary Color', 'indigo' ),
+	'section'  => 'branding',
+	'default'  => '#A1A1A1',
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'color',
+	'settings' => 'branding_tertiary_color',
+	'label'    => __( 'Tertiary Color', 'indigo' ),
+	'section'  => 'branding',
+	'default'  => '#666666',
+] );
+
+
+// -- Typography Fields --
+
+Kirki::add_field( 'theme_config_id', [
+	'type'     => 'typography',
+	'settings' => 'typography_main',
+	'label'    => esc_html__( 'Main Typography', 'indigo' ),
+	'section'  => 'typography',
+	'default'  => [
+		'font-family'    => 'Roboto',
+		'variant'        => 'regular',
+		'font-size'      => '14px',
+		'line-height'    => '1.5',
+		'letter-spacing' => '0',
+		'color'          => '#333333',
+		'text-transform' => 'none',
+		'text-align'     => 'left',
+	],
+	'choices'  => [
+		'fonts' => [
+			'standard' => array( 'serif', 'sans-serif' ),
+		],
+		'variant' => array('regular','italic','700','700italic'),
+	],
+	'priority'  => 10,
 	'transport' => 'auto',
 	'output'    => [
 		[
