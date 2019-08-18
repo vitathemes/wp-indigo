@@ -228,8 +228,52 @@ function website_field_remove( $fields ) {
 
 
 function xtreme_enqueue_comments_reply() {
-	if( get_option( 'thread_comments' ) )  {
+	if ( get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
 add_action( 'comment_form_before', 'xtreme_enqueue_comments_reply' );
+
+
+// Add config
+Kirki::add_config( 'indigo', array(
+	'option_type' => 'theme_mod'
+) );
+
+// Add panel
+Kirki::add_panel( 'theme_options', array(
+	'priority'    => 10,
+	'title'       => esc_html__( 'Theme Options', 'indigo' ),
+	'description' => esc_html__( 'My panel description', 'indigo' ),
+) );
+
+// Add sections
+Kirki::add_section( 'branding', array(
+	'title'    => esc_html__( 'Branding', 'indigo' ),
+	'panel'    => 'theme_options',
+	'priority' => 160,
+) );
+
+// Add Branding fields
+
+Kirki::add_field( 'indigo', [
+	'type'      => 'background',
+	'settings'  => 'branding_background',
+	'label'     => esc_html__( 'Background', 'indigo' ),
+	'section'   => 'branding',
+	'default'   => [
+		'background-color'      => 'fff',
+		'background-image'      => '',
+		'background-repeat'     => 'repeat',
+		'background-position'   => 'center center',
+		'background-size'       => 'cover',
+		'background-attachment' => 'scroll',
+	],
+	'transport' => 'auto',
+	'output'    => [
+		[
+			'element' => 'body',
+		],
+	],
+] );
