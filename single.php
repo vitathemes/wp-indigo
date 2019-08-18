@@ -21,32 +21,4 @@ get_header(); ?>
 	?>
 </div>
 
-<div class="social-share">
-    <div class="social-share-title">
-        <span>Share this post:</span>
-    </div>
-    <div class="social-share-links">
-		<?php
-		$linkedin_url = "https://www.linkedin.com/shareArticle?mini=true&url=" . get_permalink() . "&title=" . get_the_title();
-		$twitter_url  = "https://twitter.com/intent/tweet?url=" . get_permalink() . "&title=" . get_the_title();
-		$facebook_url = "https://www.facebook.com/sharer.php?u=" . get_permalink();
-		?>
-
-        <a target="_blank" href="<?php echo $facebook_url; ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.svg" alt="Share on facebook"/>
-        </a>
-
-        <a target="_blank" href="<?php echo $twitter_url; ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.svg" alt="Share on facebook"/>
-        </a>
-
-        <a target="_blank" href="<?php echo $linkedin_url; ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.svg" alt="Share on facebook"/>
-        </a>
-
-    </div>
-</div>
-
-<?php comments_template(); ?>
-
 <?php get_footer(); ?>

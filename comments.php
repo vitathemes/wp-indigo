@@ -73,7 +73,7 @@ $discussion = indigo_get_discussion_data();
 		if ( comments_open() ) {
 			indigo_comment_form( 'desc' );
 
-			echo "<h3>Comments</h3>";
+			echo "<h3>" . __( 'Comments', 'indigo' ) . "</h3>";
 		}
 
 		?>
