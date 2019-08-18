@@ -1,13 +1,20 @@
-<div class="item">
-    <?php if (has_post_thumbnail()): ?>
-    <div class="item-image">
-        <?php the_post_thumbnail('large'); ?>
+
+<div class="meta">
+    <div class="author-meta">
+        <div class="author-avatar">
+            <img class="author-avatar-img" src="<?php echo get_avatar_url( $post->post_author ); ?>" alt="author avatar"/>
+        </div>
+        <h4 class="author-name"><?php echo  get_the_author_meta( 'display_name' ); ?></h4>
     </div>
-    <?php endif; ?>
-    <a class="url" href="<?php the_permalink(); ?>">
-        <aside class="date">
-            <time datetime="<?php echo get_the_date( get_option( 'date_format' ) ); ?>"><?php echo get_the_date(); ?></time>
-        </aside>
-		<?php the_title( sprintf( '<h3 class="title">', esc_url( get_permalink() ) ), '</h3>' ); ?>
-    </a>
+    <span class="separator spacer"></span>
+    <span class="date">
+                <time datetime="<?php echo get_the_date( get_option( 'date_format' , $post->post_author ) ); ?>"><?php echo get_the_date(); ?></time>
+            </span>
+</div>
+
+<div class="single-content-area">
+    <div class="post-thumbnail">
+		<?php the_post_thumbnail('full'); ?>
+    </div>
+	<?php the_content(); ?>
 </div>

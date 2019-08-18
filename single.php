@@ -7,65 +7,46 @@
  */
 get_header(); ?>
 
-    <div id="content-area" class="post">
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><?php the_title( sprintf( '<h1 class="title">', esc_url( get_permalink() ) ), '</h1>' ); ?><?php
-			$avatar = get_avatar_url( $post->post_author );
-			?>
-            <div class="meta">
-                <div class="author-meta">
-                    <div class="author-avatar">
-                        <img class="author-avatar-img" src="<?php echo $avatar; ?>" alt="author avatar"/>
-                    </div>
-                    <h4 class="author-name"><?php echo  get_the_author_meta( 'display_name' ); ?></h4>
-                </div>
-                <span class="separator spacer"></span>
-            <span class="date">
-                <time datetime="<?php echo get_the_date( get_option( 'date_format' , $post->post_author ) ); ?>"><?php echo get_the_date(); ?></time>
-            </span>
-            </div>
+<div id="content-area" class="post">
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><?php the_title( sprintf( '<h1 class="title">', esc_url( get_permalink() ) ), '</h1>' ); ?><?php
 
-            <div class="single-content-area">
-                <div class="post-thumbnail">
-                    <?php the_post_thumbnail('full'); ?>
-                </div>
-				<?php the_content(); ?>
-            </div>
+		get_template_part( 'template-parts/content', get_post_type() );
 
-		<?php endwhile; ?>
+	endwhile; ?>
 
-			<?php
-		else :
-			get_template_part( 'template-parts/content', 'none' );
-		endif;
+		<?php
+	else :
+		get_template_part( 'template-parts/content', 'none' );
+	endif;
+	?>
+</div>
+
+<div class="social-share">
+    <div class="social-share-title">
+        <span>Share this post:</span>
+    </div>
+    <div class="social-share-links">
+		<?php
+		$linkedin_url = "https://www.linkedin.com/shareArticle?mini=true&url=" . get_permalink() . "&title=" . get_the_title();
+		$twitter_url  = "https://twitter.com/intent/tweet?url=" . get_permalink() . "&title=" . get_the_title();
+		$facebook_url = "https://www.facebook.com/sharer.php?u=" . get_permalink();
 		?>
+
+        <a target="_blank" href="<?php echo $facebook_url; ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.svg" alt="Share on facebook"/>
+        </a>
+
+        <a target="_blank" href="<?php echo $twitter_url; ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.svg" alt="Share on facebook"/>
+        </a>
+
+        <a target="_blank" href="<?php echo $linkedin_url; ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.svg" alt="Share on facebook"/>
+        </a>
+
     </div>
+</div>
 
-    <div class="social-share">
-        <div class="social-share-title">
-            <span>Share this post:</span>
-        </div>
-        <div class="social-share-links">
-			<?php
-			$linkedin_url = "https://www.linkedin.com/shareArticle?mini=true&url=" . get_permalink() . "&title=" . get_the_title();
-			$twitter_url  = "https://twitter.com/intent/tweet?url=" . get_permalink() . "&title=" . get_the_title() ;
-			$facebook_url = "https://www.facebook.com/sharer.php?u=" . get_permalink();
-			?>
-
-            <a target="_blank" href="<?php echo $facebook_url; ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.svg" alt="Share on facebook"/>
-            </a>
-
-            <a target="_blank" href="<?php echo $twitter_url; ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.svg" alt="Share on facebook"/>
-            </a>
-
-            <a target="_blank" href="<?php echo $linkedin_url; ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.svg" alt="Share on facebook"/>
-            </a>
-
-        </div>
-    </div>
-
-	<?php comments_template(); ?>
+<?php comments_template(); ?>
 
 <?php get_footer(); ?>
