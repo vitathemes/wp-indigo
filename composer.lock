@@ -1,0 +1,69 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "052510a5e7b87f0aeee19d8d73451f91",
+    "packages": [
+        {
+            "name": "aristath/kirki",
+            "version": "v3.0.44",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aristath/kirki.git",
+                "reference": "0ad720aad498ab984acdd6ef29dde426bd00058c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aristath/kirki/zipball/0ad720aad498ab984acdd6ef29dde426bd00058c",
+                "reference": "0ad720aad498ab984acdd6ef29dde426bd00058c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "require-dev": {
+                "codacy/coverage": "dev-master",
+                "composer/installers": "*",
+                "dealerdirect/phpcodesniffer-composer-installer": "*",
+                "php-coveralls/php-coveralls": "^2.0",
+                "phpcompatibility/phpcompatibility-wp": "*",
+                "phpunit/phpunit": "*",
+                "wp-coding-standards/wpcs": "*"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ".",
+                "core"
+            ],
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "aristath",
+                    "role": "Developer",
+                    "email": "aristath@gmail.com",
+                    "homepage": "https://aristath.github.io"
+                }
+            ],
+            "description": "Extending the WordPress customizer",
+            "homepage": "https://kirki.org",
+            "keywords": [
+                "customizer",
+                "wordpress"
+            ],
+            "time": "2019-06-24T21:32:08+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
