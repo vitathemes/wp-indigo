@@ -236,6 +236,9 @@ function xtreme_enqueue_comments_reply() {
 add_action( 'comment_form_before', 'xtreme_enqueue_comments_reply' );
 
 
+// Disable Kiriki help notice
+add_filter( 'kirki_telemetry', '__return_false' );
+
 // Add config
 Kirki::add_config( 'indigo', array(
 	'option_type' => 'theme_mod'
