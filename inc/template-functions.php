@@ -241,36 +241,29 @@ Kirki::add_config( 'indigo', array(
 	'option_type' => 'theme_mod'
 ) );
 
-// Add panel
-Kirki::add_panel( 'theme_options', array(
-	'priority'    => 10,
-	'title'       => esc_html__( 'Theme Options', 'indigo' ),
-	'description' => esc_html__( 'My panel description', 'indigo' ),
-) );
-
 // Add sections
 Kirki::add_section( 'branding', array(
 	'title'    => esc_html__( 'Branding', 'indigo' ),
-	'panel'    => 'theme_options',
-	'priority' => 160,
+	'panel'    => '',
+	'priority' => 3,
 ) );
 
 Kirki::add_section( 'typography', array(
 	'title'    => esc_html__( 'Typography', 'indigo' ),
-	'panel'    => 'theme_options',
-	'priority' => 160,
+	'panel'    => '',
+	'priority' => 4,
 ) );
 
 Kirki::add_section( 'elements', array(
 	'title'    => esc_html__( 'Elements', 'indigo' ),
-	'panel'    => 'theme_options',
-	'priority' => 160,
+	'panel'    => '',
+	'priority' => 5,
 ) );
 
 Kirki::add_section( 'socials', array(
 	'title'    => esc_html__( 'Social Networks', 'indigo' ),
-	'panel'    => 'theme_options',
-	'priority' => 160,
+	'panel'    => '',
+	'priority' => 6,
 ) );
 
 // Add Branding fields
@@ -324,6 +317,11 @@ Kirki::add_field( 'indigo', [
 
 
 // -- Typography Fields --
+
+
+// -- Typography Fields --
+
+
 
 Kirki::add_field( 'indigo', [
 	'type'     => 'toggle',
