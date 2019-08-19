@@ -261,6 +261,18 @@ Kirki::add_section( 'typography', array(
 	'priority' => 160,
 ) );
 
+Kirki::add_section( 'elements', array(
+	'title'    => esc_html__( 'Elements', 'indigo' ),
+	'panel'    => 'theme_options',
+	'priority' => 160,
+) );
+
+Kirki::add_section( 'socials', array(
+	'title'    => esc_html__( 'Social Networks', 'indigo' ),
+	'panel'    => 'theme_options',
+	'priority' => 160,
+) );
+
 // Add Branding fields
 
 // -- Branding Fields --
@@ -313,32 +325,189 @@ Kirki::add_field( 'indigo', [
 
 // -- Typography Fields --
 
-Kirki::add_field( 'theme_config_id', [
-	'type'     => 'typography',
-	'settings' => 'typography_main',
-	'label'    => esc_html__( 'Main Typography', 'indigo' ),
-	'section'  => 'typography',
-	'default'  => [
-		'font-family'    => 'Roboto',
-		'variant'        => 'regular',
-		'font-size'      => '14px',
-		'line-height'    => '1.5',
-		'letter-spacing' => '0',
-		'color'          => '#333333',
-		'text-transform' => 'none',
-		'text-align'     => 'left',
+Kirki::add_field( 'indigo', [
+	'type'     => 'toggle',
+	'settings' => 'show_share_icons',
+	'label'    => esc_html__( 'Show Share Icons', 'indigo' ),
+	'section'  => 'elements',
+	'default'  => '1',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'toggle',
+	'settings' => 'show_post_thumbnail',
+	'label'    => esc_html__( 'Show Post Thumbnail', 'indigo' ),
+	'section'  => 'elements',
+	'default'  => '1',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'toggle',
+	'settings' => 'show_profile_section',
+	'label'    => esc_html__( 'show_profile_section', 'indigo' ),
+	'description'    => esc_html__( 'Show profile section in pages: About/Blog/Home', 'indigo' ),
+	'section'  => 'elements',
+	'default'  => '1',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'text',
+	'settings' => 'copyright_text',
+	'label'    => esc_html__( 'Copyright Text', 'indigo' ),
+	'section'  => 'elements',
+	'priority' => 10,
+] );
+
+
+Kirki::add_field( 'indigo', [
+	'type'        => 'code',
+	'settings'    => 'profile_animation',
+	'label'       => esc_html__( 'Profile Animation', 'indigo' ),
+	'description' => esc_html__( 'Animation for profile section.', 'indigo' ),
+	'section'     => 'elements',
+	'default'     => '',
+	'choices'     => [
+		'language' => 'css',
 	],
-	'choices'  => [
-		'fonts' => [
-			'standard' => array( 'serif', 'sans-serif' ),
-		],
-		'variant' => array('regular','italic','700','700italic'),
-	],
-	'priority'  => 10,
-	'transport' => 'auto',
-	'output'    => [
-		[
-			'element' => 'body',
-		],
-	],
+] );
+
+
+// Social Networks Fields
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-mail',
+	'label'    => __( 'Email', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-facebook',
+	'label'    => __( 'Facebook', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-twitter',
+	'label'    => __( 'Twitter', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-instagram',
+	'label'    => __( 'Instagram', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-pinterest',
+	'label'    => __( 'Pinterest', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-linkedin',
+	'label'    => __( 'Linkedin', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-youtube',
+	'label'    => __( 'Youtube', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-spotify',
+	'label'    => __( 'Spotify', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-github',
+	'label'    => __( 'Github', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-gitlab',
+	'label'    => __( 'Gitlab', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-lastfm',
+	'label'    => __( 'Lastfm', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-stackoverflow',
+	'label'    => __( 'Stackoverflow', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-quora',
+	'label'    => __( 'Quora', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-reddit',
+	'label'    => __( 'Reddit', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-medium',
+	'label'    => __( 'Medium', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-vimeo',
+	'label'    => __( 'Vimeo', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'indigo', [
+	'type'     => 'link',
+	'settings' => 'social-lanyrd',
+	'label'    => __( 'Lanyrd', 'indigo' ),
+	'section'  => 'socials',
+	'priority' => 10,
 ] );
