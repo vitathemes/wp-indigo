@@ -1,5 +1,9 @@
 <?php
 
+// Disable Kiriki help notice
+add_filter( 'kirki_telemetry', '__return_false' );
+
+
 // Add config
 Kirki::add_config( 'indigo', array(
 	'option_type' => 'theme_mod'
@@ -276,7 +280,7 @@ Kirki::add_field( 'indigo', [
 	'label'     => esc_html__( 'Main Typography', 'indigo' ),
 	'section'   => 'typography',
 	'default'   => [
-		'font-family' => 'Roboto',
+		'font-family' => 'Roboto Mono',
 		'font-size'   => '16px',
 		'color'       => '#a1a1a1',
 	],
