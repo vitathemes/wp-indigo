@@ -93,10 +93,6 @@ add_action( 'wp_enqueue_scripts', 'indigo_scripts' );
 /**
  * Customizer additions.
  */
-
-// Disable Kiriki help notice
-update_option('kirki_telemetry_no_consent', true);
-
 require get_template_directory() . '/vendor/autoload.php';
 
 require get_template_directory() . '/inc/customizer.php';

@@ -2,50 +2,46 @@
 html {
   position: relative; }
 
-body, html {
-  font-size: 62.5%; }
-
-body {
-  line-height: 1;
-  font: 16px "Roboto Mono", sans-serif;
-  color: #1A1A1A; }
-
 h1, h2, h3, h4 {
-  font-family: "Roboto Mono", sans-serif;
-  color: #1A1A1A;
+  color: var(--secondary-color);
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  font-weight: 400; }
+  text-rendering: optimizeLegibility; }
 
 h1 {
-  font-size: 1.6rem;
+  font-size: 1.65em;
   letter-spacing: -1px;
-  color: #1A1A1A;
+  color: var(--secondary-color);
   font-weight: 700; }
 
 h2 {
-  font-size: 2.0rem; }
+  font-size: 1.25em; }
 
 h3 {
-  font-size: 1.8rem; }
+  font-size: 1.15em; }
 
 h4 {
-  font-size: 1.6rem; }
+  font-size: 1em; }
+
+h5 {
+  font-size: 0.93em; }
+
+h6 {
+  font-size: 0.85em; }
 
 a {
-  color: #1A1A1A;
+  color: var(--secondary-color);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   padding-bottom: 2px; }
   a:hover {
-    border-color: #3F51B5;
-    color: #3F51B5; }
+    border-color: var(--primary-color);
+    color: var(--primary-color); }
   a:visited {
-    color: #3F51B5; }
+    color: var(--primary-color); }
 
 p {
   line-height: 1.6;
-  color: #1A1A1A;
+  color: var(--secondary-color);
   font-weight: 300;
   margin-bottom: 20px;
   letter-spacing: 0.4px;
@@ -62,7 +58,7 @@ ul li,
 ol li {
   line-height: 2.4rem;
   font-weight: 300;
-  color: #1A1A1A; }
+  color: var(--secondary-color); }
 
 figure,
 img,
@@ -311,7 +307,7 @@ dfn {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2.6rem;
+  font-size: 1.6rem;
   margin: 0.67em 0; }
 
 /**
@@ -895,7 +891,6 @@ textarea {
     display: inline-block; }
   .author > .toright > .name {
     font-size: 1.5rem;
-    font-family: "Roboto Mono", sans-serif;
     font-weight: 500;
     margin: 6px 0 0; }
     @media only screen and (max-width: 400px) {
@@ -907,7 +902,6 @@ textarea {
         width: 100%;
         display: block; } }
   .author > .toright > .bio {
-    font-family: "Roboto Mono", sans-serif;
     font-weight: 300;
     color: #979A9A;
     font-size: 1.3rem;
@@ -959,7 +953,7 @@ textarea {
   font-weight: 300;
   text-align: center;
   position: relative;
-  font-size: 14px;
+  font-size: .85em;
   line-height: 16px; }
   .footer-main:before {
     display: block;
@@ -985,15 +979,15 @@ textarea {
       display: inherit;
       margin: 0; }
       .footer-main > .link > .icon:hover {
-        fill: #3F51B5 !important; }
+        fill: var(--primary-color) !important; }
   .footer-main > .extra {
-    color: #1A1A1A;
+    color: var(--secondary-color);
     margin-top: 10px;
     line-height: 28px;
-    font-size: 13px; }
+    font-size: 0.96em; }
     .footer-main > .extra > .link {
-      font-size: 13px;
-      color: #1A1A1A;
+      font-size: 0.96em;
+      color: var(--secondary-color);
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: ease-in-out all .3s;
@@ -1011,23 +1005,21 @@ textarea {
   .header-home .custom-logo-link:hover {
     text-decoration: none;
     border: 0; }
+  .header-home .has-animation:hover img {
+    opacity: .9; }
   .header-home .selfie img {
     width: 100px;
     margin-bottom: 25px;
     border-radius: 100%;
-    transition: all .2s;
     box-shadow: none;
     opacity: 1; }
-    .header-home .selfie img:hover {
-      opacity: .9; }
   .header-home > .title-link {
     text-decoration: none; }
     .header-home > .title-link > .title {
-      font-size: 2.6rem;
       line-height: 30px;
       margin: 0 0 30px; }
   .header-home > .description {
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: 300;
     font-style: normal;
     color: #666;
@@ -1073,15 +1065,15 @@ textarea {
         display: block;
         text-decoration: none;
         padding: 5px;
-        color: #1A1A1A; }
+        color: var(--secondary-color); }
   .nav > .list > li > a,
   .nav-home > .list > li > a {
     display: inline-block;
     font-weight: 300;
-    font-size: 1.4rem;
+    font-size: 1rem;
     padding: 20px 10px;
     text-decoration: none;
-    color: #1A1A1A; }
+    color: var(--secondary-color); }
 
 .nav {
   position: absolute;
@@ -1093,19 +1085,19 @@ textarea {
     margin: 0 auto;
     padding: 0 13px 0; }
     .nav > .list > li > a {
-      font-size: 1.6rem;
+      font-size: 1rem;
       padding: 4px 8px;
       margin: 0 15px;
-      color: #1A1A1A;
+      color: var(--secondary-color);
       font-weight: 400;
       line-height: 19px;
       transition: .2s;
       border: 1px solid transparent; }
       .nav > .list > li > a:hover {
-        border-color: #3F51B5; }
+        border-color: var(--primary-color); }
     .nav > .list > li.current-menu-item > a {
-      border: 2px solid #3F51B5;
-      background-color: #3F51B5;
+      border: 2px solid var(--primary-color);
+      background-color: var(--primary-color);
       color: #fff; }
 
 .nav-home {
@@ -1116,17 +1108,17 @@ textarea {
     .nav-home > .list > li {
       margin: 0 18px; }
     .nav-home > .list > li > a {
-      font-size: 1.6rem;
+      font-size: 1rem;
       padding: 4px 8px;
       margin: 0;
       border-radius: 0;
       transition: all .2s ease-in-out;
-      color: #1A1A1A;
+      color: var(--secondary-color);
       font-weight: 400;
       line-height: 19px;
       border: 1px solid transparent; }
       .nav-home > .list > li > a:hover {
-        border-color: #3F51B5; }
+        border-color: var(--primary-color); }
 
 .evidence {
   background-image: linear-gradient(to bottom, rgba(39, 243, 106, 0.15), rgba(39, 243, 106, 0.15));
@@ -1194,9 +1186,9 @@ textarea {
   text-align: center; }
   .pagination .nav-links > .page-numbers {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 0.93em;
     line-height: 21px;
-    color: #1A1A1A;
+    color: var(--secondary-color);
     text-decoration: none;
     margin: 0 5px;
     font-weight: 300;
@@ -1204,7 +1196,7 @@ textarea {
   .pagination .nav-links > .prev,
   .pagination .nav-links > .next {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 0.93em;
     position: relative;
     top: 1px; }
   .pagination .nav-links > .hidden {
@@ -1296,7 +1288,7 @@ textarea {
     .social-links > .link:hover {
       border-bottom: 0; }
       .social-links > .link:hover > .icon {
-        fill: #3F51B5; }
+        fill: var(--primary-color); }
     .social-links > .link:hover::before {
       opacity: 1;
       display: inline-block;
@@ -1311,7 +1303,7 @@ textarea {
       margin: 0 auto;
       font-size: 13px;
       padding: 3px 10px;
-      background: #1A1A1A;
+      background: var(--secondary-color);
       color: #fff;
       border-radius: 2px;
       height: 22px;
@@ -1329,7 +1321,7 @@ textarea {
       height: 0;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
-      border-bottom: 6px solid #1A1A1A;
+      border-bottom: 6px solid var(--secondary-color);
       opacity: 0;
       transition: opacity 150ms linear, transform 150ms linear, -webkit-transform 150ms linear;
       transform: translate3d(0, -8px, 0);
@@ -1363,26 +1355,26 @@ form input[type=submit] {
   width: auto;
   border-color: #1A1A1A;
   transition: .1s;
-  font-size: 1.6rem;
+  font-size: 1em;
   font-weight: 400; }
 
 form input[type=submit]:hover, form input[type=submit]:focus {
   cursor: pointer;
-  background: #3F51B5;
-  border-color: #3F51B5; }
+  background: var(--primary-color);
+  border-color: var(--primary-color); }
 
 form input, form textarea {
   padding: 5px 10px;
   width: 100%;
   border: 1px solid #C4C4C4;
   box-sizing: border-box;
-  font-size: 1.3rem; }
+  font-size: 0.813em; }
   form input:focus, form textarea:focus {
     background-color: #FBFBFF;
-    border-color: #3F51B5;
-    color: #1A1A1A; }
+    border-color: var(--primary-color);
+    color: var(--secondary-color); }
   form input:active, form textarea:active {
-    border-color: #3F51B5; }
+    border-color: var(--primary-color); }
   form input:invalid, form textarea:invalid {
     background-color: #FFEFEF;
     border-color: #F25555; }
@@ -1443,14 +1435,14 @@ input[type=checkbox] {
     border-top: 1px solid #d4d4d4;
     padding: 20px 10px;
     margin: 5px 0; }
-    .comments .comment .comment-metadata * {
-      font-size: 1.4rem;
+    .comments .comment .comment-metadata a * {
+      font-size: 0.813em;
       text-decoration: none;
       color: #888888; }
     .comments .comment:last-child {
       margin-bottom: 10px; }
     .comments .comment .comment-author {
-      font-size: 1.2em;
+      font-size: 1em;
       margin-top: 0;
       margin-bottom: 5px; }
 
@@ -1533,7 +1525,7 @@ ol.children {
 .home > .list > .item:hover > .url > .title,
 .blog > .list > .item:hover > .url > .title,
 .projects > .list > .item:hover > .url > .title {
-  color: #3F51B5; }
+  color: var(--primary-color); }
 
 .home > .list aside,
 .blog > .list aside,
@@ -1579,9 +1571,9 @@ ol.children {
       margin-top: 140px; } }
   .page h1.single-title {
     text-align: center;
-    margin-bottom: 6rem;
-    color: #1A1A1A;
-    font-size: 2.6rem;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+    font-size: 1.6rem;
     line-height: 3rem; }
     @media screen and (max-width: 567px) {
       .page h1.single-title {
@@ -1695,9 +1687,6 @@ ol.children {
     .post > .blog-navigation .next {
       text-align: right; }
 
-.single-content-area * {
-  font-family: "Roboto Mono", sans-serif; }
-
 .single-content-area dl, .single-content-area dl *, .single-content-area ul *, .single-content-area ol * {
   line-height: 32px; }
 
@@ -1710,9 +1699,12 @@ table tr td, table tr th {
   margin: 50px 0; }
 
 .social-share-title {
-  font-size: 14px;
+  font-size: 0.93em;
   line-height: 25px;
-  color: #979A9A; }
+  color: #979A9A;
+  font-family: inherit; }
+  .social-share-title span {
+    font-family: inherit; }
 
 .social-share-links {
   display: flex;
@@ -1803,7 +1795,7 @@ table tr td, table tr th {
     transition: all ease-in-out .2s;
     font-size: 1.6rem; }
   .tag-list > .list > .item:hover > .url > .title {
-    color: #3F51B5; }
+    color: var(--primary-color); }
   .tag-list > .list aside {
     position: relative;
     top: 2px;

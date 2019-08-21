@@ -68,7 +68,7 @@ Kirki::add_field( 'indigo', [
 	'settings' => 'branding_secondary_color',
 	'label'    => __( 'Secondary Color', 'indigo' ),
 	'section'  => 'branding',
-	'default'  => '#A1A1A1',
+	'default'  => '#1A1A1A',
 ] );
 
 Kirki::add_field( 'indigo', [
@@ -84,7 +84,6 @@ Kirki::add_field( 'indigo', [
 
 
 // -- Typography Fields --
-
 
 
 Kirki::add_field( 'indigo', [
@@ -106,13 +105,13 @@ Kirki::add_field( 'indigo', [
 ] );
 
 Kirki::add_field( 'indigo', [
-	'type'     => 'toggle',
-	'settings' => 'show_profile_section',
-	'label'    => esc_html__( 'show_profile_section', 'indigo' ),
-	'description'    => esc_html__( 'Show profile section in pages: About/Blog/Home', 'indigo' ),
-	'section'  => 'elements',
-	'default'  => '1',
-	'priority' => 10,
+	'type'        => 'toggle',
+	'settings'    => 'show_profile_section',
+	'label'       => esc_html__( 'Show Profile Section', 'indigo' ),
+	'description' => esc_html__( 'Show profile section in pages: About/Blog/Home', 'indigo' ),
+	'section'     => 'elements',
+	'default'     => '1',
+	'priority'    => 10,
 ] );
 
 Kirki::add_field( 'indigo', [
@@ -125,15 +124,12 @@ Kirki::add_field( 'indigo', [
 
 
 Kirki::add_field( 'indigo', [
-	'type'        => 'code',
+	'type'        => 'toggle',
 	'settings'    => 'profile_animation',
 	'label'       => esc_html__( 'Profile Animation', 'indigo' ),
 	'description' => esc_html__( 'Animation for profile section.', 'indigo' ),
 	'section'     => 'elements',
-	'default'     => '',
-	'choices'     => [
-		'language' => 'css',
-	],
+	'priority'    => 9,
 ] );
 
 
@@ -275,25 +271,20 @@ Kirki::add_field( 'indigo', [
 ] );
 
 Kirki::add_field( 'indigo', [
-	'type'        => 'typography',
-	'settings'    => 'typography',
-	'label'       => esc_html__( 'Control Label', 'indigo' ),
-	'section'     => 'typography',
-	'default'     => [
-		'font-family'    => 'Roboto',
-		'variant'        => 'regular',
-		'font-size'      => '14px',
-		'line-height'    => '1.5',
-		'letter-spacing' => '0',
-		'color'          => '#333333',
-		'text-transform' => 'none',
-		'text-align'     => 'left',
+	'type'      => 'typography',
+	'settings'  => 'main_typography',
+	'label'     => esc_html__( 'Main Typography', 'indigo' ),
+	'section'   => 'typography',
+	'default'   => [
+		'font-family' => 'Roboto',
+		'font-size'   => '16px',
+		'color'       => '#a1a1a1',
 	],
-	'priority'    => 10,
-	'transport'   => 'auto',
-	'output'      => [
-		[
-			'element' => 'body',
-		],
-	],
+	'priority'  => 10,
+	'transport' => 'auto',
+	'output'    => array(
+		array(
+			'element' => ':root',
+		),
+	),
 ] );
