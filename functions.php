@@ -93,7 +93,6 @@ add_action( 'wp_enqueue_scripts', 'indigo_scripts' );
 /**
  * Customizer additions.
  */
-
 require get_template_directory() . '/vendor/autoload.php';
 
 require get_template_directory() . '/inc/customizer.php';

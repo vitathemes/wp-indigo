@@ -1,52 +1,49 @@
 html
 	position: relative
 
-body, html
-	font-size: 62.5%
-
-body
-	line-height: 1
-	font: 16px $fontRoboto
-	color: $dark
-
 h1, h2, h3, h4
-	font-family: $fontRoboto
-	color: $dark
+
+	color: var(--secondary-color)
 	-webkit-font-smoothing: antialiased
 	text-rendering: optimizeLegibility
-	font-weight: 400
 
 h1
-	font-size: 1.6rem
+	font-size: 1.65em
 	letter-spacing: -1px
-	color: $dark
+	color: var(--secondary-color)
 	font-weight: 700
 
 h2
-	font-size: 2.0rem
+	font-size: 1.25em
 
 h3
-	font-size: 1.8rem
+	font-size: 1.15em
 
 h4
-	font-size: 1.6rem
+	font-size: 1em
+
+h5
+	font-size: 0.93em
+
+h6
+	font-size: 0.85em
 
 a
-	color: $dark
+	color: var(--secondary-color)
 	text-decoration: none
 	border-bottom: 1px solid transparent
 	padding-bottom: 2px
 
 	&:hover
-		border-color: $delta
-		color: $delta
+		border-color: var(--primary-color)
+		color: var(--primary-color)
 
 	&:visited
-		color: $delta
+		color: var(--primary-color)
 
 p
 	line-height: 1.6
-	color: $dark
+	color: var(--secondary-color)
 	font-weight: 300
 	margin-bottom: 20px
 	letter-spacing: 0.4px
@@ -64,7 +61,7 @@ ol
 	li
 		line-height: 2.4rem
 		font-weight: 300
-		color: $dark
+		color: var(--secondary-color)
 
 figure,
 img,

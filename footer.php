@@ -19,8 +19,16 @@
     </a>
 
     <p class="extra">
+        <?php
+        if (get_theme_mod('copyright_text')):
+            echo get_theme_mod('copyright_text');
+        else:
+        ?>
         <a target="_blank" class="link" href="https://github.com/veronalabs/wp-indigo">WP-Indigo theme</a> by
         <a target="_blank" title="WordPress Solutions to Meet Your Needs and Help You Grow" class="link" href="https://veronalabs.com/">VeronaLabs</a>
+        <?php
+        endif;
+        ?>
     </p>
 </footer>
 
