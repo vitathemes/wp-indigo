@@ -11,6 +11,37 @@
             --primary-color: <?php echo get_theme_mod('branding_primary_color' , '#3F51B5');?>;
             --secondary-color: <?php echo get_theme_mod('branding_secondary_color' , '#1A1A1A');?>;
             --tertiary-color: <?php echo get_theme_mod('branding_tertiary_color' , '#666666');?>;
+
+        <?php
+			$text_typography = get_theme_mod('text_typography');
+			$heading_typography = get_theme_mod('headings_typography');
+
+			if ($heading_typography <= 0) {
+				$heading_typography = array(
+				        'font-family' => "Roboto Mono",
+                        'font-size'=> "26px",
+                         'variant' => '700',
+                         'line-height' => '31px',
+                         );
+			}
+
+			if ($text_typography <= 0) {
+				$text_typography = array(
+				        'font-family' => "Roboto Mono",
+                        'font-size'=> "16px",
+                         'variant' => 'regular',
+                         'line-height' => '28px',
+                         );
+			}
+
+		?>  --heading-typography-font-size: <?php echo $heading_typography['font-size'];?>;
+            --heading-typography-font-family: <?php echo $heading_typography['font-family']; ?>;
+            --heading-typography-line-height: <?php echo $heading_typography['line-height']; ?>;
+            --heading-typography-variant: <?php echo $heading_typography['variant']; ?>;
+            --text-typography-font-size: <?php echo $text_typography['font-size']?>;
+            --text-typography-font-family: <?php echo $text_typography['font-family'];?>;
+            --text-typography-line-height: <?php echo $text_typography['line-height'];?>;
+            --text-typography-variant: <?php echo $text_typography['variant'];?>;
         }
     </style>
 </head>

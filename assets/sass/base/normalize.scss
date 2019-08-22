@@ -6,7 +6,6 @@
  */
 
 html {
-  font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -150,7 +149,7 @@ dfn {
  */
 
 h1 {
-  font-size: 1.6rem;
+  font-size: var(--heading-typography-font-size);
   margin: 0.67em 0;
 }
 
