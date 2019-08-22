@@ -13,7 +13,7 @@
 
 <div class="single-content-area">
 	<?php
-	if ( get_theme_mod( 'show_post_thumbnail' ) ):
+	if ( get_theme_mod( 'show_post_thumbnail' , true ) ):
 	?>
     <div class="post-thumbnail">
 		<?php the_post_thumbnail( 'full' ); ?>
@@ -25,7 +25,7 @@
 </div>
 
 <?php
-if ( get_theme_mod( 'show_share_icons' ) ):
+if ( get_theme_mod( 'show_share_icons' , true ) ):
     ?>
     <div class="social-share">
         <div class="social-share-title">

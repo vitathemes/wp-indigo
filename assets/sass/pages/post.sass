@@ -42,14 +42,14 @@
 
       .author-name
         font-weight: 300
-        font-size: 14px
+        font-size: calc(var(--text-typography-font-size) - 2px)
         line-height: 21px
         color: $gray
         margin: 0 0 0 10px
 
     > .date
       font-weight: 300
-      font-size: 14px
+      font-size: calc(var(--text-typography-font-size) - 2px)
       line-height: 21px
       color: $gray
 
@@ -130,10 +130,11 @@ table
   margin: 50px 0
 
 .social-share-title
-  font-size: 0.93em
+  font-size: calc(var(--text-typography-font-size) - 2px)
   line-height: 25px
   color: #979A9A
   font-family: inherit
+  font-weight: 400
 
   span
     font-family: inherit

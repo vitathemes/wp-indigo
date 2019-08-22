@@ -71,7 +71,7 @@ Kirki::add_field( 'indigo', [
 	'type'     => 'color',
 	'settings' => 'branding_secondary_color',
 	'label'    => __( 'Secondary Color', 'indigo' ),
-	'section'  => 'branding',
+	'section'  => 'typography',
 	'default'  => '#1A1A1A',
 ] );
 
@@ -79,15 +79,9 @@ Kirki::add_field( 'indigo', [
 	'type'     => 'color',
 	'settings' => 'branding_tertiary_color',
 	'label'    => __( 'Tertiary Color', 'indigo' ),
-	'section'  => 'branding',
+	'section'  => 'typography',
 	'default'  => '#666666',
 ] );
-
-
-// -- Typography Fields --
-
-
-// -- Typography Fields --
 
 
 Kirki::add_field( 'indigo', [
@@ -123,6 +117,7 @@ Kirki::add_field( 'indigo', [
 	'settings' => 'copyright_text',
 	'label'    => esc_html__( 'Copyright Text', 'indigo' ),
 	'section'  => 'elements',
+	'default'  => 'Max Edwards © 2019',
 	'priority' => 10,
 ] );
 
@@ -274,21 +269,39 @@ Kirki::add_field( 'indigo', [
 	'priority' => 10,
 ] );
 
+
+// -- Typography Fields --
+Kirki::add_field( 'indigo', [
+	'type'        => 'typography',
+	'settings'    => 'headings_typography',
+	'label'       => esc_html__( 'Heading Typography', 'indigo' ),
+	'description' => esc_html__( 'H1 Heading Typography', 'indigo' ),
+	'section'     => 'typography',
+	'default'     => [
+		'font-family' => 'Roboto Mono',
+		'font-size'   => '26px',
+		'variant'     => 'regular',
+	],
+
+	'priority'    => 10,
+	'transport'   => 'auto',
+] );
+
 Kirki::add_field( 'indigo', [
 	'type'      => 'typography',
-	'settings'  => 'main_typography',
-	'label'     => esc_html__( 'Main Typography', 'indigo' ),
+	'settings'  => 'text_typography',
+	'label'     => esc_html__( 'Text Typography', 'indigo' ),
 	'section'   => 'typography',
 	'default'   => [
 		'font-family' => 'Roboto Mono',
 		'font-size'   => '16px',
-		'color'       => '#a1a1a1',
+		'variant'     => 'regular',
+		'line-height' => '26px'
 	],
+	'output'      => ':root',
 	'priority'  => 10,
 	'transport' => 'auto',
-	'output'    => array(
-		array(
-			'element' => ':root',
-		),
-	),
 ] );
+
+
+// -- Typography Fields --

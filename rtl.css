@@ -5,3 +5,12 @@
 .pagination {
   direction: ltr;
 }
+
+.post > .meta > .author-meta .author-name {
+  margin: 0 10px 0 0;
+}
+
+.search-form .search-submit {
+  margin-left: 0;
+  margin-right: 10px;
+}

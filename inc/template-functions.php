@@ -37,7 +37,7 @@ function indigo_show_avatar() {
 	if ( has_custom_logo() ) {
 		the_custom_logo();
 	} else {
-		echo '<img src="' . get_bloginfo( 'template_url' ) . '/assets/images/profile.jpg" />';
+		echo '<a class="custom-logo-link" href="'. site_url() .'"><img src="' . get_bloginfo( 'template_url' ) . '/assets/images/profile.jpg" /></a>';
 	}
 }
 
@@ -236,3 +236,12 @@ function enqueue_comments_reply() {
 add_action( 'comment_form_before', 'enqueue_comments_reply' );
 
 
+function remove_unused_sections() {
+	global $wp_customize;
+	$wp_customize->remove_section( 'background_image' );
+	$wp_customize->remove_section( 'background_image' );
+	$wp_customize->remove_section( 'background_image' );
+	$wp_customize->remove_section( 'background_image' );
+}
+
+add_action( 'customize_register', 'remove_unused_sections', 11 );

@@ -8,25 +8,47 @@ h1, h2, h3, h4 {
   text-rendering: optimizeLegibility; }
 
 h1 {
-  font-size: 1.65em;
+  font-family: var(--heading-typography-font-family);
+  font-size: var(--heading-typography-font-size);
   letter-spacing: -1px;
   color: var(--secondary-color);
-  font-weight: 700; }
+  line-height: 1.175;
+  font-weight: var(--heading-typography-variant); }
 
 h2 {
-  font-size: 1.25em; }
+  font-family: var(--heading-typography-font-family);
+  font-size: calc(var(--heading-typography-font-size) - 4px);
+  color: var(--secondary-color);
+  line-height: 1.167;
+  font-weight: var(--heading-typography-variant); }
 
 h3 {
-  font-size: 1.15em; }
+  font-family: var(--heading-typography-font-family);
+  font-size: calc(var(--heading-typography-font-size) - 6px);
+  color: var(--secondary-color);
+  line-height: 1.154;
+  font-weight: var(--heading-typography-variant); }
 
 h4 {
-  font-size: 1em; }
+  font-family: var(--heading-typography-font-family);
+  font-size: calc(var(--heading-typography-font-size) - 9px);
+  color: var(--secondary-color);
+  line-height: 1.15;
+  font-weight: var(--heading-typography-variant); }
 
 h5 {
-  font-size: 0.93em; }
+  font-family: var(--heading-typography-font-family);
+  font-size: calc(var(--heading-typography-font-size) - 10px);
+  color: var(--secondary-color);
+  line-height: 1.205;
+  font-weight: var(--heading-typography-variant); }
 
 h6 {
-  font-size: 0.85em; }
+  font-family: var(--heading-typography-font-family);
+  font-size: calc(var(--heading-typography-font-size) - 11px);
+  color: var(--secondary-color);
+  line-height: 1.194;
+  font-weight: var(--heading-typography-variant); }
 
 a {
   color: var(--secondary-color);
@@ -40,12 +62,13 @@ a {
     color: var(--primary-color); }
 
 p {
-  line-height: 1.6;
-  color: var(--secondary-color);
-  font-weight: 300;
+  font-family: var(--text-typography-font-family);
+  font-size: var(--text-typography-font-size);
+  line-height: var(--text-typography-line-height);
+  font-weight: var(--text-typography-variant);
+  color: var(--tertiary-color);
   margin-bottom: 20px;
-  letter-spacing: 0.4px;
-  line-height: 32px; }
+  letter-spacing: 0.4px; }
   @media only screen and (max-width: 400px) {
     p {
       letter-spacing: 0.2px; } }
@@ -54,11 +77,13 @@ strong {
   font-weight: 400;
   color: #000; }
 
-ul li,
-ol li {
-  line-height: 2.4rem;
-  font-weight: 300;
-  color: var(--secondary-color); }
+ul,
+ol {
+  font-family: var(--text-typography-font-family);
+  font-size: var(--text-typography-font-size);
+  line-height: var(--text-typography-line-height);
+  font-weight: var(--text-typography-variant);
+  color: var(--tertiary-color); }
 
 figure,
 img,
@@ -79,12 +104,12 @@ figcaption {
   margin: 0 auto;
   width: 100%;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: calc(var(--text-typography-font-size) + 30%);
   color: #979A9A;
   font-weight: 300; }
   @media only screen and (max-width: 400px) {
     figcaption {
-      font-size: 1.2rem; } }
+      font-size: calc(var(--text-typography-font-size) + 20%); } }
 
 blockquote {
   padding-left: 15px;
@@ -105,10 +130,9 @@ code,
 tt {
   padding: 1px 0;
   font-family: "Consolas", Liberation Mono, Menlo, Courier, monospace;
-  font-size: 12px;
+  font-size: calc(var(--text-typography-font-size) - 20%);
   line-height: 20px;
   background: #fff;
-  border-radius: 2px;
   border-radius: 2px; }
 
 pre {
@@ -117,7 +141,7 @@ pre {
   width: 100%;
   padding: 5px 10px;
   font-family: "Consolas", Liberation Mono, Menlo, Courier, monospace;
-  font-size: 1.2rem;
+  font-size: calc(var(--text-typography-font-size) - 20%);
   line-height: 2rem;
   overflow: auto;
   background: #fff;
@@ -183,8 +207,6 @@ pre {
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 html {
-  font-family: sans-serif;
-  /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
@@ -307,7 +329,7 @@ dfn {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 1.6rem;
+  font-size: var(--heading-typography-font-size);
   margin: 0.67em 0; }
 
 /**
@@ -1237,7 +1259,7 @@ textarea {
   .share > .reddit {
     display: inline;
     vertical-align: middle;
-    font-size: 13px;
+    font-size: calc(var(--text-typography-font-size) - 3px);
     font-weight: 700;
     color: #fff;
     padding: 6px 10px;
@@ -1301,7 +1323,7 @@ textarea {
       bottom: -32px;
       left: -6px;
       margin: 0 auto;
-      font-size: 13px;
+      font-size: calc(var(--text-typography-font-size) - 3px);
       padding: 3px 10px;
       background: var(--secondary-color);
       color: #fff;
@@ -1355,7 +1377,7 @@ form input[type=submit] {
   width: auto;
   border-color: #1A1A1A;
   transition: .1s;
-  font-size: 1em;
+  font-size: var(--text-typography-font-size);
   font-weight: 400; }
 
 form input[type=submit]:hover, form input[type=submit]:focus {
@@ -1368,7 +1390,8 @@ form input, form textarea {
   width: 100%;
   border: 1px solid #C4C4C4;
   box-sizing: border-box;
-  font-size: 0.813em; }
+  font-size: calc(var(--text-typography-font-size) - 3px);
+  font-weight: 400; }
   form input:focus, form textarea:focus {
     background-color: #FBFBFF;
     border-color: var(--primary-color);
@@ -1388,8 +1411,8 @@ input[type=checkbox] {
   margin: 5px 10px; }
 
 .comments-title {
-  font-size: 20px !important;
-  line-height: 31px;
+  font-size: calc(var(--text-typography-font-size) + 4px) !important;
+  line-height: calc(var(--text-typography-line-height) + 4px);
   margin-bottom: 30px; }
 
 .comment-form {
@@ -1438,7 +1461,8 @@ input[type=checkbox] {
     .comments .comment .comment-metadata a * {
       font-size: 0.813em;
       text-decoration: none;
-      color: #888888; }
+      color: #888888;
+      font-weight: 400; }
     .comments .comment:last-child {
       margin-bottom: 10px; }
     .comments .comment .comment-author {
@@ -1460,6 +1484,9 @@ ol.children {
 
 .comments > .comment:first-child {
   border-top: 0; }
+
+.comment-content p, .screen-reader-text.says {
+  font-weight: 400; }
 
 .home,
 .blog,
@@ -1515,7 +1542,7 @@ ol.children {
   font-weight: 500;
   transition: all ease-in-out .2s;
   line-height: 28px;
-  font-size: 16px; }
+  font-size: var(--text-typography-font-size); }
 
 .home > .list > .item:hover > .url,
 .blog > .list > .item:hover > .url,
@@ -1539,7 +1566,7 @@ ol.children {
   color: #979A9A;
   text-align: right;
   transition: all ease-in-out .2s;
-  font-size: 14px;
+  font-size: calc(var(--text-typography-font-size) - 2px);
   line-height: 21px; }
 
 .home > .list .item:hover .url aside,
@@ -1573,14 +1600,11 @@ ol.children {
     text-align: center;
     margin-bottom: 30px;
     color: var(--secondary-color);
-    font-size: 1.6rem;
-    line-height: 3rem; }
+    font-size: var(--heading-typography-font-size);
+    line-height: var(--heading-typography-line-height); }
     @media screen and (max-width: 567px) {
       .page h1.single-title {
-        font-size: 2rem; } }
-  .page h2 {
-    line-height: 37px;
-    font-size: 2rem; }
+        font-size: calc(var(--heading-typography-font-size) - 15%); } }
 
 .about img {
   width: 50%;
@@ -1624,13 +1648,13 @@ ol.children {
         z-index: -2; }
       .post > .meta > .author-meta .author-name {
         font-weight: 300;
-        font-size: 14px;
+        font-size: calc(var(--text-typography-font-size) - 2px);
         line-height: 21px;
         color: #979A9A;
         margin: 0 0 0 10px; }
     .post > .meta > .date {
       font-weight: 300;
-      font-size: 14px;
+      font-size: calc(var(--text-typography-font-size) - 2px);
       line-height: 21px;
       color: #979A9A; }
   .post > .date,
@@ -1699,10 +1723,11 @@ table tr td, table tr th {
   margin: 50px 0; }
 
 .social-share-title {
-  font-size: 0.93em;
+  font-size: calc(var(--text-typography-font-size) - 2px);
   line-height: 25px;
   color: #979A9A;
-  font-family: inherit; }
+  font-family: inherit;
+  font-weight: 400; }
   .social-share-title span {
     font-family: inherit; }
 
@@ -1793,7 +1818,7 @@ table tr td, table tr th {
     width: 75%;
     font-weight: 400;
     transition: all ease-in-out .2s;
-    font-size: 1.6rem; }
+    font-size: var(--heading-typography-font-size); }
   .tag-list > .list > .item:hover > .url > .title {
     color: var(--primary-color); }
   .tag-list > .list aside {
@@ -1806,6 +1831,6 @@ table tr td, table tr th {
     color: #979A9A;
     text-align: right;
     transition: all ease-in-out .2s;
-    font-size: 1.6rem; }
+    font-size: calc(var(--text-typography-font-size) - 2px); }
   .tag-list > .list .item:hover .url aside {
     color: #646666; }

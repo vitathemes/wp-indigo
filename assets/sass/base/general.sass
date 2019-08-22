@@ -1,149 +1,173 @@
 html
-	position: relative
+  position: relative
 
 h1, h2, h3, h4
 
-	color: var(--secondary-color)
-	-webkit-font-smoothing: antialiased
-	text-rendering: optimizeLegibility
+  color: var(--secondary-color)
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
 
 h1
-	font-size: 1.65em
-	letter-spacing: -1px
-	color: var(--secondary-color)
-	font-weight: 700
+  font-family: var(--heading-typography-font-family)
+  font-size: var(--heading-typography-font-size)
+  letter-spacing: -1px
+  color: var(--secondary-color)
+  line-height: 1.175
+  font-weight: var(--heading-typography-variant)
 
 h2
-	font-size: 1.25em
+  font-family: var(--heading-typography-font-family)
+  font-size: calc(var(--heading-typography-font-size) - 4px)
+  color: var(--secondary-color)
+  line-height: 1.167
+  font-weight: var(--heading-typography-variant)
 
 h3
-	font-size: 1.15em
+  font-family: var(--heading-typography-font-family)
+  font-size: calc(var(--heading-typography-font-size) - 6px)
+  color: var(--secondary-color)
+  line-height: 1.154
+  font-weight: var(--heading-typography-variant)
 
 h4
-	font-size: 1em
+  font-family: var(--heading-typography-font-family)
+  font-size: calc(var(--heading-typography-font-size) - 9px)
+  color: var(--secondary-color)
+  line-height: 1.15
+  font-weight: var(--heading-typography-variant)
 
 h5
-	font-size: 0.93em
+  font-family: var(--heading-typography-font-family)
+  font-size: calc(var(--heading-typography-font-size) - 10px)
+  color: var(--secondary-color)
+  line-height: 1.205
+  font-weight: var(--heading-typography-variant)
 
 h6
-	font-size: 0.85em
+  font-family: var(--heading-typography-font-family)
+  font-size: calc(var(--heading-typography-font-size) - 11px)
+  color: var(--secondary-color)
+  line-height: 1.194
+  font-weight: var(--heading-typography-variant)
 
 a
-	color: var(--secondary-color)
-	text-decoration: none
-	border-bottom: 1px solid transparent
-	padding-bottom: 2px
+  color: var(--secondary-color)
+  text-decoration: none
+  border-bottom: 1px solid transparent
+  padding-bottom: 2px
 
-	&:hover
-		border-color: var(--primary-color)
-		color: var(--primary-color)
+  &:hover
+    border-color: var(--primary-color)
+    color: var(--primary-color)
 
-	&:visited
-		color: var(--primary-color)
+  &:visited
+    color: var(--primary-color)
 
 p
-	line-height: 1.6
-	color: var(--secondary-color)
-	font-weight: 300
-	margin-bottom: 20px
-	letter-spacing: 0.4px
-	line-height: 32px
+  font-family: var(--text-typography-font-family)
+  font-size: var(--text-typography-font-size)
+  line-height: var(--text-typography-line-height)
+  font-weight: var(--text-typography-variant)
+  color: var(--tertiary-color)
+  margin-bottom: 20px
+  letter-spacing: 0.4px
 
-	@media #{$mobile}
-		letter-spacing: 0.2px
+  @media #{$mobile}
+    letter-spacing: 0.2px
 
 strong
-	font-weight: 400
-	color: #000
+  font-weight: 400
+  color: #000
 
 ul,
 ol
-	li
-		line-height: 2.4rem
-		font-weight: 300
-		color: var(--secondary-color)
+  li
+  font-family: var(--text-typography-font-family)
+  font-size: var(--text-typography-font-size)
+  line-height: var(--text-typography-line-height)
+  font-weight: var(--text-typography-variant)
+  color: var(--tertiary-color)
 
 figure,
 img,
 pre,
 iframe
-	max-width: 100%
-	height: auto
+  max-width: 100%
+  height: auto
 
 img,
 pre
-	border-radius: 4px
+  border-radius: 4px
 
 figcaption
-	position: relative
-	top: -20px
-	left: 0
-	right: 0
-	margin: 0 auto
-	width: 100%
-	text-align: center
-	font-size: 1.3rem
-	color: $gray
-	font-weight: 300
+  position: relative
+  top: -20px
+  left: 0
+  right: 0
+  margin: 0 auto
+  width: 100%
+  text-align: center
+  font-size: calc(var(--text-typography-font-size) + 30%)
+  color: $gray
+  font-weight: 300
 
-	@media #{$mobile}
-		font-size: 1.2rem
+  @media #{$mobile}
+    font-size: calc(var(--text-typography-font-size) + 20%)
 
 blockquote
-	padding-left: 15px
-	border-left: 3px solid #eee
+  padding-left: 15px
+  border-left: 3px solid #eee
 
 hr
-	border: none
-	height: 1px
-	margin: 40px auto
-	background: #eee
-	width: 100%
+  border: none
+  height: 1px
+  margin: 40px auto
+  background: #eee
+  width: 100%
 
 figure.highlight
-	width: 100%
-	margin: 0
+  width: 100%
+  margin: 0
 
 code,
 tt
-	padding: 1px 0
-	font-family: $fontMonospace
-	font-size: 12px
-	line-height: 20px
-	background: #fff
-	border-radius: 2px
-	border-radius: 2px
+  padding: 1px 0
+  font-family: $fontMonospace
+  font-size: calc(var(--text-typography-font-size) - 20%)
+  line-height: 20px
+  background: #fff
+  border-radius: 2px
 
 pre
-	box-sizing: border-box
-	margin: 0 0 1.75em 0
-	width: 100%
-	padding: 5px 10px
-	font-family: $fontMonospace
-	font-size: 1.2rem
-	line-height: 2rem
-	overflow: auto
-	background: #fff
-	border: 1px solid $epsilon
-	border-radius: 2px
+  box-sizing: border-box
+  margin: 0 0 1.75em 0
+  width: 100%
+  padding: 5px 10px
+  font-family: $fontMonospace
+  font-size: calc(var(--text-typography-font-size) - 20%)
+  line-height: 2rem
+  overflow: auto
+  background: #fff
+  border: 1px solid $epsilon
+  border-radius: 2px
 
 .wrapper-normal,
 .wrapper-large
-	height: 100%
-	width: 96%
-	margin: 0 auto
+  height: 100%
+  width: 96%
+  margin: 0 auto
 
-	@media #{$mobile}
-		width: 88%
+  @media #{$mobile}
+    width: 88%
 
-	@media #{$tablet}
-		width: 88%
+  @media #{$tablet}
+    width: 88%
 
 .wrapper-normal
-	max-width: 560px
+  max-width: 560px
 
 .wrapper-large
-	max-width: 810px
+  max-width: 810px
 
 *
-	outline: none !important
+  outline: none !important
