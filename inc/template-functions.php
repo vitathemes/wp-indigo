@@ -239,9 +239,7 @@ add_action( 'comment_form_before', 'enqueue_comments_reply' );
 function remove_unused_sections() {
 	global $wp_customize;
 	$wp_customize->remove_section( 'background_image' );
-	$wp_customize->remove_section( 'background_image' );
-	$wp_customize->remove_section( 'background_image' );
-	$wp_customize->remove_section( 'background_image' );
+	$wp_customize->remove_section( 'colors' );
 }
 
 add_action( 'customize_register', 'remove_unused_sections', 11 );
