@@ -306,27 +306,30 @@ Kirki::add_field( 'indigo', [
 
 // -- Typography Fields --
 
-// Add the selective part
-$wp_customize->selective_refresh->add_partial( 'copyright_text', array(
-	'selector' => '.footer-main', // You can also select a css class
-) );
+function add_edit_icons()
+{
+	$wp_customize->selective_refresh->add_partial( 'copyright_text', array(
+		'selector' => '.footer-main',
+	) );
 
-$wp_customize->selective_refresh->add_partial( 'blogname', array(
-	'selector' => '.header-home .title', // You can also select a css class
-) );
+	$wp_customize->selective_refresh->add_partial( 'blogname', array(
+		'selector' => '.header-home .title',
+	) );
 
-$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-	'selector' => '.description', // You can also select a css class
-) );
+	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+		'selector' => '.description',
+	) );
 
-$wp_customize->selective_refresh->add_partial( 'social-mail', array(
-	'selector' => '.social-links', // You can also select a css class
-) );
+	$wp_customize->selective_refresh->add_partial( 'social-mail', array(
+		'selector' => '.social-links',
+	) );
 
-$wp_customize->selective_refresh->add_partial( 'show_post_thumbnail', array(
-	'selector' => '.post-thumbnail', // You can also select a css class
-) );
+	$wp_customize->selective_refresh->add_partial( 'show_post_thumbnail', array(
+		'selector' => '.post-thumbnail',
+	) );
 
-$wp_customize->selective_refresh->add_partial( 'show_share_icons', array(
-	'selector' => '.social-share', // You can also select a css class
-) );
+	$wp_customize->selective_refresh->add_partial( 'show_share_icons', array(
+		'selector' => '.social-share',
+	) );
+}
+add_action( 'customize_preview_init', 'add_edit_icons' );
