@@ -22,6 +22,7 @@
                         'font-size'=> "26px",
                          'variant' => '700',
                          'line-height' => '31px',
+                         'color' => '#1a1a1a'
                          );
 			}
 
@@ -31,6 +32,7 @@
                         'font-size'=> "16px",
                          'variant' => 'regular',
                          'line-height' => '28px',
+                         'color' => '#666666'
                          );
 			}
 
