@@ -23,10 +23,13 @@
 	?>
 
     <p class="extra">
-        <a target="_blank" class="link" href="https://github.com/veronalabs/wp-indigo">WP-Indigo</a> by
-        <a target="_blank" title="WordPress Solutions to Meet Your Needs and Help You Grow" class="link" href="https://vitathemes.com/">VitaThemes</a>
+        <a target="_blank" class="link" href="https://github.com/vitathemes/wp-indigo">WP-Indigo</a> by
+        <a target="_blank" title="Clean, Minimal and Fast-loading WordPress Themes" class="link" href="https://vitathemes.com/">VitaThemes</a>
     </p>
 </footer>
 
 <?php wp_footer(); ?>
-</div></div></body></html>
+			</div>
+		</div>
+	</body>
+</html>
