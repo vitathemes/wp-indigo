@@ -8,10 +8,6 @@
 	<?php wp_head(); ?>
     <style>
         :root {
-            --primary-color: <?php echo get_theme_mod('branding_primary_color' , '#3F51B5');?>;
-            --secondary-color: <?php echo get_theme_mod('branding_secondary_color' , '#1A1A1A');?>;
-            --tertiary-color: <?php echo get_theme_mod('branding_tertiary_color' , '#666666');?>;
-
         <?php
 			$text_typography = get_theme_mod('text_typography');
 			$heading_typography = get_theme_mod('headings_typography');
@@ -44,6 +40,10 @@
             --text-typography-font-family: <?php echo $text_typography['font-family'];?>;
             --text-typography-line-height: <?php echo $text_typography['line-height'];?>;
             --text-typography-variant: <?php echo $text_typography['variant'];?>;
+
+            --primary-color: <?php echo get_theme_mod('branding_primary_color' , '#3F51B5');?>;
+            --secondary-color: <?php echo $heading_typography['color'];?>;
+            --tertiary-color: <?php echo $text_typography['color'];?>;
         }
     </style>
 </head>
