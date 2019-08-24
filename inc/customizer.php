@@ -66,24 +66,6 @@ Kirki::add_field( 'indigo', [
 	'default'  => '#3F51B5',
 ] );
 
-
-Kirki::add_field( 'indigo', [
-	'type'     => 'color',
-	'settings' => 'branding_secondary_color',
-	'label'    => __( 'Secondary Color', 'indigo' ),
-	'section'  => 'typography',
-	'default'  => '#1A1A1A',
-] );
-
-Kirki::add_field( 'indigo', [
-	'type'     => 'color',
-	'settings' => 'branding_tertiary_color',
-	'label'    => __( 'Tertiary Color', 'indigo' ),
-	'section'  => 'typography',
-	'default'  => '#666666',
-] );
-
-
 Kirki::add_field( 'indigo', [
 	'type'     => 'toggle',
 	'settings' => 'show_share_icons',
@@ -280,7 +262,7 @@ Kirki::add_field( 'indigo', [
 		'font-family' => 'Roboto Mono',
 		'font-size'   => '26px',
 		'variant'     => 'regular',
-		'color'       => '#1a1a1a'
+		'color'       => '#1A1A1A'
 	],
 
 	'priority'  => 10,
@@ -293,11 +275,11 @@ Kirki::add_field( 'indigo', [
 	'label'     => esc_html__( 'Texts', 'indigo' ),
 	'section'   => 'typography',
 	'default'   => [
-		'font-family' => 'Roboto Mono',
-		'font-size'   => '16px',
-		'variant'     => 'regular',
-		'line-height' => '26px',
-		'color'       => '#666666'
+		'font-family'    => 'Roboto',
+		'variant'        => 'regular',
+		'font-size'      => '14px',
+		'line-height'    => '1.5',
+		'color'          => '#666666',
 	],
 	'output'    => ':root',
 	'priority'  => 10,
@@ -306,7 +288,7 @@ Kirki::add_field( 'indigo', [
 
 // -- Typography Fields --
 
-function add_edit_icons()
+function add_edit_icons($wp_customize)
 {
 	$wp_customize->selective_refresh->add_partial( 'copyright_text', array(
 		'selector' => '.footer-main',
