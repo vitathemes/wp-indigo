@@ -272,36 +272,61 @@ Kirki::add_field( 'indigo', [
 
 // -- Typography Fields --
 Kirki::add_field( 'indigo', [
-	'type'        => 'typography',
-	'settings'    => 'headings_typography',
-	'label'       => esc_html__( 'Heading Typography', 'indigo' ),
-	'description' => esc_html__( 'H1 Heading Typography', 'indigo' ),
-	'section'     => 'typography',
-	'default'     => [
+	'type'     => 'typography',
+	'settings' => 'headings_typography',
+	'label'    => esc_html__( 'Headlines', 'indigo' ),
+	'section'  => 'typography',
+	'default'  => [
 		'font-family' => 'Roboto Mono',
 		'font-size'   => '26px',
 		'variant'     => 'regular',
+		'color'       => '#1a1a1a'
 	],
 
-	'priority'    => 10,
-	'transport'   => 'auto',
+	'priority'  => 10,
+	'transport' => 'auto',
 ] );
 
 Kirki::add_field( 'indigo', [
 	'type'      => 'typography',
 	'settings'  => 'text_typography',
-	'label'     => esc_html__( 'Text Typography', 'indigo' ),
+	'label'     => esc_html__( 'Texts', 'indigo' ),
 	'section'   => 'typography',
 	'default'   => [
 		'font-family' => 'Roboto Mono',
 		'font-size'   => '16px',
 		'variant'     => 'regular',
-		'line-height' => '26px'
+		'line-height' => '26px',
+		'color'       => '#666666'
 	],
-	'output'      => ':root',
+	'output'    => ':root',
 	'priority'  => 10,
 	'transport' => 'auto',
 ] );
 
-
 // -- Typography Fields --
+
+// Add the selective part
+$wp_customize->selective_refresh->add_partial( 'copyright_text', array(
+	'selector' => '.footer-main', // You can also select a css class
+) );
+
+$wp_customize->selective_refresh->add_partial( 'blogname', array(
+	'selector' => '.header-home .title', // You can also select a css class
+) );
+
+$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+	'selector' => '.description', // You can also select a css class
+) );
+
+$wp_customize->selective_refresh->add_partial( 'social-mail', array(
+	'selector' => '.social-links', // You can also select a css class
+) );
+
+$wp_customize->selective_refresh->add_partial( 'show_post_thumbnail', array(
+	'selector' => '.post-thumbnail', // You can also select a css class
+) );
+
+$wp_customize->selective_refresh->add_partial( 'show_share_icons', array(
+	'selector' => '.social-share', // You can also select a css class
+) );
