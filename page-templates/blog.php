@@ -24,7 +24,7 @@ get_header(); ?>
 
 					$posts->the_post();
 
-					get_template_part( 'template-parts/content', 'blog' );
+					get_template_part( 'template-parts/list', 'blog' );
 
 				} ?>
                 <div class="pagination">

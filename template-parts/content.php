@@ -7,8 +7,8 @@
     </div>
     <span class="separator spacer"></span>
     <span class="date">
-                <time datetime="<?php echo get_the_date( get_option( 'date_format', $post->post_author ) ); ?>"><?php echo get_the_date(); ?></time>
-            </span>
+        <time datetime="<?php echo get_the_date( get_option( 'date_format', $post->post_author ) ); ?>"><?php echo get_the_date(); ?></time>
+    </span>
 </div>
 
 <div class="single-content-area">

@@ -126,7 +126,7 @@ function indigo_show_socials() {
 		</a>';
 	}
 	if ( get_theme_mod( 'social-mail' ) != "" ) {
-		echo '<a class="link" data-title="' . get_theme_mod( 'social-mail' ) . '" href="' . get_theme_mod( 'social-mail' ) . '" target="_blank">
+		echo '<a class="link" data-title="' . get_theme_mod( 'social-mail' ) . '" href="mailto:' . get_theme_mod( 'social-mail' ) . '" target="_blank">
 			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-mail"></use></svg>
 		</a>';
 	}
@@ -227,17 +227,7 @@ function website_field_remove( $fields ) {
 }
 
 
-function enqueue_comments_reply() {
-	if ( get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-
-add_action( 'comment_form_before', 'enqueue_comments_reply' );
-
-
-function remove_unused_sections() {
-	global $wp_customize;
+function remove_unused_sections($wp_customize) {
 	$wp_customize->remove_section( 'background_image' );
 	$wp_customize->remove_section( 'colors' );
 }
