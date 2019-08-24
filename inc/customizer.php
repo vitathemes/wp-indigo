@@ -99,7 +99,6 @@ Kirki::add_field( 'indigo', [
 	'settings' => 'copyright_text',
 	'label'    => esc_html__( 'Copyright Text', 'indigo' ),
 	'section'  => 'elements',
-	'default'  => 'Max Edwards © 2019',
 	'priority' => 10,
 ] );
 
@@ -116,7 +115,7 @@ Kirki::add_field( 'indigo', [
 
 // Social Networks Fields
 Kirki::add_field( 'indigo', [
-	'type'     => 'link',
+	'type'     => 'text',
 	'settings' => 'social-mail',
 	'label'    => __( 'Email', 'indigo' ),
 	'section'  => 'socials',
