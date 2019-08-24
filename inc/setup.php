@@ -74,3 +74,17 @@ function indigo_setup() {
 }
 
 add_action( 'after_setup_theme', 'indigo_setup' );
+
+/**
+ * Enqueue scripts and styles.
+ */
+// External Assets
+function indigo_scripts() {
+	wp_enqueue_style( 'indigo-style', get_template_directory_uri() . '/assets/css/style.css' );
+
+	if ( is_singular() && comments_open() ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+
+add_action( 'wp_enqueue_scripts', 'indigo_scripts' );
