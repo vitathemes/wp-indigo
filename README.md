@@ -1,18 +1,3 @@
-# wp-indigo
-Intro...
-
-
-
-## Development
- We used Gulp for Development, You can change `gulpfile` and make it better for your needs. We just put important tasks in gulpfile like Sass Compiler and BrowserSync.
- 
- If you want to change Template style files, we made it easy for you. Just follow these steps and start:
- 
-1. Run `npm install`
-2. Edit `proxy`  in `serve` task to your folder of project.(if it's in `localhost/wordpress` you just need to write it)
-3. Run `gulp`
-4. Start
-
 # WP-Indigo - [Demo](https://demo.vitathemes.com/indigo/)
 WP-Indigo is a WordPress minimal theme.
 
@@ -35,7 +20,7 @@ Or download the latest version from WordPress.org and upload it from admin panel
 ```shell
 themes/wp-indigo/  	      # → Root of your theme
 ├── assets/               # → Assets files
-│   ├── css/      		  # → Compiled CSS file
+│   ├── css/      		      # → Compiled CSS file
 │   ├── images/           # → Theme images
 │   └── sass/      	      # → Theme scss files
 ├── composer.json         # → Autoloading for `vendor/` files
@@ -43,10 +28,10 @@ themes/wp-indigo/  	      # → Root of your theme
 ├── languages/            # → Theme Language files
 ├── template-parts/       # → Theme Part files (Include)
 ├── node_modules/         # → Node.js packages
-├── vendor/    		      # → Third Party Packages (Managed by Composer, Currently we use Kirki Framework for customizer)
+├── vendor/    		         # → Third Party Packages (Managed by Composer, Currently we use Kirki Framework for customizer)
 ├── package.json          # → Node.js dependencies and scripts
-├── inc/           		  # → Theme functions
-│   ├── classes/   		  # → Custom PHP classes
+├── inc/              		  # → Theme functions
+│   ├── classes/      		  # → Custom PHP classes
 │   ├── customizer.php    # → All codes related to WordPress Customizer (We use Kirki Framework)
 │   ├── template-functions.php    # → Custom template tags & tweaks
 │   └── setup.php         # → Theme Setup
