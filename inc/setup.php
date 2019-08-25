@@ -130,7 +130,11 @@ function indigo_show_avatar() {
 }
 
 
-// Show social Field
+/**
+ * Show socials list
+ *
+ * @param $social_names | array
+ */
 function indigo_show_socials( $social_names ) {
 	foreach($social_names as $social_name) {
 		$social = get_theme_mod( $social_name );
