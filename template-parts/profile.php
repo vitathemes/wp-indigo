@@ -10,23 +10,26 @@ if ( get_theme_mod( 'show_profile_section', 1 ) ):
 		<?php } ?>
         <div class="social-links">
 			<?php
-			indigo_show_social( 'social-facebook' );
-			indigo_show_social( 'social-twitter' );
-			indigo_show_social( 'social-instagram' );
-			indigo_show_social( 'social-pinterest' );
-			indigo_show_social( 'social-linkedin' );
-			indigo_show_social( 'social-youtube' );
-			indigo_show_social( 'social-spotify' );
-			indigo_show_social( 'social-github' );
-			indigo_show_social( 'social-gitlab' );
-			indigo_show_social( 'social-lastfm' );
-			indigo_show_social( 'social-stackoverflow' );
-			indigo_show_social( 'social-quora' );
-			indigo_show_social( 'social-reddit' );
-			indigo_show_social( 'social-medium' );
-			indigo_show_social( 'social-vimeo' );
-			indigo_show_social( 'social-lanyrd' );
-			indigo_show_social( 'social-mail' );
+			$social_names = array(
+				'social-facebook',
+				'social-twitter',
+				'social-instagram',
+				'social-pinterest',
+				'social-linkedin',
+				'social-youtube',
+				'social-spotify',
+				'social-github',
+				'social-gitlab',
+				'social-lastfm',
+				'social-stackoverflow',
+				'social-quora',
+				'social-reddit',
+				'social-medium',
+				'social-vimeo',
+				'social-lanyrd',
+				'social-mail'
+			);
+			indigo_show_socials( $social_names );
 			?>
         </div>
     </header>

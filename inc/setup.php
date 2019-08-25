@@ -131,13 +131,15 @@ function indigo_show_avatar() {
 
 
 // Show social Field
-function indigo_show_social( $social_name ) {
-	$social = get_theme_mod( $social_name );
-	if ( $social != "" ) {
-		$name = explode( '-', $social_name );
-		echo '<a class="link" data-title="' . $social . '" href="' . $social . '" target="_blank">
+function indigo_show_socials( $social_names ) {
+	foreach($social_names as $social_name) {
+		$social = get_theme_mod( $social_name );
+		if ( $social != "" ) {
+			$name = explode( '-', $social_name );
+			echo '<a class="link" data-title="' . $social . '" href="' . $social . '" target="_blank">
 			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
+		}
 	}
 }
 
