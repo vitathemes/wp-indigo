@@ -53,6 +53,59 @@ function indigo_show_social( $social_name ) {
 	}
 }
 
+// Load theme typography
+function indigo_typography() {
+
+	$text_typography    = get_theme_mod( 'text_typography' );
+	$heading_typography = get_theme_mod( 'headings_typography' );
+
+	$default_heading_typography = array(
+		'font-family' => "Roboto Mono",
+		'font-size'   => "16px",
+		'variant'     => 'regular',
+		'line-height' => '28px',
+		'color'       => '#666666'
+	);
+
+	$default_text_typography = array(
+		'font-family' => "Roboto Mono",
+		'font-size'   => "16px",
+		'variant'     => 'regular',
+		'line-height' => '28px',
+		'color'       => '#666666'
+	);
+
+	if ( empty( $heading_typography ) ) {
+		$heading_typography = $default_heading_typography;
+	} else {
+		$heading_typography = array_merge( $default_heading_typography, $heading_typography );
+	}
+
+	if ( empty( $text_typography ) ) {
+		$text_typography = $default_text_typography;
+	} else {
+		$text_typography = array_merge( $default_text_typography, $text_typography );
+	}
+	$html = '<style>
+	        :root {
+				--heading-typography-font-size: ' . $heading_typography["font-size"] . ';
+	            --heading-typography-font-family: ' . $heading_typography["font-family"] . ';
+	            --heading-typography-line-height: ' . $heading_typography["line-height"] . ';
+	            --heading-typography-variant: ' . $heading_typography["variant"] . ';
+	            --text-typography-font-size: ' . $text_typography["font-size"] . ';
+	            --text-typography-font-family: ' . $text_typography["font-family"] . ';
+	            --text-typography-line-height: ' . $text_typography["line-height"] . ';
+	            --text-typography-variant: ' . $text_typography["variant"] . ';
+	
+	            --primary-color: ' . get_theme_mod( "branding_primary_color", "#3F51B5" ) . ';
+	            --secondary-color: ' . $heading_typography["color"] . ';
+	            --tertiary-color: ' . $text_typography['color'] . ';
+			}
+		    </style>';
+
+	echo $html;
+}
+
 
 //
 function indigo_get_discussion_data() {

@@ -274,21 +274,24 @@ Kirki::add_field( 'indigo', [
 	'label'     => esc_html__( 'Texts', 'indigo' ),
 	'section'   => 'typography',
 	'default'   => [
-		'font-family'    => 'Roboto',
-		'variant'        => 'regular',
-		'font-size'      => '14px',
-		'line-height'    => '1.5',
-		'color'          => '#666666',
+		'font-family' => 'Roboto',
+		'variant'     => 'regular',
+		'font-size'   => '14px',
+		'line-height' => '1.5',
+		'color'       => '#666666',
 	],
-	'output'    => ':root',
+	'output'    => [
+		[
+			'element' => 'body',
+		]
+	],
 	'priority'  => 10,
 	'transport' => 'auto',
 ] );
 
 // -- Typography Fields --
 
-function add_edit_icons($wp_customize)
-{
+function add_edit_icons( $wp_customize ) {
 	$wp_customize->selective_refresh->add_partial( 'copyright_text', array(
 		'selector' => '.footer-main',
 	) );
@@ -313,4 +316,5 @@ function add_edit_icons($wp_customize)
 		'selector' => '.social-share',
 	) );
 }
+
 add_action( 'customize_preview_init', 'add_edit_icons' );
