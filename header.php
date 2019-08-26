@@ -43,7 +43,7 @@
 
             --primary-color: <?php echo get_theme_mod('branding_primary_color' , '#3F51B5');?>;
             --secondary-color: <?php echo $heading_typography['color'];?>;
-            --tertiary-color: <?php echo $text_typography['color'];?>;
+            --third-color: <?php echo $text_typography['color'];?>;
         }
     </style>
 </head>

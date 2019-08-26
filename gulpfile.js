@@ -9,18 +9,11 @@ var rtlcss = require('gulp-rtlcss');  // RTLCss Create rtl.css file for theme
 // Browsersync
 gulp.task('serve' , function(){
     browserSync.init({
-        ui: false,  // Disable ui of BrowserSync
+        ui: false,  // Disable UI of BrowserSync
         injectChanges: true,  // Allow to inject style changes to browser without reloading page
         proxy: "free-themes.local",  // Where is your Project? changes proxy to your project url
     });
 });
-
-// RTLCss - Create a rtl version of your styles
-// gulp.task('rtlcss', function () {
-//     return gulp.src('assets/css/rtl.css')
-//         .pipe(rtlcss())
-//         .pipe(gulp.dest(''));
-// });
 
 // Sass - Sass Files Compile Here
 gulp.task('sass', function () {
@@ -43,4 +36,4 @@ gulp.task('watch', function () {
 });
 
 // Default Gulp Command
-gulp.task('default' , ['sass' , 'serve' , 'watch' , 'sass:watch']);
+gulp.task('default' , gulp.series( 'sass' , 'serve' , 'watch' , 'sass:watch'));

@@ -5,31 +5,31 @@ add_filter( 'kirki_telemetry', '__return_false' );
 
 
 // Add config
-Kirki::add_config( 'indigo', array(
+Kirki::add_config( 'wp-indigo', array(
 	'option_type' => 'theme_mod'
 ) );
 
 // Add sections
 Kirki::add_section( 'branding', array(
-	'title'    => esc_html__( 'Branding', 'indigo' ),
+	'title'    => esc_html__( 'Branding', 'wp-indigo' ),
 	'panel'    => '',
 	'priority' => 3,
 ) );
 
 Kirki::add_section( 'typography', array(
-	'title'    => esc_html__( 'Typography', 'indigo' ),
+	'title'    => esc_html__( 'Typography', 'wp-indigo' ),
 	'panel'    => '',
 	'priority' => 4,
 ) );
 
 Kirki::add_section( 'elements', array(
-	'title'    => esc_html__( 'Elements', 'indigo' ),
+	'title'    => esc_html__( 'Elements', 'wp-indigo' ),
 	'panel'    => '',
 	'priority' => 5,
 ) );
 
 Kirki::add_section( 'socials', array(
-	'title'    => esc_html__( 'Social Networks', 'indigo' ),
+	'title'    => esc_html__( 'Social Networks', 'wp-indigo' ),
 	'panel'    => '',
 	'priority' => 6,
 ) );
@@ -37,10 +37,10 @@ Kirki::add_section( 'socials', array(
 // Add Branding fields
 
 // -- Branding Fields --
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'      => 'background',
 	'settings'  => 'branding_background',
-	'label'     => esc_html__( 'Background', 'indigo' ),
+	'label'     => esc_html__( 'Background', 'wp-indigo' ),
 	'section'   => 'branding',
 	'default'   => [
 		'background-color'      => 'fff',
@@ -51,211 +51,211 @@ Kirki::add_field( 'indigo', [
 		'background-attachment' => 'scroll',
 	],
 	'transport' => 'auto',
-	'output'    => [
+	'output'      => [
 		[
 			'element' => 'body',
 		],
 	],
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'color',
 	'settings' => 'branding_primary_color',
-	'label'    => __( 'Primary Color', 'indigo' ),
+	'label'    => __( 'Primary Color', 'wp-indigo' ),
 	'section'  => 'branding',
 	'default'  => '#3F51B5',
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'toggle',
 	'settings' => 'show_share_icons',
-	'label'    => esc_html__( 'Show Share Icons', 'indigo' ),
+	'label'    => esc_html__( 'Show Share Icons', 'wp-indigo' ),
 	'section'  => 'elements',
 	'default'  => '1',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'toggle',
 	'settings' => 'show_post_thumbnail',
-	'label'    => esc_html__( 'Show Post Thumbnail', 'indigo' ),
+	'label'    => esc_html__( 'Show Post Thumbnail', 'wp-indigo' ),
 	'section'  => 'elements',
 	'default'  => '1',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'        => 'toggle',
 	'settings'    => 'show_profile_section',
-	'label'       => esc_html__( 'Show Profile Section', 'indigo' ),
-	'description' => esc_html__( 'Show profile section in pages: About/Blog/Home', 'indigo' ),
+	'label'       => esc_html__( 'Show Profile Section', 'wp-indigo' ),
+	'description' => esc_html__( 'Show profile section in pages: About/Blog/Home', 'wp-indigo' ),
 	'section'     => 'elements',
 	'default'     => '1',
 	'priority'    => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'text',
 	'settings' => 'copyright_text',
-	'label'    => esc_html__( 'Copyright Text', 'indigo' ),
+	'label'    => esc_html__( 'Copyright Text', 'wp-indigo' ),
 	'section'  => 'elements',
 	'priority' => 10,
 ] );
 
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'        => 'toggle',
 	'settings'    => 'profile_animation',
-	'label'       => esc_html__( 'Profile Animation', 'indigo' ),
-	'description' => esc_html__( 'Animation for profile section.', 'indigo' ),
+	'label'       => esc_html__( 'Profile Animation', 'wp-indigo' ),
+	'description' => esc_html__( 'Animation for profile section.', 'wp-indigo' ),
 	'section'     => 'elements',
 	'priority'    => 9,
 ] );
 
 
 // Social Networks Fields
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'text',
 	'settings' => 'social-mail',
-	'label'    => __( 'Email', 'indigo' ),
+	'label'    => __( 'Email', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-facebook',
-	'label'    => __( 'Facebook', 'indigo' ),
+	'label'    => __( 'Facebook', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-twitter',
-	'label'    => __( 'Twitter', 'indigo' ),
+	'label'    => __( 'Twitter', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-instagram',
-	'label'    => __( 'Instagram', 'indigo' ),
+	'label'    => __( 'Instagram', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-pinterest',
-	'label'    => __( 'Pinterest', 'indigo' ),
+	'label'    => __( 'Pinterest', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-linkedin',
-	'label'    => __( 'Linkedin', 'indigo' ),
+	'label'    => __( 'Linkedin', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-youtube',
-	'label'    => __( 'Youtube', 'indigo' ),
+	'label'    => __( 'Youtube', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-spotify',
-	'label'    => __( 'Spotify', 'indigo' ),
+	'label'    => __( 'Spotify', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-github',
-	'label'    => __( 'Github', 'indigo' ),
+	'label'    => __( 'Github', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-gitlab',
-	'label'    => __( 'Gitlab', 'indigo' ),
+	'label'    => __( 'Gitlab', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-lastfm',
-	'label'    => __( 'Lastfm', 'indigo' ),
+	'label'    => __( 'Lastfm', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-stackoverflow',
-	'label'    => __( 'Stackoverflow', 'indigo' ),
+	'label'    => __( 'Stackoverflow', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-quora',
-	'label'    => __( 'Quora', 'indigo' ),
+	'label'    => __( 'Quora', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-reddit',
-	'label'    => __( 'Reddit', 'indigo' ),
+	'label'    => __( 'Reddit', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-medium',
-	'label'    => __( 'Medium', 'indigo' ),
+	'label'    => __( 'Medium', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-vimeo',
-	'label'    => __( 'Vimeo', 'indigo' ),
+	'label'    => __( 'Vimeo', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'link',
 	'settings' => 'social-lanyrd',
-	'label'    => __( 'Lanyrd', 'indigo' ),
+	'label'    => __( 'Lanyrd', 'wp-indigo' ),
 	'section'  => 'socials',
 	'priority' => 10,
 ] );
 
 
 // -- Typography Fields --
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'     => 'typography',
 	'settings' => 'headings_typography',
-	'label'    => esc_html__( 'Headlines', 'indigo' ),
+	'label'    => esc_html__( 'Headlines', 'wp-indigo' ),
 	'section'  => 'typography',
 	'default'  => [
 		'font-family' => 'Roboto Mono',
@@ -268,10 +268,10 @@ Kirki::add_field( 'indigo', [
 	'transport' => 'auto',
 ] );
 
-Kirki::add_field( 'indigo', [
+Kirki::add_field( 'wp-indigo', [
 	'type'      => 'typography',
 	'settings'  => 'text_typography',
-	'label'     => esc_html__( 'Texts', 'indigo' ),
+	'label'     => esc_html__( 'Texts', 'wp-indigo' ),
 	'section'   => 'typography',
 	'default'   => [
 		'font-family'    => 'Roboto',
@@ -280,7 +280,11 @@ Kirki::add_field( 'indigo', [
 		'line-height'    => '1.5',
 		'color'          => '#666666',
 	],
-	'output'    => ':root',
+	'output'      => [
+		[
+			'element' => 'body',
+		],
+	],
 	'priority'  => 10,
 	'transport' => 'auto',
 ] );

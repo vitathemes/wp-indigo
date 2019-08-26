@@ -66,7 +66,7 @@ p {
   font-size: var(--text-typography-font-size);
   line-height: var(--text-typography-line-height);
   font-weight: var(--text-typography-variant);
-  color: var(--tertiary-color);
+  color: var(--third-color);
   margin-bottom: 20px;
   letter-spacing: 0.4px; }
   @media only screen and (max-width: 400px) {
@@ -83,7 +83,7 @@ ol {
   font-size: var(--text-typography-font-size);
   line-height: var(--text-typography-line-height);
   font-weight: var(--text-typography-variant);
-  color: var(--tertiary-color); }
+  color: var(--third-color); }
 
 figure,
 img,
@@ -170,6 +170,48 @@ pre {
 
 * {
   outline: none !important; }
+
+.aligncenter {
+  text-align: center; }
+
+.alignleft {
+  text-align: left; }
+
+.alignright {
+  text-align: right; }
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  padding: 5px 3px 10px;
+  text-align: center; }
+
+.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px; }
+
+.gallery-caption {
+  color: #888;
+  font-size: 12px;
+  margin: 0 0 12px; }
+
+.sticky {
+  position: sticky; }
+
+.bypostauthor {
+  background-color: #FFFFFF;
+  color: #000000; }
+
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto; }
 
 /*
  * general helpers

@@ -37,7 +37,7 @@ function indigo_show_avatar() {
 	if ( has_custom_logo() ) {
 		the_custom_logo();
 	} else {
-		echo '<a class="custom-logo-link" href="'. site_url() .'"><img src="' . get_bloginfo( 'template_url' ) . '/assets/images/profile.jpg" /></a>';
+		echo '<a class="custom-logo-link" href="'. site_url() .'"><img src="' . get_template_directory_uri() . '/assets/images/profile.jpg" /></a>';
 	}
 }
 
@@ -47,87 +47,87 @@ function indigo_show_socials() {
 
 	if ( get_theme_mod( 'social-facebook' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-facebook' ) . '" href="' . get_theme_mod( 'social-facebook' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-facebook"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-facebook"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-twitter' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-twitter' ) . '" href="' . get_theme_mod( 'social-twitter' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-twitter"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-twitter"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-instagram' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-instagram' ) . '" href="' . get_theme_mod( 'social-instagram' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-instagram"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-instagram"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-pinterest' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-pinterest' ) . '" href="' . get_theme_mod( 'social-pinterest' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-pinterest"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-pinterest"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-linkedin' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-linkedin' ) . '" href="' . get_theme_mod( 'social-linkedin' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-linkedin"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-linkedin"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-youtube' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-youtube' ) . '" href="' . get_theme_mod( 'social-youtube' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-youtube"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-youtube"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-spotify' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-spotify' ) . '" href="' . get_theme_mod( 'social-spotify' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-spotify"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-spotify"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-github' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-github' ) . '" href="' . get_theme_mod( 'social-github' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-github"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-github"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-gitlab' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-gitlab' ) . '" href="' . get_theme_mod( 'social-gitlab' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-gitlab"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-gitlab"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-lastfm' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-lastfm' ) . '" href="' . get_theme_mod( 'social-lastfm' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-lastfm"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-lastfm"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-stackoverflow' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-stackoverflow' ) . '" href="' . get_theme_mod( 'social-stackoverflow' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-stackoverflow"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-stackoverflow"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-quora' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-quora' ) . '" href="' . get_theme_mod( 'social-quora' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-quora"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-quora"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-reddit' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-reddit' ) . '" href="' . get_theme_mod( 'social-reddit' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-reddit"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-reddit"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-medium' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-medium' ) . '" href="' . get_theme_mod( 'social-medium' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-medium"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-medium"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-vimeo' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-vimeo' ) . '" href="' . get_theme_mod( 'social-vimeo' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-vimeo"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-vimeo"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-lanyrd' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-lanyrd' ) . '" href="' . get_theme_mod( 'social-lanyrd' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-lanyrd"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-lanyrd"></use></svg>
 		</a>';
 	}
 	if ( get_theme_mod( 'social-mail' ) != "" ) {
 		echo '<a class="link" data-title="' . get_theme_mod( 'social-mail' ) . '" href="mailto:' . get_theme_mod( 'social-mail' ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-mail"></use></svg>
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-mail"></use></svg>
 		</a>';
 	}
 }

@@ -828,7 +828,7 @@ if ( ! class_exists( 'ariColor' ) ) {
 				'honeydew'             => 'F0FFF0',
 				'hotpink'              => 'FF69B4',
 				'indianred'            => 'CD5C5C',
-				'indigo'               => '4B0082',
+				'wp-indigo'               => '4B0082',
 				'ivory'                => 'FFFFF0',
 				'khaki'                => 'F0E68C',
 				'lavender'             => 'E6E6FA',

@@ -12,9 +12,9 @@ function indigo_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on _s, use a find and replace
-	 * to change 'indigo' to the name of your theme in all the template files.
+	 * to change 'wp-indigo' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'indigo', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'wp-indigo', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -36,7 +36,7 @@ function indigo_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary-menu' => esc_html__( 'Primary', 'indigo' ),
+		'primary-menu' => esc_html__( 'Primary', 'wp-indigo' ),
 	) );
 
 	/*
@@ -88,3 +88,8 @@ function indigo_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'indigo_scripts' );
+
+
+if ( ! isset( $content_width ) ) {
+	$content_width = 560;
+}
