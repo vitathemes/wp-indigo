@@ -12,7 +12,7 @@ indigo_show_profile(); ?>
 
         <h1>
             <?php
-            printf( esc_html__('Search Results for: %s', 'indigo' ), get_search_query());
+            printf( esc_html__('Search Results for: %s', 'wp-indigo' ), get_search_query());
             ?>
         </h1>
         <div class="list">
@@ -32,8 +32,8 @@ indigo_show_profile(); ?>
 
 				the_posts_pagination( array(
 					'mid_size'  => 2,
-					'prev_text' => __( 'Previous', 'indigo' ),
-					'next_text' => __( 'Next', 'indigo' ),
+					'prev_text' => __( 'Previous', 'wp-indigo' ),
+					'next_text' => __( 'Next', 'wp-indigo' ),
 				) );
 
 			else :

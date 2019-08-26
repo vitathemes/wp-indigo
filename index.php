@@ -31,8 +31,8 @@ get_header(); ?>
 				the_posts_pagination( array(
 					'screen_reader_text' => ' ',
 					'mid_size'           => 2,
-					'prev_text'          => __( 'Previous', 'indigo' ),
-					'next_text'          => __( 'Next', 'indigo' ),
+					'prev_text'          => __( 'Previous', 'wp-indigo' ),
+					'next_text'          => __( 'Next', 'wp-indigo' ),
 				) );
 
 			else :
