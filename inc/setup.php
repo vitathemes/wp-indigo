@@ -161,6 +161,7 @@ function indigo_check_socials($social_names){
 			return true;
 		}
 	}
+	return false;
 }
 
 // Load theme typography
