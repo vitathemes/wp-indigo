@@ -1,34 +1,6 @@
 <?php
 require "classes/indigo_Walker_Comment.php";
 
-//
-function indigo_is_comment_by_post_author( $comment = null ) {
-	if ( is_object( $comment ) && $comment->user_id > 0 ) {
-		$user = get_userdata( $comment->user_id );
-		$post = get_post( $comment->comment_post_ID );
-		if ( ! empty( $user ) && ! empty( $post ) ) {
-			return $comment->user_id === $post->post_author;
-		}
-	}
-
-	return false;
-}
-
-
-// Remove unnecessary fields from comment form
-add_filter( 'comment_form_default_fields', 'website_field_remove' );
-function website_field_remove( $fields ) {
-	if ( isset( $fields['url'] ) ) {
-		unset( $fields['url'] );
-		unset( $fields['cookies'] );
-	}
-
-	return $fields;
-}
-
-
-
-
 //Show Profile
 function indigo_show_profile() {
 	get_template_part( "template-parts/profile" );
@@ -101,16 +73,17 @@ function indigo_check_socials( $social_names ) {
 	}
 	return false;
 }
+
 // Load theme typography
 function indigo_typography() {
 	$text_typography    = get_theme_mod( 'text_typography' );
 	$heading_typography = get_theme_mod( 'headings_typography' );
 	$default_heading_typography = array(
 		'font-family' => "Roboto Mono",
-		'font-size'   => "16px",
+		'font-size'   => "26px",
 		'variant'     => 'regular',
 		'line-height' => '28px',
-		'color'       => '#666666'
+		'color'       => '#1a1a1a'
 	);
 	$default_text_typography = array(
 		'font-family' => "Roboto Mono",

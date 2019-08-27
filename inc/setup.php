@@ -95,11 +95,7 @@ function website_field_remove( $fields ) {
 	}
 	return $fields;
 }
-function remove_unused_sections( $wp_customize ) {
-	$wp_customize->remove_section( 'background_image' );
-	$wp_customize->remove_section( 'colors' );
-}
-add_action( 'customize_register', 'remove_unused_sections', 11 );
+
 if ( ! isset( $content_width ) ) {
 	$content_width = 560;
 }
