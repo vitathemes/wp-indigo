@@ -36,20 +36,20 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 ## Theme structure
 
 ```shell
-themes/wp-indigo/  	      # → Root of your theme
+themes/wp-indigo/         # → Root of your theme
 ├── assets/               # → Assets files
-│   ├── css/      		      # → Compiled CSS file
+│   ├── css/              # → Compiled CSS file
 │   ├── images/           # → Theme images
-│   └── sass/      	      # → Theme scss files
+│   └── sass/             # → Theme scss files
 ├── composer.json         # → Autoloading for `vendor/` files
 ├── composer.lock         # → Composer lock file
 ├── languages/            # → Theme Language files
 ├── template-parts/       # → Theme Part files (Include)
 ├── node_modules/         # → Node.js packages
-├── vendor/    		         # → Third Party Packages (Managed by Composer, Currently we use [Kirki Framework](https://github.com/aristath/kirki) for customizer)
+├── vendor/               # → Third Party Packages (Managed by Composer, Currently we use [Kirki Framework](https://github.com/aristath/kirki) for customizer)
 ├── package.json          # → Node.js dependencies and scripts
-├── inc/              		  # → Theme functions
-│   ├── classes/      		  # → Custom PHP classes
+├── inc/                  # → Theme functions
+│   ├── classes/          # → Custom PHP classes
 │   ├── customizer.php    # → All codes related to WordPress Customizer (We use Kirki Framework)
 │   ├── template-functions.php    # → Custom template tags & tweaks
 │   └── setup.php         # → Theme Setup
