@@ -12,7 +12,7 @@
 
 	<?php
 	if ( get_theme_mod( 'copyright_text' ) ) {
-		echo get_theme_mod( 'copyright_text' , 'Max Edwards © 2019' ); ?>
+		echo get_theme_mod( 'copyright_text' ); ?>
         <a class="link" href="<?php echo bloginfo( 'rss2_url' ); ?>" target="_blank">
             <svg class="icon icon-rss">
                 <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/defs.svg#icon-rss"></use>
