@@ -147,6 +147,22 @@ function indigo_show_socials( $social_names ) {
 	}
 }
 
+/**
+ * Check active socials
+ *
+ * @param $social_names
+ *
+ * @return bool
+ */
+function indigo_check_socials($social_names){
+	foreach($social_names as $social_name) {
+		$social = get_theme_mod( $social_name );
+		if ( $social != "" ) {
+			return true;
+		}
+	}
+}
+
 // Load theme typography
 function indigo_typography() {
 
