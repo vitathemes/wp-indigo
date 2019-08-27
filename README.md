@@ -1,7 +1,9 @@
-# WP-Indigo - [Demo](https://demo.vitathemes.com/indigo/) | [Download](http://wordpress.org/themes/wp-indigo/)
+# WP-Indigo - [Demo](https://demo.vitathemes.com/indigo/) | [Download](https://wordpress.org/themes/wp-indigo/)
 WP-Indigo is a WordPress minimal & Fast-loading theme for people who want to have a simple blog & introduce themselves.
 
 It's based on the [indigo](https://github.com/sergiokopplin/indigo), that orginally build for Jekyll.
+
+![Image of WP-Indigo](screenshot.png)
 
 ## Features
 * No additional JS
@@ -26,9 +28,9 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 1. Simply install as a normal WordPress theme and activate.
 2. Make a page called Home and set the Page template to Home.
 3. Make another page called Blog and set the Page template to Blog.
-4. In your admin panel, navigate to Settings > Reading.
+4. In your admin panel, navigate to `Settings > Reading`.
 5. Select `A static page (select below)` and select the pages created.
-6. In your admin panel, navigate to Appearance > Customize.
+6. In your admin panel, navigate to `Appearance > Customize`.
 7. Put the finishing touches on your website by adding a logo, typography settings, custom colors and etc.
 
 ## Theme structure
