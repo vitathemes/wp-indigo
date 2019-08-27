@@ -136,7 +136,7 @@ function indigo_show_avatar() {
  * @param $social_names | array
  */
 function indigo_show_socials( $social_names ) {
-	foreach($social_names as $social_name) {
+	foreach ( $social_names as $social_name ) {
 		$social = get_theme_mod( $social_name );
 		if ( $social != "" ) {
 			$name = explode( '-', $social_name );
@@ -154,13 +154,14 @@ function indigo_show_socials( $social_names ) {
  *
  * @return bool
  */
-function indigo_check_socials($social_names){
-	foreach($social_names as $social_name) {
+function indigo_check_socials( $social_names ) {
+	foreach ( $social_names as $social_name ) {
 		$social = get_theme_mod( $social_name );
 		if ( $social != "" ) {
 			return true;
 		}
 	}
+
 	return false;
 }
 
