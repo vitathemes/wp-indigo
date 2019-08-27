@@ -1,7 +1,7 @@
 # WP-Indigo - [Demo](https://demo.vitathemes.com/indigo/) | [Download](https://wordpress.org/themes/wp-indigo/)
 WP-Indigo is a WordPress minimal & Fast-loading theme for people who want to have a simple blog & introduce themselves.
 
-It's based on the [indigo](https://github.com/sergiokopplin/indigo), that orginally build for Jekyll.
+It's based on the [indigo](https://github.com/sergiokopplin/indigo), that originally builds for Jekyll.
 
 ![Image of WP-Indigo](screenshot.png)
 
@@ -12,14 +12,14 @@ It's based on the [indigo](https://github.com/sergiokopplin/indigo), that orgina
 * Fast & lightweight (Google Speed: 99/100)
 * Theme options built directly into WordPress native live theme customizer
 * Responsive design
-* Cross browser compatibility
+* Cross-browser compatibility
 * Custom Google WebFonts
 * Child themes support
 * Developer friendly extendable code
 * Translation ready (with .POT files included)
 * Right-to-left (RTL) languages support
 * SEO optimized
-* MIT licenced
+* MIT licensed
 * …and much more
 
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
