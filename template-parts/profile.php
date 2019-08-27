@@ -8,7 +8,7 @@ if ( get_theme_mod( 'show_profile_section', 1 ) ):
 		<?php if ( get_bloginfo( 'description' ) !== '' ) { ?>
             <h2 class="description"><?php bloginfo( 'description' ); ?></h2>
 		<?php } ?>
-        <div class="social-links">
+
 			<?php
 			$social_names = array(
 				'social-facebook',
@@ -31,7 +31,7 @@ if ( get_theme_mod( 'show_profile_section', 1 ) ):
 			);
 			indigo_show_socials( $social_names );
 			?>
-        </div>
+
     </header>
 <?php
 endif;

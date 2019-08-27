@@ -125,7 +125,7 @@ function indigo_show_avatar() {
 	if ( has_custom_logo() ) {
 		the_custom_logo();
 	} else {
-		echo '<a class="custom-logo-link" href="' . site_url() . '"><img src="' . get_bloginfo( 'template_url' ) . '/assets/images/profile.jpg" /></a>';
+		echo '<a class="custom-logo-link" href="' . site_url() . '"><img src="' . get_template_directory_uri() . '/assets/images/profile.jpg" /></a>';
 	}
 }
 
@@ -136,15 +136,19 @@ function indigo_show_avatar() {
  * @param $social_names | array
  */
 function indigo_show_socials( $social_names ) {
-	foreach($social_names as $social_name) {
-		$social = get_theme_mod( $social_name );
-		if ( $social != "" ) {
-			$name = explode( '-', $social_name );
-			echo '<a class="link" data-title="' . $social . '" href="' . $social . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
+
+		echo '<div class="social-links">';
+		foreach ( $social_names as $social_name ) {
+			$social = get_theme_mod( $social_name );
+			if ( $social != "" ) {
+				$name = explode( '-', $social_name );
+				echo '<a class="link" data-title="' . $social . '" href="' . $social . '" target="_blank">
+			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
+			}
 		}
-	}
+		echo '</div>';
+
 }
 
 // Load theme typography

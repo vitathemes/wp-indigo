@@ -4,7 +4,6 @@ var gulp = require('gulp');  // Gulp Core
 var sass = require('gulp-sass');  // Sass Plugin for Gulp
 var browserSync = require('browser-sync').create();  // BrowserSyc for Reload and Inject
 sass.compiler = require('node-sass'); // Sass Compiler Work with gul-sass
-var rtlcss = require('gulp-rtlcss');  // RTLCss Create rtl.css file for theme
 
 // Browsersync
 gulp.task('serve' , function(){
