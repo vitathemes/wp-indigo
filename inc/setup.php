@@ -7,7 +7,6 @@
  * as indicating support for post thumbnails.
  */
 function indigo_setup() {
-
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -15,10 +14,8 @@ function indigo_setup() {
 	 * to change 'wp-indigo' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'wp-indigo', get_template_directory() . '/languages' );
-
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-
 	/*
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
@@ -26,19 +23,16 @@ function indigo_setup() {
 	 * provide it for us.
 	 */
 	add_theme_support( 'title-tag' );
-
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary-menu' => esc_html__( 'Primary', 'wp-indigo' ),
 	) );
-
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -50,16 +44,13 @@ function indigo_setup() {
 		'gallery',
 		'caption',
 	) );
-
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
-
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
-
 	/**
 	 * Add support for core custom logo.
 	 *
@@ -72,31 +63,24 @@ function indigo_setup() {
 		'flex-height' => true,
 	) );
 }
-
 add_action( 'after_setup_theme', 'indigo_setup' );
-
 /**
  * Enqueue scripts and styles.
  */
 // External Assets
 function indigo_scripts() {
 	wp_enqueue_style( 'indigo-style', get_template_directory_uri() . '/assets/css/style.css' );
-
 	if ( is_singular() && comments_open() ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-
 add_action( 'wp_enqueue_scripts', 'indigo_scripts' );
-
 //Show Profile
 function indigo_show_profile() {
 	get_template_part( "template-parts/profile" );
 }
-
 // Menu Generator
 function indigo_show_menu() {
-
 	if ( has_nav_menu( 'primary-menu' ) ) {
 		$menu_args = array(
 			'theme_location'  => 'primary-menu',
@@ -105,58 +89,61 @@ function indigo_show_menu() {
 			'container_class' => 'nav-home',
 			'depth'           => 1
 		);
-
 		if ( ! is_front_page() ) {
 			$menu_args['container_class'] = 'nav';
 			$menu_args['depth']           = 0;
 		}
-
 		wp_nav_menu( $menu_args );
 	}
 }
-
 // Show Post Tags
 function indigo_show_tags() {
 	the_tags( '', ' ', '' );
 }
-
 // Show Name Field
 function indigo_show_avatar() {
 	if ( has_custom_logo() ) {
 		the_custom_logo();
 	} else {
-		echo '<a class="custom-logo-link" href="' . site_url() . '"><img src="' . get_template_directory_uri() . '/assets/images/profile.jpg" /></a>';
+		echo '<a class="custom-logo-link" href="' . site_url() . '"><img src="' . get_bloginfo( 'template_url' ) . '/assets/images/profile.jpg" /></a>';
 	}
 }
-
-
 /**
  * Show socials list
  *
  * @param $social_names | array
  */
 function indigo_show_socials( $social_names ) {
-
-		echo '<div class="social-links">';
-		foreach ( $social_names as $social_name ) {
-			$social = get_theme_mod( $social_name );
-			if ( $social != "" ) {
-				$name = explode( '-', $social_name );
-				echo '<a class="link" data-title="' . $social . '" href="' . $social . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
+	foreach ( $social_names as $social_name ) {
+		$social = get_theme_mod( $social_name );
+		if ( $social != "" ) {
+			$name = explode( '-', $social_name );
+			echo '<a class="link" data-title="' . $social . '" href="' . $social . '" target="_blank">
+			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
-			}
 		}
-		echo '</div>';
-
+	}
 }
-
+/**
+ * Check active socials
+ *
+ * @param $social_names
+ *
+ * @return bool
+ */
+function indigo_check_socials( $social_names ) {
+	foreach ( $social_names as $social_name ) {
+		$social = get_theme_mod( $social_name );
+		if ( $social != "" ) {
+			return true;
+		}
+	}
+	return false;
+}
 // Load theme typography
 function indigo_typography() {
-
 	$text_typography    = get_theme_mod( 'text_typography' );
 	$heading_typography = get_theme_mod( 'headings_typography' );
-
 	$default_heading_typography = array(
 		'font-family' => "Roboto Mono",
 		'font-size'   => "16px",
@@ -164,7 +151,6 @@ function indigo_typography() {
 		'line-height' => '28px',
 		'color'       => '#666666'
 	);
-
 	$default_text_typography = array(
 		'font-family' => "Roboto Mono",
 		'font-size'   => "16px",
@@ -172,13 +158,11 @@ function indigo_typography() {
 		'line-height' => '28px',
 		'color'       => '#666666'
 	);
-
 	if ( empty( $heading_typography ) ) {
 		$heading_typography = $default_heading_typography;
 	} else {
 		$heading_typography = array_merge( $default_heading_typography, $heading_typography );
 	}
-
 	if ( empty( $text_typography ) ) {
 		$text_typography = $default_text_typography;
 	} else {
@@ -200,22 +184,17 @@ function indigo_typography() {
 	            --tertiary-color: ' . $text_typography['color'] . ';
 			}
 		    </style>';
-
 	echo $html;
 }
-
-
 //
 function indigo_get_discussion_data() {
 	static $discussion, $post_id;
-
 	$current_post_id = get_the_ID();
 	if ( $current_post_id === $post_id ) {
 		return $discussion; /* If we have discussion information for post ID, return cached object */
 	} else {
 		$post_id = $current_post_id;
 	}
-
 	$comments = get_comments(
 		array(
 			'post_id' => $current_post_id,
@@ -225,41 +204,30 @@ function indigo_get_discussion_data() {
 			'number'  => 20, /* Only retrieve the last 20 comments, as the end goal is just 6 unique authors */
 		)
 	);
-
 	$authors = array();
 	foreach ( $comments as $comment ) {
 		$authors[] = ( (int) $comment->user_id > 0 ) ? (int) $comment->user_id : $comment->comment_author_email;
 	}
-
 	$authors    = array_unique( $authors );
 	$discussion = (object) array(
 		'authors'   => array_slice( $authors, 0, 6 ),           /* Six unique authors commenting on the post. */
 		'responses' => get_comments_number( $current_post_id ), /* Number of responses. */
 	);
-
 	return $discussion;
 }
-
-
 //
 function indigo_comment_form( $order ) {
 	if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
-
 		$fields = array(
-
 			'author' =>
 				'<p class="comment-form-author">' .
 				'<input placeholder="Your Name" id="author" name="author" type="text" size="30" /></p>',
-
 			'email' =>
 				'<p class="comment-form-email">' .
 				'<input placeholder="Your Email" id="email" name="email" type="email" value="" size="30" /></p>',
-
 			'url' => '',
-
 			'cookies' => ''
 		);
-
 		comment_form(
 			array(
 				'logged_in_as'         => null,
@@ -272,7 +240,6 @@ function indigo_comment_form( $order ) {
 		);
 	}
 }
-
 //
 function indigo_is_comment_by_post_author( $comment = null ) {
 	if ( is_object( $comment ) && $comment->user_id > 0 ) {
@@ -282,11 +249,8 @@ function indigo_is_comment_by_post_author( $comment = null ) {
 			return $comment->user_id === $post->post_author;
 		}
 	}
-
 	return false;
 }
-
-
 // Remove unnecessary fields from comment form
 add_filter( 'comment_form_default_fields', 'website_field_remove' );
 function website_field_remove( $fields ) {
@@ -294,19 +258,13 @@ function website_field_remove( $fields ) {
 		unset( $fields['url'] );
 		unset( $fields['cookies'] );
 	}
-
 	return $fields;
 }
-
-
 function remove_unused_sections( $wp_customize ) {
 	$wp_customize->remove_section( 'background_image' );
 	$wp_customize->remove_section( 'colors' );
 }
-
 add_action( 'customize_register', 'remove_unused_sections', 11 );
-
-
 if ( ! isset( $content_width ) ) {
 	$content_width = 560;
 }
