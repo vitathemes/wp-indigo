@@ -1069,7 +1069,7 @@ textarea {
   .header-home .custom-logo-link:hover {
     text-decoration: none;
     border: 0; }
-  .header-home .has-animation:hover img {
+  .header-home .has-animation img:hover {
     opacity: .9; }
   .header-home .selfie img {
     width: 100px;

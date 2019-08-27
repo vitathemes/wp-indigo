@@ -118,9 +118,16 @@ function indigo_show_socials( $social_names ) {
 		$social = get_theme_mod( $social_name );
 		if ( $social != "" ) {
 			$name = explode( '-', $social_name );
+			if (strpos($name[1], 'mail') !== false) {
+				echo '<a class="link" data-title="' . $social . '" href="mailto:' . $social . '" target="_blank">
+			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
+		</a>';
+			} else{
+			$name = explode( '-', $social_name );
 			echo '<a class="link" data-title="' . $social . '" href="' . $social . '" target="_blank">
 			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
+			}
 		}
 	}
 }
