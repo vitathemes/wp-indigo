@@ -34,7 +34,7 @@ function indigo_show_avatar() {
 	if ( has_custom_logo() ) {
 		the_custom_logo();
 	} else {
-		echo '<a class="custom-logo-link" href="' . site_url() . '"><img src="' . get_template_directory_uri() . '/assets/images/profile.jpg" /></a>';
+		echo '<a aria-label="Go to HomePage" class="custom-logo-link" href="' . site_url() . '"><img alt="" src="' . get_template_directory_uri() . '/assets/images/profile.jpg" /></a>';
 	}
 }
 
