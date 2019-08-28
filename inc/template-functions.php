@@ -88,7 +88,7 @@ function indigo_typography() {
 		'font-family' => "Roboto Mono",
 		'font-size'   => "26px",
 		'variant'     => 'regular',
-		'line-height' => '28px',
+		'line-height' => '31px',
 		'color'       => '#1a1a1a'
 	);
 	$default_text_typography    = array(
