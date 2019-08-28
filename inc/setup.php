@@ -106,9 +106,3 @@ function remove_unused_sections($wp_customize) {
 }
 
 add_action( 'customize_register', 'remove_unused_sections', 11 );
-
-
-if (!is_admin()) add_action("wp_enqueue_scripts", "deregister_scripts", 11);
-function deregister_scripts() {
-	wp_deregister_script( 'jquery' );
-}

@@ -5,6 +5,7 @@ require "classes/indigo_Walker_Comment.php";
 function indigo_show_profile() {
 	get_template_part( "template-parts/profile" );
 }
+
 // Menu Generator
 function indigo_show_menu() {
 	if ( has_nav_menu( 'primary-menu' ) ) {
@@ -22,18 +23,21 @@ function indigo_show_menu() {
 		wp_nav_menu( $menu_args );
 	}
 }
+
 // Show Post Tags
 function indigo_show_tags() {
 	the_tags( '', ' ', '' );
 }
+
 // Show Name Field
 function indigo_show_avatar() {
 	if ( has_custom_logo() ) {
 		the_custom_logo();
 	} else {
-		echo '<a class="custom-logo-link" href="' . site_url() . '"><img src="' . get_bloginfo( 'template_url' ) . '/assets/images/profile.jpg" /></a>';
+		echo '<a class="custom-logo-link" href="' . site_url() . '"><img src="' . get_template_directory_uri() . '/assets/images/profile.jpg" /></a>';
 	}
 }
+
 /**
  * Show socials list
  *
@@ -44,19 +48,20 @@ function indigo_show_socials( $social_names ) {
 		$social = get_theme_mod( $social_name );
 		if ( $social != "" ) {
 			$name = explode( '-', $social_name );
-			if (strpos($name[1], 'mail') !== false) {
-				echo '<a rel="noopener" class="link" data-title="' . $social . '" href="mailto:' . $social . '" target="_blank">
+			if ( strpos( $name[1], 'mail' ) !== false ) {
+				echo '<a rel="noopener" aria-label="' . $name[1] . '" class="link" data-title="' . $social . '" href="mailto:' . $social . '" target="_blank">
 			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
-			} else{
+			} else {
 				$name = explode( '-', $social_name );
-				echo '<a rel="noopener" class="link" data-title="' . $social . '" href="' . $social . '" target="_blank">
+				echo '<a rel="noopener" aria-label="' . $name[1] . '" class="link" data-title="' . $social . '" href="' . $social . '" target="_blank">
 			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
 			}
 		}
 	}
 }
+
 /**
  * Check active socials
  *
@@ -71,13 +76,14 @@ function indigo_check_socials( $social_names ) {
 			return true;
 		}
 	}
+
 	return false;
 }
 
 // Load theme typography
 function indigo_typography() {
-	$text_typography    = get_theme_mod( 'text_typography' );
-	$heading_typography = get_theme_mod( 'headings_typography' );
+	$text_typography            = get_theme_mod( 'text_typography' );
+	$heading_typography         = get_theme_mod( 'headings_typography' );
 	$default_heading_typography = array(
 		'font-family' => "Roboto Mono",
 		'font-size'   => "26px",
@@ -85,7 +91,7 @@ function indigo_typography() {
 		'line-height' => '28px',
 		'color'       => '#1a1a1a'
 	);
-	$default_text_typography = array(
+	$default_text_typography    = array(
 		'font-family' => "Roboto Mono",
 		'font-size'   => "16px",
 		'variant'     => 'regular',
@@ -120,6 +126,7 @@ function indigo_typography() {
 		    </style>';
 	echo $html;
 }
+
 //
 function indigo_get_discussion_data() {
 	static $discussion, $post_id;
@@ -138,7 +145,7 @@ function indigo_get_discussion_data() {
 			'number'  => 20, /* Only retrieve the last 20 comments, as the end goal is just 6 unique authors */
 		)
 	);
-	$authors = array();
+	$authors  = array();
 	foreach ( $comments as $comment ) {
 		$authors[] = ( (int) $comment->user_id > 0 ) ? (int) $comment->user_id : $comment->comment_author_email;
 	}
@@ -147,19 +154,21 @@ function indigo_get_discussion_data() {
 		'authors'   => array_slice( $authors, 0, 6 ),           /* Six unique authors commenting on the post. */
 		'responses' => get_comments_number( $current_post_id ), /* Number of responses. */
 	);
+
 	return $discussion;
 }
+
 //
 function indigo_comment_form( $order ) {
 	if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
 		$fields = array(
-			'author' =>
+			'author'  =>
 				'<p class="comment-form-author">' .
 				'<input placeholder="Your Name" id="author" name="author" type="text" size="30" /></p>',
-			'email' =>
+			'email'   =>
 				'<p class="comment-form-email">' .
 				'<input placeholder="Your Email" id="email" name="email" type="email" value="" size="30" /></p>',
-			'url' => '',
+			'url'     => '',
 			'cookies' => ''
 		);
 		comment_form(
