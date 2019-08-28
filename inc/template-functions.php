@@ -45,7 +45,7 @@ function indigo_show_socials( $social_names ) {
 		if ( $social != "" ) {
 			$name = explode( '-', $social_name );
 			if (strpos($name[1], 'mail') !== false) {
-				echo '<a rel="noopener" class="link" data-title="' . $social . '" href="mailto:' . $social . '" target="_blank">
+				echo '<a aria-label="Email Me" rel="noopener" class="link" data-title="' . $social . '" href="mailto:' . $social . '" target="_blank">
 			<svg class="icon icon-facebook"><use xlink:href="' . get_bloginfo( 'template_url' ) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
 			} else{
