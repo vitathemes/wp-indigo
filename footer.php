@@ -23,8 +23,8 @@
 	?>
 
     <p class="extra">
-        <a rel="noreferrer target="_blank" class="link" href="https://github.com/vitathemes/wp-indigo">WP-Indigo</a> by
-        <a rel="noreferrer target="_blank" title="Clean, Minimal and Fast-loading WordPress Themes" class="link" href="https://vitathemes.com/">VitaThemes</a>
+        <a rel="noreferrer" target="_blank" class="link" href="https://github.com/vitathemes/wp-indigo">WP-Indigo</a> by
+        <a rel="noreferrer" target="_blank" title="Clean, Minimal and Fast-loading WordPress Themes" class="link" href="https://vitathemes.com/">VitaThemes</a>
     </p>
 </footer>
 
