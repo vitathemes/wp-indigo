@@ -41,8 +41,6 @@ themes/wp-indigo/         # → Root of your theme
 │   ├── css/              # → Compiled CSS file
 │   ├── images/           # → Theme images
 │   └── sass/             # → Theme scss files
-├── composer.json         # → Autoloading for `vendor/` files
-├── composer.lock         # → Composer lock file
 ├── languages/            # → Theme Language files
 ├── template-parts/       # → Theme Part files (Include)
 ├── node_modules/         # → Node.js packages
