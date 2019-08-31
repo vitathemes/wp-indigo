@@ -48,6 +48,7 @@ themes/wp-indigo/         # → Root of your theme
 ├── package.json          # → Node.js dependencies and scripts
 ├── inc/                  # → Theme functions
 │   ├── classes/          # → Custom PHP classes
+│   ├── kirki/            # → Kirki Customization framework
 │   ├── customizer.php    # → All codes related to WordPress Customizer (We use Kirki Framework)
 │   ├── template-functions.php    # → Custom template tags & tweaks
 │   └── setup.php         # → Theme Setup
