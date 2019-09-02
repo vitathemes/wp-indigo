@@ -14,4 +14,4 @@
 
 <div class="wrapper-normal">
     <div class="page">
-		<?php if ( ! is_front_page() ) : ?><?php indigo_show_menu(); ?><?php endif; ?>
+		<?php if ( ! is_page_template( 'page-templates/home.php' ) ) : ?><?php indigo_show_menu(); ?><?php endif; ?>
