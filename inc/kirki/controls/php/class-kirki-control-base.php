@@ -129,14 +129,14 @@ class Kirki_Control_Base extends WP_Customize_Control {
 			'kirkiL10n',
 			array(
 				'isScriptDebug'        => ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ),
-				'noFileSelected'       => esc_html__( 'No File Selected', 'kirki' ),
-				'remove'               => esc_html__( 'Remove', 'kirki' ),
-				'default'              => esc_html__( 'Default', 'kirki' ),
-				'selectFile'           => esc_html__( 'Select File', 'kirki' ),
-				'standardFonts'        => esc_html__( 'Standard Fonts', 'kirki' ),
-				'googleFonts'          => esc_html__( 'Google Fonts', 'kirki' ),
-				'defaultCSSValues'     => esc_html__( 'CSS Defaults', 'kirki' ),
-				'defaultBrowserFamily' => esc_html__( 'Default Browser Font-Family', 'kirki' ),
+				'noFileSelected'       => esc_html__( 'No File Selected', 'wp-indigo' ),
+				'remove'               => esc_html__( 'Remove', 'wp-indigo' ),
+				'default'              => esc_html__( 'Default', 'wp-indigo' ),
+				'selectFile'           => esc_html__( 'Select File', 'wp-indigo' ),
+				'standardFonts'        => esc_html__( 'Standard Fonts', 'wp-indigo' ),
+				'googleFonts'          => esc_html__( 'Google Fonts', 'wp-indigo' ),
+				'defaultCSSValues'     => esc_html__( 'CSS Defaults', 'wp-indigo' ),
+				'defaultBrowserFamily' => esc_html__( 'Default Browser Font-Family', 'wp-indigo' ),
 			)
 		);
 

@@ -70,7 +70,7 @@ Kirki::$url = plugins_url( '', __FILE__ );
 
 // Instantiate classes.
 new Kirki();
-new Kirki_L10n();
+//new Kirki_L10n();
 
 // Include deprecated functions & methods.
 require_once wp_normalize_path( dirname( __FILE__ ) . '/deprecated/deprecated.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude
