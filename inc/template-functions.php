@@ -16,7 +16,7 @@ function indigo_show_menu() {
 			'container_class' => 'nav-home',
 			'depth'           => 1
 		);
-		if ( ! is_front_page() ) {
+		if ( ! is_page_template( 'page-templates/home.php' ) ) {
 			$menu_args['container_class'] = 'nav';
 			$menu_args['depth']           = 0;
 		}

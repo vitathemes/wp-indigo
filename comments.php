@@ -109,9 +109,6 @@ $discussion = indigo_get_discussion_data();
             </h3>
 		<?php
 		endif;
-
-	else :
-
 	endif; // if have_comments();
 	?>
 </div><!-- #comments -->

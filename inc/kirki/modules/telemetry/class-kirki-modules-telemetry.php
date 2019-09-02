@@ -143,33 +143,33 @@ final class Kirki_Modules_Telemetry {
 		$data = $this->get_data();
 		?>
 		<div class="notice notice-info kirki-telemetry">
-			<h3><strong><?php esc_html_e( 'Help us improve Kirki.', 'kirki' ); ?></strong></h3>
-			<p style="max-width: 76em;"><?php _e( 'Help us begin a dialogue with theme developers, collaborate and improve both the theme you are using and the Kirki framework by agreeing to send anonymous data. <strong>The data is completely anonymous and we will never collect any identifyable information about you or your website.</strong>', 'kirki' ); // phpcs:ignore WordPress.Security.EscapeOutput ?></p>
+			<h3><strong><?php esc_html_e( 'Help us improve Kirki.', 'wp-indigo' ); ?></strong></h3>
+			<p style="max-width: 76em;"><?php _e( 'Help us begin a dialogue with theme developers, collaborate and improve both the theme you are using and the Kirki framework by agreeing to send anonymous data. <strong>The data is completely anonymous and we will never collect any identifyable information about you or your website.</strong>', 'wp-indigo' ); // phpcs:ignore WordPress.Security.EscapeOutput ?></p>
 			<table class="data-to-send hidden">
 				<thead>
 					<tr>
-						<th colspan="2"><?php esc_html_e( 'Data that will be sent', 'kirki' ); ?></th>
+						<th colspan="2"><?php esc_html_e( 'Data that will be sent', 'wp-indigo' ); ?></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td style="min-width: 200px;"><?php esc_html_e( 'PHP Version', 'kirki' ); ?></td>
+						<td style="min-width: 200px;"><?php esc_html_e( 'PHP Version', 'wp-indigo' ); ?></td>
 						<td><code><?php echo esc_html( $data['phpVer'] ); ?></code></td>
 					</tr>
 					<tr>
-						<td><?php esc_html_e( 'Theme Name', 'kirki' ); ?></td>
+						<td><?php esc_html_e( 'Theme Name', 'wp-indigo' ); ?></td>
 						<td><code><?php echo esc_html( $data['themeName'] ); ?></code></td>
 					</tr>
 					<tr>
-						<td><?php esc_html_e( 'Theme Author', 'kirki' ); ?></td>
+						<td><?php esc_html_e( 'Theme Author', 'wp-indigo' ); ?></td>
 						<td><code><?php echo esc_html( $data['themeAuthor'] ); ?></code></td>
 					</tr>
 					<tr>
-						<td><?php esc_html_e( 'Theme URI', 'kirki' ); ?></td>
+						<td><?php esc_html_e( 'Theme URI', 'wp-indigo' ); ?></td>
 						<td><code><?php echo esc_html( $data['themeURI'] ); ?></code></td>
 					</tr>
 					<tr>
-						<td><?php esc_html_e( 'Field Types Used', 'kirki' ); ?></td>
+						<td><?php esc_html_e( 'Field Types Used', 'wp-indigo' ); ?></td>
 						<td><code><?php echo esc_html( implode( ',', $data['fieldTypes'] ) ); ?></code></td>
 					</tr>
 				</tbody>
@@ -179,7 +179,7 @@ final class Kirki_Modules_Telemetry {
 							<?php
 							printf(
 								/* translators: %1$s: URL to the server plugin code. %2$s: URL to the stats page. */
-								__( 'We believe in complete transparency. You can see the code used on our server <a href="%1$s" rel="nofollow">here</a>, and the results of the statistics we\'re gathering on <a href="%2$s" rel="nofollow">this page</a>.', 'kirki' ), // phpcs:ignore WordPress.Security.EscapeOutput
+								__( 'We believe in complete transparency. You can see the code used on our server <a href="%1$s" rel="nofollow">here</a>, and the results of the statistics we\'re gathering on <a href="%2$s" rel="nofollow">this page</a>.', 'wp-indigo' ), // phpcs:ignore WordPress.Security.EscapeOutput
 								'https://github.com/aristath/kirki-telemetry-server',
 								'https://wplemon.com/kirki-telemetry-statistics/'
 							);
@@ -190,10 +190,10 @@ final class Kirki_Modules_Telemetry {
 			</table>
 			<p class="actions">
 
-				<a href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'kirki-consent-notice', 'telemetry' ) ) ); ?>" class="button button-primary consent"><?php esc_html_e( 'I agree', 'kirki' ); ?></a>
-				<a href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'kirki-hide-notice', 'telemetry' ) ) ); ?>" class="button button-secondary dismiss"><?php esc_html_e( 'No thanks', 'kirki' ); ?></a>
-				<a class="button button-link details details-show"><?php esc_html_e( 'Show me the data', 'kirki' ); ?></a>
-				<a class="button button-link details details-hide hidden"><?php esc_html_e( 'Collapse data', 'kirki' ); ?></a>
+				<a href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'kirki-consent-notice', 'telemetry' ) ) ); ?>" class="button button-primary consent"><?php esc_html_e( 'I agree', 'wp-indigo' ); ?></a>
+				<a href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'kirki-hide-notice', 'telemetry' ) ) ); ?>" class="button button-secondary dismiss"><?php esc_html_e( 'No thanks', 'wp-indigo' ); ?></a>
+				<a class="button button-link details details-show"><?php esc_html_e( 'Show me the data', 'wp-indigo' ); ?></a>
+				<a class="button button-link details details-hide hidden"><?php esc_html_e( 'Collapse data', 'wp-indigo' ); ?></a>
 			</p>
 			<script>
 			jQuery( '.kirki-telemetry a.details' ).on( 'click', function() {

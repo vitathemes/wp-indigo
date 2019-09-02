@@ -234,7 +234,7 @@ class Kirki extends Kirki_Init {
 	 */
 	public static function add_field( $config_id, $args ) {
 		if ( doing_action( 'customize_register' ) ) {
-			_doing_it_wrong( __METHOD__, esc_html__( 'Kirki fields should not be added on customize_register. Please add them directly, or on init.', 'kirki' ), '3.0.10' );
+			_doing_it_wrong( __METHOD__, esc_html__( 'Kirki fields should not be added on customize_register. Please add them directly, or on init.', 'wp-indigo' ), '3.0.10' );
 		}
 
 		parent::maybe_show_fontawesome_nag( $args );

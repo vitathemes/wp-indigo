@@ -16,13 +16,13 @@ get_header(); ?>
 				'paged'          => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
 			);
 
-			$posts = new WP_Query( $args );
+			$query = new WP_Query( $args );
 
-			if ( $posts->have_posts() ) {
+			if ( $query->have_posts() ) {
 
-				while ( $posts->have_posts() ) {
+				while ( $query->have_posts() ) {
 
-					$posts->the_post();
+					$query->the_post();
 
 					get_template_part( 'template-parts/list', 'blog' );
 
@@ -33,7 +33,7 @@ get_header(); ?>
 						$paginate_args = array(
 							'base'               => '%_%',
 							'format'             => '?paged=%#%',
-							'total'              => $posts->max_num_pages,
+							'total'              => $query->max_num_pages,
 							'current'            => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
 							'show_all'           => false,
 							'end_size'           => 1,
