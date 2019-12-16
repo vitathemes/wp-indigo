@@ -41,8 +41,6 @@ themes/wp-indigo/         # → Root of your theme
 │   ├── css/              # → Compiled CSS file
 │   ├── images/           # → Theme images
 │   └── sass/             # → Theme scss files
-├── composer.json         # → Autoloading for `vendor/` files
-├── composer.lock         # → Composer lock file
 ├── languages/            # → Theme Language files
 ├── template-parts/       # → Theme Part files (Include)
 ├── node_modules/         # → Node.js packages
@@ -50,6 +48,7 @@ themes/wp-indigo/         # → Root of your theme
 ├── package.json          # → Node.js dependencies and scripts
 ├── inc/                  # → Theme functions
 │   ├── classes/          # → Custom PHP classes
+│   ├── kirki/            # → Kirki Customization framework
 │   ├── customizer.php    # → All codes related to WordPress Customizer (We use Kirki Framework)
 │   ├── template-functions.php    # → Custom template tags & tweaks
 │   └── setup.php         # → Theme Setup
