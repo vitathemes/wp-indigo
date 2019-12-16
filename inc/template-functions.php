@@ -33,8 +33,6 @@ function indigo_show_tags() {
 function wp_indigo_show_avatar() {
 	if ( has_custom_logo() ) {
 		the_custom_logo();
-	} else {
-		echo '<a aria-label="Go to HomePage" class="custom-logo-link" href="' . site_url() . '"><img alt="" src="' . get_template_directory_uri() . '/assets/images/profile.jpg" /></a>';
 	}
 }
 
@@ -145,13 +143,13 @@ function wp_indigo_get_discussion_data() {
 			'number'  => 20, /* Only retrieve the last 20 comments, as the end goal is just 6 unique authors */
 		)
 	);
-	$authors  = array();
+	$wp_indigo_authors  = array();
 	foreach ( $wp_indigo_comments as $wp_indigo_comment ) {
-		$authors[] = ( (int) $wp_indigo_comment->user_id > 0 ) ? (int) $wp_indigo_comment->user_id : $wp_indigo_comment->comment_author_email;
+		$wp_indigo_authors[] = ( (int) $wp_indigo_comment->user_id > 0 ) ? (int) $wp_indigo_comment->user_id : $wp_indigo_comment->comment_author_email;
 	}
-	$authors    = array_unique( $authors );
+	$wp_indigo_authors    = array_unique( $wp_indigo_authors );
 	$discussion = (object) array(
-		'authors'   => array_slice( $authors, 0, 6 ),           /* Six unique authors commenting on the post. */
+		'authors'   => array_slice( $wp_indigo_authors, 0, 6 ),           /* Six unique authors commenting on the post. */
 		'responses' => get_comments_number( $wp_indigo_current_post_id ), /* Number of responses. */
 	);
 
