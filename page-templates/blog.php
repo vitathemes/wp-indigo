@@ -6,7 +6,7 @@
  *
  * */
 get_header(); ?>
-<?php indigo_show_profile(); ?>
+<?php wp_indigo_show_profile(); ?>
     <section class="blog">
         <div class="list">
 			<?php
@@ -16,13 +16,13 @@ get_header(); ?>
 				'paged'          => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
 			);
 
-			$posts = new WP_Query( $args );
+			$wp_indigo_posts = new WP_Query( $args );
 
-			if ( $posts->have_posts() ) {
+			if ( $wp_indigo_posts->have_posts() ) {
 
-				while ( $posts->have_posts() ) {
+				while ( $wp_indigo_posts->have_posts() ) {
 
-					$posts->the_post();
+					$wp_indigo_posts->the_post();
 
 					get_template_part( 'template-parts/list', 'blog' );
 
@@ -33,7 +33,7 @@ get_header(); ?>
 						$paginate_args = array(
 							'base'               => '%_%',
 							'format'             => '?paged=%#%',
-							'total'              => $posts->max_num_pages,
+							'total'              => $wp_indigo_posts->max_num_pages,
 							'current'            => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
 							'show_all'           => false,
 							'end_size'           => 1,

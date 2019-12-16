@@ -12,10 +12,10 @@
 
 	<?php
 	if ( get_theme_mod( 'copyright_text' ) ) {
-		echo get_theme_mod( 'copyright_text' ); ?>
+		echo esc_html( get_theme_mod( 'copyright_text' ) ); ?>
         <a class="link" href="<?php echo bloginfo( 'rss2_url' ); ?>" target="_blank">
             <svg class="icon icon-rss">
-                <use xlink:href="<?php echo get_template_directory_uri() ?>/assets/images/defs.svg#icon-rss"></use>
+                <use xlink:href="<?php echo esc_html( get_template_directory_uri() ) ?>/assets/images/defs.svg#icon-rss"></use>
             </svg>
         </a>
 		<?php
@@ -23,13 +23,13 @@
 	?>
 
     <p class="extra">
-        <a rel="noreferrer" target="_blank" class="link" href="https://github.com/vitathemes/wp-indigo">WP-Indigo</a> by
-        <a rel="noreferrer" target="_blank" title="Clean, Minimal and Fast-loading WordPress Themes" class="link" href="https://vitathemes.com/">VitaThemes</a>
+        <a rel="noreferrer" target="_blank" class="link" href="https://github.com/vitathemes/wp-indigo"><?php echo esc_html__( 'WP-Indigo', 'wp-indigo' ); ?></a> <?php echo esc_html__( 'by', 'wp-indigo' ); ?>
+        <a rel="noreferrer" target="_blank" title="Clean, Minimal and Fast-loading WordPress Themes" class="link" href="https://vitathemes.com/"><?php echo esc_html__( 'VitaThemes', 'wp-indigo' ); ?></a>
     </p>
 </footer>
 
 <?php wp_footer(); ?>
-			</div>
-		</div>
-	</body>
+</div>
+</div>
+</body>
 </html>

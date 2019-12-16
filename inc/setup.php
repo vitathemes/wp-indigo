@@ -6,12 +6,10 @@
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function indigo_setup() {
+function wp_indigo_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on _s, use a find and replace
-	 * to change 'wp-indigo' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'wp-indigo', get_template_directory() . '/languages' );
 	// Add default posts and comments RSS feed links to head.
@@ -63,20 +61,20 @@ function indigo_setup() {
 		'flex-height' => true,
 	) );
 }
-add_action( 'after_setup_theme', 'indigo_setup' );
+add_action( 'after_setup_theme', 'wp_indigo_setup' );
 /**
  * Enqueue scripts and styles.
  */
 // External Assets
-function indigo_scripts() {
+function wp_indigo_scripts() {
 	wp_enqueue_style( 'indigo-style', get_template_directory_uri() . '/assets/css/style.css' );
 	if ( is_singular() && comments_open() ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'indigo_scripts' );
+add_action( 'wp_enqueue_scripts', 'wp_indigo_scripts' );
 //
-function indigo_is_comment_by_post_author( $comment = null ) {
+function wp_indigo_is_comment_by_post_author( $comment = null ) {
 	if ( is_object( $comment ) && $comment->user_id > 0 ) {
 		$user = get_userdata( $comment->user_id );
 		$post = get_post( $comment->comment_post_ID );

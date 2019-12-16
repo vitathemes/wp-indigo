@@ -291,7 +291,7 @@ Kirki::add_field( 'wp-indigo', [
 
 // -- Typography Fields --
 
-function add_edit_icons( $wp_customize ) {
+function wpindigo_add_edit_icons( $wp_customize ) {
 	$wp_customize->selective_refresh->add_partial( 'copyright_text', array(
 		'selector' => '.footer-main',
 	) );
@@ -317,4 +317,4 @@ function add_edit_icons( $wp_customize ) {
 	) );
 }
 
-add_action( 'customize_preview_init', 'add_edit_icons' );
+add_action( 'customize_preview_init', 'wpindigo_add_edit_icons' );
