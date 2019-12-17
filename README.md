@@ -76,4 +76,6 @@ See the [Changelog](CHANGELOG.md)
 
 ## License
 
+This Theme based on [indigo](https://github.com/sergiokopplin/indigo) by [sergiokopplin](https://github.com/sergiokopplin)
+
 WP-Indigo is licensed under [MIT](LICENSE).

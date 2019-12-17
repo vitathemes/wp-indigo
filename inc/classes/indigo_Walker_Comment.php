@@ -13,10 +13,10 @@ class Indigo_Walker_Comment extends Walker_Comment {
 	 */
 	protected function html5_comment( $comment, $depth, $args ) {
 
-		$tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
+		$wp_indigo_tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
 
 		?>
-        <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
+        <<?php echo esc_html($wp_indigo_tag); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
         <article id="comment div-comment-<?php comment_ID(); ?>" class="comment-body">
             <footer class="comment-meta">
                 <div class="comment-author vcard">

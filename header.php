@@ -7,11 +7,12 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php
     wp_head();
-	indigo_typography();
+	wp_indigo_typography();
     ?>
 </head>
 <body <?php body_class(); ?>>
+<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-indigo' ); ?></a>
 
 <div class="wrapper-normal">
     <div class="page">
-		<?php if ( ! is_page_template( 'page-templates/home.php' ) ) : ?><?php indigo_show_menu(); ?><?php endif; ?>
+	    <?php if ( ! is_page_template( 'page-templates/home.php' ) ) : ?><?php indigo_show_menu(); ?><?php endif; ?>
