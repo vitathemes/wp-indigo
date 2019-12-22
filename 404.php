@@ -9,9 +9,9 @@
 get_header();
 ?>
     <section class="lost-container">
-        <h2><?php esc_html__('Page Not Found - 404' , 'wp-indigo'); ?></h2>
-        <p><?php esc_html__('This page not found (deleted or never exists). try a phrase in search box or back to home and start again.' , 'wp-indigo'); ?></p>
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html__('Take me home!' , 'wp-indigo'); ?></a>
+        <h2><?php esc_html_e('Page Not Found - 404' , 'wp-indigo'); ?></h2>
+        <p><?php esc_html_e('This page not found (deleted or never exists). try a phrase in search box or back to home and start again.' , 'wp-indigo'); ?></p>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html_e('Take me home!' , 'wp-indigo'); ?></a>
         <br>
         <br>
         <?php get_search_form(); ?>

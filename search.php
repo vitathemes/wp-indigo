@@ -12,7 +12,7 @@ wp_indigo_show_profile(); ?>
 
         <h1>
             <?php
-            printf( esc_html__('Search Results for: %s', 'wp-indigo' ), get_search_query());
+            printf( esc_html_e('Search Results for: %s', 'wp-indigo' ), get_search_query());
             ?>
         </h1>
         <div class="list">

@@ -23,8 +23,8 @@
 	?>
 
     <p class="extra">
-        <a rel="noreferrer" target="_blank" class="link" href="https://github.com/vitathemes/wp-indigo"><?php echo esc_html__( 'WP-Indigo', 'wp-indigo' ); ?></a> <?php echo esc_html__( 'by', 'wp-indigo' ); ?>
-        <a rel="noreferrer" target="_blank" title="Clean, Minimal and Fast-loading WordPress Themes" class="link" href="https://vitathemes.com/"><?php echo esc_html__( 'VitaThemes', 'wp-indigo' ); ?></a>
+        <a rel="noreferrer" target="_blank" class="link" href="https://github.com/vitathemes/wp-indigo"><?php echo esc_html_e( 'WP-Indigo', 'wp-indigo' ); ?></a> <?php echo esc_html_e( 'by', 'wp-indigo' ); ?>
+        <a rel="noreferrer" target="_blank" title="Clean, Minimal and Fast-loading WordPress Themes" class="link" href="https://vitathemes.com/"><?php echo esc_html_e( 'VitaThemes', 'wp-indigo' ); ?></a>
     </p>
 </footer>
 

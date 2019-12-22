@@ -25,7 +25,7 @@ function wp_indigo_show_menu() {
 }
 
 // Show Post Tags
-function indigo_show_tags() {
+function wp_indigo_show_tags() {
 	the_tags( '', ' ', '' );
 }
 
@@ -47,15 +47,17 @@ function wp_indigo_show_socials( $wp_indigo_social_names ) {
 		if ( $social != "" ) {
 			$name = explode( '-', $wp_indigo_social_name );
 			if ( strpos( $name[1], 'mail' ) !== false ) {
-				echo '<a rel="noopener" aria-label="Email me" class="link" data-title="' . $social . '" href="mailto:' . $social . '" target="_blank">
+				$output = '<a rel="noopener" aria-label="Email me" class="link" data-title="' . $social . '" href="mailto:' . $social . '" target="_blank">
 			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
 			} else {
 				$name = explode( '-', $wp_indigo_social_name );
-				echo '<a rel="noopener" aria-label="View ' . $name[1] . ' page" class="link" data-title="' . $social . '" href="' . $social . '" target="_blank">
+				$output = '<a rel="noopener" aria-label="View ' . $name[1] . ' page" class="link" data-title="' . $social . '" href="' . $social . '" target="_blank">
 			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
 			}
+
+			echo esc_html($output);
 		}
 	}
 }
