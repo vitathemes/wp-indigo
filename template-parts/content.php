@@ -29,7 +29,7 @@ if ( get_theme_mod( 'show_share_icons' , true ) ):
     ?>
     <div class="social-share">
         <div class="social-share-title">
-            <span><?php _e( 'Share on Internet:', 'wp-indigo' ); ?></span>
+            <span><?php esc_attr_e ('Share on Internet:', 'wp-indigo' ); ?></span>
         </div>
         <div class="social-share-links">
 			<?php
@@ -38,15 +38,15 @@ if ( get_theme_mod( 'show_share_icons' , true ) ):
 			$facebook_url = "https://www.facebook.com/sharer.php?u=" . get_permalink();
 			?>
 
-            <a target="_blank" href="<?php echo $facebook_url; ?>">
+            <a target="_blank" href="<?php echo esc_url($facebook_url); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.svg" alt="<?php echo __( 'Share on Facebook', 'wp-indigo' ); ?>"/>
             </a>
 
-            <a target="_blank" href="<?php echo $twitter_url; ?>">
+            <a target="_blank" href="<?php echo esc_url($twitter_url); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.svg" alt="<?php echo __( 'Share on Twitter', 'wp-indigo' ); ?>"/>
             </a>
 
-            <a target="_blank" href="<?php echo $linkedin_url; ?>">
+            <a target="_blank" href="<?php echo esc_url($linkedin_url); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.svg" alt="<?php echo __( 'Share on Linkedin', 'wp-indigo' ); ?>"/>
             </a>
 

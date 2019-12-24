@@ -69,7 +69,7 @@ class Indigo_Walker_Comment extends Walker_Comment {
                 </div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-                    <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'wp-indigo' ); ?></p>
+                    <p class="comment-awaiting-moderation"><?php esc_attr_e( 'Your comment is awaiting moderation.', 'wp-indigo' ); ?></p>
 				<?php endif; ?>
             </footer><!-- .comment-meta -->
 
