@@ -11,16 +11,19 @@ function wp_indigo_show_menu() {
 	if ( has_nav_menu( 'primary-menu' ) ) {
 		$wp_indigo_menu_args = array(
 			'theme_location'  => 'primary-menu',
-			'menu_class'      => 'list',
+			'menu_class'      => 'list navigation',
+			'menu_id'        => 'navigation',
 			'container'       => 'div',
 			'container_class' => 'nav-home',
-			'depth'           => 1
+			'container_id' => 'main-nav',
+			'depth'           => 2
 		);
 		if ( ! is_front_page() ) {
 			$wp_indigo_menu_args['container_class'] = 'nav';
-			$wp_indigo_menu_args['depth']           = 0;
 		}
+		echo '<nav id="site-navigation" class="main-navigation" role="navigation">';
 		wp_nav_menu( $wp_indigo_menu_args );
+		echo '</nav>';
 	}
 }
 

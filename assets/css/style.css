@@ -1128,20 +1128,23 @@ textarea {
   .nav-home > .list li {
     display: inline-block;
     position: relative; }
-    .nav > .list li:hover > ul.sub-menu,
-    .nav-home > .list li:hover > ul.sub-menu {
+    .nav > .list li:hover > ul.sub-menu, .nav > .list li.focus > ul.sub-menu,
+    .nav-home > .list li:hover > ul.sub-menu,
+    .nav-home > .list li.focus > ul.sub-menu {
       display: block; }
     .nav > .list li ul.sub-menu,
     .nav-home > .list li ul.sub-menu {
-      display: none;
-      position: absolute;
       list-style: none;
       box-shadow: 0 0 10px -6px gray;
       border-radius: 3px;
-      padding: 0 10px;
+      padding: 5px 10px;
       background: white;
-      z-index: 99;
-      right: 0; }
+      position: absolute;
+      display: none;
+      z-index: 99; }
+      .nav > .list li ul.sub-menu.focus,
+      .nav-home > .list li ul.sub-menu.focus {
+        display: block; }
       .nav > .list li ul.sub-menu li,
       .nav-home > .list li ul.sub-menu li {
         display: block; }

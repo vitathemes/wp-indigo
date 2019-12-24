@@ -9,21 +9,22 @@
       display: inline-block
       position: relative
 
-      &:hover
+      &:hover, &.focus
         & > ul.sub-menu
           display: block
 
       ul.sub-menu
-        display: none
-        position: absolute
         list-style: none
         box-shadow: 0 0 10px -6px gray
         border-radius: 3px
-        padding: 0 10px
+        padding: 5px 10px
         background: white
+        position: absolute
+        display: none
         z-index: 99
-        right: 0
 
+        &.focus
+          display: block
 
         li
           display: block
@@ -47,6 +48,7 @@
       padding: 20px 10px
       text-decoration: none
       color: var(--secondary-color)
+
 
 .nav
   position: absolute
