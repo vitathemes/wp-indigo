@@ -165,10 +165,10 @@ function wp_indigo_comment_form( $wp_indigo_order ) {
 		$wp_indigo_fields = array(
 			'author'  =>
 				'<p class="comment-form-author">' .
-				'<input placeholder="Your Name" id="author" name="author" type="text" size="30" /></p>',
+				'<input placeholder="'. esc_html_e( 'Your Name', 'wp-indigo' ) .'" id="author" name="author" type="text" size="30" /></p>',
 			'email'   =>
 				'<p class="comment-form-email">' .
-				'<input placeholder="Your Email" id="email" name="email" type="email" value="" size="30" /></p>',
+				'<input placeholder="'. esc_html_e( 'Comments are disabled.', 'wp-indigo' ) .'" id="email" name="email" type="email" value="" size="30" /></p>',
 			'url'     => '',
 			'cookies' => ''
 		);
@@ -179,7 +179,7 @@ function wp_indigo_comment_form( $wp_indigo_order ) {
 				'comment_notes_before' => false,
 				'label_submit'         => 'Submit',
 				'fields'               => $wp_indigo_fields,
-				'comment_field'        => '<p class="comment-form-comment"><textarea placeholder="Write your comment" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
+				'comment_field'        => '<p class="comment-form-comment"><textarea placeholder="'. esc_html_e( 'Write Your Comment', 'wp-indigo' ) .'" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
 			)
 		);
 	}
