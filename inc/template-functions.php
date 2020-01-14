@@ -46,7 +46,7 @@ function wp_indigo_show_avatar() {
  */
 function wp_indigo_show_socials( $wp_indigo_social_names ) {
 	foreach ( $wp_indigo_social_names as $wp_indigo_social_name ) {
-		$social = get_theme_mod( $wp_indigo_social_name );
+		$social = esc_attr(get_theme_mod( $wp_indigo_social_name ));
 		if ( $social != "" ) {
 			$name = explode( '-', $wp_indigo_social_name );
 			if ( strpos( $name[1], 'mail' ) !== false ) {

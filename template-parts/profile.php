@@ -1,7 +1,7 @@
 <?php
 if ( get_theme_mod( 'show_profile_section', 1 ) ):
 	?>
-    <header class="header-home <?php echo get_theme_mod( 'profile_animation', true ) ? "animated" : ''; ?>">
+    <header class="header-home <?php echo esc_attr(get_theme_mod( 'profile_animation', true )) ? "animated" : ''; ?>">
         <div class="selfie"><?php wp_indigo_show_avatar(); ?></div>
         <a class="title-link" href="<?php echo esc_url( home_url( '/' ) ); ?>"><h1
                     class="title"><?php bloginfo( 'name' ); ?></h1></a>
