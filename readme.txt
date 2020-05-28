@@ -1,7 +1,7 @@
-=== Theme Name ===
+=== WP Indigo ===
 Contributors: vitathemes, kashani, mrmolaei, mostafas1990
 Requires at least: 5.0
-Tested up to: 5.2.2
+Tested up to: 5.4
 Requires PHP: 5.6
 License: MIT
 License URI: https://opensource.org/licenses/MIT
@@ -34,6 +34,12 @@ It's based on the [indigo](https://github.com/sergiokopplin/indigo), that origin
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
 
 == Changelog ==
+= 1.0.6 =
+* Updated readme.
+
+= 1.0.5 =
+* Updated readme.
+
 = 1.0.4 =
 * Fix: Replace `esc_html_e` by `esc_html_` in `search.php`
 * Fix: Remove unnecessary echo before `esc_html_e` function
