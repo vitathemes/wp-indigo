@@ -1,5 +1,5 @@
 === Theme Name ===
-Contributors: kashani, mrmolaei, mostafas1990
+Contributors: vitathemes, kashani, mrmolaei, mostafas1990
 Requires at least: 5.0
 Tested up to: 5.2.2
 Requires PHP: 5.6
