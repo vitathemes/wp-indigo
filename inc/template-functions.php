@@ -1,13 +1,13 @@
 <?php
-require "classes/indigo_Walker_Comment.php";
+require "classes/wpindigo_Walker_Comment.php";
 
 //Show Profile
-function wp_indigo_show_profile() {
+function wpindigo_show_profile() {
 	get_template_part( "template-parts/profile" );
 }
 
 // Menu Generator
-function wp_indigo_show_menu() {
+function wpindigo_show_menu() {
 	if ( has_nav_menu( 'primary-menu' ) ) {
 		$wp_indigo_menu_args = array(
 			'theme_location'  => 'primary-menu',
@@ -28,12 +28,12 @@ function wp_indigo_show_menu() {
 }
 
 // Show Post Tags
-function wp_indigo_show_tags() {
+function wpindigo_show_tags() {
 	the_tags( '', ' ', '' );
 }
 
 // Show Name Field
-function wp_indigo_show_avatar() {
+function wpindigo_show_avatar() {
 	if ( has_custom_logo() ) {
 		the_custom_logo();
 	}
@@ -44,13 +44,13 @@ function wp_indigo_show_avatar() {
  *
  * @param $wp_indigo_social_names | array
  */
-function wp_indigo_show_socials( $wp_indigo_social_names ) {
+function wpindigo_show_socials( $wp_indigo_social_names ) {
 	foreach ( $wp_indigo_social_names as $wp_indigo_social_name ) {
 		$social = esc_attr(get_theme_mod( $wp_indigo_social_name ));
 		if ( $social != "" ) {
 			$name = explode( '-', $wp_indigo_social_name );
 			if ( strpos( $name[1], 'mail' ) !== false ) {
-				echo '<a rel="noopener" aria-label="Email me" class="link" data-title="' . $social . '" href="mailto:' . $social . '" target="_blank">
+				echo '<a rel="noopener" aria-label="Email me" class="link" data-title="' . sanitize_email($social) . '" href="mailto:' . sanitize_email($social) . '" target="_blank">
 			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
 			} else {
@@ -70,7 +70,7 @@ function wp_indigo_show_socials( $wp_indigo_social_names ) {
  *
  * @return bool
  */
-function wp_indigo_check_socials( $wp_indigo_social_names ) {
+function wpindigo_check_socials( $wp_indigo_social_names ) {
 	foreach ( $wp_indigo_social_names as $wp_indigo_social_name ) {
 		$social = get_theme_mod( $wp_indigo_social_name );
 		if ( $social != "" ) {
@@ -82,7 +82,7 @@ function wp_indigo_check_socials( $wp_indigo_social_names ) {
 }
 
 // Load theme typography
-function wp_indigo_typography() {
+function wpindigo_typography() {
 	$wp_indigo_text_typography            = get_theme_mod( 'text_typography' );
 	$wp_indigo_heading_typography         = get_theme_mod( 'headings_typography' );
 	$wp_indigo_default_heading_typography = array(
@@ -109,8 +109,7 @@ function wp_indigo_typography() {
 	} else {
 		$wp_indigo_text_typography = array_merge( $default_text_typography, $wp_indigo_text_typography );
 	}
-	$html = '<style>
-	        :root {
+	$html = ':root {
 				--heading-typography-font-size: ' . $wp_indigo_heading_typography["font-size"] . ';
 	            --heading-typography-font-family: ' . $wp_indigo_heading_typography["font-family"] . ';
 	            --heading-typography-line-height: ' . $wp_indigo_heading_typography["line-height"] . ';
@@ -123,13 +122,12 @@ function wp_indigo_typography() {
 	            --primary-color: ' . get_theme_mod( "branding_primary_color", "#3F51B5" ) . ';
 	            --secondary-color: ' . $wp_indigo_heading_typography["color"] . ';
 	            --tertiary-color: ' . $wp_indigo_text_typography['color'] . ';
-			}
-		    </style>';
-	echo $html;
+			}';
+	echo esc_html($html);
 }
 
 //
-function wp_indigo_get_discussion_data() {
+function wpindigo_get_discussion_data() {
 	static $discussion, $post_id;
 	$wp_indigo_current_post_id = get_the_ID();
 	if ( $wp_indigo_current_post_id === $post_id ) {
@@ -160,7 +158,7 @@ function wp_indigo_get_discussion_data() {
 }
 
 //
-function wp_indigo_comment_form( $wp_indigo_order ) {
+function wpindigo_comment_form( $wp_indigo_order ) {
 	if ( true === $wp_indigo_order || strtolower( $wp_indigo_order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
 		$wp_indigo_fields = array(
 			'author'  =>

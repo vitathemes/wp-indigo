@@ -21,7 +21,7 @@ if ( post_password_required() ) {
 	return;
 }
 
-$wp_indigo_discussion = wp_indigo_get_discussion_data();
+$wp_indigo_discussion = wpindigo_get_discussion_data();
 ?>
 
 <div id="comments" class="<?php echo comments_open() ? 'comments-area' : 'comments-area comments-closed'; ?>">
@@ -57,7 +57,7 @@ $wp_indigo_discussion = wp_indigo_get_discussion_data();
         </h2><!-- .comments-title -->
         <?php
         // Show comment form.
-        wp_indigo_comment_form( 'asc' );
+        wpindigo_comment_form( 'asc' );
         ?>
 		<?php
 		// Only show discussion meta information when comments are open and available.
@@ -71,7 +71,7 @@ $wp_indigo_discussion = wp_indigo_get_discussion_data();
 
 		// Show comment form at top if showing newest comments at the top.
 		if ( comments_open() ) {
-			wp_indigo_comment_form( 'desc' );
+			wpindigo_comment_form( 'desc' );
 
 			echo "<h3>" . esc_html_e( 'Comments', 'wp-indigo' ) . "</h3>";
 		}
@@ -81,7 +81,7 @@ $wp_indigo_discussion = wp_indigo_get_discussion_data();
 			<?php
 			wp_list_comments(
 				array(
-					'walker'      => new Indigo_Walker_Comment(),
+					'walker'      => new WpIndigo_Walker_Comment(),
 					'avatar_size' => 60,
 					'short_ping'  => true,
 					'style'       => 'ol',

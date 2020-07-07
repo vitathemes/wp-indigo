@@ -6,7 +6,7 @@
  *
  */
 get_header();
-wp_indigo_show_profile(); ?>
+wpindigo_show_profile(); ?>
 
     <section class="blog search">
 

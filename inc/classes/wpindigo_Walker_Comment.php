@@ -1,6 +1,6 @@
 <?php
 
-class Indigo_Walker_Comment extends Walker_Comment {
+class WpIndigo_Walker_Comment extends Walker_Comment {
 
 	/**
 	 * Outputs a comment in the HTML5 format.
