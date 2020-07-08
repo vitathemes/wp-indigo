@@ -3,8 +3,8 @@ Contributors: vitathemes, kashani, mrmolaei, mostafas1990
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 5.6
-License: MIT
-License URI: https://opensource.org/licenses/MIT
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 WP-Indigo is a WordPress minimal & Fast-loading theme for people who want to have a simple blog & introduce themselves.
 
