@@ -13,7 +13,7 @@
 get_header(); ?>
 <?php wpindigo_show_profile(); ?>
     <section class="blog">
-        <div class="list">
+        <div id="content" class="list">
 			<?php if ( have_posts() ) : ?><?php
 				/* Start the Loop */
 				while ( have_posts() ) :

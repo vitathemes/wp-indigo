@@ -76,3 +76,30 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 5. Select `A static page (select below)` and select the pages created.
 6. In your admin panel, navigate to `Appearance > Customize`.
 7. Put the finishing touches on your website by adding a logo, typography settings, custom colors and etc.
+
+== Screenshots ==
+
+1. This screen shot description corresponds to screenshot.(png|jpg|jpeg|gif).
+
+== Copyright ==
+
+WP-Indigo WordPress Theme, Copyright 2019-2020 WordPress.org
+WP-Indigo is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+WP-Indigo is derived from the indigo Theme, Copyright 2019 Sérgio Kopplin
+WP-Indigo is distributed under the terms of the GNU GPL version 2.0
+
+WP-Indigo bundles the following third-party resources:
+
+Kirki WordPress Customizer Framework
+License: MIT License (https://opensource.org/licenses/MIT)

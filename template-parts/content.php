@@ -11,7 +11,7 @@
     </span>
 </div>
 
-<div id="content" class="single-content-area">
+<div class="single-content-area">
 	<?php
 	if ( get_theme_mod( 'show_post_thumbnail', true ) ):
 		?>

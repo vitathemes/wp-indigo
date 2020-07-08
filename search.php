@@ -15,7 +15,7 @@ wpindigo_show_profile(); ?>
             printf( esc_html__('Search Results for: %s', 'wp-indigo' ), get_search_query());
             ?>
         </h1>
-        <div class="list">
+        <div id="content" class="list">
 			<?php if ( have_posts() ) : ?><?php
 				/* Start the Loop */
 				while ( have_posts() ) :

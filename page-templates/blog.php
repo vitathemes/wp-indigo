@@ -16,13 +16,13 @@ get_header(); ?>
 				'paged'          => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
 			);
 
-			$wp_indigo_posts = new WP_Query( $args );
+			$wpindigo_posts = new WP_Query( $args );
 
-			if ( $wp_indigo_posts->have_posts() ) {
+			if ( $wpindigo_posts->have_posts() ) {
 
-				while ( $wp_indigo_posts->have_posts() ) {
+				while ( $wpindigo_posts->have_posts() ) {
 
-					$wp_indigo_posts->the_post();
+					$wpindigo_posts->the_post();
 
 					get_template_part( 'template-parts/list', 'blog' );
 
@@ -33,7 +33,7 @@ get_header(); ?>
 						$paginate_args = array(
 							'base'               => '%_%',
 							'format'             => '?paged=%#%',
-							'total'              => $wp_indigo_posts->max_num_pages,
+							'total'              => $wpindigo_posts->max_num_pages,
 							'current'            => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
 							'show_all'           => false,
 							'end_size'           => 1,

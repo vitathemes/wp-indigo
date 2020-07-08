@@ -11,7 +11,7 @@
 
       &:hover, &.focus
         & > ul.sub-menu
-          display: block
+          visibility: visible
 
       ul.sub-menu
         list-style: none
@@ -20,7 +20,8 @@
         padding: 5px 10px
         background: white
         position: absolute
-        display: none
+        display: block
+        visibility: hidden
         z-index: 99
 
         &.focus
@@ -80,7 +81,6 @@
       color: #fff
 
 .nav-home
-  margin-top: 40px
   text-align: center
 
   > .list
@@ -102,3 +102,6 @@
 
       &:hover
         border-color: var(--primary-color)
+
+ul.sub-menu:focus-within
+  visibility: visible !important

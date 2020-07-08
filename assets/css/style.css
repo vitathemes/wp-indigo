@@ -1131,7 +1131,7 @@ textarea {
     .nav > .list li:hover > ul.sub-menu, .nav > .list li.focus > ul.sub-menu,
     .nav-home > .list li:hover > ul.sub-menu,
     .nav-home > .list li.focus > ul.sub-menu {
-      display: block; }
+      visibility: visible; }
     .nav > .list li ul.sub-menu,
     .nav-home > .list li ul.sub-menu {
       list-style: none;
@@ -1140,7 +1140,8 @@ textarea {
       padding: 5px 10px;
       background: white;
       position: absolute;
-      display: none;
+      display: block;
+      visibility: hidden;
       z-index: 99; }
       .nav > .list li ul.sub-menu.focus,
       .nav-home > .list li ul.sub-menu.focus {
@@ -1194,7 +1195,6 @@ textarea {
       color: #fff; }
 
 .nav-home {
-  margin-top: 40px;
   text-align: center; }
   .nav-home > .list {
     padding: 0; }
@@ -1212,6 +1212,9 @@ textarea {
       border: 1px solid transparent; }
       .nav-home > .list > li > a:hover {
         border-color: var(--primary-color); }
+
+ul.sub-menu:focus-within {
+  visibility: visible !important; }
 
 .evidence {
   background-image: linear-gradient(to bottom, rgba(39, 243, 106, 0.15), rgba(39, 243, 106, 0.15));
