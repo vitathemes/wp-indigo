@@ -24,7 +24,7 @@ class WpIndigo_Walker_Nav extends Walker_Nav_Menu {
 		$class_names = implode( ' ', $classes );
 
 		// Build HTML for output.
-		$output .= "\n" . $indent . '<ul class="' . $class_names . '">' . "\n";
+		$output .= "\n" . $indent . '<ul role="menubar" aria-label="menubar" class="' . $class_names . '">' . "\n";
 	}
 
 	/**
@@ -63,7 +63,7 @@ class WpIndigo_Walker_Nav extends Walker_Nav_Menu {
 		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
 		$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
 		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-		$attributes .= ' aria-label="menuitem" ';
+		$attributes .= ' role="menuitem" tab-index="0" ';
 		$attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link' : 'main-menu-link' ) . '"';
 
 		// Build HTML output and pass through the proper filter.

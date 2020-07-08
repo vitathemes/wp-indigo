@@ -11,7 +11,7 @@
 
       &:hover, &.focus
         & > ul.sub-menu
-          visibility: visible
+          left: 0
 
       ul.sub-menu
         list-style: none
@@ -21,7 +21,8 @@
         background: white
         position: absolute
         display: block
-        visibility: hidden
+        left: -10000px
+        visibility: visible
         z-index: 99
 
         &.focus
@@ -104,4 +105,4 @@
         border-color: var(--primary-color)
 
 ul.sub-menu:focus-within
-  visibility: visible !important
+  left: 0

@@ -11,17 +11,17 @@ function wpindigo_show_profile() {
 function wpindigo_show_menu() {
 	if ( has_nav_menu( 'primary-menu' ) ) {
 		$wpindigo_menu_args = array(
-			'theme_location'  => 'primary-menu',
-			'menu_class'      => 'list navigation',
+			'theme_location' => 'primary-menu',
+			'menu_class'     => 'list navigation',
 			'menu_id'        => 'navigation',
-			'container'       => '',
-			'depth'           => 2,
-			'walker' => new WpIndigo_Walker_Nav()
+			'container'      => '',
+			'depth'          => 2,
+			'walker'         => new WpIndigo_Walker_Nav()
 		);
 		if ( ! is_front_page() ) {
 			$wpindigo_menu_args['container_class'] = 'nav';
 		}
-		echo '<nav id="site-navigation main-nav" class="main-navigation nav-home nav" role="navigation" aria-label="Main Navigation">';
+		echo '<nav id="site-navigation" class="main-navigation nav-home nav" role="navigation">';
 		wp_nav_menu( $wpindigo_menu_args );
 		echo '</nav>';
 	}
@@ -46,11 +46,11 @@ function wpindigo_show_avatar() {
  */
 function wpindigo_show_socials( $wpindigo_social_names ) {
 	foreach ( $wpindigo_social_names as $wpindigo_social_name ) {
-		$social = esc_attr(get_theme_mod( $wpindigo_social_name ));
+		$social = esc_attr( get_theme_mod( $wpindigo_social_name ) );
 		if ( $social != "" ) {
 			$name = explode( '-', $wpindigo_social_name );
 			if ( strpos( $name[1], 'mail' ) !== false ) {
-				echo '<a rel="noopener" aria-label="Email me" class="link" data-title="' . sanitize_email($social) . '" href="mailto:' . sanitize_email($social) . '" target="_blank">
+				echo '<a rel="noopener" aria-label="Email me" class="link" data-title="' . sanitize_email( $social ) . '" href="mailto:' . sanitize_email( $social ) . '" target="_blank">
 			<svg class="icon icon-facebook"><use xlink:href="' . get_template_directory_uri() . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
 			} else {
@@ -92,7 +92,7 @@ function wpindigo_typography() {
 		'line-height' => '31px',
 		'color'       => '#1a1a1a'
 	);
-	$default_text_typography    = array(
+	$default_text_typography             = array(
 		'font-family' => "Roboto Mono",
 		'font-size'   => "16px",
 		'variant'     => 'regular',
@@ -123,7 +123,7 @@ function wpindigo_typography() {
 	            --secondary-color: ' . $wpindigo_heading_typography["color"] . ';
 	            --tertiary-color: ' . $wpindigo_text_typography['color'] . ';
 			}';
-	echo esc_html($html);
+	echo esc_html( $html );
 }
 
 //
@@ -148,10 +148,12 @@ function wpindigo_get_discussion_data() {
 	foreach ( $wpindigo_comments as $wpindigo_comment ) {
 		$wpindigo_authors[] = ( (int) $wpindigo_comment->user_id > 0 ) ? (int) $wpindigo_comment->user_id : $wpindigo_comment->comment_author_email;
 	}
-	$wpindigo_authors    = array_unique( $wpindigo_authors );
-	$discussion = (object) array(
-		'authors'   => array_slice( $wpindigo_authors, 0, 6 ),           /* Six unique authors commenting on the post. */
-		'responses' => get_comments_number( $wpindigo_current_post_id ), /* Number of responses. */
+	$wpindigo_authors = array_unique( $wpindigo_authors );
+	$discussion       = (object) array(
+		'authors'   => array_slice( $wpindigo_authors, 0, 6 ),
+		/* Six unique authors commenting on the post. */
+		'responses' => get_comments_number( $wpindigo_current_post_id ),
+		/* Number of responses. */
 	);
 
 	return $discussion;
@@ -163,10 +165,10 @@ function wpindigo_comment_form( $wpindigo_order ) {
 		$wpindigo_fields = array(
 			'author'  =>
 				'<p class="comment-form-author">' .
-				'<input placeholder="'. esc_html( 'Your Name', 'wp-indigo' ) .'" id="author" name="author" type="text" size="30" /></p>',
+				'<input placeholder="' . esc_html( 'Your Name', 'wp-indigo' ) . '" id="author" name="author" type="text" size="30" /></p>',
 			'email'   =>
 				'<p class="comment-form-email">' .
-				'<input placeholder="'. esc_html( 'Comments are disabled.', 'wp-indigo' ) .'" id="email" name="email" type="email" value="" size="30" /></p>',
+				'<input placeholder="' . esc_html( 'Comments are disabled.', 'wp-indigo' ) . '" id="email" name="email" type="email" value="" size="30" /></p>',
 			'url'     => '',
 			'cookies' => ''
 		);
@@ -177,7 +179,7 @@ function wpindigo_comment_form( $wpindigo_order ) {
 				'comment_notes_before' => false,
 				'label_submit'         => 'Submit',
 				'fields'               => $wpindigo_fields,
-				'comment_field'        => '<p class="comment-form-comment"><textarea placeholder="'. esc_html( 'Write Your Comment', 'wp-indigo' ) .'" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
+				'comment_field'        => '<p class="comment-form-comment"><textarea placeholder="' . esc_html( 'Write Your Comment', 'wp-indigo' ) . '" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
 			)
 		);
 	}

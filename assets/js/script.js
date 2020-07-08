@@ -7,6 +7,7 @@
     var container, menu, links, i, len;
 
     container = document.getElementById('site-navigation');
+
     if (!container) {
         return;
     }
@@ -14,6 +15,8 @@
     menu = container.getElementsByTagName('ul')[0];
 
     menu.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-label', 'mainmenu');
+
     if (-1 === menu.className.indexOf('navigation')) {
         menu.className += ' navigation';
     }
