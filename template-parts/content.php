@@ -29,7 +29,7 @@ if ( get_theme_mod( 'show_share_icons', true ) ):
 	?>
     <div class="social-share">
         <div class="social-share-title">
-            <span><?php esc_attr_e( 'Share on Internet:', 'wp-indigo' ); ?></span>
+            <span><?php esc_html_e( 'Share on Internet:', 'wp-indigo' ); ?></span>
         </div>
         <div class="social-share-links">
 			<?php

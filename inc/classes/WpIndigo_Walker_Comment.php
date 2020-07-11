@@ -5,18 +5,19 @@ class WpIndigo_Walker_Comment extends Walker_Comment {
 	/**
 	 * Outputs a comment in the HTML5 format.
 	 *
-	 * @see wp_list_comments()
-	 *
 	 * @param WP_Comment $comment Comment to display.
 	 * @param int $depth Depth of the current comment.
 	 * @param array $args An array of arguments.
+	 *
+	 * @see wp_list_comments()
+	 *
 	 */
 	protected function html5_comment( $comment, $depth, $args ) {
 
 		$wpindigo_tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
 
 		?>
-        <<?php echo esc_html($wpindigo_tag); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
+        <<?php echo esc_html( $wpindigo_tag ); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
         <article id="comment div-comment-<?php comment_ID(); ?>" class="comment-body">
             <footer class="comment-meta">
                 <div class="comment-author vcard">
@@ -27,16 +28,16 @@ class WpIndigo_Walker_Comment extends Walker_Comment {
 					$avatar              = get_avatar( $comment, $args['avatar_size'] );
 					if ( 0 != $args['avatar_size'] ) {
 						if ( empty( $comment_author_url ) ) {
-							echo $avatar;
+							echo esc_html( $avatar );
 						} else {
-							printf( '<a href="%s" rel="external nofollow" class="url">', $comment_author_url );
-							echo $avatar;
+							printf( '<a href="%s" rel="external nofollow" class="url">', esc_url( $comment_author_url ) );
+							echo esc_html( $avatar );
 						}
 					}
 
 					printf(
-					/* translators: %s: comment author link */
 						wp_kses(
+						/* translators: %s: comment author link */
 							__( '%s <span class="screen-reader-text says">says:</span>', 'wp-indigo' ),
 							array(
 								'span' => array(
@@ -69,7 +70,7 @@ class WpIndigo_Walker_Comment extends Walker_Comment {
                 </div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-                    <p class="comment-awaiting-moderation"><?php esc_attr_e( 'Your comment is awaiting moderation.', 'wp-indigo' ); ?></p>
+                    <p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'wp-indigo' ); ?></p>
 				<?php endif; ?>
             </footer><!-- .comment-meta -->
 

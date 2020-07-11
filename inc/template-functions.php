@@ -1,11 +1,17 @@
 <?php
 require "classes/WpIndigo_Walker_Comment.php";
-require "classes/WpIndigo_Walker_Nav.php";
 
 //Show Profile
 function wpindigo_show_profile() {
 	get_template_part( "template-parts/profile" );
 }
+
+// Register Menu
+function wpindigo_register_primary_menu() {
+	register_nav_menu( 'primary-menu', __( 'Primary Menu', 'wp-indigo' ) );
+}
+
+add_action( 'init', 'wpindigo_register_primary_menu' );
 
 // Menu Generator
 function wpindigo_show_menu() {
@@ -16,7 +22,6 @@ function wpindigo_show_menu() {
 			'menu_id'        => 'navigation',
 			'container'      => '',
 			'depth'          => 2,
-			'walker'         => new WpIndigo_Walker_Nav()
 		);
 		if ( ! is_front_page() ) {
 			$wpindigo_menu_args['container_class'] = 'nav';
