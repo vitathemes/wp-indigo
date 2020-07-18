@@ -10,8 +10,7 @@ function wpindigo_show_profile() {
 function wpindigo_register_primary_menu() {
 	register_nav_menu( 'primary-menu', __( 'Primary Menu', 'wp-indigo' ) );
 }
-
-add_action( 'init', 'wpindigo_register_primary_menu' );
+add_action( 'after_setup_theme', 'wpindigo_register_primary_menu' );
 
 // Menu Generator
 function wpindigo_show_menu() {
