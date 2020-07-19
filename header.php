@@ -2,18 +2,27 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta http-equiv="X-UA-Compatible"  content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php
-    wp_head();
-	wp_indigo_typography();
-    ?>
+	wp_head();
+	?>
+    <style>
+        <?php wpindigo_typography(); ?>
+    </style>
 </head>
+
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+<?php
+if ( function_exists( 'wp_body_open' ) ) {
+	wp_body_open();
+} else {
+	do_action( 'wp_body_open' );
+}
+?>
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-indigo' ); ?></a>
 
 <div class="wrapper-normal">
     <div class="page">
-	    <?php if ( ! is_page_template( 'page-templates/home.php' ) ) : ?><?php wp_indigo_show_menu(); ?><?php endif; ?>
+		<?php if ( ! is_page_template( 'page-templates/home.php' ) && ! is_home() ) : ?><?php wpindigo_show_menu(); ?><?php endif; ?>

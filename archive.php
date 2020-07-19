@@ -6,13 +6,13 @@
  *
  */
 get_header();
-wp_indigo_show_profile(); ?>
+wpindigo_show_profile(); ?>
 
     <section class="blog archive">
 
 
         <?php the_archive_title('<h1>', '</h1>') ?>
-        <div class="list">
+        <div id="content" class="list">
 			<?php if ( have_posts() ) :
 				/* Start the Loop */
 				while ( have_posts() ) :

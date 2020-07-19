@@ -68,13 +68,14 @@ add_action( 'after_setup_theme', 'wp_indigo_setup' );
 // External Assets
 function wp_indigo_scripts() {
 	wp_enqueue_style( 'indigo-style', get_template_directory_uri() . '/assets/css/style.css' );
+	wp_enqueue_script( 'indigo-script', get_template_directory_uri() . '/assets/js/script.js', array(), false, true);
 	if ( is_singular() && comments_open() ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'wp_indigo_scripts' );
 //
-function wp_indigo_is_comment_by_post_author( $comment = null ) {
+function wpindigo_is_comment_by_post_author( $comment = null ) {
 	if ( is_object( $comment ) && $comment->user_id > 0 ) {
 		$user = get_userdata( $comment->user_id );
 		$post = get_post( $comment->comment_post_ID );

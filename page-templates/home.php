@@ -10,8 +10,8 @@
 get_header(); ?>
 
 <?php
-wp_indigo_show_profile();
-wp_indigo_show_menu();
+wpindigo_show_profile();
+wpindigo_show_menu();
 ?>
 
 <?php get_footer(); ?>
