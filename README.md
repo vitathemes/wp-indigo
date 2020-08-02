@@ -19,7 +19,7 @@ It's based on the [indigo](https://github.com/sergiokopplin/indigo), that origin
 * Translation ready (with .POT files included)
 * Right-to-left (RTL) languages support
 * SEO optimized
-* MIT licensed
+* GNU GPL version 2.0 licensed
 * …and much more
 
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
@@ -78,7 +78,4 @@ See the [Changelog](CHANGELOG.md)
 
 This Theme based on [indigo](https://github.com/sergiokopplin/indigo) by [sergiokopplin](https://github.com/sergiokopplin)
 
-WP-Indigo is licensed under [MIT](LICENSE).
-
-Fred WordPress Theme, Copyright 2012 Joe Smith
-Fred is distributed under the terms of the GNU GPL
+WP-Indigo is licensed under [GNU GPL](LICENSE).

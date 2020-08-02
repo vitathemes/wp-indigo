@@ -28,7 +28,7 @@ It's based on the [indigo](https://github.com/sergiokopplin/indigo), that origin
 * Translation ready (with .POT files included)
 * Right-to-left (RTL) languages support
 * SEO optimized
-* MIT licensed
+* GNU GPL version 2.0 licensed
 * …and much more
 
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
@@ -99,10 +99,15 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-WP-Indigo is derived from the indigo Theme, Copyright 2019 Sérgio Kopplin
+WP-Indigo is derived from the indigo Theme, Copyright 2019 Sérgio Kopplin (https://github.com/sergiokopplin/indigo)
 WP-Indigo is distributed under the terms of the GNU GPL version 2.0
 
 WP-Indigo bundles the following third-party resources:
 
+Avatar image, Copyright Jakob Owens
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://unsplash.com/photos/lkMJcGDZLVs
+
 Kirki WordPress Customizer Framework
-License: MIT License (https://opensource.org/licenses/MIT)
+License: MIT License
+Source: https://opensource.org/licenses/MIT

@@ -1,6 +1,6 @@
 {
   "name": "wp-indigo",
-  "version": "1.0.1",
+  "version": "1.0.7",
   "description": "Just another Minimal WordPress theme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,7 +15,7 @@
     "wp-indigo"
   ],
   "author": "VitaThemes",
-  "license": "MIT",
+  "license": "GPLv2",
   "bugs": {
     "url": "https://github.com/vitathemes/wp-indigo/issues"
   },
