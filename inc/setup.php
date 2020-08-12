@@ -85,16 +85,10 @@ function wp_indigo_is_comment_by_post_author( $comment = null ) {
 	}
 	return false;
 }
- //Remove unnecessary fields from comment form
-add_filter( 'comment_form_default_fields', 'wp_indigo_website_field_remove' );
-function wp_indigo_website_field_remove( $fields ) {
-	if ( isset( $fields['url'] ) ) {
-		unset( $fields['url'] );
-		unset( $fields['cookies'] );
-	}
-	return $fields;
-}
 
-if ( ! isset( $content_width ) ) {
-	$content_width = 560;
+function wp_indigo_set_content_width () {
+	if ( ! isset( $content_width ) ) {
+		$content_width = 560;
+	}
 }
+add_action('after_setup_theme', 'wp_indigo_set_content_width');
