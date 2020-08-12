@@ -1831,7 +1831,17 @@ form input:active, form textarea:active {
     border-color: var(--primary-color);
 }
 
-form input:invalid, form textarea:invalid {
+.cookie-label {
+    font-size: 13px;
+    letter-spacing: 0.05em;
+}
+
+.comment-form-cookies {
+    display: flex;
+    align-items: flex-start;
+}
+
+form input:focus:invalid, form textarea:focus:invalid {
     background-color: #FFEFEF;
     border-color: #F25555;
 }
