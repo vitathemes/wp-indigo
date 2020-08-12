@@ -29,6 +29,7 @@ It's based on the [indigo](https://github.com/sergiokopplin/indigo), that origin
 * Right-to-left (RTL) languages support
 * SEO optimized
 * GNU GPL version 2.0 licensed
+* Only support 2 levels sub-menus
 * …and much more
 
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
@@ -107,9 +108,9 @@ WP-Indigo is distributed under the terms of the GNU GPL version 2.0
 
 WP-Indigo bundles the following third-party resources:
 
-Avatar image, Copyright Jakob Owens
+Avatar image, Photo by Burst from StockSnap
 License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/lkMJcGDZLVs
+Source: https://stocksnap.io/photo/people-browsing-MKIDJKUDEP
 
 Kirki WordPress Customizer Framework
 License: MIT License

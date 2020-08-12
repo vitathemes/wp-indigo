@@ -5,6 +5,19 @@
     margin: 0
     padding: 0 13px 0
 
+    @media #{$mobile}
+      overflow-x: scroll
+      overflow-y: hidden
+      flex-wrap: nowrap
+      display: flex
+      padding-bottom: 12px !important
+
+      li
+        min-width: auto
+
+      a
+        white-space: nowrap
+
     li
       display: inline-block
       position: relative

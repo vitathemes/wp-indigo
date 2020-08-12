@@ -8,9 +8,6 @@
 	<?php
 	wp_head();
 	?>
-    <style>
-        <?php wp_indigo_typography(); ?>
-    </style>
 </head>
 
 <body <?php body_class(); ?>>

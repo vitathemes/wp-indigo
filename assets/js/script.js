@@ -38,7 +38,6 @@
 
         // Move up through the ancestors of the current link until we hit .nav-home.
         while (-1 === self.className.indexOf('navigation')) {
-            console.log(self.className.indexOf('navigation'));
             // On li elements toggle the class .focus.
             if ('li' === self.tagName.toLowerCase()) {
                 if (-1 !== self.className.indexOf('focus')) {

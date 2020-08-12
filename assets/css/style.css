@@ -699,6 +699,12 @@ textarea {
     /* 2 */
 }
 
+@media screen and (max-width:600px) {
+    #wpadminbar {
+        top: -46px;
+    }
+}
+
 /*
  * GitHub style for Pygments syntax highlighter, for use with Jekyll
  * Courtesy of GitHub.com
@@ -1368,6 +1374,24 @@ textarea {
     padding: 0 13px 0;
 }
 
+@media only screen and (max-width: 780px) {
+    .nav-home > .list {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        display: flex;
+        padding-bottom: 12px !important;
+    }
+
+    .nav-home > .list li {
+        min-width: auto;
+    }
+
+    .nav-home > .list a {
+        white-space: nowrap;
+    }
+}
+
 .nav > .list li,
 .nav-home > .list li {
     display: inline-block;
@@ -1518,6 +1542,17 @@ ul.sub-menu:focus-within {
     text-align: center;
     color: #000;
     margin: 7px auto;
+}
+
+.icon-share {
+    width: 24px;
+    height: 24px;
+    transition: 0.2s;
+    margin: 0;
+}
+
+.icon-share:hover {
+    fill: var(--primary-color)
 }
 
 .caption {

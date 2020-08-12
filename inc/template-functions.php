@@ -56,12 +56,12 @@ function wp_indigo_show_socials( $wp_indigo_social_names ) {
 			$name = explode( '-', $wp_indigo_social_name );
 			if ( strpos( $name[1], 'mail' ) !== false ) {
 				echo '<a rel="noopener" aria-label="'. esc_attr__('Email me', 'wp-indigo') . '" class="link" data-title="' . sanitize_email( $social ) . '" href="mailto:' . sanitize_email( $social ) . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . esc_url(get_template_directory_uri()) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
+			<svg class="icon icon-' .  $name[1] . '"><use xlink:href="' . esc_url(get_template_directory_uri()) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
 			} else {
 				$name = explode( '-', $wp_indigo_social_name );
 				echo '<a rel="noopener" aria-label="View ' . $name[1] . ' page" class="link" data-title="' . $social . '" href="' . $social . '" target="_blank">
-			<svg class="icon icon-facebook"><use xlink:href="' . esc_url(get_template_directory_uri()) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
+			<svg class="icon icon-' .  $name[1] . '"><use xlink:href="' . esc_url(get_template_directory_uri()) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
 			}
 		}
@@ -128,8 +128,18 @@ function wp_indigo_typography() {
 	            --secondary-color: ' . $wp_indigo_heading_typography["color"] . ';
 	            --tertiary-color: ' . $wp_indigo_text_typography['color'] . ';
 			}';
-	echo esc_html( $html );
+	return esc_html( $html );
 }
+
+add_action('wp_head', 'wp_indigo_theme_settings');
+function wp_indigo_theme_settings(){
+	$wp_indigo_theme_typography = wp_indigo_typography();
+	?>
+	<style>
+		<?php echo $wp_indigo_theme_typography; ?>
+	</style>
+	<?php
+};
 
 //
 function wp_indigo_get_discussion_data() {
