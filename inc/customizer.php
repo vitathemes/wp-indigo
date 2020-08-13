@@ -297,13 +297,3 @@ function wp_indigo_add_edit_icons( $wp_customize ) {
 }
 
 add_action( 'customize_preview_init', 'wp_indigo_add_edit_icons' );
-
-
-function wp_indigo_set_default_logo( $wp_customize ) {
-
-	$wp_customize->add_setting( 'site_logo' , array(
-		'default'     => get_bloginfo('template_url') . '/assets/images/avatar.png',
-	) );
-
-}
-add_action( 'customize_register', 'wp_indigo_set_default_logo' );
