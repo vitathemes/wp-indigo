@@ -416,3 +416,9 @@ textarea {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
+
+@media screen and (max-width:600px) {
+  #wpadminbar {
+    top: -46px;
+  }
+}

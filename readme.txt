@@ -3,8 +3,8 @@ Contributors: vitathemes, kashani, mrmolaei, mostafas1990
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 5.6
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
 
 WP-Indigo is a WordPress minimal & Fast-loading theme for people who want to have a simple blog & introduce themselves.
 
@@ -29,6 +29,7 @@ It's based on the [indigo](https://github.com/sergiokopplin/indigo), that origin
 * Right-to-left (RTL) languages support
 * SEO optimized
 * GNU GPL version 2.0 licensed
+* Only support 2 levels sub-menus
 * …and much more
 
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
@@ -107,9 +108,17 @@ WP-Indigo is distributed under the terms of the GNU GPL version 2.0
 
 WP-Indigo bundles the following third-party resources:
 
-Avatar image, Copyright Jakob Owens
+Avatar image, Photo by Burst from StockSnap
 License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/lkMJcGDZLVs
+Source: https://stocksnap.io/photo/people-browsing-MKIDJKUDEP
+
+Simple Icons by Simple Icons
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://github.com/simple-icons/simple-icons
+
+Dashicons by WordPress
+License: GNU GPLv2
+Source: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 Kirki WordPress Customizer Framework
 License: MIT License

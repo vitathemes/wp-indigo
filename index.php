@@ -11,7 +11,7 @@
  *
  */
 get_header(); ?>
-<?php wpindigo_show_profile(); ?>
+<?php wp_indigo_show_profile(); ?>
     <section class="blog">
         <div id="content" class="list">
 			<?php if ( have_posts() ) : ?><?php

@@ -1,7 +1,7 @@
 <div class="meta">
     <div class="author-meta">
         <div class="author-avatar">
-            <img class="author-avatar-img" src="<?php echo esc_url( get_avatar_url( $post->post_author ) ); ?>" alt="<?php echo get_user_by( 'ID', $post->post_author )->display_name; ?>"/>
+            <img class="author-avatar-img" src="<?php echo esc_attr( get_avatar_url( $post->post_author ) ); ?>" alt="<?php echo esc_attr(get_user_by( 'ID', $post->post_author )->display_name); ?>"/>
         </div>
         <h4 class="author-name"><?php echo get_the_author_meta( 'display_name' ); ?></h4>
     </div>
@@ -39,15 +39,15 @@ if ( get_theme_mod( 'show_share_icons', true ) ):
 			?>
 
             <a target="_blank" href="<?php echo esc_url( $facebook_url ); ?>">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/facebook.svg" alt="<?php echo __( 'Share on Facebook', 'wp-indigo' ); ?>"/>
+                <svg class="icon icon-share icon-facebook"><use xlink:href="<?php echo esc_url(get_template_directory_uri()) . '/assets/images/defs.svg#icon-facebook' ?>"></use></svg>
             </a>
 
             <a target="_blank" href="<?php echo esc_url( $twitter_url ); ?>">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/twitter.svg" alt="<?php echo __( 'Share on Twitter', 'wp-indigo' ); ?>"/>
+                <svg class="icon icon-share icon-twitter"><use xlink:href="<?php echo esc_url(get_template_directory_uri()) . '/assets/images/defs.svg#icon-twitter' ?>"></use></svg>
             </a>
 
             <a target="_blank" href="<?php echo esc_url( $linkedin_url ); ?>">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/linkedin.svg" alt="<?php echo __( 'Share on Linkedin', 'wp-indigo' ); ?>"/>
+                <svg class="icon icon-share icon-linkedin"><use xlink:href="<?php echo esc_url(get_template_directory_uri()) . '/assets/images/defs.svg#icon-linkedin' ?>"></use></svg>
             </a>
 
         </div>

@@ -38,27 +38,6 @@ Kirki::add_section( 'wpindigo_socials', array(
 
 // -- Branding Fields --
 Kirki::add_field( 'wp-indigo', [
-	'type'      => 'background',
-	'settings'  => 'branding_background',
-	'label'     => esc_html__( 'Background', 'wp-indigo' ),
-	'section'   => 'wpindigo_branding',
-	'default'   => [
-		'background-color'      => 'fff',
-		'background-image'      => '',
-		'background-repeat'     => 'repeat',
-		'background-position'   => 'center center',
-		'background-size'       => 'cover',
-		'background-attachment' => 'scroll',
-	],
-	'transport' => 'auto',
-	'output'    => [
-		[
-			'element' => 'body',
-		],
-	],
-] );
-
-Kirki::add_field( 'wp-indigo', [
 	'type'     => 'color',
 	'settings' => 'branding_primary_color',
 	'label'    => __( 'Primary Color', 'wp-indigo' ),
@@ -291,7 +270,7 @@ Kirki::add_field( 'wp-indigo', [
 
 // -- Typography Fields --
 
-function wpindigo_add_edit_icons( $wp_customize ) {
+function wp_indigo_add_edit_icons( $wp_customize ) {
 	$wp_customize->selective_refresh->add_partial( 'copyright_text', array(
 		'selector' => '.footer-main',
 	) );
@@ -317,4 +296,4 @@ function wpindigo_add_edit_icons( $wp_customize ) {
 	) );
 }
 
-add_action( 'customize_preview_init', 'wpindigo_add_edit_icons' );
+add_action( 'customize_preview_init', 'wp_indigo_add_edit_icons' );

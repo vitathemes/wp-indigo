@@ -67,15 +67,15 @@ add_action( 'after_setup_theme', 'wp_indigo_setup' );
  */
 // External Assets
 function wp_indigo_scripts() {
-	wp_enqueue_style( 'indigo-style', get_template_directory_uri() . '/assets/css/style.css' );
-	wp_enqueue_script( 'indigo-script', get_template_directory_uri() . '/assets/js/script.js', array(), false, true);
+	wp_enqueue_style( 'wp-indigo-style', get_template_directory_uri() . '/assets/css/style.css' );
+	wp_enqueue_script( 'wp-indigo-script', get_template_directory_uri() . '/assets/js/script.js', array(), false, true);
 	if ( is_singular() && comments_open() ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'wp_indigo_scripts' );
 //
-function wpindigo_is_comment_by_post_author( $comment = null ) {
+function wp_indigo_is_comment_by_post_author( $comment = null ) {
 	if ( is_object( $comment ) && $comment->user_id > 0 ) {
 		$user = get_userdata( $comment->user_id );
 		$post = get_post( $comment->comment_post_ID );
@@ -85,16 +85,10 @@ function wpindigo_is_comment_by_post_author( $comment = null ) {
 	}
 	return false;
 }
-// Remove unnecessary fields from comment form
-add_filter( 'comment_form_default_fields', 'website_field_remove' );
-function website_field_remove( $fields ) {
-	if ( isset( $fields['url'] ) ) {
-		unset( $fields['url'] );
-		unset( $fields['cookies'] );
-	}
-	return $fields;
-}
 
-if ( ! isset( $content_width ) ) {
-	$content_width = 560;
+function wp_indigo_set_content_width () {
+	if ( ! isset( $content_width ) ) {
+		$content_width = 560;
+	}
 }
+add_action('after_setup_theme', 'wp_indigo_set_content_width');
