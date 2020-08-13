@@ -3,8 +3,8 @@ Contributors: vitathemes, kashani, mrmolaei, mostafas1990
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 5.6
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
 
 WP-Indigo is a WordPress minimal & Fast-loading theme for people who want to have a simple blog & introduce themselves.
 
@@ -117,7 +117,7 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: https://github.com/simple-icons/simple-icons
 
 Dashicons by WordPress
-License: GNU GPL, version 2
+License: GNU GPLv2
 Source: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 Kirki WordPress Customizer Framework
