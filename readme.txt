@@ -112,6 +112,14 @@ Avatar image, Photo by Burst from StockSnap
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/people-browsing-MKIDJKUDEP
 
+Simple Icons by Simple Icons
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://github.com/simple-icons/simple-icons
+
+Dashicons by WordPress
+License: GNU GPL, version 2
+Source: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
 Kirki WordPress Customizer Framework
 License: MIT License
 Source: https://opensource.org/licenses/MIT
