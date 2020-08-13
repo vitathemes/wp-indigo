@@ -6,7 +6,7 @@
  *
  */
 get_header();
-wpindigo_show_profile(); ?>
+wp_indigo_show_profile(); ?>
 
     <section class="blog archive">
 

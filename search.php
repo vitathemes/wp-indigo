@@ -6,13 +6,13 @@
  *
  */
 get_header();
-wpindigo_show_profile(); ?>
+wp_indigo_show_profile(); ?>
 
     <section class="blog search">
 
         <h1>
             <?php
-            printf( esc_html__('Search Results for: %s', 'wp-indigo' ), get_search_query());
+            printf( esc_html__('Search Results for: %s', 'wp-indigo' ), esc_html(get_search_query()));
             ?>
         </h1>
         <div id="content" class="list">
