@@ -1,5 +1,5 @@
 <?php
-require "classes/Wp_Indigo_walker_Comment.php";
+require "classes/wp_indigo_walker_comment.php";
 
 //Show Profile
 function wp_indigo_show_profile() {

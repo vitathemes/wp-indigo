@@ -245,21 +245,21 @@ msgstr ""
 msgid "Your Website"
 msgstr ""
 
-#: inc/classes/wp_Indigo_walker_Comment.php:41
+#: inc/classes/wp_indigo_walker_comment.php:41
 #, php-format
 msgid "%s <span class=\"screen-reader-text says\">says:</span>"
 msgstr ""
 
-#: inc/classes/wp_Indigo_walker_Comment.php:61
+#: inc/classes/wp_indigo_walker_comment.php:61
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/classes/wp_Indigo_walker_Comment.php:68
+#: inc/classes/wp_indigo_walker_comment.php:68
 msgid "Edit"
 msgstr ""
 
-#: inc/classes/wp_Indigo_walker_Comment.php:73
+#: inc/classes/wp_indigo_walker_comment.php:73
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
