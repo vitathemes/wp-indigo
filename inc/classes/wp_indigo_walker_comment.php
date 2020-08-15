@@ -31,7 +31,7 @@ class Wp_indigo_walker_comment extends Walker_Comment {
 							echo $avatar;
 						} else {
 							printf( '<a href="%s" rel="external nofollow" class="url">', esc_url( $comment_author_url ) );
-							echo wp_kses($avatar, 'a');
+							echo $avatar;
 						}
 					}
 
