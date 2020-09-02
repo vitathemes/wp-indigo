@@ -191,7 +191,6 @@ function wp_indigo_comment_form() {
 		'cookies' => '<p class="comment-form-cookies-consent comment-form-cookies"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label class="cookie-label" for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>'
 	);
 
-
 	comment_form(
 		array(
 			'logged_in_as'         => null,

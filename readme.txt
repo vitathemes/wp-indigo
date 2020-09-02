@@ -3,8 +3,9 @@ Contributors: vitathemes, kashani, mrmolaei, mostafas1990
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 5.6
+Stable tag: 1.0.9
 License: GPL-2.0-or-later
-License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 WP-Indigo is a WordPress minimal & Fast-loading theme for people who want to have a simple blog & introduce themselves.
 
@@ -90,7 +91,6 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 
 == Copyright ==
 
-WP-Indigo WordPress Theme, Copyright 2019-2020 WordPress.org
 WP-Indigo is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
