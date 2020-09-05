@@ -1376,8 +1376,6 @@ textarea {
 
 @media only screen and (max-width: 780px) {
     .nav-home > .list {
-        overflow-x: scroll;
-        overflow-y: hidden;
         flex-wrap: nowrap;
         display: flex;
         padding-bottom: 12px !important;
@@ -1400,7 +1398,8 @@ textarea {
 
 .nav > .list li:hover > ul.sub-menu, .nav > .list li.focus > ul.sub-menu,
 .nav-home > .list li:hover > ul.sub-menu,
-.nav-home > .list li.focus > ul.sub-menu {
+.nav-home > .list li.focus > ul.sub-menu ,
+.nav-home > .list li:focus > ul.sub-menu {
     left: 0;
 }
 

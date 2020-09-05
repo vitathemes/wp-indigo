@@ -1,5 +1,5 @@
 <?php
-require "classes/Wp_Indigo_walker_Comment.php";
+require "classes/wp_indigo_walker_comment.php";
 
 //Show Profile
 function wp_indigo_show_profile() {
@@ -190,7 +190,6 @@ function wp_indigo_comment_form() {
 			'<input placeholder="' . esc_attr__( 'Your Website', 'wp-indigo' ) . '" value="' . esc_attr( $wp_indigo_commenter['comment_author_url'] ) . '"  id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>',
 		'cookies' => '<p class="comment-form-cookies-consent comment-form-cookies"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label class="cookie-label" for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>'
 	);
-
 
 	comment_form(
 		array(
