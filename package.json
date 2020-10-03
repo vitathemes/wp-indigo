@@ -1,0 +1,29 @@
+{
+  "name": "wp-indigo",
+  "version": "1.0.7",
+  "description": "Just another Minimal WordPress theme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "sass": "gulp sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitathemes/wp-indigo.git"
+  },
+  "keywords": [
+    "wp-indigo"
+  ],
+  "author": "VitaThemes",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/vitathemes/wp-indigo/issues"
+  },
+  "homepage": "https://github.com/vitathemes/wp-indigo#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0"
+  }
+}
