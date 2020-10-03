@@ -26,7 +26,13 @@ function wp_indigo_show_menu() {
 		if ( ! is_front_page() ) {
 			$wp_indigo_menu_args['container_class'] = 'nav';
 		}
-		echo '<nav id="site-navigation" class="main-navigation nav-home nav" role="navigation">';
+		echo '<nav id="site-navigation" class="main-navigation nav-home nav" role="navigation">'; ?>
+        <button class="c-menu-toggle js-menu-toggle hamburger" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+        </button>
+		<?php
 		wp_nav_menu( $wp_indigo_menu_args );
 		echo '</nav>';
 	}
@@ -55,13 +61,13 @@ function wp_indigo_show_socials( $wp_indigo_social_names ) {
 		if ( $social != "" ) {
 			$name = explode( '-', $wp_indigo_social_name );
 			if ( strpos( $name[1], 'mail' ) !== false ) {
-				echo '<a rel="noopener" aria-label="'. esc_attr__('Email me', 'wp-indigo') . '" class="link" data-title="' . sanitize_email( $social ) . '" href="mailto:' . sanitize_email( $social ) . '" target="_blank">
-			<svg class="icon icon-' .  $name[1] . '"><use xlink:href="' . esc_url(get_template_directory_uri()) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
+				echo '<a rel="noopener" aria-label="' . esc_attr__( 'Email me', 'wp-indigo' ) . '" class="link" data-title="' . sanitize_email( $social ) . '" href="mailto:' . sanitize_email( $social ) . '" target="_blank">
+			<svg class="icon icon-' . $name[1] . '"><use xlink:href="' . esc_url( get_template_directory_uri() ) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
 			} else {
 				$name = explode( '-', $wp_indigo_social_name );
 				echo '<a rel="noopener" aria-label="View ' . $name[1] . ' page" class="link" data-title="' . $social . '" href="' . $social . '" target="_blank">
-			<svg class="icon icon-' .  $name[1] . '"><use xlink:href="' . esc_url(get_template_directory_uri()) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
+			<svg class="icon icon-' . $name[1] . '"><use xlink:href="' . esc_url( get_template_directory_uri() ) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
 		</a>';
 			}
 		}
@@ -128,18 +134,21 @@ function wp_indigo_typography() {
 	            --secondary-color: ' . $wp_indigo_heading_typography["color"] . ';
 	            --tertiary-color: ' . $wp_indigo_text_typography['color'] . ';
 			}';
+
 	return esc_html( $html );
 }
 
-add_action('wp_head', 'wp_indigo_theme_settings');
-function wp_indigo_theme_settings(){
+add_action( 'wp_head', 'wp_indigo_theme_settings' );
+function wp_indigo_theme_settings() {
 	$wp_indigo_theme_typography = wp_indigo_typography();
 	?>
-	<style>
-		<?php echo $wp_indigo_theme_typography; ?>
-	</style>
+    <style>
+        <?php echo $wp_indigo_theme_typography; ?>
+    </style>
 	<?php
-};
+}
+
+;
 
 //
 function wp_indigo_get_discussion_data() {
@@ -172,33 +181,4 @@ function wp_indigo_get_discussion_data() {
 	);
 
 	return $discussion;
-}
-
-
-function wp_indigo_comment_form() {
-	$wp_indigo_commenter     = wp_get_current_commenter();
-
-	$wpindigo_fields = array(
-		'author'  =>
-			'<p class="comment-form-author">' .
-			'<input placeholder="' . esc_attr__( 'Your Name', 'wp-indigo' ) . '" value="' . esc_attr( $wp_indigo_commenter['comment_author'] ) . '" id="author" name="author" type="text" size="30" /></p>',
-		'email'   =>
-			'<p class="comment-form-email">' .
-			'<input placeholder="' . esc_attr__( 'Your Email', 'wp-indigo' ) . '" value="' . esc_attr( $wp_indigo_commenter['comment_author_email'] ) . '" id="email" name="email" type="email" value="" size="30" /></p>',
-		'url'     =>
-			'<p class="comment-form-email">' .
-			'<input placeholder="' . esc_attr__( 'Your Website', 'wp-indigo' ) . '" value="' . esc_attr( $wp_indigo_commenter['comment_author_url'] ) . '"  id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>',
-		'cookies' => '<p class="comment-form-cookies-consent comment-form-cookies"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label class="cookie-label" for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>'
-	);
-
-	comment_form(
-		array(
-			'logged_in_as'         => null,
-			'title_reply'          => null,
-			'comment_notes_before' => false,
-			'label_submit'         => 'Submit',
-			'fields'               => $wpindigo_fields,
-			'comment_field'        => '<p class="comment-form-comment"><textarea placeholder="' . esc_html( 'Write Your Comment', 'wp-indigo' ) . '" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
-		)
-	);
 }

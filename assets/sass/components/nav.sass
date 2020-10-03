@@ -7,8 +7,15 @@
 
     @media #{$mobile}
       flex-wrap: nowrap
-      display: flex
+      display: none
       padding-bottom: 12px !important
+
+      &.is-open
+        display: flex
+        flex-direction: column
+        position: absolute
+        top: 100%
+        width: 100%
 
       li
         min-width: auto
@@ -69,6 +76,9 @@
   top: 45px
   display: flex
   width: 100%
+
+  @media #{$below}
+    justify-content: flex-end
 
   > .list
     margin: 0 auto

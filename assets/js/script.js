@@ -50,4 +50,11 @@
             self = self.parentElement;
         }
     }
+
+    var menuToggle = document.querySelector('.js-menu-toggle');
+    var menu = document.querySelector('.list.navigation');
+    menuToggle.addEventListener('click', function () {
+        menu.classList.toggle('is-open');
+        menuToggle.classList.toggle('is-active');
+    })
 })();
