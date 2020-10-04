@@ -14,4 +14,4 @@ wp_indigo_show_menu();
 wp_indigo_show_profile();
 ?>
 
-<?php get_footer(); ?>
+<?php get_footer();

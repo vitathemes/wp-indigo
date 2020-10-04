@@ -6,7 +6,7 @@ if ( get_theme_mod( 'show_profile_section', 1 ) ):
         <a class="title-link" href="<?php echo esc_url( home_url( '/' ) ); ?>"><h1
                     class="title"><?php bloginfo( 'name' ); ?></h1></a>
 		<?php if ( get_bloginfo( 'description' ) !== '' ) { ?>
-            <h2 class="description"><?php bloginfo( 'description' ); ?></h2>
+            <p class="description"><?php bloginfo( 'description' ); ?></p>
 		<?php } ?>
 		<?php
 		$social_names = array(

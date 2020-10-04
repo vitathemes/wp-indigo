@@ -12,6 +12,7 @@ wp_indigo_show_profile(); ?>
 
         <h1>
             <?php
+            /* translators: %s: search query. */
             printf( esc_html__('Search Results for: %s', 'wp-indigo' ), esc_html(get_search_query()));
             ?>
         </h1>

@@ -1,54 +1,52 @@
 html
   position: relative
 
-h1, h2, h3, h4
-
-  color: var(--secondary-color)
-  -webkit-font-smoothing: antialiased
-  text-rendering: optimizeLegibility
-
-h1
+h1, .h1, h1 *
   font-family: var(--heading-typography-font-family)
-  font-size: var(--heading-typography-font-size)
-  letter-spacing: -1px
+  font-size: clamp(1em, var(--heading-typography-font-size), 10em)
   color: var(--secondary-color)
-  line-height: 1.175
+  line-height: var(--heading-typography-font-size)
+  font-weight: var(--heading-typography-variant) !important
+
+
+h2, .h2, h2 *
+  font-family: var(--heading-typography-font-family)
+  font-size: clamp(0.85em, calc(var(--heading-typography-font-size) - 0.3em), 8em)
+  color: var(--secondary-color)
+  line-height: calc(var(--heading-typography-line-height) - 0.1)
+  font-weight: var(--heading-typography-variant) !important
+
+
+h3, .h3, h3 *
+  font-family: var(--heading-typography-font-family)
+  font-size: clamp(0.75em, calc(var(--heading-typography-font-size) - 0.4em), 7em)
+  color: var(--secondary-color)
+  line-height: calc(var(--heading-typography-line-height) - 0.2)
   font-weight: var(--heading-typography-variant)
 
-h2
-  font-family: var(--heading-typography-font-family)
-  font-size: calc(var(--heading-typography-font-size) - 4px)
-  color: var(--secondary-color)
-  line-height: 1.167
-  font-weight: var(--heading-typography-variant)
 
-h3
+h4, .h4, h4 *
   font-family: var(--heading-typography-font-family)
-  font-size: calc(var(--heading-typography-font-size) - 6px)
+  font-size: clamp(0.65em, calc(var(--heading-typography-font-size) - 0.5em), 6em)
   color: var(--secondary-color)
-  line-height: 1.154
-  font-weight: var(--heading-typography-variant)
+  line-height: calc(var(--heading-typography-line-height) - 0.3)
+  font-weight: var(--heading-typography-variant) !important
 
-h4
-  font-family: var(--heading-typography-font-family)
-  font-size: calc(var(--heading-typography-font-size) - 9px)
-  color: var(--secondary-color)
-  line-height: 1.15
-  font-weight: var(--heading-typography-variant)
 
-h5
+h5, .h5, h5 *
   font-family: var(--heading-typography-font-family)
-  font-size: calc(var(--heading-typography-font-size) - 10px)
+  font-size: clamp(0.5em, calc(var(--heading-typography-font-size) - 0.6em), 5em)
   color: var(--secondary-color)
-  line-height: 1.205
-  font-weight: var(--heading-typography-variant)
+  line-height: calc(var(--heading-typography-line-height) - 0.4)
+  font-weight: var(--heading-typography-variant) !important
 
-h6
+
+h6, .h6, h6 *
   font-family: var(--heading-typography-font-family)
-  font-size: calc(var(--heading-typography-font-size) - 11px)
+  font-size: clamp(0.45em, calc(var(--heading-typography-font-size) - 0.7em), 4em)
   color: var(--secondary-color)
-  line-height: 1.194
-  font-weight: var(--heading-typography-variant)
+  line-height: calc(var(--heading-typography-line-height) - 0.45)
+  font-weight: var(--heading-typography-variant) !important
 
 a
   color: var(--secondary-color)
@@ -65,10 +63,9 @@ a
 
 p
   font-family: var(--text-typography-font-family)
-  font-size: var(--text-typography-font-size)
   line-height: var(--text-typography-line-height)
   font-weight: var(--text-typography-variant)
-  color: var(--third-color)
+  color: var(--tertiary-color)
   margin-bottom: 20px
   letter-spacing: 0.4px
 
@@ -83,10 +80,9 @@ ul,
 ol
   li
   font-family: var(--text-typography-font-family)
-  font-size: var(--text-typography-font-size)
   line-height: var(--text-typography-line-height)
   font-weight: var(--text-typography-variant)
-  color: var(--third-color)
+  color: var(--tertiary-color)
 
 figure,
 img,
@@ -133,7 +129,6 @@ code,
 tt
   padding: 1px 0
   font-family: $fontMonospace
-  font-size: calc(var(--text-typography-font-size) - 20%)
   line-height: 20px
   background: #fff
   border-radius: 2px
@@ -144,7 +139,6 @@ pre
   width: 100%
   padding: 5px 10px
   font-family: $fontMonospace
-  font-size: calc(var(--text-typography-font-size) - 20%)
   line-height: 2rem
   overflow: auto
   background: #fff
@@ -198,7 +192,7 @@ pre
 
 .gallery-caption
   color: #888
-  font-size: 12px
+  font-size: 0.75rem
   margin: 0 0 12px
 
 .sticky

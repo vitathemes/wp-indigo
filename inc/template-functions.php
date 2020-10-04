@@ -1,5 +1,4 @@
 <?php
-require "classes/wp_indigo_walker_comment.php";
 
 //Show Profile
 function wp_indigo_show_profile() {
@@ -27,7 +26,7 @@ function wp_indigo_show_menu() {
 			$wp_indigo_menu_args['container_class'] = 'nav';
 		}
 		echo '<nav id="site-navigation" class="main-navigation nav-home nav" role="navigation">'; ?>
-        <button class="c-menu-toggle js-menu-toggle hamburger" type="button">
+        <button class="c-menu-toggle hamburger--boring js-menu-toggle hamburger" type="button">
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
               </span>
@@ -61,13 +60,13 @@ function wp_indigo_show_socials( $wp_indigo_social_names ) {
 		if ( $social != "" ) {
 			$name = explode( '-', $wp_indigo_social_name );
 			if ( strpos( $name[1], 'mail' ) !== false ) {
-				echo '<a rel="noopener" aria-label="' . esc_attr__( 'Email me', 'wp-indigo' ) . '" class="link" data-title="' . sanitize_email( $social ) . '" href="mailto:' . sanitize_email( $social ) . '" target="_blank">
-			<svg class="icon icon-' . $name[1] . '"><use xlink:href="' . esc_url( get_template_directory_uri() ) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
+				echo '<a rel="noopener" aria-label="' . esc_attr__( 'Email me', 'wp-indigo' ) . '" class="link" data-title="' . esc_attr(sanitize_email( $social )) . '" href="mailto:' . esc_attr(sanitize_email( $social )) . '" target="_blank">
+			<svg class="icon icon-' . esc_attr($name[1]) . '"><use xlink:href="' . esc_url( get_template_directory_uri() ) . '/assets/images/defs.svg#icon-' . esc_attr($name[1]) . '"></use></svg>
 		</a>';
 			} else {
 				$name = explode( '-', $wp_indigo_social_name );
-				echo '<a rel="noopener" aria-label="View ' . $name[1] . ' page" class="link" data-title="' . $social . '" href="' . $social . '" target="_blank">
-			<svg class="icon icon-' . $name[1] . '"><use xlink:href="' . esc_url( get_template_directory_uri() ) . '/assets/images/defs.svg#icon-' . $name[1] . '"></use></svg>
+				echo '<a rel="noopener" aria-label="View ' . esc_attr($name[1]) . ' page" class="link" data-title="' . esc_attr($social) . '" href="' . esc_attr($social) . '" target="_blank">
+			<svg class="icon icon-' . esc_attr($name[1]) . '"><use xlink:href="' . esc_attr( get_template_directory_uri() ) . '/assets/images/defs.svg#icon-' . esc_attr($name[1]) . '"></use></svg>
 		</a>';
 			}
 		}
@@ -143,7 +142,7 @@ function wp_indigo_theme_settings() {
 	$wp_indigo_theme_typography = wp_indigo_typography();
 	?>
     <style>
-        <?php echo $wp_indigo_theme_typography; ?>
+        <?php echo esc_html($wp_indigo_theme_typography); ?>
     </style>
 	<?php
 }
@@ -182,3 +181,22 @@ function wp_indigo_get_discussion_data() {
 
 	return $discussion;
 }
+
+
+function wp_indigo_enqueue_fonts() {
+	$wp_indigo_text_typography    = get_theme_mod( 'text_typography' );
+	$wp_indigo_heading_typography = get_theme_mod( 'headings_typography' );
+
+	if ( $wp_indigo_heading_typography['font-family'] ) {
+		wp_enqueue_style( 'wp-meliora-headings-fonts', '//fonts.googleapis.com/css2?family=' . $wp_indigo_heading_typography['font-family'] . ':wght@' . $wp_indigo_heading_typography['font-weight'] );
+	} else {
+		wp_enqueue_style( 'wp-meliora-headings-fonts', '//fonts.googleapis.com/css2?family=Roboto+Mono:wght@400' );
+	}
+	if ( $wp_indigo_text_typography['font-family'] ) {
+		wp_enqueue_style( 'wp-meliora-body-font', '//fonts.googleapis.com/css2?family=' . $wp_indigo_text_typography['font-family'] . ':wght@' . $wp_indigo_text_typography['font-weight'] );
+	} else {
+		wp_enqueue_style( 'wp-meliora-headings-fonts', '//fonts.googleapis.com/css2?family=Roboto+Mono:wght@300' );
+	}
+}
+
+add_action( 'wp_head', 'wp_indigo_enqueue_fonts' );

@@ -5,7 +5,7 @@
     margin: 0
     padding: 0 13px 0
 
-    @media #{$mobile}
+    @media #{$below}
       flex-wrap: nowrap
       display: none
       padding-bottom: 12px !important
@@ -16,6 +16,9 @@
         position: absolute
         top: 100%
         width: 100%
+        z-index: 100
+        background-color: #fff
+        height: 100vh
 
       li
         min-width: auto
@@ -27,8 +30,9 @@
       display: inline-block
       position: relative
 
-      &:hover, &.focus, &:focus
+      &:hover, &.focus, &:focus, &:focus-within
         & > ul.sub-menu
+          display: block
           left: 0
 
       ul.sub-menu
@@ -43,8 +47,15 @@
         visibility: visible
         z-index: 99
 
-        &.focus
+        @media #{$below}
+          margin: 10px 0
+          position: relative
+          width: auto
+          display: none
+
+        &.focus, &:focus-within, &:hover
           display: block
+
 
         li
           display: block
@@ -63,8 +74,6 @@
 
     > li > a
       display: inline-block
-      font-weight: 300
-      font-size: 1rem
       padding: 20px 10px
       text-decoration: none
       color: var(--secondary-color)
@@ -79,17 +88,16 @@
 
   @media #{$below}
     justify-content: flex-end
+    top: 0
 
   > .list
     margin: 0 auto
     padding: 0 13px 0
 
     > li > a
-      font-size: 1rem
       padding: 4px 8px
       margin: 0 15px
       color: var(--secondary-color)
-      font-weight: 400
       line-height: 19px
       transition: .2s
       border: 1px solid transparent
@@ -111,15 +119,16 @@
     > li
       margin: 0 18px
 
+      @media #{$below}
+        margin: 0 18px 16px
+
     > li > a
-      font-size: 1rem
       padding: 4px 8px
       margin: 0
       border-radius: 0
       transition: all .2s ease-in-out
       color: var(--secondary-color)
-      font-weight: 400
-      line-height: 19px
+      line-height: 1
       border: 1px solid transparent
 
       &:hover
