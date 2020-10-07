@@ -67,7 +67,7 @@ $wp_indigo_discussion = wp_indigo_get_discussion_data();
 
 		// Show comment form at top if showing newest comments at the top.
 		if ( comments_open() ) {
-			wp_indigo_comment_form( );
+			comment_form();
 
 			echo "<h3>" . esc_html_e( 'Comments', 'wp-indigo' ) . "</h3>";
 		}

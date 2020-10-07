@@ -22,4 +22,4 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 <div class="wrapper-normal">
     <div class="page">
-		<?php if ( ! is_page_template( 'page-templates/home.php' ) && ! is_home() ) : ?><?php wp_indigo_show_menu(); ?><?php endif; ?>
+			<?php wp_indigo_show_menu(); ?>

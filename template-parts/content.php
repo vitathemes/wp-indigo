@@ -3,7 +3,7 @@
         <div class="author-avatar">
             <img class="author-avatar-img" src="<?php echo esc_attr( get_avatar_url( $post->post_author ) ); ?>" alt="<?php echo esc_attr(get_user_by( 'ID', $post->post_author )->display_name); ?>"/>
         </div>
-        <h4 class="author-name"><?php echo get_the_author_meta( 'display_name' ); ?></h4>
+        <h4 class="author-name"><?php echo esc_html(get_the_author_meta( 'display_name' )); ?></h4>
     </div>
     <span class="separator spacer"></span>
     <span class="date">

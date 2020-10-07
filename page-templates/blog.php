@@ -47,7 +47,12 @@ get_header(); ?>
 							'before_page_number' => '',
 							'after_page_number'  => ''
 						);
-						echo paginate_links( $paginate_args );
+						the_posts_pagination( array(
+							'screen_reader_text' => ' ',
+							'mid_size'           => 2,
+							'prev_text'          => __( 'Previous', 'wp-indigo' ),
+							'next_text'          => __( 'Next', 'wp-indigo' ),
+						) );
 						?>
                     </div>
                 </div>
