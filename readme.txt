@@ -1,9 +1,9 @@
 === WP Indigo ===
 Contributors: vitathemes, kashani, mrmolaei, mostafas1990
 Requires at least: 5.0
-Tested up to: 5.4
+Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 1.0.9
+Stable tag: 1.0.11
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,10 @@ It's based on the [indigo](https://github.com/sergiokopplin/indigo), that origin
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
 
 == Changelog ==
+= 1.0.11 =
+* Removed unused zip file and update theme URI
+* Fixed translation and escaping output issues & Improve customizer
+
 = 1.0.8 =
 * Update Licenses.
 
