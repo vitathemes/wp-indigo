@@ -10,7 +10,6 @@
 get_header(); ?>
 
 <?php
-wp_indigo_show_menu();
 wp_indigo_show_profile();
 ?>
 

@@ -60,13 +60,13 @@ function wp_indigo_show_socials( $wp_indigo_social_names ) {
 		if ( $social != "" ) {
 			$name = explode( '-', $wp_indigo_social_name );
 			if ( strpos( $name[1], 'mail' ) !== false ) {
-				echo '<a rel="noopener" aria-label="' . esc_attr__( 'Email me', 'wp-indigo' ) . '" class="link" data-title="' . esc_attr(sanitize_email( $social )) . '" href="mailto:' . esc_attr(sanitize_email( $social )) . '" target="_blank">
-			<svg class="icon icon-' . esc_attr($name[1]) . '"><use xlink:href="' . esc_url( get_template_directory_uri() ) . '/assets/images/defs.svg#icon-' . esc_attr($name[1]) . '"></use></svg>
+				echo '<a rel="noopener" aria-label="' . esc_attr__( 'Email me', 'wp-indigo' ) . '" class="link" data-title="' . esc_attr( sanitize_email( $social ) ) . '" href="mailto:' . esc_attr( sanitize_email( $social ) ) . '" target="_blank">
+			<svg class="icon icon-' . esc_attr( $name[1] ) . '"><use xlink:href="' . esc_url( get_template_directory_uri() ) . '/assets/images/defs.svg#icon-' . esc_attr( $name[1] ) . '"></use></svg>
 		</a>';
 			} else {
 				$name = explode( '-', $wp_indigo_social_name );
-				echo '<a rel="noopener" aria-label="View ' . esc_attr($name[1]) . ' page" class="link" data-title="' . esc_attr($social) . '" href="' . esc_attr($social) . '" target="_blank">
-			<svg class="icon icon-' . esc_attr($name[1]) . '"><use xlink:href="' . esc_attr( get_template_directory_uri() ) . '/assets/images/defs.svg#icon-' . esc_attr($name[1]) . '"></use></svg>
+				echo '<a rel="noopener" aria-label="View ' . esc_attr( $name[1] ) . ' page" class="link" data-title="' . esc_attr( $social ) . '" href="' . esc_attr( $social ) . '" target="_blank">
+			<svg class="icon icon-' . esc_attr( $name[1] ) . '"><use xlink:href="' . esc_attr( get_template_directory_uri() ) . '/assets/images/defs.svg#icon-' . esc_attr( $name[1] ) . '"></use></svg>
 		</a>';
 			}
 		}
@@ -98,14 +98,14 @@ function wp_indigo_typography() {
 	$wp_indigo_default_heading_typography = array(
 		'font-family' => "Roboto Mono",
 		'font-size'   => "26px",
-		'variant'     => 'regular',
+		'font-weight' => 'regular',
 		'line-height' => '31px',
 		'color'       => '#1a1a1a'
 	);
 	$default_text_typography              = array(
 		'font-family' => "Roboto Mono",
 		'font-size'   => "16px",
-		'variant'     => 'regular',
+		'font-weight' => 'regular',
 		'line-height' => '28px',
 		'color'       => '#666666'
 	);
@@ -119,15 +119,10 @@ function wp_indigo_typography() {
 	} else {
 		$wp_indigo_text_typography = array_merge( $default_text_typography, $wp_indigo_text_typography );
 	}
+
 	$html = ':root {
-				--heading-typography-font-size: ' . $wp_indigo_heading_typography["font-size"] . ';
-	            --heading-typography-font-family: ' . $wp_indigo_heading_typography["font-family"] . ';
-	            --heading-typography-line-height: ' . $wp_indigo_heading_typography["line-height"] . ';
-	            --heading-typography-variant: ' . $wp_indigo_heading_typography["variant"] . ';
-	            --text-typography-font-size: ' . $wp_indigo_text_typography["font-size"] . ';
+	            --heading-typography-font-family: ' . $wp_indigo_heading_typography["font-family"] . ';      
 	            --text-typography-font-family: ' . $wp_indigo_text_typography["font-family"] . ';
-	            --text-typography-line-height: ' . $wp_indigo_text_typography["line-height"] . ';
-	            --text-typography-variant: ' . $wp_indigo_text_typography["variant"] . ';
 	
 	            --primary-color: ' . get_theme_mod( "branding_primary_color", "#3F51B5" ) . ';
 	            --secondary-color: ' . $wp_indigo_heading_typography["color"] . ';
@@ -138,16 +133,16 @@ function wp_indigo_typography() {
 }
 
 add_action( 'wp_head', 'wp_indigo_theme_settings' );
+
 function wp_indigo_theme_settings() {
-	$wp_indigo_theme_typography = wp_indigo_typography();
+	$wp_indigo_theme_settings = wp_indigo_typography();
 	?>
     <style>
-        <?php echo esc_html($wp_indigo_theme_typography); ?>
+        <?php echo esc_html($wp_indigo_theme_settings); ?>
     </style>
 	<?php
 }
 
-;
 
 //
 function wp_indigo_get_discussion_data() {
@@ -188,14 +183,20 @@ function wp_indigo_enqueue_fonts() {
 	$wp_indigo_heading_typography = get_theme_mod( 'headings_typography' );
 
 	if ( $wp_indigo_heading_typography['font-family'] ) {
+		if ( ! $wp_indigo_heading_typography['font-weight'] ) {
+			$wp_indigo_heading_typography['font-weight'] = 400;
+		}
 		wp_enqueue_style( 'wp-indigo-headings-fonts', '//fonts.googleapis.com/css2?family=' . $wp_indigo_heading_typography['font-family'] . ':wght@' . $wp_indigo_heading_typography['font-weight'] );
 	} else {
 		wp_enqueue_style( 'wp-indigo-headings-fonts', '//fonts.googleapis.com/css2?family=Roboto+Mono:wght@400' );
 	}
 	if ( $wp_indigo_text_typography['font-family'] ) {
+		if ( ! $wp_indigo_text_typography['font-weight'] ) {
+			$wp_indigo_text_typography['font-weight'] = 400;
+		}
 		wp_enqueue_style( 'wp-indigo-body-font', '//fonts.googleapis.com/css2?family=' . $wp_indigo_text_typography['font-family'] . ':wght@' . $wp_indigo_text_typography['font-weight'] );
 	} else {
-		wp_enqueue_style( 'wp-indigo-headings-fonts', '//fonts.googleapis.com/css2?family=Roboto+Mono:wght@300' );
+		wp_enqueue_style( 'wp-indigo-body-fonts', '//fonts.googleapis.com/css2?family=Roboto+Mono:wght@300' );
 	}
 }
 
