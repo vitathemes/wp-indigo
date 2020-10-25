@@ -1077,7 +1077,7 @@ textarea {
     .nav {
       justify-content: flex-end;
       top: 0;
-      padding: 3px; } }
+      padding: 3px 0; } }
   .nav > .list {
     margin: 0 auto;
     padding: 0 13px 0; }
@@ -1471,6 +1471,9 @@ ol.children {
 
 .edit-link {
   margin-right: 25px; }
+
+#cancel-comment-reply-link {
+  margin: 0 15px; }
 
 .hamburger {
   padding: 12px 15px;

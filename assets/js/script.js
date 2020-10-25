@@ -75,7 +75,6 @@
         } else {
             isToggleItem = false;
         }
-        console.log(isBackward);
     }, true);
 
     document.addEventListener('keydown', function (e) {
