@@ -95,34 +95,9 @@ function wp_indigo_check_socials( $wp_indigo_social_names ) {
 function wp_indigo_typography() {
 	$wp_indigo_text_typography            = get_theme_mod( 'text_typography' );
 	$wp_indigo_heading_typography         = get_theme_mod( 'headings_typography' );
-	$wp_indigo_default_heading_typography = array(
-		'font-family' => "Roboto Mono",
-		'font-size'   => "26px",
-		'font-weight' => 'regular',
-		'line-height' => '31px',
-		'color'       => '#1a1a1a'
-	);
-	$default_text_typography              = array(
-		'font-family' => "Roboto Mono",
-		'font-size'   => "16px",
-		'font-weight' => 'regular',
-		'line-height' => '28px',
-		'color'       => '#666666'
-	);
-	if ( empty( $wp_indigo_heading_typography ) ) {
-		$wp_indigo_heading_typography = $wp_indigo_default_heading_typography;
-	} else {
-		$wp_indigo_heading_typography = array_merge( $wp_indigo_default_heading_typography, $wp_indigo_heading_typography );
-	}
-	if ( empty( $wp_indigo_text_typography ) ) {
-		$wp_indigo_text_typography = $default_text_typography;
-	} else {
-		$wp_indigo_text_typography = array_merge( $default_text_typography, $wp_indigo_text_typography );
-	}
 
 	$html = ':root {
-	            --heading-typography-font-family: ' . $wp_indigo_heading_typography["font-family"] . ';      
-	            --text-typography-font-family: ' . $wp_indigo_text_typography["font-family"] . ';
+
 	
 	            --primary-color: ' . get_theme_mod( "branding_primary_color", "#3F51B5" ) . ';
 	            --secondary-color: ' . $wp_indigo_heading_typography["color"] . ';
@@ -144,7 +119,6 @@ function wp_indigo_theme_settings() {
 }
 
 
-//
 function wp_indigo_get_discussion_data() {
 	static $discussion, $post_id;
 	$wp_indigo_current_post_id = get_the_ID();
@@ -176,28 +150,3 @@ function wp_indigo_get_discussion_data() {
 
 	return $discussion;
 }
-
-
-function wp_indigo_enqueue_fonts() {
-	$wp_indigo_text_typography    = get_theme_mod( 'text_typography' );
-	$wp_indigo_heading_typography = get_theme_mod( 'headings_typography' );
-
-	if ( $wp_indigo_heading_typography['font-family'] ) {
-		if ( ! $wp_indigo_heading_typography['font-weight'] ) {
-			$wp_indigo_heading_typography['font-weight'] = 400;
-		}
-		wp_enqueue_style( 'wp-indigo-headings-fonts', '//fonts.googleapis.com/css2?family=' . $wp_indigo_heading_typography['font-family'] . ':wght@' . $wp_indigo_heading_typography['font-weight'] );
-	} else {
-		wp_enqueue_style( 'wp-indigo-headings-fonts', '//fonts.googleapis.com/css2?family=Roboto+Mono:wght@400' );
-	}
-	if ( $wp_indigo_text_typography['font-family'] ) {
-		if ( ! $wp_indigo_text_typography['font-weight'] ) {
-			$wp_indigo_text_typography['font-weight'] = 400;
-		}
-		wp_enqueue_style( 'wp-indigo-body-font', '//fonts.googleapis.com/css2?family=' . $wp_indigo_text_typography['font-family'] . ':wght@' . $wp_indigo_text_typography['font-weight'] );
-	} else {
-		wp_enqueue_style( 'wp-indigo-body-fonts', '//fonts.googleapis.com/css2?family=Roboto+Mono:wght@300' );
-	}
-}
-
-add_action( 'wp_head', 'wp_indigo_enqueue_fonts' );

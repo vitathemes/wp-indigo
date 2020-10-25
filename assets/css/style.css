@@ -910,17 +910,14 @@ textarea {
         fill: var(--primary-color) !important; }
   .footer-main > .extra {
     color: var(--secondary-color);
-    margin-top: 10px;
-    line-height: 28px;
-    font-size: 0.96em; }
+    margin-top: 10px; }
     .footer-main > .extra > .link {
-      font-size: 0.96em;
+      font-size: inherit;
       color: var(--secondary-color);
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: ease-in-out all .3s;
-      padding-bottom: 1px;
-      line-height: 15px; }
+      padding-bottom: 1px; }
       .footer-main > .extra > .link:hover {
         border-color: #979A9A; }
 
@@ -1656,12 +1653,7 @@ body {
   .page h1.single-title {
     text-align: center;
     margin-bottom: 30px;
-    color: var(--secondary-color);
-    font-size: var(--heading-typography-font-size);
-    line-height: var(--heading-typography-line-height); }
-    @media screen and (max-width: 567px) {
-      .page h1.single-title {
-        font-size: calc(var(--heading-typography-font-size) - 15%); } }
+    color: var(--secondary-color); }
 
 .about img {
   width: 50%;
@@ -1702,13 +1694,11 @@ body {
         z-index: -2; }
       .post > .meta > .author-meta .author-name {
         font-weight: 300;
-        font-size: calc(var(--text-typography-font-size) - 2px);
         line-height: 21px;
         color: #979A9A;
         margin: 0 0 0 10px; }
     .post > .meta > .date {
       font-weight: 300;
-      font-size: calc(var(--text-typography-font-size) - 2px);
       line-height: 21px;
       color: #979A9A; }
   .post > .date,
@@ -1777,7 +1767,6 @@ table tr td, table tr th {
   margin: 50px 0; }
 
 .social-share-title {
-  font-size: calc(var(--text-typography-font-size) - 2px);
   line-height: 25px;
   color: #979A9A;
   font-family: inherit;

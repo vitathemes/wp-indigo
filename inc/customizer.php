@@ -516,11 +516,33 @@ Kirki::add_field( 'wp-indigo', [
 		'line-height' => '1.5',
 		'color'       => '#666666',
 	],
-	'output'    => [
-		[
-			'element' => 'body',
-		]
-	],
+	'output'    => array(
+		array(
+			'element'       => 'body',
+			'property'      => 'font-size',
+			'value_pattern' => '$',
+			'choice'        => 'font-size',
+		),
+		array(
+			'element'       => 'body',
+			'property'      => 'font-weight',
+			'value_pattern' => '$',
+			'choice'        => 'font-weight',
+		),
+		array(
+			'element'       => 'body',
+			'property'      => 'font-family',
+			'value_pattern' => '$',
+			'choice'        => 'font-family',
+		),
+		array(
+			'element'       => 'body',
+			'property'      => 'letter-spacing',
+			'value_pattern' => '$',
+			'choice'        => 'letter-spacing',
+		),
+
+	),
 	'priority'  => 10,
 	'transport' => 'auto',
 ] );
