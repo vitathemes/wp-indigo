@@ -96,6 +96,14 @@ function wp_indigo_typography() {
 	$wp_indigo_text_typography            = get_theme_mod( 'text_typography' );
 	$wp_indigo_heading_typography         = get_theme_mod( 'headings_typography' );
 
+	if (!isset($wp_indigo_heading_typography["color"])) {
+		$wp_indigo_heading_typography["color"] = "#1A1A1A";
+    }
+
+	if (!isset($wp_indigo_text_typography["color"])) {
+		$wp_indigo_text_typography["color"] = "#555555";
+	}
+
 	$html = ':root {
 
 	

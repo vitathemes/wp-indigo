@@ -525,6 +525,12 @@ Kirki::add_field( 'wp-indigo', [
 		),
 		array(
 			'element'       => 'body',
+			'property'      => 'line-height',
+			'value_pattern' => '$',
+			'choice'        => 'line-height',
+		),
+		array(
+			'element'       => 'body',
 			'property'      => 'font-weight',
 			'value_pattern' => '$',
 			'choice'        => 'font-weight',
