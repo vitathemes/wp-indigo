@@ -4,57 +4,32 @@ html {
 }
 
 h1, .h1, h1 * {
-    font-family: var(--heading-typography-font-family);
-    font-size: clamp(1em, var(--heading-typography-font-size), 10em);
     color: var(--secondary-color);
-    line-height: var(--heading-typography-font-size);
-    font-weight: var(--heading-typography-variant) !important;
 }
 
 h2, .h2, h2 * {
-    font-family: var(--heading-typography-font-family);
-    font-size: clamp(0.85em, calc(var(--heading-typography-font-size) - 0.3em), 8em);
     color: var(--secondary-color);
-    line-height: calc(var(--heading-typography-line-height) - 0.1);
-    font-weight: var(--heading-typography-variant) !important;
 }
 
 h3, .h3, h3 * {
-    font-family: var(--heading-typography-font-family);
-    font-size: clamp(0.75em, calc(var(--heading-typography-font-size) - 0.4em), 7em);
     color: var(--secondary-color);
-    line-height: calc(var(--heading-typography-line-height) - 0.2);
-    font-weight: var(--heading-typography-variant);
 }
 
 h4, .h4, h4 * {
-    font-family: var(--heading-typography-font-family);
-    font-size: clamp(0.65em, calc(var(--heading-typography-font-size) - 0.5em), 6em);
     color: var(--secondary-color);
-    line-height: calc(var(--heading-typography-line-height) - 0.3);
-    font-weight: var(--heading-typography-variant) !important;
 }
 
 h5, .h5, h5 * {
-    font-family: var(--heading-typography-font-family);
-    font-size: clamp(0.5em, calc(var(--heading-typography-font-size) - 0.6em), 5em);
     color: var(--secondary-color);
-    line-height: calc(var(--heading-typography-line-height) - 0.4);
-    font-weight: var(--heading-typography-variant) !important;
 }
 
 h6, .h6, h6 * {
-    font-family: var(--heading-typography-font-family);
-    font-size: clamp(0.45em, calc(var(--heading-typography-font-size) - 0.7em), 4em);
     color: var(--secondary-color);
-    line-height: calc(var(--heading-typography-line-height) - 0.45);
-    font-weight: var(--heading-typography-variant) !important;
 }
 
 a {
     color: var(--secondary-color);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
     padding-bottom: 2px;
 }
 
@@ -68,9 +43,6 @@ a:visited {
 }
 
 p {
-    font-family: var(--text-typography-font-family);
-    line-height: var(--text-typography-line-height);
-    font-weight: var(--text-typography-variant);
     color: var(--tertiary-color);
     margin-bottom: 20px;
     letter-spacing: 0.4px;
@@ -89,9 +61,6 @@ strong {
 
 ul,
 ol {
-    font-family: var(--text-typography-font-family);
-    line-height: var(--text-typography-line-height);
-    font-weight: var(--text-typography-variant);
     color: var(--tertiary-color);
 }
 
@@ -116,14 +85,14 @@ figcaption {
     margin: 0 auto;
     width: 100%;
     text-align: center;
-    font-size: calc(var(--text-typography-font-size) + 30%);
+    font-size: 0.7rem;
     color: #979A9A;
     font-weight: 300;
 }
 
 @media only screen and (max-width: 400px) {
     figcaption {
-        font-size: calc(var(--text-typography-font-size) + 20%);
+        font-size: 0.8rem;
     }
 }
 
@@ -148,7 +117,6 @@ figure.highlight {
 code,
 tt {
     padding: 1px 0;
-    font-family: "Consolas", Liberation Mono, Menlo, Courier, monospace;
     line-height: 20px;
     background: #fff;
     border-radius: 2px;
@@ -159,7 +127,6 @@ pre {
     margin: 0 0 1.75em 0;
     width: 100%;
     padding: 5px 10px;
-    font-family: "Consolas", Liberation Mono, Menlo, Courier, monospace;
     line-height: 2rem;
     overflow: auto;
     background: #fff;
@@ -1119,18 +1086,15 @@ textarea {
 .footer-main > .extra {
     color: var(--secondary-color);
     margin-top: 10px;
-    line-height: 28px;
-    font-size: 0.96em;
 }
 
 .footer-main > .extra > .link {
-    font-size: 0.96em;
+    font-size: inherit;
     color: var(--secondary-color);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: ease-in-out all .3s;
     padding-bottom: 1px;
-    line-height: 15px;
 }
 
 .footer-main > .extra > .link:hover {
@@ -1154,9 +1118,13 @@ textarea {
     opacity: .9;
 }
 
+.header-home .selfie a {
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
 .header-home .selfie img {
     width: 100px;
-    margin-bottom: 25px;
     border-radius: 100%;
     box-shadow: none;
     opacity: 1;
@@ -1172,13 +1140,9 @@ textarea {
 }
 
 .header-home > .description {
-    font-size: 1em;
-    font-weight: 300;
-    font-style: normal;
-    color: #666;
     width: 70%;
     margin: 0 auto 30px;
-    line-height: 28px;
+    line-height: 1.4;
 }
 
 .header-home > .description a {
@@ -1205,15 +1169,15 @@ textarea {
     width: auto;
     z-index: 100000;
     /* Above WP toolbar */
-    -webkit-transition: top .5s ease-out;
-    transition: top .5s ease-out;
+    -webkit-transition: top .5s ease-out 0s;
+    transition: top .5s ease-out 0s;
 }
 
 .skip-link:focus {
     color: #21759b;
     top: 7px;
-    -webkit-transition: top 0s;
-    transition: top 0s;
+    -webkit-transition: top 0.2s;
+    transition: top 0.2s;
 }
 
 .nav > .list,
@@ -1340,6 +1304,7 @@ textarea {
     .nav {
         justify-content: flex-end;
         top: 0;
+        padding: 3px 0;
     }
 }
 
@@ -1555,7 +1520,6 @@ ul.sub-menu:focus-within {
 .share > .reddit {
     display: inline;
     vertical-align: middle;
-    font-size: calc(var(--text-typography-font-size) - 3px);
     font-weight: 700;
     color: #fff;
     padding: 6px 10px;
@@ -1647,7 +1611,7 @@ ul.sub-menu:focus-within {
     bottom: -32px;
     left: -6px;
     margin: 0 auto;
-    font-size: calc(var(--text-typography-font-size) - 3px);
+    font-size: calc(1rem - 3px);
     padding: 3px 10px;
     background: var(--secondary-color);
     color: #fff;
@@ -1722,7 +1686,7 @@ form input[type=submit] {
     width: auto;
     border-color: #1A1A1A;
     transition: .1s;
-    font-size: var(--text-typography-font-size);
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -1737,7 +1701,7 @@ form input, form textarea {
     width: 100%;
     border: 1px solid #C4C4C4;
     box-sizing: border-box;
-    font-size: calc(var(--text-typography-font-size) - 3px);
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -1776,8 +1740,8 @@ input[type=checkbox] {
 }
 
 .comments-title {
-    font-size: calc(var(--text-typography-font-size) + 4px) !important;
-    line-height: calc(var(--text-typography-line-height) + 4px);
+    font-size: calc(1rem + 4px) !important;
+    line-height: 1;
     margin-bottom: 30px;
 }
 
@@ -1881,8 +1845,12 @@ ol.children {
     margin-right: 25px;
 }
 
+#cancel-comment-reply-link {
+    margin: 0 15px;
+}
+
 .hamburger {
-    padding: 15px 15px;
+    padding: 12px 15px;
     display: inline-block;
     cursor: pointer;
     transition-property: opacity, filter;
@@ -2064,7 +2032,7 @@ body {
     color: #979A9A;
     text-align: right;
     transition: all ease-in-out .2s;
-    font-size: calc(var(--text-typography-font-size) - 0.25em);
+    font-size: calc(1rem - 0.25em);
     line-height: 1;
 }
 
@@ -2110,14 +2078,6 @@ body {
     text-align: center;
     margin-bottom: 30px;
     color: var(--secondary-color);
-    font-size: var(--heading-typography-font-size);
-    line-height: var(--heading-typography-line-height);
-}
-
-@media screen and (max-width: 567px) {
-    .page h1.single-title {
-        font-size: calc(var(--heading-typography-font-size) - 15%);
-    }
 }
 
 .about img {
@@ -2178,7 +2138,6 @@ body {
 
 .post > .meta > .author-meta .author-name {
     font-weight: 300;
-    font-size: calc(var(--text-typography-font-size) - 2px);
     line-height: 21px;
     color: #979A9A;
     margin: 0 0 0 10px;
@@ -2186,7 +2145,6 @@ body {
 
 .post > .meta > .date {
     font-weight: 300;
-    font-size: calc(var(--text-typography-font-size) - 2px);
     line-height: 21px;
     color: #979A9A;
 }
@@ -2281,7 +2239,6 @@ table tr td, table tr th {
 }
 
 .social-share-title {
-    font-size: calc(var(--text-typography-font-size) - 2px);
     line-height: 25px;
     color: #979A9A;
     font-family: inherit;
@@ -2422,7 +2379,7 @@ table tr td, table tr th {
     color: #979A9A;
     text-align: right;
     transition: all ease-in-out .2s;
-    font-size: calc(var(--text-typography-font-size) - 0.3rem);
+    font-size: calc(1rem - 0.3rem);
 }
 
 .tag-list > .list .item:hover .url aside {

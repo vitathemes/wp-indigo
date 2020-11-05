@@ -239,7 +239,7 @@ Kirki::add_field( 'wp-indigo', [
 	'default'  => [
 		'font-family' => 'Roboto Mono',
 		'font-size'   => '26px',
-		'variant'     => 'regular',
+		'font-weight'     => 'regular',
 		'color'       => '#1A1A1A'
 	],
 	'transport' => 'auto',
@@ -261,7 +261,7 @@ Kirki::add_field( 'wp-indigo', [
 			'element'       => 'h2',
 			'property'      => 'font-weight',
 			'value_pattern' => '$',
-			'choice'        => 'variant',
+			'choice'        => 'font-weight',
 		),
 		array(
 			'element'       => 'h2',
@@ -286,7 +286,7 @@ Kirki::add_field( 'wp-indigo', [
 			'element'       => '.h2',
 			'property'      => 'font-weight',
 			'value_pattern' => '$',
-			'choice'        => 'variant',
+			'choice'        => 'font-weight',
 		),
 		array(
 			'element'       => '.h2',
@@ -311,7 +311,7 @@ Kirki::add_field( 'wp-indigo', [
 			'element'       => 'h3',
 			'property'      => 'font-weight',
 			'value_pattern' => '$',
-			'choice'        => 'variant',
+			'choice'        => 'font-weight',
 		),
 		array(
 			'element'       => 'h3',
@@ -336,7 +336,7 @@ Kirki::add_field( 'wp-indigo', [
 			'element'       => '.h3',
 			'property'      => 'font-weight',
 			'value_pattern' => '$',
-			'choice'        => 'variant',
+			'choice'        => 'font-weight',
 		),
 		array(
 			'element'       => '.h3',
@@ -361,7 +361,7 @@ Kirki::add_field( 'wp-indigo', [
 			'element'       => 'h4',
 			'property'      => 'font-weight',
 			'value_pattern' => '$',
-			'choice'        => 'variant',
+			'choice'        => 'font-weight',
 		),
 		array(
 			'element'       => 'h4',
@@ -386,7 +386,7 @@ Kirki::add_field( 'wp-indigo', [
 			'element'       => '.h4',
 			'property'      => 'font-weight',
 			'value_pattern' => '$',
-			'choice'        => 'variant',
+			'choice'        => 'font-weight',
 		),
 		array(
 			'element'       => '.h4',
@@ -411,7 +411,7 @@ Kirki::add_field( 'wp-indigo', [
 			'element'       => 'h5',
 			'property'      => 'font-weight',
 			'value_pattern' => '$',
-			'choice'        => 'variant',
+			'choice'        => 'font-weight',
 		),
 		array(
 			'element'       => 'h5',
@@ -436,7 +436,7 @@ Kirki::add_field( 'wp-indigo', [
 			'element'       => '.h5',
 			'property'      => 'font-weight',
 			'value_pattern' => '$',
-			'choice'        => 'variant',
+			'choice'        => 'font-weight',
 		),
 		array(
 			'element'       => '.h5',
@@ -461,7 +461,7 @@ Kirki::add_field( 'wp-indigo', [
 			'element'       => 'h6',
 			'property'      => 'font-weight',
 			'value_pattern' => '$',
-			'choice'        => 'variant',
+			'choice'        => 'font-weight',
 		),
 		array(
 			'element'       => 'h6',
@@ -486,7 +486,7 @@ Kirki::add_field( 'wp-indigo', [
 			'element'       => '.h6',
 			'property'      => 'font-weight',
 			'value_pattern' => '$',
-			'choice'        => 'variant',
+			'choice'        => 'font-weight',
 		),
 		array(
 			'element'       => '.h6',
@@ -511,16 +511,44 @@ Kirki::add_field( 'wp-indigo', [
 	'section' =>'wpindigo_typography',
 	'default'   => [
 		'font-family' => 'Roboto',
-		'variant'     => 'regular',
+		'font-weight'     => 'regular',
 		'font-size'   => '14px',
 		'line-height' => '1.5',
 		'color'       => '#666666',
 	],
-	'output'    => [
-		[
-			'element' => 'body',
-		]
-	],
+	'output'    => array(
+		array(
+			'element'       => 'body',
+			'property'      => 'font-size',
+			'value_pattern' => '$',
+			'choice'        => 'font-size',
+		),
+		array(
+			'element'       => 'body',
+			'property'      => 'line-height',
+			'value_pattern' => '$',
+			'choice'        => 'line-height',
+		),
+		array(
+			'element'       => 'body',
+			'property'      => 'font-weight',
+			'value_pattern' => '$',
+			'choice'        => 'font-weight',
+		),
+		array(
+			'element'       => 'body',
+			'property'      => 'font-family',
+			'value_pattern' => '$',
+			'choice'        => 'font-family',
+		),
+		array(
+			'element'       => 'body',
+			'property'      => 'letter-spacing',
+			'value_pattern' => '$',
+			'choice'        => 'letter-spacing',
+		),
+
+	),
 	'priority'  => 10,
 	'transport' => 'auto',
 ] );

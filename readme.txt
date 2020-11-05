@@ -36,6 +36,9 @@ It's based on the [indigo](https://github.com/sergiokopplin/indigo), that origin
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
 
 == Changelog ==
+= 1.0.12 =
+* Minor Improvements.
+
 = 1.0.11 =
 * Removed unused zip file and update theme URI
 * Fixed translation and escaping output issues & Improve customizer
