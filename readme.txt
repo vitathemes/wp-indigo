@@ -1,5 +1,5 @@
 === WP Indigo ===
-Contributors: vitathemes, kashani, mrmolaei, mostafas1990
+Contributors: vitathemes, veronalabs, kashani, mrmolaei, mostafas1990
 Requires at least: 5.0
 Tested up to: 5.5
 Requires PHP: 5.6
@@ -36,6 +36,9 @@ It's based on the [indigo](https://github.com/sergiokopplin/indigo), that origin
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
 
 == Changelog ==
+= 1.0.13 =
+* Fixed undefined colors issue.
+
 = 1.0.12 =
 * Minor Improvements.
 
