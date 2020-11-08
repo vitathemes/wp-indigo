@@ -34,47 +34,24 @@ $wp_indigo_discussion = wp_indigo_get_discussion_data();
 				} else {
 					esc_html_e( 'Leave a comment', 'wp-indigo' );
 				}
-			} else {
-				if ( '1' == $wp_indigo_discussion->responses ) {
-					/* translators: %s: post title */
-					printf( esc_html( _x( 'One reply on &ldquo;%s&rdquo;', 'comments title', 'wp-indigo' ), esc_html( get_the_title() ) ) );
-				} else {
-					printf(
-					/* translators: 1: number of comments, 2: post title */
-						esc_html( _nx(
-							'%1$s reply on &ldquo;%2$s&rdquo;',
-							'%1$s replies on &ldquo;%2$s&rdquo;',
-							$wp_indigo_discussion->responses,
-							'comments title',
-							'wp-indigo'
-						) ),
-						esc_html( number_format_i18n( $wp_indigo_discussion->responses ) ),
-						esc_html( get_the_title() )
-					);
-				}
 			}
 			?>
         </h2><!-- .comments-title -->
-		<?php
-		// Only show discussion meta information when comments are open and available.
-		if ( have_comments() && comments_open() ) {
-			get_template_part( 'template-parts/post/discussion', 'meta' );
-		}
-		?>
     </div><!-- .comments-title-flex -->
 	<?php
-	if ( have_comments() ) :
 
-		// Show comment form at top if showing newest comments at the top.
-		if ( comments_open() ) {
-			comment_form();
 
-			echo "<h3>" . esc_html_e( 'Comments', 'wp-indigo' ) . "</h3>";
-		}
+	// Show comment form at top if showing newest comments at the top.
+	if ( comments_open() ) {
+		comment_form();
 
-		?>
-        <ol class="comment-list comments">
-			<?php
+		echo "<h3>" . esc_html_e( 'Comments', 'wp-indigo' ) . "</h3>";
+	}
+
+	?>
+    <ol class="comment-list comments">
+		<?php
+		if ( have_comments() ) :
 			wp_list_comments(
 				array(
 					'walker'      => new Wp_indigo_walker_comment(),
@@ -83,28 +60,29 @@ $wp_indigo_discussion = wp_indigo_get_discussion_data();
 					'style'       => 'ol',
 				)
 			);
-			?>
-        </ol><!-- .comment-list -->
-		<?php
+		endif;
+		?>
+    </ol><!-- .comment-list -->
+	<?php
 
-		// Show comment navigation
-		if ( get_comment_pages_count() > 1 ) :
-			$wp_indigo_comments_text = __( 'Comments', 'wp-indigo' );
-			the_comments_navigation(
-				array(
-					'prev_text' => sprintf( ' <span class="nav-prev-text"> < <span class="secondary-text">%s</span></span>', esc_html_e( 'Previous', 'wp-indigo' ) ),
-					'next_text' => sprintf( '<span class="nav-next-text"><span class="primary-text">%s</span> > </span> ', esc_html_e( 'Next', 'wp-indigo' ) ),
-				)
-			);
-		endif;
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) :
-			?>
-            <h3 class="no-comments">
-				<?php esc_html_e( 'Comments are disabled.', 'wp-indigo' ); ?>
-            </h3>
-		<?php
-		endif;
-	endif; // if have_comments();
+	// Show comment navigation
+	if ( get_comment_pages_count() > 1 ) :
+		$wp_indigo_comments_text = __( 'Comments', 'wp-indigo' );
+		the_comments_navigation(
+			array(
+				'prev_text' => sprintf( ' <span class="nav-prev-text"> < <span class="secondary-text">%s</span></span>', esc_html_e( 'Previous', 'wp-indigo' ) ),
+				'next_text' => sprintf( '<span class="nav-next-text"><span class="primary-text">%s</span> > </span> ', esc_html_e( 'Next', 'wp-indigo' ) ),
+			)
+		);
+	endif;
+
+	// If comments are closed and there are comments, let's leave a little note, shall we?
+	if ( ! comments_open() ) :
+		?>
+        <h3 class="no-comments">
+			<?php esc_html_e( 'Comments are disabled.', 'wp-indigo' ); ?>
+        </h3>
+	<?php
+	endif;
 	?>
 </div><!-- #comments -->
