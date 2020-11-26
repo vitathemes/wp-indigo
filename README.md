@@ -3,8 +3,11 @@ WP-Indigo is a modern WordPress theme with a simple yet elegant design. This min
 
 It's based on the [indigo](https://github.com/sergiokopplin/indigo), that originally builds for Jekyll.
 
+![Home Page](screenshot.png)
 
-![Image of WP-Indigo](screenshot.png)
+![Blog Page](screenshot-1.png)
+
+![Single Page](screenshot-2.png)
 
 ## Features
 * No additional JS
