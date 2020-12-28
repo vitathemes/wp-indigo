@@ -95,6 +95,13 @@
     margin: 0 auto
     padding: 0 13px 0
 
+    @media #{$below}
+      margin-top: 2rem;
+
+    > li
+      @media #{$below}
+        margin-bottom: 30px
+
     > li > a
       padding: 4px 8px
       margin: 0 15px
@@ -103,6 +110,9 @@
       transition: .2s
       border: 1px solid transparent
 
+      @media #{$below}
+        font-size: 1.25em
+
       &:hover
         border-color: var(--primary-color)
 
@@ -110,6 +120,9 @@
       border: 2px solid var(--primary-color)
       background-color: var(--primary-color)
       color: #fff
+
+      @media #{$below}
+        padding: 0.4rem 1.85rem
 
 .nav-home
   text-align: center
@@ -121,7 +134,7 @@
       margin: 0 18px
 
       @media #{$below}
-        margin: 0 18px 16px
+        margin: 0 18px 30px
 
     > li > a
       padding: 4px 8px
