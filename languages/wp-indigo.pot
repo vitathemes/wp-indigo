@@ -213,7 +213,15 @@ msgstr ""
 msgid "Lanyrd"
 msgstr ""
 
-#: inc/customizer.php:237
+#: inc/customizer.php:235
+msgid "Dribbble"
+msgstr ""
+
+#: inc/customizer.php:243
+msgid "Behance"
+msgstr ""
+
+#: inc/customizer.php:526
 msgid "Headlines"
 msgstr ""
 
