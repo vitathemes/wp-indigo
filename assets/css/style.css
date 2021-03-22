@@ -867,11 +867,12 @@ textarea {
   .footer-main > .link {
     display: inline; }
     .footer-main > .link > .icon {
-      width: 15px !important;
+      width: 12px !important;
       fill: #979A9A !important;
       transition: ease-in-out all .3s;
       position: relative;
-      top: 3px;
+      top: 4px;
+      left: 1px;
       display: inherit;
       margin: 0; }
       .footer-main > .link > .icon:hover {
