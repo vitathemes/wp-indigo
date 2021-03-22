@@ -229,6 +229,22 @@ Kirki::add_field( 'wp-indigo', [
 	'priority' => 10,
 ] );
 
+Kirki::add_field( 'wp-indigo', [
+	'type'     => 'link',
+	'settings' => 'social-dribbble',
+	'label'    => __( 'Dribbble', 'wp-indigo' ),
+	'section'  => 'wpindigo_socials',
+	'priority' => 10,
+] );
+
+Kirki::add_field( 'wp-indigo', [
+	'type'     => 'link',
+	'settings' => 'social-behance',
+	'label'    => __( 'Behance', 'wp-indigo' ),
+	'section'  => 'wpindigo_socials',
+	'priority' => 10,
+] );
+
 
 // -- Typography Fields --
 Kirki::add_field( 'wp-indigo', [

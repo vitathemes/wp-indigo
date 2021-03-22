@@ -26,7 +26,9 @@ if ( get_theme_mod( 'show_profile_section', 1 ) ):
 			'social-medium',
 			'social-vimeo',
 			'social-lanyrd',
-			'social-mail'
+			'social-mail',
+			'social-dribbble',
+			'social-behance'
 		);
 		if ( wp_indigo_check_socials( $social_names ) ):
 			?>
