@@ -36,7 +36,9 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 == Changelog ==
 = 1.1.0 =
 * Added Footer menu
+* Added Dribbble and Behance to social network options
 * Fixed mobile menu visibility
+* Fixed RSS icon bug in the footer
 
 = 1.0.14 =
 * Updated screenshots
