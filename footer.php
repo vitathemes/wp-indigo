@@ -10,6 +10,17 @@
 ?>
 <footer class="footer-main">
 
+    <?php
+    if (has_nav_menu('footer-menu')) {
+	    wp_nav_menu( array(
+		    'theme_location' => 'footer-menu',
+		    'menu_class'     => 'list navigation navigation--footer',
+		    'menu_id'        => 'navigation',
+		    'container'      => '',
+		    'depth'          => 2,
+	    ) );
+    }?>
+
 	<?php
 	if ( get_theme_mod( 'copyright_text' ) ) {
 		echo esc_html( get_theme_mod( 'copyright_text' ) ); ?>

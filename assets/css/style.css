@@ -867,11 +867,12 @@ textarea {
   .footer-main > .link {
     display: inline; }
     .footer-main > .link > .icon {
-      width: 15px !important;
+      width: 12px !important;
       fill: #979A9A !important;
       transition: ease-in-out all .3s;
       position: relative;
-      top: 3px;
+      top: 4px;
+      left: 2px;
       display: inherit;
       margin: 0; }
       .footer-main > .link > .icon:hover {
@@ -953,26 +954,40 @@ textarea {
 .nav-home > .list {
   list-style: none;
   margin: 0;
-  padding: 0 13px 0; }
+  padding: 0 13px 0;
+  transition: 2s all;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff; }
   @media only screen and (max-width: 780px) {
     .nav > .list,
     .nav-home > .list {
-      flex-wrap: nowrap;
-      display: none;
-      padding-bottom: 12px !important; }
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 12px !important;
+      height: 0;
+      max-height: 0;
+      transition: 1s all;
+      visibility: hidden; }
       .nav > .list.is-open,
       .nav-home > .list.is-open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        z-index: 100;
-        background-color: #fff;
-        height: 100vh; }
+        height: 100vh;
+        max-height: 100vh;
+        visibility: visible; }
+        .nav > .list.is-open li,
+        .nav-home > .list.is-open li {
+          opacity: 1; }
       .nav > .list li,
       .nav-home > .list li {
-        min-width: auto; }
+        min-width: auto;
+        opacity: 0;
+        transition: 0.4s all; }
       .nav > .list a,
       .nav-home > .list a {
         white-space: nowrap; } }
@@ -1094,6 +1109,21 @@ textarea {
 
 ul.sub-menu:focus-within {
   left: 0; }
+
+.navigation--footer {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0 24px;
+  flex-wrap: wrap; }
+  .navigation--footer li {
+    margin: 0 0.85rem 1rem; }
+    @media only screen and (max-width: 780px) {
+      .navigation--footer li {
+        width: 100%; } }
 
 .evidence {
   background-image: linear-gradient(to bottom, rgba(39, 243, 106, 0.15), rgba(39, 243, 106, 0.15));

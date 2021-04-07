@@ -1,1 +1,13 @@
-node_modules
+### Sass template
+.sass-cache/
+*.css.map
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# phpStorm
+.idea

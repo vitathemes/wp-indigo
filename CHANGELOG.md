@@ -1,3 +1,9 @@
+## 1.1.0
+
+* Fix: Mobile menu visibility issue
+* Update: Footer Menu
+
+
 ## 1.0.1
 
 * Fix: Overriding WordPress globals in blog page

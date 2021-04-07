@@ -1,15 +1,15 @@
 === WP Indigo ===
 Contributors: vitathemes, veronalabs, kashani, mrmolaei, mostafas1990
 Requires at least: 5.0
-Tested up to: 5.5
+Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 1.0.14
+Stable tag: 1.1.0
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Indigo is a modern WordPress theme with a simple yet elegant design. This minimal theme is suitable for almost any type of website and perfect for personal blogs and portfolios. While it is minimal and lightweight, it is responsive, flexible, customizable with WordPress customizer, and has a clean optimized code.
+WP-Indigo is a minimal WordPress theme with a simple yet elegant design. This multipurpose theme includes a demo and is suitable for almost any type of website, and perfect for Portfolios, Personal Blogs, CV & Resumes, Photographers, Designers, and Freelancers. While it is minimal and lightweight, it is responsive, flexible, customizable with WordPress customizer, and has a clean optimized code.
 
 It's based on the [indigo](https://github.com/sergiokopplin/indigo), that originally builds for Jekyll.
 
@@ -34,6 +34,10 @@ It's based on the [indigo](https://github.com/sergiokopplin/indigo), that origin
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
 
 == Changelog ==
+= 1.1.0 =
+* Added Footer menu
+* Fixed mobile menu visibility
+
 = 1.0.14 =
 * Updated screenshots
 * Updated readme file

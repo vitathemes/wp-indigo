@@ -4,24 +4,42 @@
     list-style: none
     margin: 0
     padding: 0 13px 0
+    transition: 2s all
+    display: flex
+    justify-content: center
+    flex-direction: row
+    position: absolute
+    top: 100%
+    width: 100%
+    z-index: 100
+    background-color: #fff
+
 
     @media #{$below}
-      flex-wrap: nowrap
-      display: none
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
       padding-bottom: 12px !important
+      height: 0
+      max-height: 0
+      transition: 1s all
+      visibility: hidden
+
 
       &.is-open
-        display: flex
-        flex-direction: column
-        position: absolute
-        top: 100%
-        width: 100%
-        z-index: 100
-        background-color: #fff
         height: 100vh
+        max-height: 100vh
+        visibility: visible
+
+
+        li
+          opacity: 1
 
       li
         min-width: auto
+        opacity: 0
+        transition: 0.4s all
+
 
       a
         white-space: nowrap
@@ -96,7 +114,7 @@
     padding: 0 13px 0
 
     @media #{$below}
-      margin-top: 2rem;
+      margin-top: 2rem
 
     > li
       @media #{$below}
@@ -150,3 +168,21 @@
 
 ul.sub-menu:focus-within
   left: 0
+
+
+
+.navigation--footer
+  list-style: none
+  width: 100%
+  padding: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 8px 0 24px
+  flex-wrap: wrap
+
+  li
+    margin: 0 0.85rem 1rem
+
+    @media #{$below}
+      width: 100%
