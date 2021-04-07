@@ -1,7 +1,9 @@
 ## 1.1.0
 
-* Fix: Mobile menu visibility issue
-* Update: Footer Menu
+* Added Footer menu
+* Added Dribbble and Behance to social network options
+* Fixed mobile menu visibility
+* Fixed RSS icon bug in the footer
 
 
 ## 1.0.1
