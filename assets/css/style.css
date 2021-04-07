@@ -971,13 +971,15 @@ textarea {
       justify-content: flex-start;
       align-items: center;
       padding-bottom: 12px !important;
-      height: 0vh;
-      max-height: 0vh;
-      transition: 1s all; }
+      height: 0;
+      max-height: 0;
+      transition: 1s all;
+      visibility: hidden; }
       .nav > .list.is-open,
       .nav-home > .list.is-open {
         height: 100vh;
-        max-height: 100vh; }
+        max-height: 100vh;
+        visibility: visible; }
         .nav > .list.is-open li,
         .nav-home > .list.is-open li {
           opacity: 1; }
@@ -985,7 +987,7 @@ textarea {
       .nav-home > .list li {
         min-width: auto;
         opacity: 0;
-        transition: 0.6s all; }
+        transition: 0.4s all; }
       .nav > .list a,
       .nav-home > .list a {
         white-space: nowrap; } }

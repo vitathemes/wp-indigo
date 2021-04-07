@@ -20,14 +20,16 @@
       justify-content: flex-start
       align-items: center
       padding-bottom: 12px !important
-      height: 0vh
-      max-height: 0vh
+      height: 0
+      max-height: 0
       transition: 1s all
+      visibility: hidden
 
 
       &.is-open
         height: 100vh
         max-height: 100vh
+        visibility: visible
 
 
         li
@@ -36,7 +38,7 @@
       li
         min-width: auto
         opacity: 0
-        transition: 0.6s all
+        transition: 0.4s all
 
 
       a
@@ -112,7 +114,7 @@
     padding: 0 13px 0
 
     @media #{$below}
-      margin-top: 2rem;
+      margin-top: 2rem
 
     > li
       @media #{$below}
