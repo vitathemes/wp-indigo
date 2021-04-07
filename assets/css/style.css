@@ -1110,6 +1110,21 @@ textarea {
 ul.sub-menu:focus-within {
   left: 0; }
 
+.navigation--footer {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0 24px;
+  flex-wrap: wrap; }
+  .navigation--footer li {
+    margin: 0 0.85rem 1rem; }
+    @media only screen and (max-width: 780px) {
+      .navigation--footer li {
+        width: 100%; } }
+
 .evidence {
   background-image: linear-gradient(to bottom, rgba(39, 243, 106, 0.15), rgba(39, 243, 106, 0.15));
   color: beta; }

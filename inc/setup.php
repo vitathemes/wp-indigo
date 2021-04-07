@@ -30,6 +30,7 @@ function wp_indigo_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary-menu' => esc_html__( 'Primary', 'wp-indigo' ),
+		'footer-menu' => esc_html__( 'Footer', 'wp-indigo' ),
 	) );
 	/*
 	 * Switch default core markup for search form, comment form, and comments
