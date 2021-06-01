@@ -1,0 +1,62 @@
+.u-ellipse {
+  display: flex;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+    border: 1px solid #f0f0f0;
+    margin: 0px 19px;
+  }
+}
+
+/* Letter spacing */
+.u-letter-space-medium {
+  letter-spacing: 0.1em;
+}
+
+.u-letter-space-regular {
+  letter-spacing: 0.05em;
+}
+
+.u-letter-space-small {
+  letter-spacing: 0.03em;
+}
+
+/* Links */
+.u-link--hypertext {
+  border-bottom: 1px solid $wp-indigo_quaternary_color;
+  padding-bottom: 3px;
+}
+
+/* Seprator */
+.u-seprator {
+  color: $wp-indigo_tertiary_color;
+
+  margin: 0px 4px;
+}
+
+/* Links */
+.u-link--secondary {
+  color: $color_link_secondary;
+  transition: $global-transition;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $wp-indigo_quaternary_color; //3F51B5
+  }
+
+  &:focus {
+    outline: thin dotted;
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}

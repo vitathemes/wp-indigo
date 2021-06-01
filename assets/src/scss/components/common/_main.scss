@@ -1,0 +1,149 @@
+/*------------------------------------*\
+  #Main
+\*------------------------------------*/
+.c-main {
+  width: 100%;
+  padding: 64px 0px 64px;
+  padding-bottom: 0px;
+  min-height: 100%;
+  height: max-content;
+
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+
+  @include media(tablet) {
+    width: 555px;
+    max-width: 555px;
+    padding: 98px 0px 64px 0px;
+  }
+}
+
+.c-main--wide {
+  @include media(tablet) {
+    padding: 109px 0px 64px 0px;
+    width: 880px;
+    max-width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.c-main--portfolios {
+  .c-main__header {
+    margin-bottom: 24px;
+  }
+  .c-main__content {
+    padding-top: 0px;
+  }
+}
+
+.c-main--single-portfolios {
+  width: 100%;
+
+  @include media(tablet) {
+    width: 555px;
+  }
+}
+
+.c-main--404 {
+  width: 100%;
+  height: max-content;
+  padding: 0;
+
+  .c-main__content {
+    height: 100%;
+    text-align: center;
+  }
+
+  .c-main__title {
+    height: max-content;
+    text-align: center;
+    font-size: 48px;
+    line-height: 74px;
+    color: $wp-indigo_primary_color;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+}
+
+.c-main__header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 39px;
+}
+
+.c-main__page-title {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0px;
+}
+
+.c-main__cat {
+  display: inline-block;
+  letter-spacing: 0.1em;
+  margin: 0px 12px;
+}
+
+.c-main__cat.active {
+  color: $wp-indigo_quaternary_color;
+}
+
+.c-main__content {
+  padding-top: 25px;
+  font-size: 0px;
+}
+
+.c-main__content--search {
+  @include media(tablet) {
+    padding-top: 75px;
+  }
+}
+
+.c-main__content--page {
+  padding-top: 0px;
+}
+
+.c-main__category {
+  margin-top: 39px;
+  font-size: 0px;
+}
+
+.c-main__portfolios {
+  @include media(tablet) {
+    padding-top: 0px;
+    display: grid;
+    grid-template-columns: 263px 263px;
+    grid-template-rows: 173px 175px 364px;
+    gap: 32px 29px;
+    grid-template-areas:
+      "a1 a2"
+      "a3 a2"
+      "a4 a4";
+  }
+}
+
+.c-main__portfolios--md {
+  @include media(tablet) {
+    display: grid;
+    grid-template-columns: 263px 263px;
+    grid-template-rows: 173px 175px;
+    gap: 32px 29px;
+    grid-template-areas:
+      "a1 a2"
+      "a3 a2";
+  }
+}
+
+.c-main__portfolios--sm {
+  @include media(tablet) {
+    display: grid;
+    grid-template-columns: 263px 263px;
+    grid-template-rows: 173px;
+    gap: 32px 29px;
+    grid-template-areas: "a1 a2";
+  }
+}

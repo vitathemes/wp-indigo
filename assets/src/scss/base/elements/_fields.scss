@@ -1,0 +1,113 @@
+/*------------------------------------*\
+  #Fields
+\*------------------------------------*/
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px 0px 15px 14px;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  border: 1px solid $wp-indigo_tertiary_color;
+  color: $wp-indigo_primary_color;
+
+  &::placeholder {
+    font-weight: 400;
+    color: $wp_indigo_secondary_color;
+  }
+
+  &:focus {
+    border: 1px solid $wp-indigo_main_accent_color;
+    outline: none;
+  }
+
+  &:active {
+    border: 1px solid $wp-indigo_main_accent_color;
+    outline: none;
+  }
+}
+
+select {
+  border: none;
+  border-radius: $global-radius;
+  padding: 10px 14px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 150px;
+  max-width: 100%;
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* Custom Check box */
+input[type="checkbox"] {
+  width: 35px;
+
+  height: 16px;
+  max-width: 16px;
+  max-height: 16px;
+  outline: $wp-indigo_tertiary_color solid 1.8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  position: relative;
+  left: 2px;
+  top: 50%;
+  @include media(tablet) {
+    width: 16px;
+  }
+
+  &:active,
+  &:focus {
+    outline: $wp-indigo_quaternary_color solid 1.8px;
+  }
+}
+
+input[type="checkbox"]:checked {
+  &:before {
+    margin: 0px;
+    padding: 0px;
+    content: url("https://api.iconify.design/bi:check.svg?color=%23000000&height=16");
+    vertical-align: -0.125em;
+    display: inline-block;
+    max-height: 16px;
+  }
+}

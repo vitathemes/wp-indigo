@@ -1,0 +1,35 @@
+.c-profile {
+  width: 100%;
+  text-align: center;
+
+  opacity: 0;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.c-profile__image {
+  width: 106px;
+  height: 106px;
+  display: inline-block;
+
+  img {
+    border-radius: 50%;
+    height: 100% !important;
+    object-fit: cover;
+  }
+}
+
+.c-profile__title {
+  margin-top: 28px;
+}
+
+.c-profile__desc {
+  // Wordpress Default class
+  padding-top: 16px;
+  .description {
+    color: $wp_indigo_secondary_color;
+    margin: 0;
+  }
+}

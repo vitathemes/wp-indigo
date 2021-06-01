@@ -1,34 +1,33 @@
 # WP-Indigo - [Demo](https://demo.vitathemes.com/indigo/) | [Download](https://wordpress.org/themes/wp-indigo/)
+
 Indigo is a modern WordPress theme with a simple yet elegant design. This minimal theme is suitable for almost any type of website and perfect for personal blogs and portfolios. While it is minimal and lightweight, it is responsive, flexible, customizable with WordPress customizer, and has a clean optimized code.
 
 It's based on the [indigo](https://github.com/sergiokopplin/indigo), that originally builds for Jekyll.
 
 ![Home Page](screenshot.png)
 
-![Blog Page](screenshot-1.png)
-
-![Single Page](screenshot-2.png)
-
 ## Features
-* No additional JS
-* Sass for stylesheets
-* Compatible with [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
-* Fast & lightweight (Google Speed: 99/100)
-* Theme options built directly into WordPress native live theme customizer
-* Responsive design
-* Cross-browser compatibility
-* Custom Google WebFonts
-* Child themes support
-* Developer friendly extendable code
-* Translation ready (with .POT files included)
-* Right-to-left (RTL) languages support
-* SEO optimized
-* GNU GPL version 2.0 licensed
-* …and much more
+
+- No additional JS
+- Sass for stylesheets
+- Compatible with [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
+- Fast & lightweight (Google Speed: 99/100)
+- Theme options built directly into WordPress native live theme customizer
+- Responsive design
+- Cross-browser compatibility
+- Custom Google WebFonts
+- Child themes support
+- Developer friendly extendable code
+- Translation ready (with .POT files included)
+- Right-to-left (RTL) languages support
+- SEO optimized
+- GNU GPL version 3.0 licensed
+- …and much more
 
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
 
 ## Theme installation
+
 1. Simply install as a normal WordPress theme and activate.
 2. Make a page called Home and set the Page template to Home.
 3. Make another page called Blog and set the Page template to Blog.
@@ -65,10 +64,10 @@ Edit `inc/setup.php` to enable or disable theme features, setup navigation menus
 
 ## Theme development
 
-* Run `npm install` from the theme directory to install dependencies
-* Update `gulpfile.js` settings:
-  * `proxy` should reflect your local development hostname
-* Run `gulp` for build the distribution
+- Run `npm install` from the theme directory to install dependencies
+- Update `gulpfile.js` settings:
+  - `proxy` should reflect your local development hostname
+- Run `gulp` for build the distribution
 
 ## Contributing
 
