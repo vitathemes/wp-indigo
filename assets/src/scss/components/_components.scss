@@ -1,0 +1,62 @@
+/* header
+--------------------------------------------- */
+@import "header/header";
+@import "header/navigation";
+
+/* Posts and pages
+--------------------------------------------- */
+@import "content/posts-and-pages";
+
+/* Posts and pages and single
+--------------------------------------------- */
+@import "content/post";
+@import "content/page";
+@import "content/single";
+
+/* Profile
+--------------------------------------------- */
+@import "profile/profile";
+
+/* Comments
+--------------------------------------------- */
+@import "comments/comments";
+
+/* Widgets
+--------------------------------------------- */
+@import "widgets/widgets";
+
+/* Media
+--------------------------------------------- */
+@import "media/media";
+
+/* Captions
+--------------------------------------------- */
+@import "media/captions";
+
+/* Galleries
+--------------------------------------------- */
+@import "media/galleries";
+
+/* Main
+--------------------------------------------- */
+@import "common/main";
+
+/* Search form
+--------------------------------------------- */
+@import "common/searchform";
+
+/* Sidebar
+--------------------------------------------- */
+@import "common/sidebar";
+
+/* Categories List
+--------------------------------------------- */
+@import "content/pagination";
+
+/* Social Share
+--------------------------------------------- */
+@import "common/social-share";
+
+/* Footer
+--------------------------------------------- */
+@import "footer/footer";

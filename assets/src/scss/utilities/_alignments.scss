@@ -1,0 +1,47 @@
+/*------------------------------------*\
+  #Alignment
+\*------------------------------------*/
+.alignleft {
+  /*rtl:ignore*/
+  float: left;
+
+  /*rtl:ignore*/
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.alignright {
+  /*rtl:ignore*/
+  float: right;
+
+  /*rtl:ignore*/
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  margin-bottom: 1.5em;
+}
+
+.wp-block-image .alignright {
+  float: unset !important;
+  text-align: right;
+  width: 100% !important;
+
+  * {
+    width: max-content !important;
+    display: inline-block !important;
+  }
+}
+
+.wp-block-image .alignleft {
+  float: unset !important;
+  text-align: left;
+  width: 100% !important;
+
+  * {
+    width: max-content !important;
+    display: inline-block !important;
+  }
+}

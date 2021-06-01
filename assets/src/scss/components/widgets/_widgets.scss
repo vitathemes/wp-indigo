@@ -1,0 +1,122 @@
+/*------------------------------------*\
+  #Widgets
+\*------------------------------------*/
+.c-widget {
+  width: 260px;
+  margin-left: 65px;
+  display: none;
+
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+
+  @include media(tablet) {
+    display: block;
+  }
+
+  .widget_search {
+    position: relative;
+    padding-bottom: 48px;
+  }
+
+  .search-field {
+    margin-top: 0px;
+    padding: 9px;
+  }
+
+  .search-submit {
+    background-color: transparent;
+    font-size: 0px;
+    position: absolute;
+    right: -12px;
+    top: -6px;
+    background: url("https://api.iconify.design/bx:bx-search-alt-2.svg") no-repeat center
+      center / contain;
+
+    background-size: 20px;
+
+    &:hover {
+      background-color: transparent;
+      background: url("https://api.iconify.design/bx:bx-search-alt-2.svg?color=%233f51b5")
+        no-repeat center center / contain;
+      background-size: 20px;
+    }
+
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}
+
+.c-widget__title {
+  margin-bottom: 16px;
+}
+
+.c-widget__tag {
+  margin-right: 8px;
+  &::before {
+    content: "#";
+  }
+}
+
+/* WordPress Default Widget */
+.widget {
+  ul {
+    margin-top: 16px;
+    margin-bottom: 48px;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-left: 0px;
+    font-family: $wp_indigo_primary_font;
+    font-weight: 300;
+  }
+
+  li {
+    margin-bottom: 10px;
+    line-height: 21px;
+    a {
+      font-weight: 300;
+    }
+  }
+}
+
+.tag-cloud-link {
+  color: $wp_indigo_secondary_color;
+
+  margin-right: 4px;
+
+  &:before {
+    content: "#";
+  }
+}
+
+.c-widget__item {
+  color: $wp_indigo_secondary_color;
+  display: inline-block;
+  margin-right: 4px;
+}
+.c-widget__item__link {
+  color: $wp_indigo_secondary_color;
+
+  &:hover {
+    color: $wp-indigo_quaternary_color;
+  }
+
+  &::before {
+    content: "#";
+  }
+}
+
+/* WordPress Default Widget ( category ) */
+
+.widget {
+  a {
+    color: $wp_indigo_secondary_color;
+
+    &:hover {
+      color: $wp-indigo_quaternary_color;
+    }
+  }
+}

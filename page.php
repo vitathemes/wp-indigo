@@ -9,18 +9,43 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
+ * @package wp-indigo
  */
-get_header(); ?>
-    <div id="content" class="page">
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-			the_title(  '<h1 class="single-title">', '</h1>' );
-			?>
+get_header();
+?>
 
-			<?php the_content(); ?><?php endwhile; ?><?php
-		else :
-			get_template_part( 'template-parts/content', 'none' );
-		endif;
+<main id="primary" class="c-main site-main">
+
+    <header class="c-main__header">
+        <h1 class="c-main__page-title"><?php echo esc_html(get_the_title()); ?></h1>
+    </header>
+
+    <section class="c-main__content c-main__content--page">
+        <?php
+			if ( have_posts() ) :
+				/* Start the Loop */
+				while ( have_posts() ) :
+
+					the_post();
+					get_template_part( 'template-parts/content', 'page' );
+
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+					
+				endwhile;
+				
+			else :
+
+				get_template_part( 'template-parts/content', 'none' );
+
+			endif;
+
 		?>
-    </div>
-<?php get_footer(); ?>
+    </section>
+
+</main><!-- #main -->
+
+<?php
+get_footer();

@@ -1,0 +1,23 @@
+/*------------------------------------*\
+  #Links
+\*------------------------------------*/
+a {
+  color: $color_link; //1a1a1a
+  transition: $global-transition;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color_link_hover;
+  }
+
+  &:focus {
+    outline: thin dotted;
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}

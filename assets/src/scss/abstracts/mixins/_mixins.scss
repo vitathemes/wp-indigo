@@ -1,0 +1,77 @@
+/*------------------------------------*\
+  #Mixins
+\*------------------------------------*/
+// Center block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+  width: map-get($columns, $numberColumns) -
+    (($columns__margin * ($numberColumns - 1)) / $numberColumns);
+}
+
+@mixin media($res) {
+  @if mobile-only == $res {
+    @media only screen and (max-width: #{$breakpoint_sm - 1}) {
+      @content;
+    }
+  }
+
+  @if mobile == $res {
+    @media only screen and (min-width: #{$breakpoint_sm}) {
+      @content;
+    }
+  }
+
+  @if tablet-only == $res {
+    @media only screen and (max-width: #{$breakpoint_md - 1}) {
+      @content;
+    }
+  }
+
+  @if tablet == $res {
+    @media only screen and (min-width: #{$breakpoint_md}) {
+      @content;
+    }
+  }
+
+  @if laptop-only == $res {
+    @media only screen and (max-width: #{$breakpoint_lg - 1}) {
+      @content;
+    }
+  }
+
+  @if laptop == $res {
+    @media only screen and (min-width: #{$breakpoint_lg}) {
+      @content;
+    }
+  }
+
+  @if desktop-only == $res {
+    @media only screen and (max-width: #{$breakpoint_xl - 1}) {
+      @content;
+    }
+  }
+
+  @if desktop == $res {
+    @media only screen and (min-width: #{$breakpoint_xl}) {
+      @content;
+    }
+  }
+
+  @if wide-only == $res {
+    @media only screen and (max-width: #{$breakpoint_xxl - 1}) {
+      @content;
+    }
+  }
+
+  @if wide == $res {
+    @media only screen and (min-width: #{$breakpoint_xxl}) {
+      @content;
+    }
+  }
+}
