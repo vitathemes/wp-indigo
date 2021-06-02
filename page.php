@@ -11,7 +11,6 @@
  *
  * @package wp-indigo
  */
-
 get_header();
 ?>
 

@@ -27,19 +27,5 @@
     url("../fonts/Overpass.woff") format("woff");
 }
 
-// // Root html variables
-// $wp_indigo_headings_font: var(--wp_indigo_headings_font); // Overpass
-// $wp_indigo_texts_font: var(--wp_indigo_texts_font); // SourceSerif
-// $wp_indigo_texts_secondary_font: var(
-//   --wp_indigo_texts_secondary_font
-// ); // Overpass - light
-
 $wp_indigo_primary_font: "overpass";
 $wp_indigo_secondary_font: "SourceSerifPro";
-
-// // Main Fonts
-// $wp_indigo_primary_font_regular: $wp_indigo_headings_font; // overpass
-// $wp_indigo_primary_font_light: $wp_indigo_texts_secondary_font; // overpass light
-
-// // Secondary Fonts
-// $wp_indigo_secondary_font_regular: $wp_indigo_texts_font; // source serfi

@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 			'url' => '<p class="comment-form-url h5 u-letter-space-small">'. __( 'Website', 'wp-indigo' ).'<br /><input type="url" id="url" name="url" required></input></p>',
 			// Cookies
 			'cookies' => '<div class="c-comment__cookie"><input type="checkbox" name="wp-comment-cookies-consent" required><span class="c-comments__cookie h5 u-letter-space-small">' . __(' Save my name, email, and website in this browser for the next time I comment', 'wp-indigo' ) .'</span></div>',
-			
+
 		),
 		// Change the title of send button
 		'label_submit' => __( 'POST COMMENT', 'wp-indigo'),

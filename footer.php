@@ -31,19 +31,15 @@
 
                     <?php
                     if ( has_nav_menu( 'primary-footer' ) ) {
-                
                         $wp_indigo_menuParameters = array(
                             'theme_location'  => 'primary-footer',
                             'container'       => false,
                             'echo'            => false,
                             'items_wrap'      => '%3$s',
                             'depth'           => 0,
-                            'link_class'   => 'c-footer__link c-footer__link--nav'
-
+                            'link_class'      => 'c-footer__link c-footer__link--nav'
                         );
-
-                        echo wp_kses_post(strip_tags(wp_nav_menu( $wp_indigo_menuParameters ), '<a>' ));
-                        
+                        echo wp_kses_post(strip_tags( wp_nav_menu( $wp_indigo_menuParameters ), '<a>' ) );
                     }
                     ?>
 
