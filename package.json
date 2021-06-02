@@ -2,19 +2,19 @@
   "name": "wp indigo",
   "version": "1.0.0",
   "description": "WP-Indigo (Version 2) is a minimal WordPress theme with a simple yet elegant design. This multipurpose theme includes a demo and is suitable for almost any type of website, and perfect for Portfolios, Personal Blogs, CV & Resumes, Photographers, Designers, and Freelancers. While it is minimal and lightweight, it is responsive, flexible, customizable with WordPress customizer, and has a clean optimized code.",
-  "author": "Automattic Theme Team",
+  "author": "VitaThemes",
   "license": "GPL-3.0-or-later",
   "keywords": [
     "WordPress",
     "Theme"
   ],
-  "homepage": "https://github.com/Automattic/_s#readme",
+  "homepage": "https://demo.vitathemes.com/indigo/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Automattic/_s.git"
+    "url": "git+https://github.com/vitathemes/wp-indigo"
   },
   "bugs": {
-    "url": "https://github.com/Automattic/_s/issues"
+    "url": "https://github.com/vitathemes/wp-indigo/issues"
   },
   "devDependencies": {
     "@wordpress/scripts": "^12.1.0",
