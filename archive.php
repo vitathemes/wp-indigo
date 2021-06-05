@@ -14,7 +14,9 @@ get_header();
     <header class="c-main__header">
         <h1 class="c-main__page-title">
 			<?php wp_indigo_get_archives_title(); ?>
-		</h1>		
+		</h1>
+
+		
 
 		<?php if ( 'portfolios' === get_post_type() && true == get_theme_mod( 'portfolio_category', true ) ) : ?>
 			<div class="c-main__category">
@@ -34,6 +36,9 @@ get_header();
 
 				/* Start the Loop */
 				while ( have_posts() ) :
+
+					
+
 					the_post();
 					get_template_part( 'template-parts/content' , get_post_type() );
 					

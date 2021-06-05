@@ -1,7 +1,7 @@
 === WP Indigo v2 ===
 Contributors: vitathemes, veronalabs, kashani, mrmolaei, mostafas1990, nimaprmdi
 Requires at least: 5.0
-Tested up to: 5.7.2
+Tested up to: 5.7
 Requires PHP: 5.6
 Stable tag: 1.0.0
 License: GPL-3.0-or-later
@@ -36,6 +36,65 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 == Changelog ==
 
 = 2.0.0 =
+* Redesign Theme ( Initial version )
+
+= 1.1.0 =
+* Added Footer menu
+* Added Dribbble and Behance to social network options
+* Fixed mobile menu visibility
+* Fixed RSS icon bug in the footer
+
+= 1.0.14 =
+* Updated screenshots
+* Updated readme file
+
+= 1.0.13 =
+* Fixed undefined colors issue.
+
+= 1.0.12 =
+* Minor Improvements.
+
+= 1.0.11 =
+* Removed unused zip file and update theme URI
+* Fixed translation and escaping output issues & Improve customizer
+
+= 1.0.8 =
+* Update Licenses.
+
+= 1.0.7 =
+* Minor Improvements.
+
+= 1.0.6 =
+* Updated readme.
+
+= 1.0.5 =
+* Updated readme.
+
+= 1.0.4 =
+* Fix: Replace `esc_html_e` by `esc_html_` in `search.php`
+* Fix: Remove unnecessary echo before `esc_html_e` function
+* Fix: All Image src and urls escaped by `esc_url`
+* Fix: Add translatable texts to comment form placeholders
+* Fix: Bring back default sections of Customizer
+
+= 1.0.3 =
+* Add: Indigo theme copyright
+* Fix: Issue to get correct menu function
+* Fix: Escaping outputs
+* Fix: Escaping all html tags in social function
+
+= 1.0.2 =
+* Fix: Fix prefix warnings & Improve internationalization
+* Add: Tags & Remove default profile photo
+
+= 1.0.1 =
+* Fix: Overriding WordPress globals in blog page
+* Fix: Remove unused 'else' in comments.php
+* Update: Theme tags in 'style.css'
+* Fix: menu disappear when home page is blog
+* Fix: Remove the Kirki textdomain
+
+= 1.0.0 =
 * Initial version
 
 == Installation ==

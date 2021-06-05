@@ -16,7 +16,7 @@
             the_post_thumbnail( 'full' ); 
         }
         else{
-            echo '<img src="' . esc_url( get_stylesheet_directory_uri() ).'/assets/images/no-thumbnail.png" />';
+            echo '<img src="' . esc_url( get_template_directory_uri() ).'/assets/images/no-thumbnail.png" />';
         }
         
         ?>

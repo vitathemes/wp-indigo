@@ -17,10 +17,13 @@ get_header();
 <main id="primary" class="c-main site-main">
 
     <header class="c-main__header">
+
         <h1 class="c-main__page-title"><?php esc_html_e( 'Blog', 'wp-indigo' ); ?></h1>
+
         <div class="c-main__category">
             <?php wp_indigo_category_filter("c-main__cat h3" , "" , true  ); ?>
         </div>
+
     </header>
 
     <section class="c-main__content">
