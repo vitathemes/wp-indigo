@@ -1805,7 +1805,11 @@ input[type="checkbox"]:checked:before {
 .c-profile__image {
   width: 106px;
   height: 106px;
-  display: inline-block; }
+  display: inline-block;
+  margin-top: 100px; }
+  @media only screen and (min-width: 1400px) {
+    .c-profile__image {
+      margin-top: 0px; } }
   .c-profile__image img {
     border-radius: 50%;
     height: 100% !important;
@@ -2515,8 +2519,7 @@ input[type="submit"] {
   /*  */ }
   @media only screen and (min-width: 980px) {
     .o-page__content--center {
-      width: auto;
-      margin-top: 100px; } }
+      width: auto; } }
   @media only screen and (min-width: 1400px) {
     .o-page__content--center {
       width: auto;
