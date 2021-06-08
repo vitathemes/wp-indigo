@@ -1808,8 +1808,10 @@ input[type="checkbox"]:checked:before {
 .c-profile__image {
   width: 106px;
   height: 106px;
-  display: inline-block;
-  margin-top: 100px; }
+  display: inline-block; }
+  @media only screen and (min-width: 980px) {
+    .c-profile__image {
+      margin-top: 100px; } }
   @media only screen and (min-width: 1400px) {
     .c-profile__image {
       margin-top: 0px; } }

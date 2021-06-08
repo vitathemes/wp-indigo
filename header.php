@@ -36,9 +36,9 @@
                 </div>
 
                 <button class="c-header__menu js-header__menu" aria-label="<?php esc_attr_e('Primary menu', 'wp-indigo'); ?>" aria-controls="primary-menu" aria-expanded="false">
-                    <div class="c-header__menu__icon">
-                        <div class="hamburger"></div>
-                    </div>
+                    <span class="c-header__menu__icon">
+                        <span class="hamburger"></span>
+                    </span>
                 </button>
 
                 <nav class="c-header__navigation">

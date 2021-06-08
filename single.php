@@ -16,8 +16,6 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/components/single-header' );
-
 			get_template_part( 'template-parts/content', 'single' );
 
 			// Display Side bar if current page was not a single of portfolios
