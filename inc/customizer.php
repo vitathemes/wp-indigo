@@ -135,6 +135,13 @@ if( function_exists( 'kirki' ) ) {
 		'priority'       => 170,
 	) );
 
+	Kirki::add_section( 'footer_styles', array(
+		'title'          => esc_html__( 'Footer Styles', 'wp-indigo' ),
+		'panel'          => 'footer',
+		'priority'       => 170,
+	) );
+
+
  	/*
      *	Kirki -> fields
 	 */
@@ -608,4 +615,20 @@ if( function_exists( 'kirki' ) ) {
 		'default'  => esc_url('http://vitathemes.com/'),
 		'priority' => 12,
 	] );
+
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'radio-buttonset',
+		'settings'    => 'footer_style',
+		'label'       => esc_html__( 'Change footer style', 'wp-indigo' ),
+		'section'     => 'footer_styles',
+		'default'     => 'no-widget',
+		'priority'    => 13,
+		'choices'     => [
+			'no-widget'   => esc_html__( 'No Widgets', 'wp-indigo' ),
+			'one-widget' => esc_html__( 'One Column Widgets', 'wp-indigo' ),
+			'two-widget'  => esc_html__( 'Two Column Widgets', 'wp-indigo' ),
+		],
+	] );
+
+
 }

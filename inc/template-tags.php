@@ -442,3 +442,28 @@ if ( ! function_exists('wp_indigo_get_post_tags')) :
         }
 	}
 endif;
+
+if ( ! function_exists('wp_indigo_is_footer_widget_active')) :
+	/**
+	  * Get Post tags 
+	  */
+	function wp_indigo_is_footer_widget_active() {
+	
+		if( is_active_sidebar( 'footer-widget' ) ){
+			if( get_theme_mod( 'footer_style' , 'no-widget') == 'one-widget' ){
+
+				echo esc_attr( 'c-footer__site-info--wide' );
+			}
+			elseif( get_theme_mod( 'footer_style' , 'no-widget') == 'two-widget' ){
+
+				echo esc_attr( 'c-footer__site-info--extra-wide' );
+			}
+		}
+		else{
+
+			if( get_theme_mod( 'footer_style' , 'no-widget') == 'no-widget' ){
+				echo esc_attr( '' );
+			}
+		}
+	}
+endif;

@@ -205,3 +205,4 @@ function wp_indigo_add_menu_link_class( $wp_indigo_atts, $wp_indigo_item, $wp_in
 	return $wp_indigo_atts;
   }
 add_filter( 'nav_menu_link_attributes', 'wp_indigo_add_menu_link_class', 1, 3 );
+

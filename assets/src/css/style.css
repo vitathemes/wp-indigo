@@ -2361,7 +2361,7 @@ ol.children {
 .c-footer__site-info {
   text-align: center;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 34px;
   padding-bottom: 39px;
   width: 100%;
@@ -2369,6 +2369,27 @@ ol.children {
   @media only screen and (min-width: 980px) {
     .c-footer__site-info {
       display: flex; } }
+
+.c-footer__site-info--wide {
+  justify-content: space-evenly; }
+  .c-footer__site-info--wide .c-footer__copy {
+    margin-top: 30px; }
+
+.c-footer__site-info--extra-wide {
+  flex-wrap: wrap; }
+  .c-footer__site-info--extra-wide .c-footer__widgets {
+    width: 100%; }
+  .c-footer__site-info--extra-wide .c-footer__widget {
+    display: flex;
+    justify-content: space-between; }
+  .c-footer__site-info--extra-wide .c-footer__copy {
+    margin-top: 0px; }
+  .c-footer__site-info--extra-wide .widget:nth-child(n + 3) {
+    display: none; }
+  .c-footer__site-info--extra-wide .widget:first-child {
+    width: 55%; }
+  .c-footer__site-info--extra-wide .widget:last-child {
+    padding-right: 32px; }
 
 .c-footer__copy {
   margin: 0px;
@@ -2379,7 +2400,7 @@ ol.children {
   width: max-content;
   display: inline-block;
   max-width: 100%;
-  text-transform: uppercase; }
+  text-transform: capitalize; }
 
 .c-footer__link {
   height: max-content;
@@ -2401,6 +2422,17 @@ ol.children {
       margin-left: 2px;
       color: var(--wp_indigo_tertiary_color) !important;
       font-size: 10px; }
+
+.c-footer__widgets {
+  width: 100%;
+  min-height: 110px;
+  text-align: left; }
+  @media only screen and (min-width: 980px) {
+    .c-footer__widgets {
+      width: 50%; } }
+
+.c-footer__widget {
+  width: 100%; }
 
 /*--------------------------------------------------------------
 # External
