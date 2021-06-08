@@ -36,8 +36,9 @@ if ( ! function_exists( 'wp_indigo_get_custom_category' ) ) :
 			$separator = $wp_indigo_seprator;
 			$output = '';
 			$category_counter = 0;
+
 			if ( ! empty( $categories ) ) {
-			
+
 				foreach( $categories as $category ) {
 
 					if( $wp_indigo_is_limited === true && $category_counter === 3){
@@ -233,7 +234,7 @@ endif;
 
 if (! function_exists('wp_indigo_get_home_section_close_tag')) :
 	/**
-	 * Add tag depend on page
+	 * Add close tag depend on page
 	 */
 	function wp_indigo_get_home_section_close_tag() {
 		if ( is_page_template( 'page-template/home.php' || is_404() ) ) {
@@ -372,6 +373,7 @@ if ( ! function_exists( 'wp_indigo_get_taxonomy' ) ) :
     }
 endif;
 
+
 if ( ! function_exists( 'wp_indigo_branding' ) ) :
 	/**
 	 * Display Custom logo if exist otherwise show site title
@@ -421,5 +423,22 @@ if (! function_exists('wp_indigo_get_archives_title')) :
 		echo wp_kses_post( $wp_indigo_archive_title );
 
 
+	}
+endif;
+
+if ( ! function_exists('wp_indigo_get_post_tags')) :
+	/**
+	  * Get Post tags 
+	  */
+	function wp_indigo_get_post_tags( $wp_indigo_class_name = "") {
+		$wp_indigo_post_tags = get_the_tags();
+            if ($wp_indigo_post_tags) {
+            foreach($wp_indigo_post_tags as $wp_indigo_post_tag) {
+				
+				/* translator 1: %s class name , translator 2: %s post tag link, translator 3: %s aria label, translator 4: %s the content of a element ,     */
+				echo sprintf('<a class="%s" href="%s" aria-label="%s" >%s</a>' , esc_attr( $wp_indigo_class_name ) ,esc_url( get_tag_link( $wp_indigo_post_tag->term_id ) ) , esc_html( $wp_indigo_post_tag->name ) , esc_html( $wp_indigo_post_tag->name ) );
+
+            }
+        }
 	}
 endif;

@@ -887,6 +887,9 @@ figure {
 /*------------------------------------*\
   #Tables
 \*------------------------------------*/
+table {
+  text-align: left; }
+
 /* Links
 --------------------------------------------- */
 /*------------------------------------*\
@@ -2368,7 +2371,8 @@ ol.children {
   color: var(--wp_indigo_secondary-color);
   width: max-content;
   display: inline-block;
-  max-width: 100%; }
+  max-width: 100%;
+  text-transform: uppercase; }
 
 .c-footer__link {
   height: max-content;
@@ -2495,6 +2499,13 @@ input[type="submit"] {
 .wp-block-image img {
   width: auto !important;
   max-width: 100%; }
+
+/*------------------------------------*\
+  #Block WordPress embed
+\*------------------------------------*/
+.wp-block-embed-wordpress-tv {
+  max-width: 100%;
+  margin: 0; }
 
 /*--------------------------------------------------------------
 # Objects
