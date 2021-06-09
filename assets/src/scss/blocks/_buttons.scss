@@ -7,7 +7,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background-color: $wp-indigo_primary_color; //1a1a1a
+  background-color: $wp_indigo_primary_color; //1a1a1a
   color: $color_background_body !important;
   transition: $global-transition;
   border: none;
@@ -43,13 +43,13 @@ input[type="submit"] {
 
 .wp-block-button.is-style-outline {
   .wp-block-button__link {
-    border: 1px solid $wp-indigo_primary_color;
-    color: $wp-indigo_primary_color !important;
+    border: 1px solid $wp_indigo_primary_color;
+    color: $wp_indigo_primary_color !important;
     padding: 10px;
 
     &:hover {
-      border: 1px solid $wp-indigo_quaternary_color;
-      color: $wp-indigo_quaternary_color !important;
+      border: 1px solid $wp_indigo_quaternary_color;
+      color: $wp_indigo_quaternary_color !important;
     }
   }
 }

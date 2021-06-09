@@ -21,6 +21,24 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 endif;
 
 
+if ( ! function_exists( 'wp_indigo_posted_by' ) ) :
+	/**
+	 * Prints HTML with meta information for the current author.
+	 */
+	function wp_indigo_posted_by() {
+
+		/* translators: %s: post author. */
+		$byline = sprintf(
+			'<span class="byline"><span class="author vcard"><a class="c-single__author__link h6 url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '"> ' . esc_html(get_the_author()) . ' </a></span></span>'
+		);
+
+		echo  wp_kses_post( $byline ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+	}
+endif;
+
+
+
 if ( ! function_exists( 'wp_indigo_get_custom_category' ) ) :
 	/**
 	 * Get category lists
@@ -357,7 +375,7 @@ if ( ! function_exists( 'wp_indigo_get_taxonomy' ) ) :
 	  * 
 	  * Display Post Tags (Custom taxonomy)
       */
-    function wp_indigo_get_taxonomy( $wp_indigo_taxonomy_name = "" , $wp_indigo_class_name = "" , $wp_indigo_tag_name = "span" , $wp_indigo_seprator = "" ) {
+    function wp_indigo_get_taxonomy( $wp_indigo_taxonomy_name = "" , $wp_indigo_class_name = "" , $wp_indigo_tag_name = "span" ) {
         $wp_indigo_custom_taxs = get_the_terms( get_the_ID(), $wp_indigo_taxonomy_name );
 	
 		$wp_indigo_output = "";
@@ -365,7 +383,8 @@ if ( ! function_exists( 'wp_indigo_get_taxonomy' ) ) :
         if (is_array($wp_indigo_custom_taxs) && !empty($wp_indigo_custom_taxs)) {
             if( !empty( $wp_indigo_taxonomy_name ) ){
                 foreach ( $wp_indigo_custom_taxs as $wp_indigo_custom_tax ) {
-                    $wp_indigo_output .= '<'. esc_html($wp_indigo_tag_name) .' class="'.esc_attr(  $wp_indigo_class_name  ).' " href="'.esc_url( get_tag_link( $wp_indigo_custom_tax->term_id ) ).'">' . esc_html( $wp_indigo_custom_tax->name ) . '</'. esc_html($wp_indigo_tag_name) .'>';
+                    $wp_indigo_output .=  '<'. esc_html($wp_indigo_tag_name) .' class="'.esc_attr(  $wp_indigo_class_name  ).' " href="'.esc_url( get_tag_link( $wp_indigo_custom_tax->term_id ) ).'">' . esc_html( $wp_indigo_custom_tax->name ). '</'. esc_html($wp_indigo_tag_name) .'> ';
+					
                 }
 				echo wp_kses_post($wp_indigo_output);
             }
@@ -414,7 +433,7 @@ if (! function_exists('wp_indigo_get_archives_title')) :
 	  */
 	function wp_indigo_get_archives_title() {
 		if ( 'portfolios' == get_post_type() ) {
-			$wp_indigo_archive_title = esc_html__( 'Portfolio', 'wp-indigo' );
+			$wp_indigo_archive_title = esc_html__( 'Portfolios', 'wp-indigo' );
 		}
 		else{
 			$wp_indigo_archive_title = wp_kses_post( get_the_archive_title() );

@@ -24,7 +24,7 @@
 
             <?php 
                 if ( 'portfolios' == get_post_type() ){ 
-                    wp_indigo_get_taxonomy( "portfolio_category" , "c-single__cat u-link--secondary h6" , "a" , ", ");
+                    wp_indigo_get_taxonomy( "portfolio_category" , "c-single__cat c-single__cat--sep u-link--secondary h6" , "a" );
                 }
                 else { 
             ?>
@@ -37,17 +37,8 @@
                 <?php endif; ?>
                 <div class="c-single__author__info">
                     
-                <span class="byline">
-                    <span class="author vcard">
-                        <a class="c-single__author__link h6 url fn n" href="<?php esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
-                            <?php 
-                                $wp_indigo_author_id = get_the_author_meta( 'ID' );
-                                echo esc_html( get_the_author_meta( 'nicename', $wp_indigo_author_id ) ) 
-                            ?>
-                        </a>
-                    </span>
-                </span>
-                    
+                <?php wp_indigo_posted_by(); ?>
+                
                 </div>
             </div>
 
@@ -118,11 +109,9 @@
 
 
     <?php 
-
         if ( comments_open() || get_comments_number() ) :
             comments_template();
         endif;
-
     ?>
 
 

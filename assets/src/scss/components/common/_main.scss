@@ -64,7 +64,7 @@
     text-align: center;
     font-size: 48px;
     line-height: 74px;
-    color: $wp-indigo_primary_color;
+    color: $wp_indigo_primary_color;
     margin-bottom: 8px;
     width: 100%;
   }
@@ -89,7 +89,7 @@
 }
 
 .c-main__cat.active {
-  color: $wp-indigo_quaternary_color;
+  color: $wp_indigo_quaternary_color;
 }
 
 .c-main__content {

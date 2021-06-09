@@ -139,7 +139,8 @@ if( true == get_theme_mod( 'portfolios_control', true ) ) {
 	$wp_indigo_postTypeArguments['publicly_queryable'] = true;
 	$wp_indigo_postTypeArguments['capability_type'] = 'post';
 	$wp_indigo_postTypeArguments['show_in_rest'] = true;
-	$wp_indigo_postTypeArguments['supports'] = array('title', 'editor' , 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields');
+	$wp_indigo_postTypeArguments['supports'] = array('title', 'editor' , 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields' , 'comments');
+
   
 	return $wp_indigo_postTypeArguments;
   }  

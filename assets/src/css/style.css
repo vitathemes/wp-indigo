@@ -1041,7 +1041,7 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked:before {
   margin: 0px;
   padding: 0px;
-  content: url("https://api.iconify.design/bi:check.svg?color=%23000000&height=16");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='1em' height='1em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 16 16'%3E%3Cg fill='%23626262'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093l3.473-4.425a.267.267 0 0 1 .02-.022z'/%3E%3C/g%3E%3C/svg%3E");
   vertical-align: -0.125em;
   display: inline-block;
   max-height: 16px; }
@@ -1708,7 +1708,8 @@ input[type="checkbox"]:checked:before {
   white-space: normal;
   max-width: 100vw;
   -ms-word-wrap: break-word;
-  padding: 0px 16px; }
+  padding: 0px 16px;
+  text-transform: capitalize; }
   @media only screen and (min-width: 980px) {
     .c-single__entry-title {
       max-width: 555px;
@@ -1753,6 +1754,13 @@ input[type="checkbox"]:checked:before {
 
 .c-single__cat {
   margin: 0px 4px; }
+
+.c-single__cat--sep {
+  margin: 0px; }
+  .c-single__cat--sep:nth-child(n + 2)::before {
+    content: ", ";
+    margin-right: 2px;
+    color: var(--wp_indigo_secondary-color) !important; }
 
 /* Content */
 .c-single__entry-content ul {
@@ -1984,11 +1992,11 @@ ol.children {
     position: absolute;
     right: -12px;
     top: -6px;
-    background: url("https://api.iconify.design/bx:bx-search-alt-2.svg") no-repeat center center/contain;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='1em' height='1em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 24 24'%3E%3Cpath d='M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392l.604.646l2.121-2.121l-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5s5 2.243 5 5s-2.243 5-5 5z' fill='%23626262'/%3E%3C/svg%3E") no-repeat center center/contain;
     background-size: 20px; }
     .c-widget .search-submit:hover {
       background-color: transparent;
-      background: url("https://api.iconify.design/bx:bx-search-alt-2.svg?color=%233f51b5") no-repeat center center/contain;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='1em' height='1em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 24 24'%3E%3Cpath d='M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392l.604.646l2.121-2.121l-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5s5 2.243 5 5s-2.243 5-5 5z' fill='%233F51B5'/%3E%3C/svg%3E") no-repeat center center/contain;
       background-size: 20px; }
     .c-widget .search-submit:focus {
       background-color: transparent; }
@@ -2058,7 +2066,9 @@ ol.children {
 .custom-logo-link {
   display: inline-block;
   width: inherit;
-  height: inherit; }
+  height: inherit;
+  max-width: 80px;
+  max-height: 25px; }
 
 /* Captions
 --------------------------------------------- */
