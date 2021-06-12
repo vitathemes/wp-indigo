@@ -33,6 +33,9 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 5. Select `A static page (select below)` and select the pages created.
 6. In your admin panel, navigate to `Appearance > Customize`.
 7. Put the finishing touches on your website by adding a logo, typography settings, custom colors and etc.
+8. Active recommended plugin at the top.
+9. After libWp plugin activated go to `Settings > Permalink` and select `Post name` (\*this option is recommended) radio button and save the changes.
+10. A section called Portfolios will appear at bottom of posts. you can add your portfolios there.
 
 ## Theme structure
 
