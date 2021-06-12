@@ -75,4 +75,4 @@ Contributions are welcome from everyone. We have [contributing guidelines](CONTR
 
 ## License
 
-WP-Indigo is licensed under [GNU GPL3](LICENSE).
+WP-Indigo is licensed under [GNU GPL](LICENSE).
