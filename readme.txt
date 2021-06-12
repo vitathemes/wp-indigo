@@ -11,8 +11,6 @@ License URI: https://opensource.org/licenses/GPL-3.0
 
 WP-Indigo is a minimal WordPress theme with a simple yet elegant design. This multipurpose theme includes a demo and is suitable for almost any type of website, and perfect for Portfolios, Personal Blogs, CV & Resumes, Photographers, Designers, and Freelancers. While it is minimal and lightweight, it is responsive, flexible, customizable with WordPress customizer, and has a clean optimized code.
 
-It's based on the [indigo](https://github.com/sergiokopplin/indigo), that originally builds for Jekyll.
-
 = Features =
 * No additional JS
 * Sass for stylesheets
@@ -124,8 +122,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-WP-Indigo is derived from the indigo Theme, Copyright 2019 Sérgio Kopplin (https://github.com/sergiokopplin/indigo)
-WP-Indigo is distributed under the terms of the GNU GPL version 2.0
+WP-Indigo is distributed under the terms of the GNU GPL version 3.0
 
 WP-Indigo bundles the following third-party resources:
 
