@@ -29,13 +29,13 @@
 
 /* Links */
 .u-link--hypertext {
-  border-bottom: 1px solid $wp-indigo_quaternary_color;
+  border-bottom: 1px solid $wp_indigo_quaternary_color;
   padding-bottom: 3px;
 }
 
 /* Seprator */
 .u-seprator {
-  color: $wp-indigo_tertiary_color;
+  color: $wp_indigo_tertiary_color;
 
   margin: 0px 4px;
 }
@@ -48,7 +48,7 @@
   &:hover,
   &:focus,
   &:active {
-    color: $wp-indigo_quaternary_color; //3F51B5
+    color: $wp_indigo_quaternary_color; //3F51B5
   }
 
   &:focus {

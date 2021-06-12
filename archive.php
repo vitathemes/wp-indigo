@@ -16,8 +16,6 @@ get_header();
 			<?php wp_indigo_get_archives_title(); ?>
 		</h1>
 
-		
-
 		<?php if ( 'portfolios' === get_post_type() && true == get_theme_mod( 'portfolio_category', true ) ) : ?>
 			<div class="c-main__category">
 				<?php wp_indigo_taxonomy_filter("c-main__cat h3" , "" , false , "portfolio_category");?>
@@ -36,10 +34,8 @@ get_header();
 
 				/* Start the Loop */
 				while ( have_posts() ) :
-
-					
-
 					the_post();
+					
 					get_template_part( 'template-parts/content' , get_post_type() );
 					
 				endwhile;
@@ -51,7 +47,6 @@ get_header();
 				wp_indigo_get_default_pagination();
 
 			else :
-
 				get_template_part( 'template-parts/content', 'none' );
 
 			endif;

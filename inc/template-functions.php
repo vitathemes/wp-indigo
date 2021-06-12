@@ -40,29 +40,13 @@ add_action( 'wp_head', 'wp_indigo_pingback_header' );
 
 function wp_indigo_typography() {
 	
-	/** Colors */
-	if ( get_theme_mod( 'typography_primary_color' ) == "" ) {
-		$wp_indigo_primary_color = "#1A1A1A";
-	} else {
-		$wp_indigo_primary_color = get_theme_mod( 'typography_primary_color' );
-	}
-	if ( get_theme_mod( 'typography_secondary_color' ) == "" ) {
-		$wp_indigo_secondary_color = "#555555";
-	} else {
-		$wp_indigo_secondary_color = get_theme_mod( 'typography_secondary_color' );
-	}
-	if ( get_theme_mod( 'wp_indigo_tertiary_color' ) == "" ) {
-		$wp_indigo_tertiary_color = "#C4C4C4";
-	} else {
-		$wp_indigo_tertiary_color = get_theme_mod( 'wp_indigo_tertiary_color' );
-	}
-	if ( get_theme_mod( 'wp_indigo_quaternary_color' ) == "" ) {
-		$wp_indigo_quaternary_color = "#3F51B5";
-	} else {
-		$wp_indigo_quaternary_color = get_theme_mod( 'wp_indigo_quaternary_color' );
-	}
-	
+	(get_theme_mod( 'typography_primary_color' ) == "" ) ? $wp_indigo_primary_color = "#1A1A1A" : $wp_indigo_primary_color = get_theme_mod( 'typography_primary_color' ); 
 
+	(get_theme_mod( 'typography_secondary_color' ) == "" ) ? $wp_indigo_secondary_color = "#555555" : $wp_indigo_secondary_color = get_theme_mod( 'typography_secondary_color' ); 
+
+	(get_theme_mod( 'wp_indigo_tertiary_color' ) == "" ) ? $wp_indigo_tertiary_color = "#C4C4C4" : $wp_indigo_tertiary_color = get_theme_mod( 'wp_indigo_tertiary_color' ); 
+
+	(get_theme_mod( 'wp_indigo_quaternary_color' ) == "" ) ? $wp_indigo_quaternary_color = "#3F51B5" : $wp_indigo_quaternary_color = get_theme_mod( 'wp_indigo_quaternary_color' ); 
 
 
 	$html = ':root {	
@@ -70,9 +54,7 @@ function wp_indigo_typography() {
 	            --wp_indigo_secondary-color: '.$wp_indigo_secondary_color.';
 				--wp_indigo_tertiary_color: '.$wp_indigo_tertiary_color.';
 				--wp_indigo_quaternary_color: '.$wp_indigo_quaternary_color.'
-
 			}';
-			
 	return $html;
 	
 }
@@ -98,12 +80,11 @@ function wp_indigo_show_description() {
 	 */
 	if ( get_bloginfo( 'description' ) !== '' ) { 
 
-		printf('<h4 class="description">');// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		echo  esc_html(bloginfo( 'description' ));
-		printf( '</h4>' );// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo sprintf('<h4 class="description">%s</h4>' ,  esc_html(get_bloginfo( 'description' )));// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
 }
+
 
 function wp_indigo_dashicons(){
 	/**
@@ -158,7 +139,8 @@ if( true == get_theme_mod( 'portfolios_control', true ) ) {
 	$wp_indigo_postTypeArguments['publicly_queryable'] = true;
 	$wp_indigo_postTypeArguments['capability_type'] = 'post';
 	$wp_indigo_postTypeArguments['show_in_rest'] = true;
-	$wp_indigo_postTypeArguments['supports'] = array('title', 'editor' , 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields');
+	$wp_indigo_postTypeArguments['supports'] = array('title', 'editor' , 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields' , 'comments');
+
   
 	return $wp_indigo_postTypeArguments;
   }  
@@ -224,3 +206,4 @@ function wp_indigo_add_menu_link_class( $wp_indigo_atts, $wp_indigo_item, $wp_in
 	return $wp_indigo_atts;
   }
 add_filter( 'nav_menu_link_attributes', 'wp_indigo_add_menu_link_class', 1, 3 );
+

@@ -5,7 +5,7 @@ Author: VitaThemes
 Author URI: https://vitathemes.com
 Description: WP-Indigo (Version 2) is a minimal WordPress theme with a simple yet elegant design. This multipurpose theme includes a demo and is suitable for almost any type of website, and perfect for Portfolios, Personal Blogs, CV & Resumes, Photographers, Designers, and Freelancers. While it is minimal and lightweight, it is responsive, flexible, customizable with WordPress customizer, and has a clean optimized code.
 Version: 2.0.0
-Tested up to: 5.7.2
+Tested up to: 5.7
 Requires PHP: 5.6
 License: GPL-3.0-or-later
 License URI: https://opensource.org/licenses/GPL-3.0
@@ -183,8 +183,12 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   :root {
     --responsive--aligndefault-width: calc(720px - var(--responsive--spacing-horizontal));
     --responsive--alignwide-width: calc(720px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-    --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--alignright-margin: calc(
+      0.5 * (100vw - var(--responsive--aligndefault-width))
+    );
+    --responsive--alignleft-margin: calc(
+      0.5 * (100vw - var(--responsive--aligndefault-width))
+    );
   }
 }
 
@@ -192,8 +196,12 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   :root {
     --responsive--aligndefault-width: calc(980px - var(--responsive--spacing-horizontal));
     --responsive--alignwide-width: calc(1140px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-    --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--alignright-margin: calc(
+      0.5 * (100vw - var(--responsive--aligndefault-width))
+    );
+    --responsive--alignleft-margin: calc(
+      0.5 * (100vw - var(--responsive--aligndefault-width))
+    );
   }
 }
 
@@ -201,26 +209,42 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   :root {
     --responsive--aligndefault-width: calc(980px - var(--responsive--spacing-horizontal));
     --responsive--alignwide-width: calc(1140px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-    --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--alignright-margin: calc(
+      0.5 * (100vw - var(--responsive--aligndefault-width))
+    );
+    --responsive--alignleft-margin: calc(
+      0.5 * (100vw - var(--responsive--aligndefault-width))
+    );
   }
 }
 
 @media only screen and (min-width: 1200px) {
   :root {
-    --responsive--aligndefault-width: calc(1140px - var(--responsive--spacing-horizontal));
+    --responsive--aligndefault-width: calc(
+      1140px - var(--responsive--spacing-horizontal)
+    );
     --responsive--alignwide-width: calc(1200px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-    --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--alignright-margin: calc(
+      0.5 * (100vw - var(--responsive--aligndefault-width))
+    );
+    --responsive--alignleft-margin: calc(
+      0.5 * (100vw - var(--responsive--aligndefault-width))
+    );
   }
 }
 
 @media only screen and (min-width: 1400px) {
   :root {
-    --responsive--aligndefault-width: calc(1140px - var(--responsive--spacing-horizontal));
+    --responsive--aligndefault-width: calc(
+      1140px - var(--responsive--spacing-horizontal)
+    );
     --responsive--alignwide-width: calc(1200px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-    --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--alignright-margin: calc(
+      0.5 * (100vw - var(--responsive--aligndefault-width))
+    );
+    --responsive--alignleft-margin: calc(
+      0.5 * (100vw - var(--responsive--aligndefault-width))
+    );
   }
 }
 
@@ -722,12 +746,14 @@ html {
   */
 @font-face {
   font-family: "overpass";
-  src: url("../fonts/overpass.woff2") format("woff2"), url("../fonts/overpass.woff") format("woff");
+  src: url("../fonts/overpass.woff2") format("woff2"),
+    url("../fonts/overpass.woff") format("woff");
 }
 
 @font-face {
   font-family: "overpass-light";
-  src: url("../fonts/overpass-light.woff2") format("woff2"), url("../fonts/overpass-light.woff") format("woff");
+  src: url("../fonts/overpass-light.woff2") format("woff2"),
+    url("../fonts/overpass-light.woff") format("woff");
 }
 
 /* Typography
@@ -2248,12 +2274,14 @@ input[type="checkbox"]:checked:before {
   position: absolute;
   left: -12px;
   top: -6px;
-  background: url("https://api.iconify.design/bx:bx-search-alt-2.svg") no-repeat center center/contain;
+  background: url("https://api.iconify.design/bx:bx-search-alt-2.svg") no-repeat center
+    center/contain;
   background-size: 20px;
 }
 .c-widget .search-submit:hover {
   background-color: transparent;
-  background: url("https://api.iconify.design/bx:bx-search-alt-2.svg?color=%233f51b5") no-repeat center center/contain;
+  background: url("https://api.iconify.design/bx:bx-search-alt-2.svg?color=%233f51b5")
+    no-repeat center center/contain;
   background-size: 20px;
 }
 .c-widget .search-submit:focus {

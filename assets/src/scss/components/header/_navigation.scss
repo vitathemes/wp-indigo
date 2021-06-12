@@ -1,6 +1,7 @@
 /*------------------------------------*\
   # Navigations
 \*------------------------------------*/
+
 .c-nav {
   width: 100%;
 }
@@ -195,7 +196,7 @@
 
 .current-menu-item {
   a {
-    color: $wp-indigo_quaternary_color;
+    color: $wp_indigo_quaternary_color;
   }
 }
 

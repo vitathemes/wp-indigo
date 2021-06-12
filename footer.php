@@ -18,27 +18,35 @@
 
         <div class="c-footer__content">
 
-            <div class="c-footer__site-info">
-                <div class="c-footer__copy">
-        
-                    <?php echo esc_html(get_theme_mod( 'copytext' , esc_html__( 'WP-Indigo by', 'wp-indigo' ) )); ?>
+            <div class="c-footer__site-info <?php wp_indigo_is_footer_widget_active() ?>">
 
+                <?php  if( is_active_sidebar( 'footer-widget' ) && get_theme_mod( 'footer_style' , 'no-widget') !== 'no-widget' ) : ?>
+                <div class="c-footer__widgets">
+                    <div id="header-widget-area" class="c-footer__widget widget-area" role="complementary">
+                        <?php dynamic_sidebar( 'footer-widget' ); ?>
+                    </div>
+                </div>
+                <?php endif; ?>
+
+                <div class="c-footer__copy">
+
+                    <?php echo esc_html(get_theme_mod( 'copytext' , esc_html__( 'WP-Indigo by', 'wp-indigo' ) )); ?>
                     
                     <a class="c-footer__link h5 u-link--secondary" href="<?php echo esc_url( get_theme_mod( 'copylink', esc_url('http://vitathemes.com/') ) ); ?>">
-                        <?php echo esc_html(get_theme_mod( 'copylink_text', esc_html( 'VitaThemes') ) ) ; ?>
+                        <?php echo esc_html(get_theme_mod( 'copylink_text', esc_html__( 'VitaThemes' , 'wp-indigo') ) ) ; ?>
                     </a>
-
 
                     <?php
                     if ( has_nav_menu( 'primary-footer' ) ) {
                 
                         $wp_indigo_menuParameters = array(
+
                             'theme_location'  => 'primary-footer',
                             'container'       => false,
                             'echo'            => false,
                             'items_wrap'      => '%3$s',
                             'depth'           => 0,
-                            'link_class'   => 'c-footer__link c-footer__link--nav'
+                            'link_class'      => 'c-footer__link c-footer__link--nav'
 
                         );
 
@@ -47,8 +55,8 @@
                     }
                     ?>
 
-                </div>              
-            
+                </div>   
+                    
             </div><!-- .site-info -->
 
         </div>

@@ -14,7 +14,7 @@ get_header();
 ?>
 <section class="o-page__content o-page__content--center">
 
-    <main id="primary" class="c-main site-main">
+    <div id="primary" class="c-main site-main">
 
         <section class="c-main__content">
 
@@ -22,7 +22,7 @@ get_header();
 
         </section>
 
-    </main><!-- #main -->
+    </div><!-- #main -->
 
 
     <?php get_footer();

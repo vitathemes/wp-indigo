@@ -32,6 +32,7 @@
   max-width: 100vw;
   -ms-word-wrap: break-word;
   padding: 0px 16px;
+  text-transform: capitalize;
 
   @include media(tablet) {
     max-width: 555px;
@@ -83,13 +84,24 @@
     color: $wp_indigo_secondary_color;
 
     &:hover {
-      color: $wp-indigo_quaternary_color;
+      color: $wp_indigo_quaternary_color;
     }
   }
 }
 
 .c-single__cat {
   margin: 0px 4px;
+}
+
+.c-single__cat--sep {
+  margin: 0px;
+  &:nth-child(n + 2) {
+    &::before {
+      content: ", ";
+      margin-right: 2px;
+      color: $wp_indigo_secondary_color !important;
+    }
+  }
 }
 
 /* Content */
@@ -117,7 +129,7 @@
 
 .c-single__content {
   a {
-    border-bottom: 1px solid $wp-indigo_quaternary_color;
+    border-bottom: 1px solid $wp_indigo_quaternary_color;
     padding-bottom: 3px;
   }
 

@@ -129,6 +129,28 @@ add_action( 'widgets_init', 'wp_indigo_widgets_init' );
 
 
 /**
+ * Register footer widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function wp_indigo_footer_widgets_init() {
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Widgets', 'wp-indigo' ),
+			'id'            => 'footer-widget',
+			'description'   => esc_html__( 'Add Footer widgets here.', 'wp-indigo' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="c-footer_widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+add_action( 'widgets_init', 'wp_indigo_footer_widgets_init' );
+
+
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.

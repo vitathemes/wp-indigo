@@ -2,8 +2,6 @@
 
 Indigo is a modern WordPress theme with a simple yet elegant design. This minimal theme is suitable for almost any type of website and perfect for personal blogs and portfolios. While it is minimal and lightweight, it is responsive, flexible, customizable with WordPress customizer, and has a clean optimized code.
 
-It's based on the [indigo](https://github.com/sergiokopplin/indigo), that originally builds for Jekyll.
-
 ![Home Page](screenshot.png)
 
 ## Features
@@ -35,27 +33,32 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 5. Select `A static page (select below)` and select the pages created.
 6. In your admin panel, navigate to `Appearance > Customize`.
 7. Put the finishing touches on your website by adding a logo, typography settings, custom colors and etc.
+8. Active recommended plugin at the top.
+9. After libWp plugin activated go to `Settings > Permalink` and select `Post name` (\*this option is recommended) radio button and save the changes.
+10. A section called Portfolios will appear at bottom of posts. you can add your portfolios there.
 
 ## Theme structure
 
 ```shell
-themes/wp-indigo/         # → Root of your theme
-├── assets/               # → Assets files
-│   ├── css/              # → Compiled CSS file
-│   ├── images/           # → Theme images
-│   └── sass/             # → Theme scss files
-├── languages/            # → Theme Language files
-├── template-parts/       # → Theme Part files (Include)
-├── node_modules/         # → Node.js packages
-├── vendor/               # → Third Party Packages (Managed by Composer, Currently we use [Kirki Framework](https://github.com/aristath/kirki) for customizer)
-├── package.json          # → Node.js dependencies and scripts
-├── inc/                  # → Theme functions
-│   ├── classes/          # → Custom PHP classes
-│   ├── kirki/            # → Kirki Customization framework
-│   ├── customizer.php    # → All codes related to WordPress Customizer (We use Kirki Framework)
+themes/wp-indigo/                 # → Root of your theme
+├── assets/                       # → Assets files
+│   ├── css/                      # → Compiled CSS file
+│   ├── fonts/                    # → Theme images
+│   ├── images/                   # → Theme images
+│   ├── js/                       # → Theme images
+│   └── src/                      # → Theme scss files
+├── classes/                      # → Theme Language files
+├── languages/                    # → Theme Language files
+├── node_modules/                 # → Theme Language files
+├── page-templates/               # → Theme Part files (Include)
+├── template-parts/               # → Theme Part files (Include)
+├── package.json                  # → Node.js dependencies and scripts
+├── inc/                          # → Theme functions
+│   ├── tgmpa/                    # → Custom PHP classes
+│   ├── customizer.php/           # → Kirki Customization framework
+│   ├── setup.php                 # → All codes related to WordPress Customizer (We use Kirki Framework)
 │   ├── template-functions.php    # → Custom template tags & tweaks
-│   └── setup.php         # → Theme Setup
-└── page-templates/       # → Page Templates
+└── └── template-tags.php         # → Theme Setup
 ```
 
 ## Theme setup
@@ -73,12 +76,6 @@ Edit `inc/setup.php` to enable or disable theme features, setup navigation menus
 
 Contributions are welcome from everyone. We have [contributing guidelines](CONTRIBUTING.md) to help you get started.
 
-## Changelog
-
-See the [Changelog](CHANGELOG.md)
-
 ## License
-
-This Theme based on [indigo](https://github.com/sergiokopplin/indigo) by [sergiokopplin](https://github.com/sergiokopplin)
 
 WP-Indigo is licensed under [GNU GPL](LICENSE).
