@@ -36,7 +36,7 @@
                         <?php echo esc_html(get_theme_mod( 'copylink_text', esc_html__( 'VitaThemes' , 'wp-indigo') ) ) ; ?>
                     </a>
 
-                    <?php wp_indigo_get_footer_menu('primary-footer'); ?>
+                    <?php wp_indigo_get_footer_menu('wp-indigo-primary-footer'); ?>
 
                 </div>   
                     

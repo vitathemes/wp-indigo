@@ -44,13 +44,13 @@ if ( ! function_exists( 'wp_indigo_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'primary-menu' => esc_html__( 'Primary', 'wp-indigo' ),
+				'wp-indigo-primary-menu' => esc_html__( 'Primary', 'wp-indigo' ),
 			)
 		);
 
 		register_nav_menus(
 			array(
-				'primary-footer' => esc_html__( 'Footer', 'wp-indigo' ),
+				'wp-indigo-primary-footer' => esc_html__( 'Footer', 'wp-indigo' ),
 			)
 		);
 
@@ -116,7 +116,7 @@ function wp_indigo_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'wp-indigo' ),
-			'id'            => 'primary-sidebar',
+			'id'            => 'wp-indigo-primary-sidebar',
 			'description'   => esc_html__( 'Add widgets here.', 'wp-indigo' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',

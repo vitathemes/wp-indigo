@@ -18,7 +18,7 @@ function wp_indigo_body_classes( $classes ) {
 	}
 
 	// Adds a class of no-sidebar when there is no sidebar present.
-	if ( ! is_active_sidebar( 'primary-sidebar' ) ) {
+	if ( ! is_active_sidebar( 'wp-indigo-primary-sidebar' ) ) {
 		$classes[] = 'no-sidebar';
 	}
 
