@@ -137,7 +137,7 @@ function wp_indigo_footer_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Footer Widgets', 'wp-indigo' ),
-			'id'            => 'footer-widget',
+			'id'            => 'wp-indigo-footer-widget',
 			'description'   => esc_html__( 'Add Footer widgets here.', 'wp-indigo' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',

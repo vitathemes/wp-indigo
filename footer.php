@@ -20,10 +20,10 @@
 
             <div class="c-footer__site-info <?php wp_indigo_is_footer_widget_active() ?>">
 
-                <?php  if( is_active_sidebar( 'footer-widget' ) && get_theme_mod( 'footer_style' , 'no-widget') !== 'no-widget' ) : ?>
+                <?php  if( is_active_sidebar( 'wp-indigo-footer-widget' ) && get_theme_mod( 'footer_style' , 'no-widget') !== 'no-widget' ) : ?>
                 <div class="c-footer__widgets">
                     <div id="header-widget-area" class="c-footer__widget widget-area" role="complementary">
-                        <?php dynamic_sidebar( 'footer-widget' ); ?>
+                        <?php dynamic_sidebar( 'wp-indigo-footer-widget' ); ?>
                     </div>
                 </div>
                 <?php endif; ?>

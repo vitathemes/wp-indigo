@@ -468,7 +468,7 @@ if ( ! function_exists('wp_indigo_is_footer_widget_active')) :
 	  */
 	function wp_indigo_is_footer_widget_active() {
 	
-		if( is_active_sidebar( 'footer-widget' ) ){
+		if( is_active_sidebar( 'wp-indigo-footer-widget' ) ){
 			if( get_theme_mod( 'footer_style' , 'no-widget') == 'one-widget' ){
 
 				echo esc_attr( 'c-footer__site-info--wide' );
