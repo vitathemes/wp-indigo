@@ -2049,6 +2049,9 @@ ol.children {
   .widget a:hover {
     color: var(--wp_indigo_quaternary_color); }
 
+.widget.widget_tag_cloud {
+  margin-bottom: 32px; }
+
 /* Media
 --------------------------------------------- */
 /*------------------------------------*\
