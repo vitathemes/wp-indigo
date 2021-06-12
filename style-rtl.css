@@ -2576,7 +2576,7 @@ input[type="checkbox"]:checked:before {
 /*------------------------------------*\
     #SearchForm
   \*------------------------------------*/
-/* Wordpress Default class */
+/* WordPress Default class */
 .search-form {
   position: relative;
 }
@@ -2740,7 +2740,7 @@ input[type="checkbox"]:checked:before {
     #Blocks
   \*------------------------------------*/
 /*------------------------------------*\
-    #Buttons + (wordpress defaults)
+    #Buttons + (WordPress defaults)
   \*------------------------------------*/
 button,
 .wp-block-button__link,
@@ -2780,7 +2780,7 @@ input[type="submit"]:focus {
 }
 
 /*------------------------------------*\
-    #Wordpress defaults
+    #WordPress defaults
   \*------------------------------------*/
 .wp-block-button {
   margin: 1rem 0;

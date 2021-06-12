@@ -486,3 +486,33 @@ if ( ! function_exists('wp_indigo_is_footer_widget_active')) :
 		}
 	}
 endif;
+
+if ( ! function_exists('wp_indigo_get_footer_menu')) :
+	/**
+	  * Get Footer menu
+	  */
+	function wp_indigo_get_footer_menu( $wp_indigo_menu_name_slug = "" ) {
+
+		if ( has_nav_menu( $wp_indigo_menu_name_slug ) ) {
+
+			$wp_indigo_menu_name = $wp_indigo_menu_name_slug;
+	
+			if ( ( $wp_indigo_locations = get_nav_menu_locations() ) && isset( $wp_indigo_locations[ $wp_indigo_menu_name ] ) ) {
+				$wp_indigo_menu = wp_get_nav_menu_object( $wp_indigo_locations[ $wp_indigo_menu_name ] );
+			
+				$wp_indigo_menu_items = wp_get_nav_menu_items($wp_indigo_menu->term_id);
+			
+				$wp_indigo_menu_list = "";
+
+				foreach ( (array) $wp_indigo_menu_items as $key => $menu_item ) {
+					$title = $menu_item->title;
+					$url = $menu_item->url;
+					$wp_indigo_menu_list .= '<a class="c-footer__link c-footer__link--nav" href="' . esc_url($url) . '">' . esc_html($title) . '</a>';
+				}
+			}
+			echo wp_kses_post($wp_indigo_menu_list);
+
+		}
+
+	}
+endif;

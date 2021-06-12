@@ -36,24 +36,7 @@
                         <?php echo esc_html(get_theme_mod( 'copylink_text', esc_html__( 'VitaThemes' , 'wp-indigo') ) ) ; ?>
                     </a>
 
-                    <?php
-                    if ( has_nav_menu( 'primary-footer' ) ) {
-                
-                        $wp_indigo_menuParameters = array(
-
-                            'theme_location'  => 'primary-footer',
-                            'container'       => false,
-                            'echo'            => false,
-                            'items_wrap'      => '%3$s',
-                            'depth'           => 0,
-                            'link_class'      => 'c-footer__link c-footer__link--nav'
-
-                        );
-
-                        echo wp_kses_post(strip_tags(wp_nav_menu( $wp_indigo_menuParameters ), '<a>' ));
-                        
-                    }
-                    ?>
+                    <?php wp_indigo_get_footer_menu('primary-footer'); ?>
 
                 </div>   
                     
