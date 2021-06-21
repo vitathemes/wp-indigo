@@ -458,7 +458,6 @@ if ( ! function_exists('wp_indigo_is_footer_widget_active')) :
 	  */
 	function wp_indigo_is_footer_widget_active( $wp_indigo_is_class = true ) {
 		
-			
 			if($wp_indigo_is_class){
 
 				if(is_active_sidebar( 'footer-widget' )) {
@@ -483,21 +482,16 @@ if ( ! function_exists('wp_indigo_is_footer_widget_active')) :
 				}
 
 			}
-			
 	}
 endif;
 
 
 if ( ! function_exists('wp_indigo_get_footer_widget')) :
 	/**
-	  *
+	  * Get footer widget
 	  */
-	function wp_indigo_get_footer_widget() {
-	
-		
-		echo sprintf('<div class="c-footer__widgets"><div id="header-widget-area" class="c-footer__widget widget-area" role="complementary">%s</div></div>' , dynamic_sidebar( 'footer-widget' ));
-		
-
+	function wp_indigo_get_footer_widget() {	
+		echo sprintf('<div class="c-footer__widgets"><div id="header-widget-area" class="c-footer__widget widget-area" role="complementary">%s</div></div>' , wp_kses_post(dynamic_sidebar( 'footer-widget' )) );
 	}
 endif;
 
@@ -617,7 +611,7 @@ if ( ! function_exists( 'wp_indigo_get_index_title' ) ) :
 				echo esc_html(get_the_title(get_option('page_for_posts')));
 			}
 			else{
-				echo esc_html__( "Blog" , "castpress" );
+				echo esc_html__( "Blog" , "wp-indigo" );
 			}
 		} 
 	}

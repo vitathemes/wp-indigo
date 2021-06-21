@@ -122,9 +122,13 @@
   /* ---- grid-item ---- */
   .c-post--portfolios {
     width: 263px;
-    height: max-content;
-    float: left;
-    margin-bottom: 24px;
+    // height: 100%;
+    // float: left;
+    // margin-bottom: 24px;
+  }
+
+  .c-post__link {
+    height: calc(100% - 10px);
   }
 }
 

@@ -775,16 +775,6 @@ if( function_exists( 'kirki' ) ) {
 		'label'       => esc_html__( 'Show Categories', 'wp-indigo' ),
 		'section'     => 'blog_options',
 		'default'     => '1',
-		'priority'    => 10,
-	] );
-
-	// Show Categories
-	Kirki::add_field( 'wp_indigo_theme', [
-		'type'        => 'toggle',
-		'settings'    => 'archives_category',
-		'label'       => esc_html__( 'Show Categories', 'wp-indigo' ),
-		'section'     => 'blog_options',
-		'default'     => '1',
 		'priority'    => 20,
 	] );
 
@@ -792,14 +782,24 @@ if( function_exists( 'kirki' ) ) {
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'        => 'radio-buttonset',
 		'settings'    => 'blog_category_style',
-		'label'       => esc_html__( 'Categories style', 'kirki' ),
+		'label'       => esc_html__( 'Categories style', 'wp-indigo' ),
 		'section'     => 'blog_options',
 		'default'     => 'list',
 		'priority'    => 30,
 		'choices'     => [
-			'list'   => esc_html__( 'Lits', 'kirki' ),
-			'dropdown' => esc_html__( 'Drop Down', 'kirki' ),
+			'list'   => esc_html__( 'List', 'wp-indigo' ),
+			'dropdown' => esc_html__( 'Drop Down', 'wp-indigo' ),
 		],
+		'active_callback' => [
+			[
+				'setting'  => 'archives_category',
+				'operator' => '===',
+				'value'    => true,
+			],
+		]
 	]);
+
+
+
 
 }

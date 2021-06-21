@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<main id="primary" class="c-main <?php wp_indigo_get_fade_in_animation(); wp_indigo_portfolios_get_class_name(); wp_indigo_get_sidebar_class();?>  site-main <?php ?>">
+<main id="primary" class="c-main <?php wp_indigo_get_fade_in_animation(); wp_indigo_portfolios_get_class_name(); wp_indigo_get_sidebar_class(); ?>  site-main <?php ?>">
 
     <?php
 		while ( have_posts() ) :

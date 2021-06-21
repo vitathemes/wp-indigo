@@ -13,7 +13,7 @@ get_header();
 
     <header class="c-main__header">
         <h1 class="c-main__page-title">
-			<?php echo get_the_archive_title(); ?>
+			<?php echo wp_kses_post(get_the_archive_title()); ?>
 		</h1>
 
 		<?php if ( 'portfolios' === get_post_type() && true == get_theme_mod( 'portfolio_category', true ) ) : ?>
@@ -30,7 +30,7 @@ get_header();
 
 				if( 'portfolios' === get_post_type() ){
 					/** translator %s: Class Name from kirki */
-					echo sprintf('<div class="c-main__portfolios %s">' , wp_indigo_get_portfolios_style() ); // Escaped in function using esc_attr()
+					echo sprintf('<div class="c-main__portfolios %s">' , esc_attr(wp_indigo_get_portfolios_style()) ); // Also Escaped in function using esc_attr()
 				}
 
 					/* Start the Loop */

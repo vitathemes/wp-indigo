@@ -13,7 +13,7 @@ class Wp_indigo_walker_nav_menu extends Walker_Nav_Menu {
 
 		//Add SPAN if no Permalink
 		if ( $permalink ) {
-			$output .= '<a href="c-nav__menu-link h6 ' . esc_url($permalink) . '">';
+			$output .= '<a href="' . esc_url($permalink) . '">';
 		}
 
 		$output .= $title;
