@@ -812,9 +812,6 @@ body {
   font-size: 13px;
   color: var(--wp_indigo_secondary-color); }
 
-div {
-  font-size: inherit; }
-
 /*------------------------------------*\
   #HR
 \*------------------------------------*/
@@ -1799,8 +1796,6 @@ select {
 
 /* Content */
 .c-single__entry-content ul {
-  font-size: 16px;
-  line-height: 27px;
   letter-spacing: 0.03em; }
 
 .c-single__thumbnail {
@@ -2236,8 +2231,7 @@ ol.children {
   color: var(--wp_indigo_quaternary_color); }
 
 .c-main__content {
-  padding-top: 25px;
-  font-size: 0px; }
+  padding-top: 25px; }
 
 @media only screen and (min-width: 980px) {
   .c-main__content--search {
@@ -2595,8 +2589,6 @@ input[type="submit"] {
   .o-page__content--center .c-main {
     padding-bottom: 0px;
     padding-top: 0px; }
-  .o-page__content--center .c-main__content {
-    padding-top: 0; }
   .o-page__content--center .c-social-share {
     padding-top: 16px; }
     @media only screen and (min-width: 980px) {
