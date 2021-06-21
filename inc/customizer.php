@@ -444,7 +444,7 @@ if( function_exists( 'kirki' ) ) {
 	Kirki::add_field( 'wp_indigo_theme' , [
 		'type'        => 'typography',
 		'settings'    => 'typography_body',
-		'label'       => esc_html__( 'Base Font Size', 'wp-indigo' ),
+		'label'       => esc_html__( 'Base Font', 'wp-indigo' ),
 		'section'     => 'typography_size',
 		'default'     => [
 			'font-size'			  => '13px',

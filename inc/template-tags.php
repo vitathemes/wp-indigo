@@ -104,9 +104,7 @@ if ( ! function_exists( 'wp_indigo_share_links' ) ) {
 
 
 			if($wp_indigo_share_title){
-				printf('<span class="c-social-share__title h6 u-letter-space-regular">');// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				echo esc_html_e( 'Share on:' , 'wp-indigo' );
-				printf( '</span>' );// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				echo sprintf('<span class="c-social-share__title h6 u-letter-space-regular">%s</span>', esc_html__( 'Share on:' , 'wp-indigo' ));
 			}
 
 			echo '<div class="c-social-share__items">';
@@ -188,7 +186,7 @@ if ( ! function_exists( 'wp_indigo_socials_links' ) ) :
 			}
 
 			if ( $wp_indigo_mail ) {
-				echo sprintf( '<a href="%s" aria-label="%s" class="c-social-share__item" target="_blank"><span class="iconify" data-icon="ant-design:mail-outlined" data-inline="false"></span></a>', esc_url( $wp_indigo_mail ), esc_html__( 'Mail', 'wp-indigo' ) );
+				echo sprintf( '<a href="mailto:%s" aria-label="%s" class="c-social-share__item" target="_blank"><span class="iconify" data-icon="ant-design:mail-outlined" data-inline="false"></span></a>', esc_attr(sanitize_email( $wp_indigo_mail)), esc_html__( 'Mail', 'wp-indigo' ) );
 			}
 			
 			if ( $wp_indigo_pinterest ) {
@@ -625,11 +623,11 @@ if ( ! function_exists( 'wp_indigo_get_sidebar_class' ) ) :
 	  */
 	function wp_indigo_get_sidebar_class() {
 	
-		if(get_theme_mod( 'sidebar_display' ,true )){
-			echo esc_attr( ' c-main--wide ' );
+		if(is_active_sidebar( 'wp-indigo-primary-sidebar' )) {
+			if(get_theme_mod( 'sidebar_display' ,true )) {
+				echo esc_attr( ' c-main--wide ' );
+			}
 		}
-
-		
 	}
 	
 endif;

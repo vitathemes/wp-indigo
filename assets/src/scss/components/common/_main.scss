@@ -115,3 +115,49 @@
     right: 0;
   }
 }
+
+/* Grid */
+.c-main__portfolios--normal {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include media(tablet) {
+    justify-content: space-between;
+  }
+
+  .c-post--portfolios {
+    max-width: 263px;
+    width: 263px;
+    height: 173px;
+    object-fit: cover;
+    display: inline-block;
+    object-position: top;
+
+    img {
+      object-position: center;
+    }
+  }
+}
+
+.c-main__portfolios--masonry {
+  max-width: 1200px;
+  counter-reset: grid-item;
+  margin: 0 auto;
+
+  /* ---- grid-item ---- */
+  .c-post--portfolios {
+    width: 263px;
+  }
+
+  .c-post__link {
+    height: calc(100% - 6px);
+  }
+}
+
+.c-main__portfolios--masonry:after {
+  content: "";
+  display: block;
+  clear: both;
+}

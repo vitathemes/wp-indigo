@@ -13,7 +13,6 @@
 
   .widget_search {
     position: relative;
-    padding-bottom: 48px;
   }
 
   .search-field {
@@ -57,9 +56,9 @@
 
 /* WordPress Default Widget */
 .widget {
+  padding-bottom: 48px;
   ul {
     margin-top: 16px;
-    margin-bottom: 48px;
     list-style-type: none;
     padding-left: 0px;
     margin-left: 0px;
@@ -73,6 +72,10 @@
     a {
       font-weight: 300;
     }
+  }
+
+  .sub-menu {
+    display: none;
   }
 }
 

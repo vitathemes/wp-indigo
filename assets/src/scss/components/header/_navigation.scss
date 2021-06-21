@@ -58,6 +58,7 @@
     font-weight: 400;
     opacity: 0;
     letter-spacing: 0.05em;
+    max-width: 160px;
 
     @include media(mobile-only) {
       font-size: 20px;
