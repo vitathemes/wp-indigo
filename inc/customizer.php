@@ -378,24 +378,7 @@ if( function_exists( 'kirki' ) ) {
 	\*------------------------------------*/
 
 
-	// Body
-	Kirki::add_field( 'wp_indigo_theme' , [
-		'type'        => 'typography',
-		'settings'    => 'typography_body',
-		'label'       => esc_html__( 'Base Font Size', 'wp-indigo' ),
-		'section'     => 'typography_size',
-		'default'     => [
-			'font-size'			  => '13px',
-			'line-height'     	  => '21px',
-		],
-		'priority'    => 3,
-		'transport'   => 'auto',
-		'output'      => [
-			[
-				'element' => array( 'body' ),
-			],
-		],
-	] );
+	
 
 	//Headings typography 
 	Kirki::add_field( 'wp_indigo_theme', [
@@ -456,6 +439,26 @@ if( function_exists( 'kirki' ) ) {
 	] );
 	
 
+
+	// Body
+	Kirki::add_field( 'wp_indigo_theme' , [
+		'type'        => 'typography',
+		'settings'    => 'typography_body',
+		'label'       => esc_html__( 'Base Font Size', 'wp-indigo' ),
+		'section'     => 'typography_size',
+		'default'     => [
+			'font-size'			  => '13px',
+			'line-height'     	  => '21px',
+		],
+		'priority'    => 3,
+		'transport'   => 'auto',
+		'output'      => [
+			[
+				'element' => array( 'body' ),
+			],
+		],
+	] );
+	
 	// Headings typography h1
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'        => 'typography',

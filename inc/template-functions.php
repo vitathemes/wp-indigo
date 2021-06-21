@@ -48,7 +48,7 @@ function wp_indigo_typography() {
 
 	(get_theme_mod( 'wp_indigo_quaternary_color' ) == "" ) ? $wp_indigo_quaternary_color = "#3F51B5" : $wp_indigo_quaternary_color = get_theme_mod( 'wp_indigo_quaternary_color' ); 
 
-	(get_theme_mod( 'fade_in_animation' ) == true ) ? $wp_indigo_animation = 0 : $wp_indigo_animation = 1; 
+	(get_theme_mod( 'fade_in_animation' , true ) == true ) ? $wp_indigo_animation = 0 : $wp_indigo_animation = 1; 
 
 	
 	$html = ':root {	
