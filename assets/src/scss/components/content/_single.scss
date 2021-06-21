@@ -123,7 +123,8 @@
 
   img {
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
   }
 }
 
@@ -143,6 +144,8 @@
   padding-top: 16px;
   margin-bottom: 24px;
   color: $wp_indigo_secondary_color;
+  width: 100%;
+  display: inline-block;
 }
 
 .c-single__tag {

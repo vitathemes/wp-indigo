@@ -22,9 +22,11 @@
                 endif;			            
             ?>
 
-            <div class="c-post__category">
-                <?php  wp_indigo_get_custom_category('' , 'c-post__cat c-post__cat--blog u-link--secondary h6'); ?>
-            </div>
+            <?php if( get_theme_mod( 'archives_posts_category' , true ) ) : ?>
+                <div class="c-post__category">
+                    <?php  wp_indigo_get_custom_category('' , 'c-post__cat c-post__cat--blog u-link--secondary h6'); ?>
+                </div>
+            <?php endif; ?>
 
         </div><!-- c-post__entry-meta -->
 

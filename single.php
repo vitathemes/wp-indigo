@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<main id="primary" class="c-main c-main--wide site-main <?php wp_indigo_portfolios_get_class_name(); ?>">
+<main id="primary" class="c-main <?php wp_indigo_get_fade_in_animation(); wp_indigo_portfolios_get_class_name(); wp_indigo_get_sidebar_class();?>  site-main <?php ?>">
 
     <?php
 		while ( have_posts() ) :
@@ -19,7 +19,9 @@ get_header();
 			get_template_part( 'template-parts/content', 'single' );
 
 			// Display Side bar if current page was not a single of portfolios
-			if ('portfolios' != get_post_type()) get_sidebar();
+			if(get_theme_mod( 'sidebar_display', true )) {
+				if ('portfolios' != get_post_type()) get_sidebar();
+			}
 			
 		endwhile;// End of the loop.	
 	?>

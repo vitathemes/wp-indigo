@@ -2,11 +2,7 @@
   width: 100%;
   text-align: center;
 
-  opacity: 0;
-  animation-name: fadeInUp;
-  animation-duration: 1s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
+  opacity: $global-animation-opacity;
 }
 
 .c-profile__image {

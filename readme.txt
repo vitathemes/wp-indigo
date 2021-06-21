@@ -134,12 +134,20 @@ Social Icons, Arrow icons, Reply Icons,Magnifier Icons & close icons by iconify
 License: Apache 2.0, http://www.apache.org/licenses/LICENSE-2.0
 Source: https://iconify.design/
 
+Masonry by desandro (David DeSandro)
+License: MIT, https://opensource.org/licenses/MIT
+Source: https://desandro.mit-license.org/
+
+Simplebar by Adrien Denat
+License: MIT, https://opensource.org/licenses/MIT
+Source: http://grsmto.github.io/simplebar/
+
 Source Serif Pro Font by Frank Grießhammer
-License: Apache, http://www.apache.org/licenses/LICENSE-2.0
+License: Apache 2.0, http://www.apache.org/licenses/LICENSE-2.0
 Source: https://fonts.google.com/specimen/Source+Serif+Pro?query=source+serif#about
 
 Overpass Font by Delve Withrington
-License: Apache, http://www.apache.org/licenses/LICENSE-2.0
+License: Apache 2.0, http://www.apache.org/licenses/LICENSE-2.0
 Source: https://fonts.google.com/specimen/Overpass?query=Overpass#about
 
 TGMPA by Thomas Griffin, Gary Jones, Juliette

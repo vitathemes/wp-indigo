@@ -60,3 +60,76 @@
     outline: 0;
   }
 }
+
+/* Animations */
+
+.u-has-fadein-animation {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+.u-has-fadein-animation-delay {
+  animation-delay: 1s;
+}
+
+.u-has-fadeinDown-animation {
+  opacity: 0;
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.u-has-fadeinUp-animation {
+  opacity: 0;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.c-main__portfolios--normal {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include media(tablet) {
+    justify-content: space-between;
+  }
+
+  .c-post--portfolios {
+    max-width: 263px;
+    height: 173px;
+    object-fit: cover;
+    display: inline-block;
+    object-position: top;
+  }
+
+  .c-post--portfolios {
+    img {
+      object-position: center;
+    }
+  }
+}
+
+.c-main__portfolios--masonry {
+  max-width: 1200px;
+  counter-reset: grid-item;
+  margin: 0 auto;
+
+  /* ---- grid-item ---- */
+  .c-post--portfolios {
+    width: 263px;
+    height: max-content;
+    float: left;
+    margin-bottom: 24px;
+  }
+}
+
+.c-main__portfolios--masonry:after {
+  content: "";
+  display: block;
+  clear: both;
+}

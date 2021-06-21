@@ -111,3 +111,11 @@ input[type="checkbox"]:checked {
     max-height: 16px;
   }
 }
+
+select {
+  color: $wp_indigo_primary_color;
+  border: none;
+  border-radius: $global-radius;
+  background-color: $wp-indigo_neutral_gray_light_second_color;
+  padding: 10px 14px;
+}

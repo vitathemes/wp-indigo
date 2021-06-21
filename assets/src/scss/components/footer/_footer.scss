@@ -6,18 +6,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  line-height: 50px;
   padding-top: 48px;
   width: 100%;
+  opacity: $global-animation-opacity;
 
-  opacity: 0;
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
+  height: 150px;
 
   @include media(tablet) {
     margin-top: auto;
+    height: 250px;
     padding: 0px 17px;
   }
 }
@@ -81,16 +78,11 @@
   .c-footer__widget {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .c-footer__copy {
     margin-top: 0px;
-  }
-
-  .widget {
-    &:nth-child(n + 3) {
-      display: none;
-    }
   }
 
   .widget:first-child {
@@ -145,12 +137,16 @@
 
 .c-footer__widgets {
   width: 100%;
+  min-height: 110px;
+  text-align: left;
 
   @include media(tablet) {
     width: 50%;
   }
-  min-height: 110px;
-  text-align: left;
+
+  .sub-menu {
+    display: none !important;
+  }
 }
 
 .c-footer__widget {

@@ -12,16 +12,28 @@ get_header();
 
 <section class="o-page__content o-page__content--center">
 
-    <main id="primary" class="c-main c-main--404 site-main">
+    <main id="primary" class="c-main <?php wp_indigo_get_fade_in_animation(); ?> c-main--404 site-main">
         <section class="c-main__content">
 
             <h1 class="c-main__title">
                 <?php esc_html_e( '404', 'wp-indigo' ); ?>
             </h1>
 
-            <p class="c-main__desc h3 c-main__desc--404">
+            <h4 class="c-main__desc c-main__desc--404">
                 <?php esc_html_e( 'Page Not Found!', 'wp-indigo' ); ?>
+            </h4>
+
+            <p class="c-main__desc h3 c-main__desc--404">
+                <?php esc_html_e( 'This page not found (deleted or never exists).', 'wp-indigo' ); ?>
+                <br />
+                <?php esc_html_e( 'Try a phrase in search box or back to home and start again.', 'wp-indigo' ); ?>
             </p>
+
+            <div class="c-main__search c-main__search--404">
+                <div class="c-main__search-form">
+                    <?php get_search_form(); ?>
+                </div>
+            </div>
 
             <a href=<?php echo esc_url( home_url() ); ?>>
                 <button class="btn btn--error h5--secondary">

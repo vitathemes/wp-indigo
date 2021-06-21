@@ -340,32 +340,42 @@ if ( ! function_exists( 'wp_indigo_category_filter' ) ) :
 	  */
 	function wp_indigo_category_filter( $wp_indigo_className = "" ) {
 		$categories = get_categories();
+		
 		global $wp_query;
+		global $wp;
 	
 		$wp_indigo_all_active_class = "";
+
 		if(empty($wp_query->query['category_name'])){
 			$wp_indigo_all_active_class = "active";
 		}
 		
-		echo '<a class="'.esc_attr( $wp_indigo_className ).' '.esc_attr( $wp_indigo_all_active_class ).'" href='.esc_url(site_url()).'/blog>';
-		echo esc_html_e( 'All ', 'wp-indigo' );
-		echo '</a>';
+		$wp_indigo_current_url =  home_url( $wp->request );
+
+		if(get_theme_mod( 'blog_category_style', 'list' ) === 'dropdown' ) {
 		
-		foreach($categories as $category) {
-			$classactive = "";
-			
-			// Check not empty 
-			if(!empty($wp_query->query['category_name'])){
-				// get current category 
-				$current_category = $wp_query->query['category_name'];				
+			get_template_part( 'template-parts/components/categories-list' );
+
+		}else{ 
+
+			echo sprintf('<a class="%s %s" href="%s">%s</a>', esc_attr($wp_indigo_all_active_class),  esc_attr($wp_indigo_className), esc_url($wp_indigo_current_url) , esc_html__( 'All', 'wp-indigo' ) );
+
+			foreach($categories as $category) {
+				$classactive = "";
+				// Check not empty 
+				if(!empty($wp_query->query['category_name'])){
+					// get current category 
+					$current_category = $wp_query->query['category_name'];				
+				}
+				// Check if current category match with url (and add active class) 
+				if($category != null && !empty($wp_query->query['category_name'])  && $category->slug == $current_category) {
+					$classactive = "active";
+				}
+				// The output
+				echo '<a class="'.esc_attr( $wp_indigo_className.' '.$classactive ).'" href="' . esc_attr($wp_indigo_current_url) . '/?category_name=' . esc_attr( $category->slug ) . '">' . esc_html($category->name) . '</a>';
 			}
-			// Check if current category match with url (and add active class) 
-			if($category != null && !empty($wp_query->query['category_name'])  && $category->slug == $current_category){
-				$classactive = "active";
-			}
-			// The output
-			echo '<a class="'.esc_attr( $wp_indigo_className.' '.$classactive ).'" href="'.esc_url(site_url()) . '/blog/?category_name=' . esc_html( $category->slug ) . '">' . esc_html($category->name) . '</a>';
 		}
+
 	}	
 endif;
 
@@ -403,18 +413,14 @@ if ( ! function_exists( 'wp_indigo_branding' ) ) :
 			the_custom_logo();
 		}
 		else{
-			?>
-
-			<h1 class="c-header__title site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php esc_html(bloginfo( 'name' )); ?></a>
-			</h1>
-
-			<?php
+			/** trnslator %s: link address, translator %s 2: Site title  */
+			echo sprintf('<h1 class="c-header__title site-title"><a href="%s" rel="home">%s</a></h1>',esc_url( home_url( '/' ) ), esc_html(get_bloginfo( 'name' )));
 		}
 		
 	}
 	
 endif;
+
 
 if (! function_exists('wp_indigo_get_archives_class')) :
 	/**
@@ -427,23 +433,6 @@ if (! function_exists('wp_indigo_get_archives_class')) :
 	}
 endif;
 
-if (! function_exists('wp_indigo_get_archives_title')) :
-	/**
-	  * Display archive title 
-	  */
-	function wp_indigo_get_archives_title() {
-		if ( 'portfolios' == get_post_type() ) {
-			$wp_indigo_archive_title = esc_html__( 'Portfolios', 'wp-indigo' );
-		}
-		else{
-			$wp_indigo_archive_title = wp_kses_post( get_the_archive_title() );
-		}
-
-		echo wp_kses_post( $wp_indigo_archive_title );
-
-
-	}
-endif;
 
 if ( ! function_exists('wp_indigo_get_post_tags')) :
 	/**
@@ -462,30 +451,56 @@ if ( ! function_exists('wp_indigo_get_post_tags')) :
 	}
 endif;
 
+
 if ( ! function_exists('wp_indigo_is_footer_widget_active')) :
 	/**
-	  * Get Post tags 
+	  * Get Footer Classes
 	  */
-	function wp_indigo_is_footer_widget_active() {
-	
-		if( is_active_sidebar( 'wp-indigo-footer-widget' ) ){
-			if( get_theme_mod( 'footer_style' , 'no-widget') == 'one-widget' ){
+	function wp_indigo_is_footer_widget_active( $wp_indigo_is_class = true ) {
+		
+			
+			if($wp_indigo_is_class){
 
-				echo esc_attr( 'c-footer__site-info--wide' );
-			}
-			elseif( get_theme_mod( 'footer_style' , 'no-widget') == 'two-widget' ){
+				if(is_active_sidebar( 'footer-widget' )) {
 
-				echo esc_attr( 'c-footer__site-info--extra-wide' );
+					if( get_theme_mod( 'footer_style' , 'two-widget') == 'one-widget' ) {
+						echo esc_attr( ' c-footer__site-info--wide ' );
+					}
+					elseif( get_theme_mod( 'footer_style' , 'two-widget') == 'two-widget' ) {
+						echo esc_attr( ' c-footer__site-info--extra-wide ' );
+					}
+					else{
+						echo esc_attr( '' );
+					}
+				}
 			}
-		}
-		else{
+			else{
 
-			if( get_theme_mod( 'footer_style' , 'no-widget') == 'no-widget' ){
-				echo esc_attr( '' );
+				if(is_active_sidebar( 'footer-widget' )) {
+
+					wp_indigo_get_footer_widget();
+
+				}
+
 			}
-		}
+			
 	}
 endif;
+
+
+if ( ! function_exists('wp_indigo_get_footer_widget')) :
+	/**
+	  *
+	  */
+	function wp_indigo_get_footer_widget() {
+	
+		
+		echo sprintf('<div class="c-footer__widgets"><div id="header-widget-area" class="c-footer__widget widget-area" role="complementary">%s</div></div>' , dynamic_sidebar( 'footer-widget' ));
+		
+
+	}
+endif;
+
 
 if ( ! function_exists('wp_indigo_get_footer_menu')) :
 	/**
@@ -515,4 +530,112 @@ if ( ! function_exists('wp_indigo_get_footer_menu')) :
 		}
 
 	}
+endif;
+
+
+if ( ! function_exists('wp_indigo_get_fade_in_animation')) :
+	/**
+	  * Get fade in Up Animation from kirki ( Handled by css using BEM Modifier )
+	  */
+	function wp_indigo_get_fade_in_animation($wp_indigo_animation_delay = true) {
+		if( get_theme_mod( 'fade_in_animation', true ) ){
+			echo esc_attr( " u-has-fadein-animation " );
+			if($wp_indigo_animation_delay === false){
+				echo esc_attr( " u-has-fadein-animation-delay " );
+			}
+		}
+	}
+endif;
+
+
+if ( ! function_exists('wp_indigo_get_fade_in_down_animation')) :
+	/**
+	  * Get fade in Down Animation from kirki ( Handled by css using BEM Modifier )
+	  */
+	function wp_indigo_get_fade_in_down_animation( ) {
+	
+		if( get_theme_mod( 'fade_in_animation', true ) ){
+			echo esc_attr( " u-has-fadeinDown-animation " );
+			
+		}
+	}
+endif;
+
+
+if ( ! function_exists('wp_indigo_get_fade_in_up_animation')) :
+	/**
+	  * Get fade in Up Animation from kirki ( Handled by css using BEM Modifier )
+	  */
+	function wp_indigo_get_fade_in_up_animation() {
+	
+		if( get_theme_mod( 'fade_in_animation', true ) ){
+			echo esc_attr( " u-has-fadeinUp-animation " );
+		}
+	}
+endif;
+
+
+if ( ! function_exists('wp_indigo_get_profile_image')) :
+	/**
+	  * Get Profile image 
+	  */
+	function wp_indigo_get_profile_image() {
+
+		$wp_indigo_image = wp_get_attachment_image_src(get_theme_mod( 'profile_image' )["id"] , 'thumbnail');
+        
+		/** translator %s: image src, translator %s 2: image srcset */
+		echo sprintf('<img alt="%s" src="%s" />', esc_attr__( 'Profile image' , 'wp-indigo' ) ,esc_attr($wp_indigo_image[0]) );
+       
+	}
+endif;
+
+
+if ( ! function_exists('wp_indigo_get_portfolios_style')) :
+	/**
+	  * Get Portfolios page Grid style 
+	  */
+	function wp_indigo_get_portfolios_style() {
+		
+		if( get_theme_mod( 'portfolios_item_style' , 'masonry') == 'masonry' ) {
+			return esc_attr( 'c-main__portfolios--masonry' );
+		}
+		else{
+			return esc_attr( 'c-main__portfolios--normal' );
+		}
+		
+	}
+endif;
+
+
+if ( ! function_exists( 'wp_indigo_get_index_title' ) ) :
+	/**
+	  * Get index.php Title 
+	  */
+	function wp_indigo_get_index_title() {
+		if (is_home()) {
+			if (get_option('page_for_posts')) {
+				echo esc_html(get_the_title(get_option('page_for_posts')));
+			}
+			else{
+				echo esc_html__( "Blog" , "castpress" );
+			}
+		} 
+	}
+	
+endif;
+
+
+if ( ! function_exists( 'wp_indigo_get_sidebar_class' ) ) :
+	/**
+	  * Get Sidebar class
+	  */
+	function wp_indigo_get_sidebar_class() {
+	
+		if(get_theme_mod( 'sidebar_display' ,true )){
+			echo esc_attr( ' c-main--wide ' );
+		}
+
+		
+	}
+	
 endif;

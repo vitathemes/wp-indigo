@@ -9,16 +9,16 @@
 
 get_header();
 ?>
-<main id="primary" class="c-main <?php wp_indigo_get_archives_class(); ?> site-main">
+<main id="primary" class="c-main <?php wp_indigo_get_fade_in_animation(); ?> <?php wp_indigo_get_archives_class(); ?> site-main">
 
     <header class="c-main__header">
         <h1 class="c-main__page-title">
-			<?php wp_indigo_get_archives_title(); ?>
+			<?php echo get_the_archive_title(); ?>
 		</h1>
 
 		<?php if ( 'portfolios' === get_post_type() && true == get_theme_mod( 'portfolio_category', true ) ) : ?>
 			<div class="c-main__category">
-				<?php wp_indigo_taxonomy_filter("c-main__cat h3" , "" , false , "portfolio_category");?>
+				<?php wp_indigo_taxonomy_filter("c-main__cat h3" , "" , false , "portfolio_category"); ?>
 			</div>
         <?php endif; ?>
 
@@ -29,16 +29,17 @@ get_header();
 			if ( have_posts() ) :
 
 				if( 'portfolios' === get_post_type() ){
-					echo wp_kses_post( '<div class="c-main__portfolios">' );
+					/** translator %s: Class Name from kirki */
+					echo sprintf('<div class="c-main__portfolios %s">' , wp_indigo_get_portfolios_style() ); // Escaped in function using esc_attr()
 				}
 
-				/* Start the Loop */
-				while ( have_posts() ) :
-					the_post();
-					
-					get_template_part( 'template-parts/content' , get_post_type() );
-					
-				endwhile;
+					/* Start the Loop */
+					while ( have_posts() ) :
+						the_post();
+						
+						get_template_part( 'template-parts/content' , get_post_type() );
+						
+					endwhile;
 				
 				if( 'portfolios' === get_post_type() ){
 					echo wp_kses_post( '</div>' );

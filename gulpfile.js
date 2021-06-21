@@ -39,7 +39,7 @@ const cleanCssTask = (cb) => {
 
 const concatVendorJs = (cb) => {
   return gulp
-    .src(["./assets/src/js/iconify.js"])
+    .src(["./assets/src/js/masonry.pkgd.js", "./assets/src/js/iconify.js"])
     .pipe(concat("vendor.js"))
     .pipe(gulp.dest("assets/js"));
   cb();

@@ -48,12 +48,15 @@ function wp_indigo_typography() {
 
 	(get_theme_mod( 'wp_indigo_quaternary_color' ) == "" ) ? $wp_indigo_quaternary_color = "#3F51B5" : $wp_indigo_quaternary_color = get_theme_mod( 'wp_indigo_quaternary_color' ); 
 
+	(get_theme_mod( 'fade_in_animation' ) == true ) ? $wp_indigo_animation = 0 : $wp_indigo_animation = 1; 
 
+	
 	$html = ':root {	
 	            --wp_indigo_primary-color: '.$wp_indigo_primary_color.';
 	            --wp_indigo_secondary-color: '.$wp_indigo_secondary_color.';
 				--wp_indigo_tertiary_color: '.$wp_indigo_tertiary_color.';
-				--wp_indigo_quaternary_color: '.$wp_indigo_quaternary_color.'
+				--wp_indigo_quaternary_color: '.$wp_indigo_quaternary_color.';
+				--wp_indigo_animation: '.$wp_indigo_animation.';
 			}';
 	return $html;
 	
@@ -207,3 +210,22 @@ function wp_indigo_add_menu_link_class( $wp_indigo_atts, $wp_indigo_item, $wp_in
   }
 add_filter( 'nav_menu_link_attributes', 'wp_indigo_add_menu_link_class', 1, 3 );
 
+
+function wp_indigo_modify_archive_title( $wp_indigo_title ) {
+	/**
+	 * Modify Archive title 
+	 */
+
+    if(is_post_type_archive('portfolios')){
+		if(get_theme_mod( 'post_type_archive_custom_title' , 'portfolios')){
+			return get_theme_mod( 'post_type_archive_custom_title' , 'portfolios');
+		}
+		else{
+			return esc_html__( 'portfolios' , 'wp-indigo' );// Also Available to change From Kirki
+		}
+	}
+	
+    return wp_kses_post( $wp_indigo_title );
+}
+add_filter( 'wp_title', 'wp_indigo_modify_archive_title' );
+add_filter( 'get_the_archive_title', 'wp_indigo_modify_archive_title' );

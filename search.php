@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<main id="primary" class="c-main site-main">
+<main id="primary" class="c-main <?php wp_indigo_get_fade_in_animation(); ?> site-main">
 
     <header class="c-main__header">
         <h1 class="c-main__page-title"><?php esc_html_e( 'Search Result', 'wp-indigo' ); ?></h1>

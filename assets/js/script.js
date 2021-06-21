@@ -10,6 +10,19 @@ function wp_indigo_childFinder(parentElement, childElement) {
   return result;
 }
 
+/*--------------------------------------*\
+  #Masonry Grid
+\*--------------------------------------*/
+if (wp_indigo_childFinder("body", "c-main__portfolios--masonry")) {
+  let wp_indigo_masonry_grid = document.querySelector(".c-main__portfolios--masonry");
+  let wp_indigo_masonry = new Masonry(".c-main__portfolios--masonry ", {
+    // options
+    itemSelector: ".c-post--portfolios",
+    gutter: 20,
+    fitWidth: true,
+  });
+}
+
 /*------------------------------------*\
   #Menu items trap focus
 \*------------------------------------*/
@@ -63,20 +76,5 @@ if (wp_indigo_childFinder("body", "s-nav")) {
         wp_indigo_menuToggle.focus();
       }
     });
-  }
-}
-
-/*------------------------------------*\
-  #Portfolio Responsive
-\*------------------------------------*/
-if (wp_indigo_childFinder("body", "c-main__portfolios")) {
-  let wp_indigo_portfoliosCount = document.querySelectorAll(".c-post").length;
-  let wp_indigo_portfolioMainContent = document.querySelector(".c-main__portfolios");
-
-  if (wp_indigo_portfoliosCount === 3) {
-    wp_indigo_portfolioMainContent.classList.add("c-main__portfolios--md");
-  }
-  if (wp_indigo_portfoliosCount === 2) {
-    wp_indigo_portfolioMainContent.classList.add("c-main__portfolios--sm");
   }
 }

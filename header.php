@@ -27,7 +27,7 @@
             <?php esc_html_e( 'Skip to content', 'wp-indigo' ); ?>
         </a>
 
-        <header id="masthead" class="c-header site-header">
+        <header id="masthead" class="c-header site-header <?php wp_indigo_get_fade_in_down_animation(); ?>">
 
             <div class="c-header__main" id="site-navigation">
 
@@ -54,7 +54,7 @@
                                 )
                             );
                         }
-                        ?>
+                    ?>
                 </nav><!-- #site-navigation -->
 
             </div><!--c-header__main -->

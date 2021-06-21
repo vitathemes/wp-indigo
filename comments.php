@@ -25,7 +25,7 @@ if ( post_password_required() ) {
 
     <?php
 	//Custom comment form 
-	$comments_args = array(
+	$wp_indigo_comments_args = array(
 		//Define Fields
 		'fields' => array(
 						
@@ -58,7 +58,7 @@ if ( post_password_required() ) {
 		'class_submit' =>  esc_html__( 'wp-indigo-comment-submit' , 'wp-indigo'),
 	);
 	
-	comment_form( $comments_args );
+	comment_form( $wp_indigo_comments_args );
 
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
@@ -66,12 +66,22 @@ if ( post_password_required() ) {
     <div class="comment-list">
         <h2 class="comments-title h3 u-letter-space-medium">
             <?php
+
 			$wp_indigo_comment_count = get_comments_number();
+
 			if ( '1' === $wp_indigo_comment_count ) {
 				echo esc_html__( "Comment", "wp-indigo" );
 			} else {
-				echo esc_html__( "Comments", "wp-indigo" );
+
+				if( get_theme_mod( 'comment_count' , false ) == true ){
+					echo esc_html( $wp_indigo_comment_count ) . esc_html__( " Comments", "wp-indigo" );
+				}
+				else{
+					echo esc_html__( "Comments", "wp-indigo" );
+				}
+
 			}
+
 			?>
         </h2><!-- .comments-title -->
 

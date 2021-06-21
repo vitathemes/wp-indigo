@@ -14,15 +14,17 @@
 get_header();
 ?>
 
-<main id="primary" class="c-main site-main">
+<main id="primary" class="c-main <?php wp_indigo_get_fade_in_animation(); ?> site-main">
 
     <header class="c-main__header">
 
-        <h1 class="c-main__page-title"><?php esc_html_e( 'Blog', 'wp-indigo' ); ?></h1>
+        <h1 class="c-main__page-title"><?php wp_indigo_get_index_title(); ?></h1>
 
-        <div class="c-main__category">
-            <?php wp_indigo_category_filter("c-main__cat h3" , "" , true  ); ?>
-        </div>
+		<?php if( get_theme_mod( 'archives_category', true ) ) : ?>
+			<div class="c-main__category">
+				<?php wp_indigo_category_filter("c-main__cat h3" , "" , true  ); ?>
+			</div>
+		<?php endif; ?>
 
     </header>
 

@@ -7,12 +7,7 @@
   padding-bottom: 0px;
   min-height: 100%;
   height: max-content;
-
-  opacity: 0;
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
+  opacity: $global-animation-opacity;
 
   @include media(tablet) {
     width: 555px;
@@ -109,41 +104,15 @@
 
 .c-main__category {
   margin-top: 39px;
-  font-size: 0px;
 }
 
-.c-main__portfolios {
-  @include media(tablet) {
-    padding-top: 0px;
-    display: grid;
-    grid-template-columns: 263px 263px;
-    grid-template-rows: 173px 175px 364px;
-    gap: 32px 29px;
-    grid-template-areas:
-      "a1 a2"
-      "a3 a2"
-      "a4 a4";
-  }
-}
+.c-main__search-form {
+  position: relative;
+  margin-bottom: 32px;
 
-.c-main__portfolios--md {
-  @include media(tablet) {
-    display: grid;
-    grid-template-columns: 263px 263px;
-    grid-template-rows: 173px 175px;
-    gap: 32px 29px;
-    grid-template-areas:
-      "a1 a2"
-      "a3 a2";
-  }
-}
-
-.c-main__portfolios--sm {
-  @include media(tablet) {
-    display: grid;
-    grid-template-columns: 263px 263px;
-    grid-template-rows: 173px;
-    gap: 32px 29px;
-    grid-template-areas: "a1 a2";
+  .search-submit {
+    position: absolute;
+    top: 15%;
+    right: 0;
   }
 }
