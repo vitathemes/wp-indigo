@@ -140,7 +140,6 @@ add_action('wp_enqueue_scripts', 'wp_indigo_dashicons', 999);
 	$wp_indigo_postTypeArguments['show_in_rest'] = true;
 	$wp_indigo_postTypeArguments['supports'] = array('title', 'editor' , 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields' , 'comments');
 
-  
 	return $wp_indigo_postTypeArguments;
   }  
   add_filter('libwp_post_type_1_arguments', 'wp_indigo_modify_libwp_post_type_argument');

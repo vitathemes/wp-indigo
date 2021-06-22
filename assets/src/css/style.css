@@ -2582,6 +2582,32 @@ input[type="submit"] {
   max-width: 100%;
   margin: 0; }
 
+/*------------------------------------*\
+  #Block Image
+\*------------------------------------*/
+.full-max-width,
+.wp-block-group .wp-block-group__inner-container > *.alignfull,
+.alignfull,
+.singular .post-thumbnail {
+  margin-left: 0px !important; }
+
+/*------------------------------------*\
+  #Block columns 
+\*------------------------------------*/
+.full-max-width,
+.wp-block-group .wp-block-group__inner-container > *.alignfull,
+.alignfull,
+.singular .post-thumbnail {
+  margin-left: 0px !important;
+  max-width: 100% !important; }
+
+.full-max-width,
+.wp-block-group .wp-block-group__inner-container > *.alignfull,
+.alignfull,
+.singular .post-thumbnail {
+  margin-left: 0px !important;
+  max-width: 100% !important; }
+
 /*--------------------------------------------------------------
 # Objects
 --------------------------------------------------------------*/
