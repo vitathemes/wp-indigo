@@ -135,6 +135,13 @@
     display: inline-block;
     object-position: top;
 
+    margin: 5px;
+
+    @include media(tablet) {
+      margin: 0px;
+      margin-bottom: 25px;
+    }
+
     img {
       object-position: center;
     }

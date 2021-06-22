@@ -2250,7 +2250,12 @@ ol.children {
     height: 173px;
     object-fit: cover;
     display: inline-block;
-    object-position: top; }
+    object-position: top;
+    margin: 5px; }
+    @media only screen and (min-width: 980px) {
+      .c-main__portfolios--normal .c-post--portfolios {
+        margin: 0px;
+        margin-bottom: 25px; } }
     .c-main__portfolios--normal .c-post--portfolios img {
       object-position: center; }
 
