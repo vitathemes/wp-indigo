@@ -1,0 +1,40 @@
+.c-profile {
+  width: 100%;
+  text-align: center;
+
+  opacity: $global-animation-opacity;
+}
+
+.c-profile__image {
+  width: 106px;
+  height: 106px;
+  display: inline-block;
+
+  @include media(tablet) {
+    margin-top: 100px;
+  }
+
+  @include media(wide) {
+    margin-top: 0px;
+  }
+
+  img {
+    border-radius: 50%;
+    height: 100% !important;
+    object-fit: cover;
+  }
+}
+
+.c-profile__title {
+  margin-top: 28px;
+}
+
+.c-profile__desc {
+  // WordPress Default class
+  padding-top: 16px;
+
+  .description {
+    color: $wp_indigo_secondary_color;
+    margin: 0;
+  }
+}

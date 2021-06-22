@@ -1,160 +1,226 @@
 <?php
-
-//Show Profile
-function wp_indigo_show_profile() {
-	get_template_part( "template-parts/profile" );
-}
-
-// Register Menu
-function wp_indigo_register_primary_menu() {
-	register_nav_menu( 'primary-menu', __( 'Primary Menu', 'wp-indigo' ) );
-}
-
-add_action( 'after_setup_theme', 'wp_indigo_register_primary_menu' );
-
-// Menu Generator
-function wp_indigo_show_menu() {
-	if ( has_nav_menu( 'primary-menu' ) ) {
-		$wp_indigo_menu_args = array(
-			'theme_location' => 'primary-menu',
-			'menu_class'     => 'list navigation',
-			'menu_id'        => 'navigation',
-			'container'      => '',
-			'depth'          => 2,
-		);
-		if ( ! is_front_page() ) {
-			$wp_indigo_menu_args['container_class'] = 'nav';
-		}
-		echo '<nav id="site-navigation" class="main-navigation nav-home nav" role="navigation">'; ?>
-        <button class="c-menu-toggle hamburger--boring js-menu-toggle hamburger" type="button">
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-              </span>
-        </button>
-		<?php
-		wp_nav_menu( $wp_indigo_menu_args );
-		echo '</nav>';
-	}
-}
-
-// Show Post Tags
-function wp_indigo_show_tags() {
-	the_tags( '', ' ', '' );
-}
-
-// Show Name Field
-function wp_indigo_show_avatar() {
-	if ( has_custom_logo() ) {
-		the_custom_logo();
-	}
-}
+/**
+ * Functions which enhance the theme by hooking into WordPress
+ *
+ * @package wp-indigo
+ */
 
 /**
- * Show socials list
+ * Adds custom classes to the array of body classes.
  *
- * @param $wp_indigo_social_names | array
+ * @param array $classes Classes for the body element.
+ * @return array
  */
-function wp_indigo_show_socials( $wp_indigo_social_names ) {
-	foreach ( $wp_indigo_social_names as $wp_indigo_social_name ) {
-		$social = esc_attr( get_theme_mod( $wp_indigo_social_name ) );
-		if ( $social != "" ) {
-			$name = explode( '-', $wp_indigo_social_name );
-			if ( strpos( $name[1], 'mail' ) !== false ) {
-				echo '<a rel="noopener" aria-label="' . esc_attr__( 'Email me', 'wp-indigo' ) . '" class="link" data-title="' . esc_attr( sanitize_email( $social ) ) . '" href="mailto:' . esc_attr( sanitize_email( $social ) ) . '" target="_blank">
-			<svg class="icon icon-' . esc_attr( $name[1] ) . '"><use xlink:href="' . esc_url( get_template_directory_uri() ) . '/assets/images/defs.svg#icon-' . esc_attr( $name[1] ) . '"></use></svg>
-		</a>';
-			} else {
-				$name = explode( '-', $wp_indigo_social_name );
-				echo '<a rel="noopener" aria-label="View ' . esc_attr( $name[1] ) . ' page" class="link" data-title="' . esc_attr( $social ) . '" href="' . esc_attr( $social ) . '" target="_blank">
-			<svg class="icon icon-' . esc_attr( $name[1] ) . '"><use xlink:href="' . esc_attr( get_template_directory_uri() ) . '/assets/images/defs.svg#icon-' . esc_attr( $name[1] ) . '"></use></svg>
-		</a>';
-			}
-		}
-	}
-}
-
-/**
- * Check active socials
- *
- * @param $wp_indigo_social_names
- *
- * @return bool
- */
-function wp_indigo_check_socials( $wp_indigo_social_names ) {
-	foreach ( $wp_indigo_social_names as $wp_indigo_social_name ) {
-		$social = get_theme_mod( $wp_indigo_social_name );
-		if ( $social != "" ) {
-			return true;
-		}
+function wp_indigo_body_classes( $classes ) {
+	// Adds a class of hfeed to non-singular pages.
+	if ( ! is_singular() ) {
+		$classes[] = 'hfeed';
 	}
 
-	return false;
-}
+	// Adds a class of no-sidebar when there is no sidebar present.
+	if ( ! is_active_sidebar( 'wp-indigo-primary-sidebar' ) ) {
+		$classes[] = 'no-sidebar';
+	}
 
-// Load theme typography
+	return $classes;
+}
+add_filter( 'body_class', 'wp_indigo_body_classes' );
+
+
+function wp_indigo_pingback_header() {
+	/**
+	 * Add a pingback url auto-discovery header for single posts, pages, or attachments.
+	 */
+	if ( is_singular() && pings_open() ) {
+		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
+	}
+}
+add_action( 'wp_head', 'wp_indigo_pingback_header' );
+
+
+
 function wp_indigo_typography() {
-	$wp_indigo_text_typography            = get_theme_mod( 'text_typography' );
-	$wp_indigo_heading_typography         = get_theme_mod( 'headings_typography' );
+	
+	(get_theme_mod( 'typography_primary_color' ) == "" ) ? $wp_indigo_primary_color = "#1A1A1A" : $wp_indigo_primary_color = get_theme_mod( 'typography_primary_color' ); 
 
-	if (!isset($wp_indigo_heading_typography["color"])) {
-		$wp_indigo_heading_typography["color"] = "#1A1A1A";
-    }
+	(get_theme_mod( 'typography_secondary_color' ) == "" ) ? $wp_indigo_secondary_color = "#555555" : $wp_indigo_secondary_color = get_theme_mod( 'typography_secondary_color' ); 
 
-	if (!isset($wp_indigo_text_typography["color"])) {
-		$wp_indigo_text_typography["color"] = "#555555";
-	}
+	(get_theme_mod( 'wp_indigo_tertiary_color' ) == "" ) ? $wp_indigo_tertiary_color = "#C4C4C4" : $wp_indigo_tertiary_color = get_theme_mod( 'wp_indigo_tertiary_color' ); 
 
-	$html = ':root {
+	(get_theme_mod( 'wp_indigo_quaternary_color' ) == "" ) ? $wp_indigo_quaternary_color = "#3F51B5" : $wp_indigo_quaternary_color = get_theme_mod( 'wp_indigo_quaternary_color' ); 
+
+	(get_theme_mod( 'fade_in_animation' , true ) == true ) ? $wp_indigo_animation = 0 : $wp_indigo_animation = 1; 
 
 	
-	            --primary-color: ' . get_theme_mod( "branding_primary_color", "#3F51B5" ) . ';
-	            --secondary-color: ' . $wp_indigo_heading_typography["color"] . ';
-	            --tertiary-color: ' . $wp_indigo_text_typography['color'] . ';
+	$html = ':root {	
+	            --wp_indigo_primary-color: '.$wp_indigo_primary_color.';
+	            --wp_indigo_secondary-color: '.$wp_indigo_secondary_color.';
+				--wp_indigo_tertiary_color: '.$wp_indigo_tertiary_color.';
+				--wp_indigo_quaternary_color: '.$wp_indigo_quaternary_color.';
+				--wp_indigo_animation: '.$wp_indigo_animation.';
 			}';
-
-	return esc_html( $html );
+	return $html;
+	
 }
 
+add_action( 'admin_head', 'wp_indigo_theme_settings' );
 add_action( 'wp_head', 'wp_indigo_theme_settings' );
 
 function wp_indigo_theme_settings() {
-	$wp_indigo_theme_settings = wp_indigo_typography();
+	$wp_indigo_theme_typography = wp_indigo_typography();
+
 	?>
-    <style>
-        <?php echo esc_html($wp_indigo_theme_settings); ?>
-    </style>
-	<?php
+<style>
+<?php echo esc_html($wp_indigo_theme_typography);
+?>
+</style>
+<?php
 }
 
 
-function wp_indigo_get_discussion_data() {
-	static $discussion, $post_id;
-	$wp_indigo_current_post_id = get_the_ID();
-	if ( $wp_indigo_current_post_id === $post_id ) {
-		return $discussion; /* If we have discussion information for post ID, return cached object */
-	} else {
-		$post_id = $wp_indigo_current_post_id;
-	}
-	$wp_indigo_comments = get_comments(
-		array(
-			'post_id' => $wp_indigo_current_post_id,
-			'orderby' => 'comment_date_gmt',
-			'order'   => get_option( 'comment_order', 'asc' ), /* Respect comment order from Settings » Discussion. */
-			'status'  => 'approve',
-			'number'  => 20, /* Only retrieve the last 20 comments, as the end goal is just 6 unique authors */
-		)
-	);
-	$wp_indigo_authors  = array();
-	foreach ( $wp_indigo_comments as $wp_indigo_comment ) {
-		$wp_indigo_authors[] = ( (int) $wp_indigo_comment->user_id > 0 ) ? (int) $wp_indigo_comment->user_id : $wp_indigo_comment->comment_author_email;
-	}
-	$wp_indigo_authors = array_unique( $wp_indigo_authors );
-	$discussion        = (object) array(
-		'authors'   => array_slice( $wp_indigo_authors, 0, 6 ),
-		/* Six unique authors commenting on the post. */
-		'responses' => get_comments_number( $wp_indigo_current_post_id ),
-		/* Number of responses. */
-	);
+function wp_indigo_show_description() {
+	/**
+	 * Display Description for profile section 
+	 */
+	if ( get_bloginfo( 'description' ) !== '' ) { 
 
-	return $discussion;
+		/** translator %s: Blog info description */
+		echo sprintf('<h4 class="description">%s</h4>' ,  esc_html(get_bloginfo( 'description' )));// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+	}
 }
+
+
+function wp_indigo_dashicons(){
+	/**
+	 * Enable Dashicons
+	 */
+    wp_enqueue_style('dashicons');
+}
+add_action('wp_enqueue_scripts', 'wp_indigo_dashicons', 999);
+
+
+
+  function wp_indigo_modify_libwp_post_type($wp_indigo_postTypeName){
+  /**
+    * Modify LibWP post type name (If libwp plugin exist)
+    */
+	$wp_indigo_postTypeName = 'portfolios';
+	return $wp_indigo_postTypeName;
+  }  
+  add_filter('libwp_post_type_1_name', 'wp_indigo_modify_libwp_post_type');
+
+  
+  function wp_indigo_modify_libwp_post_type_argument($wp_indigo_postTypeArguments){  
+  /**
+	* Modify LibWP post type arguments (If libwp plugin exist)
+	*/
+	$wp_indigo_postTypeArguments['labels'] = [
+		'name'          => _x('Portfolios', 'Post type general name', 'wp-indigo'),
+		'singular_name' => _x('Portfolio', 'Post type singular name', 'wp-indigo'),
+		'menu_name'     => _x('Portfolios', 'Admin Menu text', 'wp-indigo'),
+		'add_new'       => __('Add New', 'wp-indigo'),
+		'edit_item'     => __('Edit Portfolio', 'wp-indigo'),
+		'view_item'     => __('View Portfolio', 'wp-indigo'),
+		'all_items'     => __('All Portfolios', 'wp-indigo'),
+	];
+	
+	$wp_indigo_postTypeArguments['rewrite']['slug'] = 'portfolios';
+	$wp_indigo_postTypeArguments['public'] = true;
+	$wp_indigo_postTypeArguments['show_ui'] = true;
+	$wp_indigo_postTypeArguments['menu_position'] = 5;
+	$wp_indigo_postTypeArguments['show_in_nav_menus'] = true;
+	$wp_indigo_postTypeArguments['show_in_admin_bar'] = true;
+	$wp_indigo_postTypeArguments['hierarchical'] = true;
+	$wp_indigo_postTypeArguments['can_export'] = true;
+	$wp_indigo_postTypeArguments['has_archive'] = true;
+	$wp_indigo_postTypeArguments['exclude_from_search'] = false;
+	$wp_indigo_postTypeArguments['publicly_queryable'] = true;
+	$wp_indigo_postTypeArguments['capability_type'] = 'post';
+	$wp_indigo_postTypeArguments['show_in_rest'] = true;
+	$wp_indigo_postTypeArguments['supports'] = array('title', 'editor' , 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields' , 'comments');
+
+	return $wp_indigo_postTypeArguments;
+  }  
+  add_filter('libwp_post_type_1_arguments', 'wp_indigo_modify_libwp_post_type_argument');
+  
+  
+
+  function wp_indigo_modify_libwp_taxonomy_name($wp_indigo_taxonomyName){
+    /**
+	* Modify LibWP taxonomy name (If libwp plugin exist)
+	*/
+	$wp_indigo_taxonomyName = 'portfolio_category';
+	return $wp_indigo_taxonomyName;
+	
+  }
+  add_filter('libwp_taxonomy_1_name', 'wp_indigo_modify_libwp_taxonomy_name');
+  
+  
+  
+  function wp_indigo_modify_libwp_taxonomy_post_type_name($wp_indigo_taxonomyPostTypeName){
+  /**
+	* Modify LibWP taxonomy post type name (If libwp plugin exist)
+	*/
+	$wp_indigo_taxonomyPostTypeName = 'portfolios';
+	return $wp_indigo_taxonomyPostTypeName;
+  }
+  add_filter('libwp_taxonomy_1_post_type', 'wp_indigo_modify_libwp_taxonomy_post_type_name');
+  
+  
+
+function wp_indigo_modify_libwp_taxonomy_argument($wp_indigo_taxonomyArguments){
+  /**
+	* Modify LibWP taxonomy name (If libwp plugin exist)
+	*/
+	  $wp_indigo_taxonomyArguments['labels'] = [
+		'name'          => _x('Portfolio Categories', 'taxonomy general name', 'wp-indigo'),
+		'singular_name' => _x('Portfolio Category', 'taxonomy singular name', 'wp-indigo'),
+		'search_items'  => __('Search Portfolio Categories', 'wp-indigo'),
+		'all_items'     => __('All Portfolio Categories', 'wp-indigo'),
+		'edit_item'     => __('Edit Portfolio Category', 'wp-indigo'),
+		'add_new_item'  => __('Add New Portfolio Category', 'wp-indigo'),
+		'new_item_name' => __('New Portfolio Category Name', 'wp-indigo'),
+		'menu_name'     => __('Portfolio Categories', 'wp-indigo'),
+	];
+	$wp_indigo_taxonomyArguments['rewrite']['slug'] = 'portfolio_category';
+	$wp_indigo_taxonomyArguments['show_in_rest'] = true;
+  
+	return $wp_indigo_taxonomyArguments;
+	
+  }
+  
+add_filter('libwp_taxonomy_1_arguments', 'wp_indigo_modify_libwp_taxonomy_argument');
+
+
+
+function wp_indigo_add_menu_link_class( $wp_indigo_atts, $wp_indigo_item, $wp_indigo_args ) {
+	/**
+	* Add class to nav menu links 
+	*/
+	if (property_exists($wp_indigo_args, 'link_class')) {
+	  $wp_indigo_atts['class'] = $wp_indigo_args->link_class;
+	}
+	return $wp_indigo_atts;
+  }
+add_filter( 'nav_menu_link_attributes', 'wp_indigo_add_menu_link_class', 1, 3 );
+
+
+function wp_indigo_modify_archive_title( $wp_indigo_title ) {
+	/**
+	 * Modify Archive title 
+	 */
+
+    if(is_post_type_archive('portfolios')){
+		if(get_theme_mod( 'post_type_archive_custom_title' , 'portfolios')){
+			return get_theme_mod( 'post_type_archive_custom_title' , 'portfolios');
+		}
+		else{
+			return esc_html__( 'portfolios' , 'wp-indigo' );// Also Available to change From Kirki
+		}
+	}
+	
+    return wp_kses_post( $wp_indigo_title );
+}
+add_filter( 'wp_title', 'wp_indigo_modify_archive_title' );
+add_filter( 'get_the_archive_title', 'wp_indigo_modify_archive_title' );

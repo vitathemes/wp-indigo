@@ -6,41 +6,55 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
+ * @package wp-indigo
  */
 ?>
-<footer class="footer-main">
 
-    <?php
-    if (has_nav_menu('footer-menu')) {
-	    wp_nav_menu( array(
-		    'theme_location' => 'footer-menu',
-		    'menu_class'     => 'list navigation navigation--footer',
-		    'menu_id'        => 'navigation',
-		    'container'      => '',
-		    'depth'          => 2,
-	    ) );
-    }?>
+<footer id="colophon" class="c-footer site-footer <?php wp_indigo_get_fade_in_animation(); ?>">
 
-	<?php
-	if ( get_theme_mod( 'copyright_text' ) ) {
-		echo esc_html( get_theme_mod( 'copyright_text' ) ); ?>
-        <a class="link" href="<?php echo esc_url( get_bloginfo( 'rss2_url' ) ); ?>" target="_blank">
-            <svg class="icon icon-rss">
-                <use xlink:href="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/images/defs.svg#icon-rss"></use>
-            </svg>
-        </a>
-		<?php
-	}
-	?>
+    <div class="c-footer__wrapper">
 
-    <p class="extra">
-        <?php esc_html_e( 'WP-Indigo', 'wp-indigo' ); ?> <?php esc_html_e( 'by', 'wp-indigo' ); ?>
-        <a rel="noreferrer" target="_blank" title="<?php esc_attr_e( 'Clean, Minimal and Fast-loading WordPress Themes', 'wp-indigo' ); ?>" class="link" href="<?php echo esc_url( 'https://vitathemes.com' ); ?>"><?php esc_html_e( 'VitaThemes', 'wp-indigo' ); ?></a>
-    </p>
-</footer>
+        <?php wp_indigo_socials_links( false ); ?>        
 
-</div>
-</div>
+        <div class="c-footer__content">
+
+            <div class="c-footer__site-info <?php wp_indigo_is_footer_widget_active() ?>">
+
+                <?php  if( is_active_sidebar( 'footer-widget' ) && get_theme_mod( 'footer_style' , 'no-widget') !== 'no-widget' ) : ?>
+                <div class="c-footer__widgets">
+                    <div id="header-widget-area" class="c-footer__widget widget-area" role="complementary">
+                        <?php dynamic_sidebar( 'footer-widget' ); ?>
+                    </div>
+                </div>
+                <?php endif; ?>
+
+                <div class="c-footer__copy">
+
+                
+                    <?php echo esc_html__( 'WP-Indigo by', 'wp-indigo' ); ?>
+                    
+                    <a class="c-footer__link h5 u-link--secondary" href="<?php echo esc_url( 'http://vitathemes.com/' ); ?>">
+                        <?php echo esc_html__( 'VitaThemes' , 'wp-indigo'); ?>
+                    </a>
+
+                    
+                    <?php wp_indigo_get_footer_menu('wp-indigo-primary-footer'); ?>
+
+                </div>   
+                    
+            </div><!-- .site-info -->
+
+        </div>
+
+    </div>
+
+</footer><!-- #colophon -->
+
+<?php wp_indigo_get_home_section_close_tag(); ?>
+
+</div><!-- #page -->
+
 <?php wp_footer(); ?>
 </body>
+
 </html>

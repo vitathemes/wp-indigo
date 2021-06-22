@@ -1,0 +1,43 @@
+/*------------------------------------*\
+  #Colors
+\*------------------------------------*/
+// Main color
+$wp-indigo_main_primary_color: #1a1a1a;
+$wp-indigo_main_accent_color: #3f51b5;
+$wp-indigo_main_accent_second_color: #fbfbff;
+
+// kirki variables
+$wp_indigo_primary_color: var(--wp_indigo_primary-color); //1a1a1a
+$wp_indigo_secondary_color: var(--wp_indigo_secondary-color); //555555
+$wp_indigo_tertiary_color: var(--wp_indigo_tertiary_color); //C4C4C4
+$wp_indigo_quaternary_color: var(--wp_indigo_quaternary_color); //3F51B5
+
+// Neutral colors
+$wp-indigo_neutral_dark_gray_color: #1a1a1a;
+$wp-indigo_neutral_gray_color: #555555;
+$wp-indigo_neutral_gray_light_color: #c4c4c4;
+$wp-indigo_neutral_gray_light_second_color: #f0f0f0;
+
+// Error colors
+$wp-indigo_service_error_color: #ff3636;
+$wp-indigo_service_error_second_color: #ffefef;
+
+// background
+$color_background_body: #ffffff;
+
+// text
+$color_text_screen: #21759b;
+$color_text_input: #666;
+$color_text_input_focus: rgb(65, 65, 65);
+
+// link
+$color_link: $wp_indigo_primary_color; //1a1a1a
+$color_link_secondary: $wp_indigo_secondary_color; //555555
+
+// link hover
+$color_link_visited: $wp_indigo_primary_color;
+
+$color_link_hover: $wp_indigo_quaternary_color;
+$color_link_hover_secondary: $wp_indigo_primary_color;
+
+// button color

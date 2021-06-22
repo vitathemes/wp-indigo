@@ -1,0 +1,81 @@
+/*------------------------------------*\
+  #Copy
+\*------------------------------------*/
+* {
+  word-wrap: break-word;
+  white-space: normal;
+  transition: $global-transition;
+
+  // Developer Option
+  // outline: red solid 1px !important;
+}
+
+p {
+  font-family: $wp_indigo_secondary_font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.03em;
+  margin: 0;
+  margin-bottom: 24px;
+  color: $wp_indigo_secondary_color;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+blockquote {
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+  margin-left: 0;
+  border-left: 2px solid $wp-indigo_neutral_gray_color;
+  padding-left: 22px;
+  color: $wp_indigo_secondary_color;
+
+  cite {
+    color: $wp-indigo_neutral_gray_color;
+  }
+}
+
+address {
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+pre {
+  background: $wp-indigo_neutral_gray_light_color;
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+  color: $wp_indigo_secondary_color;
+}
+
+code,
+kbd,
+tt,
+var {
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted $wp_indigo_secondary_color;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: $wp-indigo_neutral_gray_light_color;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}

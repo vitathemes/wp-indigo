@@ -4,40 +4,58 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
+ * @package wp-indigo
  */
+
 get_header();
-wp_indigo_show_profile(); ?>
+?>
+<main id="primary" class="c-main <?php wp_indigo_get_fade_in_animation(); ?> <?php wp_indigo_get_archives_class(); ?> site-main">
 
-    <section class="blog archive">
+    <header class="c-main__header">
+        <h1 class="c-main__page-title">
+			<?php echo wp_kses_post(get_the_archive_title()); ?>
+		</h1>
 
+		<?php if ( 'portfolios' === get_post_type() && true == get_theme_mod( 'portfolio_category', true ) ) : ?>
+			<div class="c-main__category">
+				<?php wp_indigo_taxonomy_filter("c-main__cat h3" , "" , false , "portfolio_category"); ?>
+			</div>
+        <?php endif; ?>
 
-        <?php the_archive_title('<h1>', '</h1>') ?>
-        <div id="content" class="list">
-			<?php if ( have_posts() ) :
-				/* Start the Loop */
-				while ( have_posts() ) :
-					the_post();
+    </header>
 
-					/*
-					 * Include the Post-Type-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/list', 'archive' );
+    <section class="c-main__content">
+        <?php
+			if ( have_posts() ) :
 
-				endwhile;
+				if( 'portfolios' === get_post_type() ){
+					/** translator %s: Class Name from kirki */
+					echo sprintf('<div class="c-main__portfolios %s">' , esc_attr(wp_indigo_get_portfolios_style()) ); // Also Escaped in function using esc_attr()
+				}
 
-				the_posts_pagination( array(
-					'mid_size'  => 2,
-					'prev_text' => __( 'Previous', 'wp-indigo' ),
-					'next_text' => __( 'Next', 'wp-indigo' ),
-				) );
+					/* Start the Loop */
+					while ( have_posts() ) :
+						the_post();
+						
+						get_template_part( 'template-parts/content' , get_post_type() );
+						
+					endwhile;
+				
+				if( 'portfolios' === get_post_type() ){
+					echo wp_kses_post( '</div>' );
+				}
+
+				wp_indigo_get_default_pagination();
 
 			else :
-
 				get_template_part( 'template-parts/content', 'none' );
+
 			endif;
-			?>
-        </div>
+
+		?>
     </section>
-<?php get_footer(); ?>
+
+</main><!-- #main -->
+
+<?php
+get_footer();

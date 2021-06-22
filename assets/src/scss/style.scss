@@ -1,0 +1,81 @@
+/*
+Theme Name: WP Indigo
+Theme URI: https://vitathemes.com/theme/wp-indigo/
+Author: VitaThemes
+Author URI: https://vitathemes.com
+Description: WP-Indigo (Version 2) is a minimal WordPress theme with a simple yet elegant design. This multipurpose theme includes a demo and is suitable for almost any type of website, and perfect for Portfolios, Personal Blogs, CV & Resumes, Photographers, Designers, and Freelancers. While it is minimal and lightweight, it is responsive, flexible, customizable with WordPress customizer, and has a clean optimized code.
+Version: 2.0.0
+License: GNU General Public License v3 or later
+License URI: https://opensource.org/licenses/GPL-3.0
+Tags: blog, translation-ready, featured-images, theme-options
+Text Domain: wp-indigo
+Tested up to: 5.7
+Requires PHP: 5.6
+*/
+
+// Import variables and mixins.
+@import "abstracts/abstracts";
+
+/* Alignments
+--------------------------------------------- */
+@import "utilities/alignments";
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+@import "generic/normalize";
+
+/* Box sizing
+--------------------------------------------- */
+@import "generic/box-sizing";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/base";
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* Accessibility
+--------------------------------------------- */
+@import "utilities/accessibility";
+
+/* Alignments
+--------------------------------------------- */
+@import "utilities/alignments";
+
+/* Structure
+--------------------------------------------- */
+@import "utilities/structure";
+
+/* utilities
+--------------------------------------------- */
+@import "utilities/utilities";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/components";
+
+/*--------------------------------------------------------------
+# External
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Blocks
+--------------------------------------------------------------*/
+@import "blocks/blocks";
+
+/*--------------------------------------------------------------
+# Objects
+--------------------------------------------------------------*/
+@import "objects/page";

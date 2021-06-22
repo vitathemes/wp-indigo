@@ -1,33 +1,86 @@
-'use strict';
+"use strict";
 
-var gulp = require('gulp');  // Gulp Core
-var sass = require('gulp-sass');  // Sass Plugin for Gulp
-var browserSync = require('browser-sync').create();  // BrowserSyc for Reload and Inject
-sass.compiler = require('node-sass'); // Sass Compiler Work with gul-sass
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+sass.compiler = require("node-sass");
+const imagemin = require("gulp-imagemin");
+const concat = require("gulp-concat");
+const cleanCSS = require("gulp-clean-css");
+const uglify = require("gulp-uglify");
+const browserSync = require("browser-sync").create();
+const series = gulp.series;
+const parallel = gulp.parallel;
 
-// Browsersync
-gulp.task('serve' , function(){
-    browserSync.init({
-        ui: false,  // Disable UI of BrowserSync
-        injectChanges: true,  // Allow to inject style changes to browser without reloading page
-        proxy: "wp-indigo",  // Where is your Project? changes proxy to your project url
-    });
-});
+const sassTask = (cb) => {
+  return gulp
+    .src("assets/src/scss/**/*.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("assets/src/css"))
+    .pipe(browserSync.stream());
+  cb();
+};
 
-// Sass - Sass Files Compile Here
-gulp.task('sass', function () {
-    return gulp.src('./assets/sass/*.sass')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./assets/css'))
-        .pipe(browserSync.stream());
-});
+const cssConcatTask = (cb) => {
+  return gulp
+    .src("assets/src/css/*.css")
+    .pipe(concat("style.css"))
+    .pipe(gulp.dest("assets/css"))
+    .pipe(browserSync.stream());
+  cb();
+};
 
-// Watch task for php files - it will reload Browser if you change any php files
-gulp.task('watch', function () {
-    gulp.watch('./assets/sass/**/*.sass', gulp.series('sass'));
-    browserSync.watch("*/*.php").on("change", browserSync.reload); // Watch for one level deep directories files
-    browserSync.watch("*.php").on("change", browserSync.reload);  // Watch for root directory files
-});
+const cleanCssTask = (cb) => {
+  return gulp
+    .src("assets/css/*.css")
+    .pipe(cleanCSS({ compatibility: "ie11" }))
+    .pipe(gulp.dest("assets/css"));
+  cb();
+};
 
-// Default Gulp Command
-gulp.task('default' , gulp.parallel( 'sass' , 'serve' , 'watch'));
+const concatVendorJs = (cb) => {
+  return gulp
+    .src(["./assets/src/js/masonry.pkgd.js", "./assets/src/js/iconify.js"])
+    .pipe(concat("vendor.js"))
+    .pipe(gulp.dest("assets/js"));
+  cb();
+};
+
+const concatJs = (cb) => {
+  return gulp
+    .src("./assets/src/js/script.js")
+    .pipe(concat("script.js"))
+    .pipe(gulp.dest("./assets/js"));
+  cb();
+};
+
+exports.default = () =>
+  gulp
+    .src("assets/src/images/**/*")
+    .pipe(imagemin())
+    .pipe(gulp.dest("assets/images/dist"));
+
+const browserSyncTask = (cb) => {
+  browserSync.init({
+    proxy: "indigo.local/",
+    ui: false,
+  });
+  cb();
+};
+
+const watchTask = () => {
+  gulp.watch("./assets/src/scss/**/*.scss", series(sassTask, cssConcatTask));
+  gulp.watch(
+    "./assets/src/js/*.js",
+    series(concatJs, concatVendorJs),
+    browserSync.reload
+  );
+  gulp.watch("./**/*.php", browserSync.reload);
+};
+
+exports.default = parallel(
+  series(sassTask, cssConcatTask),
+  series(concatJs, concatVendorJs),
+  series(browserSyncTask, watchTask)
+);
+
+exports.production = parallel(cleanCssTask);

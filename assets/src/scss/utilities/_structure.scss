@@ -1,0 +1,12 @@
+.u-default-max-width {
+  @extend %responsive-aligndefault-width;
+}
+
+.u-wide-max-width {
+  @extend %responsive-alignwide-width;
+}
+
+.u-full-max-width {
+  @extend %responsive-alignfull-width;
+}
+

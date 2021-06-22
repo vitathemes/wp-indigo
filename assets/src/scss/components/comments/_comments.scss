@@ -1,0 +1,164 @@
+/*------------------------------------*\
+  #Comments
+\*------------------------------------*/
+.comments-area {
+  width: 555px;
+  max-width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.comment {
+  margin-top: 30px;
+
+  &:not(.comment.depth-1) {
+    border-top: 1px solid #e6e6e6;
+    padding-top: 30px;
+  }
+
+  .children {
+    list-style-type: none;
+  }
+}
+
+.comment.depth-1 {
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 27px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.c-comments__desc {
+  padding-bottom: 55px;
+  color: $wp_indigo_secondary_color;
+
+  @include media(tablet) {
+    padding-bottom: 50px;
+  }
+}
+
+.comment-respond {
+  margin-top: 64px;
+  width: 100%;
+}
+
+.c-comments__title--reply {
+  display: block;
+  letter-spacing: 0.1em;
+  margin-top: 24px;
+}
+
+.c-comments__title--primary {
+  margin-bottom: 24px;
+}
+
+.c-comment__cookie {
+  display: flex;
+  align-items: center;
+  padding-bottom: 23px;
+
+  @include media(tablet) {
+    padding-bottom: 36px;
+  }
+
+  span {
+    padding-left: 8px;
+  }
+}
+
+.comment-header {
+  margin-bottom: 14px;
+  .time {
+    display: inline-block;
+  }
+}
+
+.comment-list {
+  margin-top: 26px;
+  padding-left: 0px;
+  list-style-type: none;
+  width: 100%;
+  max-width: 100%;
+
+  @include media(tablet) {
+    margin-top: 0px;
+  }
+}
+
+.comment-meta {
+  display: flex;
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-right: 16px;
+  }
+}
+
+.comments-title {
+  padding-top: 24px;
+}
+
+.comment-content {
+  p {
+    margin: 0px;
+  }
+}
+
+.bypostauthor {
+  text-transform: capitalize;
+}
+
+.comment-author {
+  display: inline-block;
+  padding-right: 29px;
+}
+
+.comment-author-name {
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+}
+
+.comment-reply-link {
+  font-size: 16px;
+  line-height: 27px;
+  font-family: $wp_indigo_secondary_font;
+  font-weight: 400;
+}
+
+.comment-time {
+  text-transform: uppercase;
+}
+
+.comment-modification {
+  margin-top: 15px;
+
+  @include media(tablet) {
+    margin-top: 16px;
+  }
+}
+
+.comment-edit-link {
+  margin-right: 16px;
+}
+
+.comment-awaiting-moderation {
+  color: $wp_indigo_secondary_color;
+  padding-bottom: 16px;
+}
+
+#cancel-comment-reply-link {
+  letter-spacing: 0px;
+  margin-top: 16px;
+}
+
+ol.children {
+  margin-left: 0px !important;
+
+  @include media(tablet) {
+    margin-left: 1.5em !important;
+  }
+}

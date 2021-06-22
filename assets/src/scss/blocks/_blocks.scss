@@ -1,0 +1,94 @@
+/*------------------------------------*\
+  #Blocks
+\*------------------------------------*/
+@import "buttons";
+
+/*------------------------------------*\
+  #quote block
+\*------------------------------------*/
+.wp-block-quote.has-text-align-right {
+  border-left: 0px;
+  border-right: 2px solid $wp_indigo_secondary_color;
+  padding-right: 16px;
+  margin-right: 0px;
+}
+
+/*------------------------------------*\
+  #caption block
+\*------------------------------------*/
+
+.wp-caption-text {
+  margin-top: 8px;
+}
+
+/*------------------------------------*\
+  #button block
+\*------------------------------------*/
+.wp-block-search__button {
+  border: none !important;
+  background-color: $wp_indigo_quaternary_color !important;
+  padding: 12px 16px !important;
+  height: max-content !important;
+  margin-top: 8px;
+}
+
+.wp-block-file {
+  .wp-block-file__button {
+    background-color: $wp_indigo_quaternary_color !important;
+    color: $color_background_body !important;
+  }
+}
+
+/*------------------------------------*\
+  #search block
+\*------------------------------------*/
+.wp-block-search {
+  margin-bottom: 16px;
+}
+
+/*------------------------------------*\
+  #image block
+\*------------------------------------*/
+.wp-block-image {
+  img {
+    width: auto !important;
+    max-width: 100%;
+  }
+}
+
+/*------------------------------------*\
+  #Block WordPress embed
+\*------------------------------------*/
+.wp-block-embed-wordpress-tv {
+  max-width: 100%;
+  margin: 0;
+}
+
+/*------------------------------------*\
+  #Block Image
+\*------------------------------------*/
+.full-max-width,
+.wp-block-group .wp-block-group__inner-container > *.alignfull,
+.alignfull,
+.singular .post-thumbnail {
+  margin-left: 0px !important;
+}
+
+/*------------------------------------*\
+  #Block columns 
+\*------------------------------------*/
+.full-max-width,
+.wp-block-group .wp-block-group__inner-container > *.alignfull,
+.alignfull,
+.singular .post-thumbnail {
+  margin-left: 0px !important;
+  max-width: 100% !important;
+}
+
+.full-max-width,
+.wp-block-group .wp-block-group__inner-container > *.alignfull,
+.alignfull,
+.singular .post-thumbnail {
+  margin-left: 0px !important;
+  max-width: 100% !important;
+}

@@ -1,0 +1,42 @@
+/*------------------------------------*\
+  #Page
+\*------------------------------------*/
+.o-page {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0px 16px;
+
+  @include media(tablet) {
+    padding: 0;
+  }
+}
+
+.o-page__content--center {
+  height: max-content;
+  width: 100%;
+
+  @include media(tablet) {
+    width: auto;
+  }
+
+  @include media(wide) {
+    width: auto;
+    margin-top: 0px;
+  }
+
+  .c-main {
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+
+  .c-social-share {
+    padding-top: 16px;
+
+    @include media(tablet) {
+      padding-top: 72px;
+    }
+  }
+}

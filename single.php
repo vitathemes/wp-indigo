@@ -4,21 +4,33 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
+ * @package wp-indigo
  */
-get_header(); ?>
 
-<div id="content-area post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><?php the_title( sprintf( '<h1 id="content" class="title">', esc_url( get_permalink() ) ), '</h1>' ); ?><?php
+get_header();
+?>
 
-		get_template_part( 'template-parts/content', get_post_type() );
+<main id="primary" class="c-main <?php wp_indigo_get_fade_in_animation(); wp_indigo_portfolios_get_class_name(); wp_indigo_get_sidebar_class(); ?>  site-main">
 
-	endwhile; ?>
+    <?php
+		while ( have_posts() ) :
+			the_post();
 
-		<?php
-	else :
-		get_template_part( 'template-parts/content', 'none' );
-	endif;
+			get_template_part( 'template-parts/content', 'single' );
+
+			// Display Side bar if current page was not a single of portfolios
+			if(is_active_sidebar( 'wp-indigo-primary-sidebar' )){
+
+				if(get_theme_mod( 'sidebar_display', true )) {
+					if ('portfolios' != get_post_type()) get_sidebar();
+				}
+				
+			}
+			
+		endwhile;// End of the loop.	
 	?>
-</div>
 
-<?php get_footer(); ?>
+</main><!-- #main -->
+
+<?php
+get_footer();

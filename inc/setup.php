@@ -1,95 +1,182 @@
-<?php
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function wp_indigo_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 */
-	load_theme_textdomain( 'wp-indigo', get_template_directory() . '/languages' );
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-	 */
-	add_theme_support( 'post-thumbnails' );
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary-menu' => esc_html__( 'Primary', 'wp-indigo' ),
-		'footer-menu' => esc_html__( 'Footer', 'wp-indigo' ),
-	) );
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-	// Add theme support for selective refresh for widgets.
-	add_theme_support( 'customize-selective-refresh-widgets' );
-	/**
-	 * Add support for core custom logo.
-	 *
-	 * @link https://codex.wordpress.org/Theme_Logo
-	 */
-	add_theme_support( 'custom-logo', array(
-		'height'      => 100,
-		'width'       => 100,
-		'flex-width'  => true,
-		'flex-height' => true,
-	) );
+<?php 
+
+if ( ! defined( 'WP_INDIGO_VERSION' ) ) {
+	// Replace the version number of the theme on each release.
+	define( 'WP_INDIGO_VERSION', '1.0.0' );
 }
+
+
+if ( ! function_exists( 'wp_indigo_setup' ) ) :
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
+	 */
+	function wp_indigo_setup() {
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on wp-indigo, use a find and replace
+		 * to change 'wp-indigo' to the name of your theme in all the template files.
+		 */
+		load_theme_textdomain( 'wp-indigo', get_template_directory() . '/languages' );
+
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
+
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
+		add_theme_support( 'title-tag' );
+
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support( 'post-thumbnails' );
+
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menus(
+			array(
+				'wp-indigo-primary-menu' => esc_html__( 'Primary', 'wp-indigo' ),
+			)
+		);
+
+		register_nav_menus(
+			array(
+				'wp-indigo-primary-footer' => esc_html__( 'Footer', 'wp-indigo' ),
+			)
+		);
+
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+				'style',
+				'script',
+			)
+		);
+
+		// Set up the WordPress core custom background feature.
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'wp_indigo_custom_background_args',
+				array(
+					'default-color' => 'ffffff',
+					'default-image' => '',
+				)
+			)
+		);
+
+		// Add theme support for selective refresh for widgets.
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		/**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 250,
+				'width'       => 250,
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
+
+		remove_theme_support( 'custom-header' );
+	}
+endif;
 add_action( 'after_setup_theme', 'wp_indigo_setup' );
+
+
+/**
+ * Register widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function wp_indigo_widgets_init() {
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar', 'wp-indigo' ),
+			'id'            => 'wp-indigo-primary-sidebar',
+			'description'   => esc_html__( 'Add widgets here.', 'wp-indigo' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+add_action( 'widgets_init', 'wp_indigo_widgets_init' );
+
+
+/**
+ * Register footer widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function wp_indigo_footer_widgets_init() {
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer', 'wp-indigo' ),
+			'id'            => 'footer-widget',
+			'description'   => esc_html__( 'Add Footer widgets here.', 'wp-indigo' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="c-footer_widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+add_action( 'widgets_init', 'wp_indigo_footer_widgets_init' );
+
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function wp_indigo_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'wp_indigo_content_width', 640 );
+}
+add_action( 'after_setup_theme', 'wp_indigo_content_width', 0 );
+
+
 /**
  * Enqueue scripts and styles.
  */
-// External Assets
 function wp_indigo_scripts() {
-	wp_enqueue_style( 'wp-indigo-style', get_template_directory_uri() . '/assets/css/style.css' );
+	wp_enqueue_style( 'wp-indigo-style', get_stylesheet_uri(), array(), WP_INDIGO_VERSION );
+	wp_style_add_data( 'wp-indigo-style', 'rtl', 'replace' );
+	wp_enqueue_script('jquery');
+
+	wp_enqueue_style( 'wp-indigo-main-style', get_template_directory_uri() . '/assets/css/style.css' );
+
+	wp_enqueue_script( 'wp-indigo-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), WP_INDIGO_VERSION , true );
+	wp_enqueue_script( 'wp-indigo-vendor-script', get_template_directory_uri() . '/assets/js/vendor.js', array(), false, true);
 	wp_enqueue_script( 'wp-indigo-script', get_template_directory_uri() . '/assets/js/script.js', array(), false, true);
-	if ( is_singular() && comments_open() ) {
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'wp_indigo_scripts' );
-//
-function wp_indigo_is_comment_by_post_author( $comment = null ) {
-	if ( is_object( $comment ) && $comment->user_id > 0 ) {
-		$user = get_userdata( $comment->user_id );
-		$post = get_post( $comment->comment_post_ID );
-		if ( ! empty( $user ) && ! empty( $post ) ) {
-			return $comment->user_id === $post->post_author;
-		}
-	}
-	return false;
-}
-
-function wp_indigo_set_content_width () {
-	if ( ! isset( $content_width ) ) {
-		$content_width = 560;
-	}
-}
-add_action('after_setup_theme', 'wp_indigo_set_content_width');

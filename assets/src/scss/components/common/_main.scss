@@ -1,0 +1,170 @@
+/*------------------------------------*\
+  #Main
+\*------------------------------------*/
+.c-main {
+  width: 100%;
+  padding: 64px 0px 64px;
+  padding-bottom: 0px;
+  min-height: 100%;
+  height: max-content;
+  opacity: $global-animation-opacity;
+
+  @include media(tablet) {
+    width: 555px;
+    max-width: 555px;
+    padding: 98px 0px 64px 0px;
+  }
+}
+
+.c-main--wide {
+  @include media(tablet) {
+    padding: 109px 0px 64px 0px;
+    width: 880px;
+    max-width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.c-main--portfolios {
+  .c-main__header {
+    margin-bottom: 24px;
+  }
+  .c-main__content {
+    padding-top: 0px;
+  }
+}
+
+.c-main--single-portfolios {
+  width: 100%;
+
+  @include media(tablet) {
+    width: 555px;
+  }
+}
+
+.c-main--404 {
+  width: 100%;
+  height: max-content;
+  padding: 0;
+
+  .c-main__content {
+    height: 100%;
+    text-align: center;
+  }
+
+  .c-main__title {
+    height: max-content;
+    text-align: center;
+    font-size: 48px;
+    line-height: 74px;
+    color: $wp_indigo_primary_color;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+}
+
+.c-main__header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 39px;
+}
+
+.c-main__page-title {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0px;
+}
+
+.c-main__cat {
+  display: inline-block;
+  letter-spacing: 0.1em;
+  margin: 0px 12px;
+}
+
+.c-main__cat.active {
+  color: $wp_indigo_quaternary_color;
+}
+
+.c-main__content {
+  padding-top: 25px;
+}
+
+.c-main__content--search {
+  @include media(tablet) {
+    padding-top: 75px;
+  }
+}
+
+.c-main__content--page {
+  padding-top: 0px;
+}
+
+.c-main__category {
+  margin-top: 39px;
+}
+
+.c-main__search-form {
+  position: relative;
+  margin-bottom: 32px;
+
+  .search-submit {
+    position: absolute;
+    top: 15%;
+    right: 0;
+  }
+}
+
+/* Grid */
+.c-main__portfolios--normal {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include media(tablet) {
+    justify-content: space-between;
+  }
+
+  .c-post--portfolios {
+    max-width: 263px;
+    width: 263px;
+    height: 173px;
+    object-fit: cover;
+    display: inline-block;
+    object-position: top;
+
+    margin: 5px;
+
+    @include media(tablet) {
+      margin: 0px;
+      margin-bottom: 25px;
+    }
+
+    img {
+      object-position: center;
+    }
+  }
+}
+
+.c-main__portfolios--masonry {
+  max-width: 1200px;
+  counter-reset: grid-item;
+  margin: 0 auto;
+
+  /* ---- grid-item ---- */
+  .c-post--portfolios {
+    width: 263px;
+  }
+
+  .c-post__link {
+    height: calc(100% - 6px);
+  }
+}
+
+.c-main__portfolios--masonry:after {
+  content: "";
+  display: block;
+  clear: both;
+}

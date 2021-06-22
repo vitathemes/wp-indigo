@@ -1,29 +1,55 @@
 {
   "name": "wp-indigo",
-  "version": "1.0.7",
-  "description": "Just another Minimal WordPress theme",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp",
-    "sass": "gulp sass"
-  },
+  "version": "2.0.0",
+  "description": "WP-Indigo (Version 2) is a minimal WordPress theme with a simple yet elegant design. This multipurpose theme includes a demo and is suitable for almost any type of website, and perfect for Portfolios, Personal Blogs, CV & Resumes, Photographers, Designers, and Freelancers. While it is minimal and lightweight, it is responsive, flexible, customizable with WordPress customizer, and has a clean optimized code.",
+  "author": "VitaThemes",
+  "license": "GPL-3.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "homepage": "https://demo.vitathemes.com/wp-indigo/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vitathemes/wp-indigo.git"
+    "url": "git+https://github.com/vitathemes/wp-indigo/"
   },
-  "keywords": [
-    "wp-indigo"
-  ],
-  "author": "VitaThemes",
-  "license": "GPLv2",
   "bugs": {
     "url": "https://github.com/vitathemes/wp-indigo/issues"
   },
-  "homepage": "https://github.com/vitathemes/wp-indigo#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.13",
+    "@wordpress/scripts": "^12.1.0",
+    "dir-archiver": "^1.1.1",
+    "node-sass": "^4.14.1",
+    "rtlcss": "^2.5.0"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "scripts": {
+    "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+    "compile:rtl": "rtlcss style.css style-rtl.css",
+    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
+    "lint:js": "wp-scripts lint-js 'js/*.js'",
+    "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2",
-    "node-sass": "^4.12.0"
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2"
   }
 }

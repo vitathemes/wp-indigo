@@ -1,0 +1,161 @@
+/*------------------------------------*\
+  #Single
+\*------------------------------------*/
+
+.c-single {
+  width: 555px;
+  max-width: 100%;
+}
+
+/* Entry Header */
+.c-single__entry-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 39px;
+
+  @include media(tablet) {
+    margin-bottom: 48px;
+    width: 100%;
+  }
+}
+
+.c-single__entry-header__content {
+  width: 555px;
+  max-width: 100%;
+}
+
+.c-single__entry-title {
+  text-align: center;
+  margin-bottom: 16px;
+  word-wrap: break-word;
+  white-space: normal;
+  max-width: 100vw;
+  -ms-word-wrap: break-word;
+  padding: 0px 16px;
+  text-transform: capitalize;
+
+  @include media(tablet) {
+    max-width: 555px;
+    margin-bottom: 24px;
+  }
+}
+.c-single__entry-meta {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0px;
+}
+
+.c-single__author {
+  width: max-content;
+  display: flex;
+  align-items: center;
+}
+
+.c-single__author__avatar {
+  width: 33px;
+  height: 33px;
+  display: inline-block;
+  margin-right: 11px;
+
+  .avatar,
+  img {
+    border-radius: 50%;
+  }
+}
+
+.c-single__author__info {
+  display: inline-block;
+}
+
+.c-single__author__link {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $wp_indigo_secondary_color;
+}
+
+.c-single__date {
+  span {
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $wp_indigo_secondary_color;
+
+    &:hover {
+      color: $wp_indigo_quaternary_color;
+    }
+  }
+}
+
+.c-single__cat {
+  margin: 0px 4px;
+}
+
+.c-single__cat--sep {
+  margin: 0px;
+  &:nth-child(n + 2) {
+    &::before {
+      content: ", ";
+      margin-right: 2px;
+      color: $wp_indigo_secondary_color !important;
+    }
+  }
+}
+
+/* Content */
+.c-single__entry-content {
+  ul {
+    letter-spacing: 0.03em;
+  }
+}
+.c-single__thumbnail {
+  margin-bottom: 39px;
+  height: 200px;
+
+  @include media(tablet) {
+    height: 300px;
+  }
+
+  img {
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.c-single__content {
+  a {
+    border-bottom: 1px solid $wp_indigo_quaternary_color;
+    padding-bottom: 3px;
+  }
+
+  li {
+    font-size: 16px;
+    line-height: 27px;
+  }
+}
+
+.c-single__tags {
+  padding-top: 16px;
+  margin-bottom: 24px;
+  color: $wp_indigo_secondary_color;
+  width: 100%;
+  display: inline-block;
+}
+
+.c-single__tag {
+  margin-right: 8px;
+  color: $wp_indigo_secondary_color;
+
+  &::before {
+    content: "#";
+  }
+}
+
+.c-single__share {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

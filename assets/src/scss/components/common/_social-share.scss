@@ -1,0 +1,26 @@
+/*---------------------------------*\
+  #Social Share
+\*---------------------------------*/
+.c-social-share {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.c-social-share__title {
+  text-transform: uppercase;
+  color: $wp_indigo_secondary_color;
+}
+
+.c-social-share__items {
+  display: flex;
+  flex-direction: row;
+}
+.c-social-share__item {
+  margin: 0px 12.5px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}

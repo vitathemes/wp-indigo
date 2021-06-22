@@ -1,0 +1,121 @@
+/*------------------------------------*\
+  #Fields
+\*------------------------------------*/
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px 0px 15px 14px;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  border: 1px solid $wp_indigo_tertiary_color;
+  color: $wp_indigo_primary_color;
+
+  &::placeholder {
+    font-weight: 400;
+    color: $wp_indigo_secondary_color;
+  }
+
+  &:focus {
+    border: 1px solid $wp_indigo_quaternary_color;
+    outline: none;
+  }
+
+  &:active {
+    border: 1px solid $wp_indigo_quaternary_color;
+    outline: none;
+  }
+}
+
+select {
+  border: none;
+  border-radius: $global-radius;
+  padding: 10px 14px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 150px;
+  max-width: 100%;
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* Custom Check box */
+input[type="checkbox"] {
+  width: 35px;
+
+  height: 16px;
+  max-width: 16px;
+  max-height: 16px;
+  outline: $wp_indigo_tertiary_color solid 1.8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  position: relative;
+  left: 2px;
+  top: 50%;
+  @include media(tablet) {
+    width: 16px;
+  }
+
+  &:active,
+  &:focus {
+    outline: $wp_indigo_quaternary_color solid 1.8px;
+  }
+}
+
+input[type="checkbox"]:checked {
+  &:before {
+    margin: 0px;
+    padding: 0px;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='1em' height='1em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 16 16'%3E%3Cg fill='%23626262'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093l3.473-4.425a.267.267 0 0 1 .02-.022z'/%3E%3C/g%3E%3C/svg%3E"); //bi:check
+    vertical-align: -0.125em;
+    display: inline-block;
+    max-height: 16px;
+  }
+}
+
+select {
+  color: $wp_indigo_primary_color;
+  border: none;
+  border-radius: $global-radius;
+  background-color: $wp-indigo_neutral_gray_light_second_color;
+  padding: 10px 14px;
+}

@@ -1,0 +1,154 @@
+/*------------------------------------*\
+  #Footer
+\*------------------------------------*/
+.c-footer {
+  min-height: 105px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 48px;
+  width: 100%;
+  opacity: $global-animation-opacity;
+
+  height: 150px;
+
+  @include media(tablet) {
+    margin-top: auto;
+    height: 250px;
+    padding: 0px 17px;
+  }
+}
+
+.c-footer__wrapper {
+  width: 100%;
+  max-width: 555px;
+  position: relative;
+}
+
+.c-footer__content {
+  width: 100%;
+  position: relative;
+  border-top: 1px solid #e6e6e6;
+  margin-top: 35px;
+
+  &::before {
+    display: block;
+    content: " ";
+    width: 9px;
+    height: 9px;
+    border: 1px solid #e6e6e6;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    margin-left: -5px;
+    background: #fff;
+    border-radius: 50%;
+  }
+}
+
+.c-footer__site-info {
+  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 34px;
+  padding-bottom: 39px;
+  width: 100%;
+  display: inline-block;
+
+  @include media(tablet) {
+    display: flex;
+  }
+}
+
+.c-footer__site-info--wide {
+  justify-content: space-evenly;
+
+  .c-footer__copy {
+    margin-top: 30px;
+  }
+}
+
+.c-footer__site-info--extra-wide {
+  flex-wrap: wrap;
+
+  .c-footer__widgets {
+    width: 100%;
+  }
+
+  .c-footer__widget {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .c-footer__copy {
+    margin-top: 0px;
+  }
+
+  .widget:first-child {
+    width: 55%;
+  }
+  .widget:last-child {
+    padding-right: 32px;
+  }
+}
+
+.c-footer__copy {
+  margin: 0px;
+  height: max-content;
+  letter-spacing: 0.03em;
+  margin: 0px 4px;
+  color: $wp_indigo_secondary_color;
+  width: max-content;
+  display: inline-block;
+  max-width: 100%;
+  text-transform: capitalize;
+}
+
+.c-footer__link {
+  height: max-content;
+  margin: 0px;
+  letter-spacing: 0.03em;
+  color: $wp_indigo_secondary_color;
+}
+
+.c-footer__link--nav {
+  &::before {
+    content: " | ";
+  }
+}
+
+.s-footer__nav {
+  padding: 0;
+  margin: 0;
+
+  .menu-item {
+    display: inline-block;
+    line-height: 16px;
+
+    &::before {
+      content: " | ";
+      margin-left: 2px;
+      color: $wp_indigo_tertiary_color !important;
+      font-size: 10px;
+    }
+  }
+}
+
+.c-footer__widgets {
+  width: 100%;
+  min-height: 110px;
+  text-align: left;
+
+  @include media(tablet) {
+    width: 50%;
+  }
+
+  .sub-menu {
+    display: none !important;
+  }
+}
+
+.c-footer__widget {
+  width: 100%;
+}

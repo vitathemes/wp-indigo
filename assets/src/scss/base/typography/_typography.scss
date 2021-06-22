@@ -1,0 +1,14 @@
+/*------------------------------------*\
+  #Typography (base)
+\*------------------------------------*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: $wp_indigo_primary_color;
+}
+
+@import "headings";
+@import "copy";

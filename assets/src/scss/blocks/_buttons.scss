@@ -1,0 +1,55 @@
+/*------------------------------------*\
+  #Buttons + (wordpress defaults)
+\*------------------------------------*/
+button,
+.wp-block-button__link,
+.btn,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: $wp_indigo_primary_color; //1a1a1a
+  color: $color_background_body !important;
+  transition: $global-transition;
+  border: none;
+  cursor: pointer;
+  padding: 12.5px 30px;
+  font-size: 13px;
+  line-height: 21px;
+  font-family: $wp_indigo_primary_font;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+
+  &:hover {
+    background-color: $wp_indigo_quaternary_color;
+    color: $color_background_body;
+  }
+
+  &:focus {
+    background-color: $wp_indigo_quaternary_color;
+    color: $color_background_body;
+  }
+}
+
+/*------------------------------------*\
+  #WordPress defaults
+\*------------------------------------*/
+.wp-block-button {
+  margin: 1rem 0;
+}
+
+.wp-block-button__link {
+  padding-top: 5px;
+}
+
+.wp-block-button.is-style-outline {
+  .wp-block-button__link {
+    border: 1px solid $wp_indigo_primary_color;
+    color: $wp_indigo_primary_color !important;
+    padding: 10px;
+
+    &:hover {
+      border: 1px solid $wp_indigo_quaternary_color;
+      color: $wp_indigo_quaternary_color !important;
+    }
+  }
+}
