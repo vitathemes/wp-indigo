@@ -1489,7 +1489,22 @@ select {
 .s-nav > .menu-item:last-child > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu {
   transform: translate(40%, -5%); }
   .s-nav > .menu-item:last-child > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu .sub-menu {
-    transform: translate(0%, -5%); }
+    transform: translate(0%, 100%);
+    top: 50% !important; }
+
+.s-nav > .menu-item:last-child > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu {
+  transform: translate(0%, 0%);
+  top: 50%; }
+  .s-nav > .menu-item:last-child > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu .sub-menu {
+    transform: translate(0%, 0%);
+    top: 100%; }
+
+.s-nav > .menu-item > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu {
+  transform: translate(0%, 100%);
+  top: 50%; }
+  .s-nav > .menu-item > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu .sub-menu {
+    transform: translate(0%, 100%);
+    top: 50%; }
 
 .menu-item {
   list-style-type: none; }

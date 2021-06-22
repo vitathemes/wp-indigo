@@ -155,4 +155,5 @@ License: CC0 1.0 Universal (CC0 1.0)
 License URL: https://creativecommons.org/publicdomain/zero/1.0/
 Source: https://pxhere.com/en/photo/1259448
 
-masonry.jpg, normal.jpg, no-thumbnail.jpg are owned by VitaThemes
+masonry.jpg, normal.jpg, no-thumbnail.jpg are created by VitaThemes (Theme Creator)
+License: CC0 1.0 Universal (CC0 1.0)

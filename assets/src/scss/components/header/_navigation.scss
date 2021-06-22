@@ -190,7 +190,48 @@
   transform: translate(40%, -5%);
 
   .sub-menu {
-    transform: translate(0%, -5%);
+    transform: translate(0%, 100%);
+    top: 50% !important;
+  }
+}
+
+.s-nav
+  > .menu-item:last-child
+  > .sub-menu
+  > .menu-item
+  > .sub-menu
+  > .menu-item
+  > .sub-menu
+  > .menu-item
+  > .sub-menu
+  > .menu-item
+  > .sub-menu {
+  transform: translate(0%, 0%);
+  top: 50%;
+
+  .sub-menu {
+    transform: translate(0%, 00%);
+    top: 100%;
+  }
+}
+
+.s-nav
+  > .menu-item
+  > .sub-menu
+  > .menu-item
+  > .sub-menu
+  > .menu-item
+  > .sub-menu
+  > .menu-item
+  > .sub-menu
+  > .menu-item
+  > .sub-menu {
+  transform: translate(0%, 100%);
+  top: 50%;
+
+  .sub-menu {
+    transform: translate(0%, 100%);
+    top: 50%;
   }
 }
 
