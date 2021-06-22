@@ -43,7 +43,6 @@ if ( ! function_exists( 'wp_indigo_get_custom_category' ) ) :
 	/**
 	 * Get category lists
 	 *
-	 * @link https://core.trac.wordpress.org/ticket/12563
 	 */ 
 
 	function wp_indigo_get_custom_category($wp_indigo_seprator = " ", $wp_indigo_custom_class = "c-post__cat", $wp_indigo_is_limited = false) {
@@ -284,7 +283,7 @@ if ( ! function_exists( 'wp_indigo_taxonomy_filter' ) ) :
 		global $wp_query;
 		
 		$taxonomies = get_terms( array(
-			'taxonomy' => $wp_indigo_taxonomy,
+			'taxonomy' 	 => $wp_indigo_taxonomy,
 			'hide_empty' => false
 		) );
 		
@@ -297,7 +296,7 @@ if ( ! function_exists( 'wp_indigo_taxonomy_filter' ) ) :
 		}
 
 		echo '<a class="'.esc_attr( $wp_indigo_className ).' '.esc_attr( $wp_indigo_all_active_class ).'" href='.esc_url(site_url().'/'.get_post_type()).'>';
-		echo esc_html_e( 'All ', 'wp-indigo' );
+	    esc_html_e( 'All ', 'wp-indigo' );
 		echo '</a>';
 
 		if ( !empty($taxonomies) ) {
@@ -442,7 +441,7 @@ if ( ! function_exists('wp_indigo_get_post_tags')) :
             foreach($wp_indigo_post_tags as $wp_indigo_post_tag) {
 				
 				/* translator 1: %s class name , translator 2: %s post tag link, translator 3: %s aria label, translator 4: %s the content of a element ,     */
-				echo sprintf('<a class="%s" href="%s" aria-label="%s" >%s</a>' , esc_attr( $wp_indigo_class_name ) ,esc_url( get_tag_link( $wp_indigo_post_tag->term_id ) ) , esc_html( $wp_indigo_post_tag->name ) , esc_html( $wp_indigo_post_tag->name ) );
+				echo sprintf('<a class="%s" href="%s" aria-label="%s" >%s</a>' , esc_attr( $wp_indigo_class_name ) ,esc_url( get_tag_link( $wp_indigo_post_tag->term_id ) ) , esc_attr( $wp_indigo_post_tag->name ) , esc_html( $wp_indigo_post_tag->name ) );
 
             }
         }
@@ -489,6 +488,7 @@ if ( ! function_exists('wp_indigo_get_footer_widget')) :
 	  * Get footer widget
 	  */
 	function wp_indigo_get_footer_widget() {	
+		/** translator %s: Display footer widgets */
 		echo sprintf('<div class="c-footer__widgets"><div id="header-widget-area" class="c-footer__widget widget-area" role="complementary">%s</div></div>' , wp_kses_post(dynamic_sidebar( 'footer-widget' )) );
 	}
 endif;
@@ -527,7 +527,7 @@ endif;
 
 if ( ! function_exists('wp_indigo_get_fade_in_animation')) :
 	/**
-	  * Get fade in Up Animation from kirki ( Handled by css using BEM Modifier )
+	  * Get fade in Up Animation from kirki ( Handled by css using BEM )
 	  */
 	function wp_indigo_get_fade_in_animation($wp_indigo_animation_delay = true) {
 		if( get_theme_mod( 'fade_in_animation', true ) ){
@@ -542,7 +542,7 @@ endif;
 
 if ( ! function_exists('wp_indigo_get_fade_in_down_animation')) :
 	/**
-	  * Get fade in Down Animation from kirki ( Handled by css using BEM Modifier )
+	  * Get fade in Down Animation from kirki ( Handled by css using BEM )
 	  */
 	function wp_indigo_get_fade_in_down_animation( ) {
 	
@@ -556,7 +556,7 @@ endif;
 
 if ( ! function_exists('wp_indigo_get_fade_in_up_animation')) :
 	/**
-	  * Get fade in Up Animation from kirki ( Handled by css using BEM Modifier )
+	  * Get fade in Up Animation from kirki ( Handled by css using BEM )
 	  */
 	function wp_indigo_get_fade_in_up_animation() {
 	

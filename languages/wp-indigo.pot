@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-15 07:26+0430\n"
+"POT-Creation-Date: 2021-06-22 09:32+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,15 @@ msgstr ""
 msgid "Page Not Found!"
 msgstr ""
 
-#: 404.php:28
+#: 404.php:27
+msgid "This page not found (deleted or never exists)."
+msgstr ""
+
+#: 404.php:29
+msgid "Try a phrase in search box or back to home and start again."
+msgstr ""
+
+#: 404.php:40
 msgid "HOMEPAGE"
 msgstr ""
 
@@ -83,23 +91,27 @@ msgstr ""
 msgid "wp-indigo-comment-submit"
 msgstr ""
 
-#: comments.php:71
+#: comments.php:73
 msgid "Comment"
 msgstr ""
 
-#: comments.php:73
+#: comments.php:77
+msgid " Comments"
+msgstr ""
+
+#: comments.php:80
 msgid "Comments"
 msgstr ""
 
-#: comments.php:99
+#: comments.php:109
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:33
+#: footer.php:34
 msgid "WP-Indigo by"
 msgstr ""
 
-#: footer.php:36 inc/customizer.php:613
+#: footer.php:37
 msgid "VitaThemes"
 msgstr ""
 
@@ -109,10 +121,6 @@ msgstr ""
 
 #: header.php:38
 msgid "Primary menu"
-msgstr ""
-
-#: index.php:21
-msgid "Blog"
 msgstr ""
 
 #: search.php:16
@@ -131,236 +139,280 @@ msgstr ""
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer.php:92 inc/setup.php:53
-msgid "Footer"
-msgstr ""
-
-#: inc/customizer.php:102
-msgid "Social Networks"
-msgstr ""
-
-#: inc/customizer.php:109
-msgid "Typography Fonts"
-msgstr ""
-
-#: inc/customizer.php:110
-msgid "Change Typography and customize theme."
-msgstr ""
-
-#: inc/customizer.php:117
-msgid "Typography Size"
-msgstr ""
-
-#: inc/customizer.php:118
-msgid "Change Typography color and customize theme."
-msgstr ""
-
-#: inc/customizer.php:125
+#: inc/customizer.php:92
 msgid "Elements"
 msgstr ""
 
-#: inc/customizer.php:126
-msgid "Change Custom Options of theme."
+#: inc/customizer.php:101
+msgid "Typography Fonts"
+msgstr ""
+
+#: inc/customizer.php:102
+msgid "Change Typography and customize theme."
+msgstr ""
+
+#: inc/customizer.php:109
+msgid "Typography Size"
+msgstr ""
+
+#: inc/customizer.php:110
+msgid "Change Typography color and customize theme."
+msgstr ""
+
+#: inc/customizer.php:119
+msgid "Portfolios Options"
+msgstr ""
+
+#: inc/customizer.php:126 inc/setup.php:53 inc/setup.php:139
+msgid "Footer"
 msgstr ""
 
 #: inc/customizer.php:133
-msgid "Copyright"
+msgid "Social Networks"
 msgstr ""
 
-#: inc/customizer.php:139
-msgid "Footer Styles"
+#: inc/customizer.php:140
+msgid "Single Options"
 msgstr ""
 
-#: inc/customizer.php:152 inc/template-tags.php:171
+#: inc/customizer.php:147
+msgid "Archive Options"
+msgstr ""
+
+#: inc/customizer.php:154
+msgid "Sidebar Options"
+msgstr ""
+
+#: inc/customizer.php:161
+msgid "Blog Options"
+msgstr ""
+
+#: inc/customizer.php:168
+msgid "Animation"
+msgstr ""
+
+#: inc/customizer.php:181 inc/template-tags.php:169
 msgid "Facebook"
 msgstr ""
 
-#: inc/customizer.php:160 inc/template-tags.php:175
+#: inc/customizer.php:189 inc/template-tags.php:173
 msgid "Twitter"
 msgstr ""
 
-#: inc/customizer.php:168 inc/template-tags.php:179
+#: inc/customizer.php:197 inc/template-tags.php:177
 msgid "Instagram"
 msgstr ""
 
-#: inc/customizer.php:176 inc/template-tags.php:183
+#: inc/customizer.php:205 inc/template-tags.php:181
 msgid "Linkedin"
 msgstr ""
 
-#: inc/customizer.php:184 inc/template-tags.php:187
+#: inc/customizer.php:213 inc/template-tags.php:185
 msgid "Github"
 msgstr ""
 
-#: inc/customizer.php:192
+#: inc/customizer.php:221
 msgid "Email"
 msgstr ""
 
-#: inc/customizer.php:201
+#: inc/customizer.php:230
 msgid "Pinterest"
 msgstr ""
 
-#: inc/customizer.php:210
+#: inc/customizer.php:239
 msgid "Youtube"
 msgstr ""
 
-#: inc/customizer.php:218
+#: inc/customizer.php:247
 msgid "Spotify"
 msgstr ""
 
-#: inc/customizer.php:226
+#: inc/customizer.php:255
 msgid "Gitlab"
 msgstr ""
 
-#: inc/customizer.php:234
+#: inc/customizer.php:263
 msgid "Lastfm"
 msgstr ""
 
-#: inc/customizer.php:242
+#: inc/customizer.php:271
 msgid "Stackoverflow"
 msgstr ""
 
-#: inc/customizer.php:250
+#: inc/customizer.php:279
 msgid "Quora"
 msgstr ""
 
-#: inc/customizer.php:258
+#: inc/customizer.php:287
 msgid "Reddit"
 msgstr ""
 
-#: inc/customizer.php:266
+#: inc/customizer.php:295
 msgid "Medium"
 msgstr ""
 
-#: inc/customizer.php:274
+#: inc/customizer.php:303
 msgid "Vimeo"
 msgstr ""
 
-#: inc/customizer.php:282
+#: inc/customizer.php:311
 msgid "Lanyrd"
 msgstr ""
 
-#: inc/customizer.php:290
+#: inc/customizer.php:319
 msgid "Dribbble"
 msgstr ""
 
-#: inc/customizer.php:298
+#: inc/customizer.php:327
 msgid "Behance"
 msgstr ""
 
-#: inc/customizer.php:309
-msgid "Primary Color"
+#: inc/customizer.php:340
+msgid "Headings Color"
 msgstr ""
 
-#: inc/customizer.php:319
-msgid "Secondary  Color"
+#: inc/customizer.php:350
+msgid "Primary Texts Color"
 msgstr ""
 
-#: inc/customizer.php:328
-msgid "Tertiary Color"
+#: inc/customizer.php:359
+msgid "Secondary Texts Color"
 msgstr ""
 
-#: inc/customizer.php:337
-msgid "Quaternary Color"
+#: inc/customizer.php:368
+msgid "Primary Accent Color"
 msgstr ""
 
-#: inc/customizer.php:349
+#: inc/customizer.php:386
 msgid "Headings fonts"
 msgstr ""
 
-#: inc/customizer.php:369
+#: inc/customizer.php:406
 msgid "Texts fonts"
 msgstr ""
 
-#: inc/customizer.php:388
-msgid "Texts Secondary fonts"
+#: inc/customizer.php:425
+msgid "Meta Text Fonts"
 msgstr ""
 
-#: inc/customizer.php:408
+#: inc/customizer.php:446
+msgid "Base Font"
+msgstr ""
+
+#: inc/customizer.php:465
 msgid "H1"
 msgstr ""
 
-#: inc/customizer.php:428
+#: inc/customizer.php:485
 msgid "H2"
 msgstr ""
 
-#: inc/customizer.php:448
+#: inc/customizer.php:505
 msgid "H3"
 msgstr ""
 
-#: inc/customizer.php:468
+#: inc/customizer.php:525
 msgid "H4"
 msgstr ""
 
-#: inc/customizer.php:488
+#: inc/customizer.php:545
 msgid "H5"
 msgstr ""
 
-#: inc/customizer.php:508
+#: inc/customizer.php:565
 msgid "H6"
 msgstr ""
 
-#: inc/customizer.php:527
-msgid "p"
+#: inc/customizer.php:584
+msgid "Paragraph"
 msgstr ""
 
-#: inc/customizer.php:547
-msgid "Display Share icons for posts"
-msgstr ""
-
-#: inc/customizer.php:557
-msgid "Display Related Tags in side bar"
-msgstr ""
-
-#: inc/customizer.php:567
-msgid "Portfolios section control"
-msgstr ""
-
-#: inc/customizer.php:576 template-parts/components/profile.php:20
+#: inc/customizer.php:606
 msgid "Profile Image"
 msgstr ""
 
-#: inc/customizer.php:577
+#: inc/customizer.php:607
 msgid "Add Profile Image here"
 msgstr ""
 
-#: inc/customizer.php:585
-msgid "Enable Portfolios Category"
+#: inc/customizer.php:619
+msgid "Footer Widgets style"
 msgstr ""
 
-#: inc/customizer.php:594
-msgid "Theme Animation Setting"
-msgstr ""
-
-#: inc/customizer.php:603
-msgid "Copyright text"
-msgstr ""
-
-#: inc/customizer.php:605
-msgid "wp-indigo Theme by"
-msgstr ""
-
-#: inc/customizer.php:612
-msgid "Copyright link text (like your company name)"
-msgstr ""
-
-#: inc/customizer.php:621
-msgid "Copyright link text"
-msgstr ""
-
-#: inc/customizer.php:630
-msgid "Change footer style"
-msgstr ""
-
-#: inc/customizer.php:635
-msgid "No Widgets"
-msgstr ""
-
-#: inc/customizer.php:636
+#: inc/customizer.php:624
 msgid "One Column Widgets"
 msgstr ""
 
-#: inc/customizer.php:637
+#: inc/customizer.php:625
 msgid "Two Column Widgets"
+msgstr ""
+
+#: inc/customizer.php:633
+msgid "Post Type Archive title"
+msgstr ""
+
+#: inc/customizer.php:642
+msgid "Portfolios Items Style"
+msgstr ""
+
+#: inc/customizer.php:660
+msgid "Show Publish Date"
+msgstr ""
+
+#: inc/customizer.php:669
+msgid "Show Author Name"
+msgstr ""
+
+#: inc/customizer.php:678
+msgid "Show Comments Count"
+msgstr ""
+
+#: inc/customizer.php:687
+msgid "Show Posts Categories"
+msgstr ""
+
+#: inc/customizer.php:696
+msgid "Show Posts Tags"
+msgstr ""
+
+#: inc/customizer.php:706
+msgid "Display Share icons for posts"
+msgstr ""
+
+#: inc/customizer.php:715
+msgid "Show Post Thumbnail"
+msgstr ""
+
+#: inc/customizer.php:728
+msgid "Show Archives Posts Categories"
+msgstr ""
+
+#: inc/customizer.php:738
+msgid "Show Portfolios Category"
+msgstr ""
+
+#: inc/customizer.php:751
+msgid "Show Siedbar"
+msgstr ""
+
+#: inc/customizer.php:764
+msgid "Enable Animation Option"
+msgstr ""
+
+#: inc/customizer.php:777
+msgid "Show Categories"
+msgstr ""
+
+#: inc/customizer.php:787
+msgid "Categories style"
+msgstr ""
+
+#: inc/customizer.php:792
+msgid "List"
+msgstr ""
+
+#: inc/customizer.php:793
+msgid "Drop Down"
 msgstr ""
 
 #: inc/setup.php:47
@@ -375,80 +427,80 @@ msgstr ""
 msgid "Add widgets here."
 msgstr ""
 
-#: inc/setup.php:139
-msgid "Footer Widgets"
-msgstr ""
-
 #: inc/setup.php:141
 msgid "Add Footer widgets here."
 msgstr ""
 
-#: inc/template-functions.php:122
+#: inc/template-functions.php:123
 msgctxt "Post type general name"
 msgid "Portfolios"
 msgstr ""
 
-#: inc/template-functions.php:123
+#: inc/template-functions.php:124
 msgctxt "Post type singular name"
 msgid "Portfolio"
 msgstr ""
 
-#: inc/template-functions.php:124
+#: inc/template-functions.php:125
 msgctxt "Admin Menu text"
 msgid "Portfolios"
 msgstr ""
 
-#: inc/template-functions.php:125
+#: inc/template-functions.php:126
 msgid "Add New"
 msgstr ""
 
-#: inc/template-functions.php:126
+#: inc/template-functions.php:127
 msgid "Edit Portfolio"
 msgstr ""
 
-#: inc/template-functions.php:127
+#: inc/template-functions.php:128
 msgid "View Portfolio"
 msgstr ""
 
-#: inc/template-functions.php:128
+#: inc/template-functions.php:129
 msgid "All Portfolios"
 msgstr ""
 
-#: inc/template-functions.php:181
+#: inc/template-functions.php:182
 msgctxt "taxonomy general name"
 msgid "Portfolio Categories"
 msgstr ""
 
-#: inc/template-functions.php:182
+#: inc/template-functions.php:183
 msgctxt "taxonomy singular name"
 msgid "Portfolio Category"
 msgstr ""
 
-#: inc/template-functions.php:183
+#: inc/template-functions.php:184
 msgid "Search Portfolio Categories"
 msgstr ""
 
-#: inc/template-functions.php:184
+#: inc/template-functions.php:185
 msgid "All Portfolio Categories"
 msgstr ""
 
-#: inc/template-functions.php:185
+#: inc/template-functions.php:186
 msgid "Edit Portfolio Category"
 msgstr ""
 
-#: inc/template-functions.php:186
+#: inc/template-functions.php:187
 msgid "Add New Portfolio Category"
 msgstr ""
 
-#: inc/template-functions.php:187
+#: inc/template-functions.php:188
 msgid "New Portfolio Category Name"
 msgstr ""
 
-#: inc/template-functions.php:188
+#: inc/template-functions.php:189
 msgid "Portfolio Categories"
 msgstr ""
 
-#: inc/template-tags.php:68 inc/template-tags.php:328
+#: inc/template-functions.php:224
+msgid "portfolios"
+msgstr ""
+
+#: inc/template-tags.php:68 inc/template-tags.php:326
 #, php-format
 msgid "View all posts in %s"
 msgstr ""
@@ -461,72 +513,80 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: inc/template-tags.php:108
+#: inc/template-tags.php:107
 msgid "Share on:"
 msgstr ""
 
-#: inc/template-tags.php:191
+#: inc/template-tags.php:189
 msgid "Mail"
 msgstr ""
 
-#: inc/template-tags.php:195
+#: inc/template-tags.php:193
 msgid "pinterest"
 msgstr ""
 
-#: inc/template-tags.php:199
+#: inc/template-tags.php:197
 msgid "youtube"
 msgstr ""
 
-#: inc/template-tags.php:203
+#: inc/template-tags.php:201
 msgid "spotify"
 msgstr ""
 
-#: inc/template-tags.php:207
+#: inc/template-tags.php:205
 msgid "lastfm"
 msgstr ""
 
-#: inc/template-tags.php:211
+#: inc/template-tags.php:209
 msgid "gitlab"
 msgstr ""
 
-#: inc/template-tags.php:215
+#: inc/template-tags.php:213
 msgid "stackoverflow"
 msgstr ""
 
-#: inc/template-tags.php:219
+#: inc/template-tags.php:217
 msgid "reddit"
 msgstr ""
 
-#: inc/template-tags.php:223
+#: inc/template-tags.php:221
 msgid "quora"
 msgstr ""
 
-#: inc/template-tags.php:227
+#: inc/template-tags.php:225
 msgid "medium"
 msgstr ""
 
-#: inc/template-tags.php:231
+#: inc/template-tags.php:229
 msgid "vimeo"
 msgstr ""
 
-#: inc/template-tags.php:235
+#: inc/template-tags.php:233
 msgid "dribbble"
 msgstr ""
 
-#: inc/template-tags.php:239
+#: inc/template-tags.php:237
 msgid "behance"
 msgstr ""
 
-#: inc/template-tags.php:243
+#: inc/template-tags.php:241
 msgid "lanyrd"
 msgstr ""
 
-#: inc/template-tags.php:302 inc/template-tags.php:351
+#: inc/template-tags.php:300
 msgid "All "
 msgstr ""
 
-#: inc/template-tags.php:436
-msgid "Portfolios"
+#: inc/template-tags.php:359
+msgid "All"
+msgstr ""
+
+#: inc/template-tags.php:579
+msgid "Profile image"
+msgstr ""
+
+#: inc/template-tags.php:612
+msgid "Blog"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:327
@@ -1374,7 +1434,15 @@ msgstr ""
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: template-parts/content-single.php:82
+#: template-parts/content-portfolios.php:19
+msgid "No thumbnail"
+msgstr ""
+
+#: template-parts/content-single.php:89
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/components/categories-list.php:10
+msgid "Categories"
 msgstr ""

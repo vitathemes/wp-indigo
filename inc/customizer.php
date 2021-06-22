@@ -376,9 +376,6 @@ if( function_exists( 'kirki' ) ) {
 	  #Typography 
 	\*------------------------------------*/
 
-
-	
-
 	//Headings typography 
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'        => 'typography',
@@ -596,9 +593,7 @@ if( function_exists( 'kirki' ) ) {
 		],
 	] );
 
-
-
-
+	
 	// Profile Image
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'        => 'image',
@@ -649,7 +644,6 @@ if( function_exists( 'kirki' ) ) {
 			
 		],
 	] );
-
 
 	/*------------------------------------*\
 	  #Single Options

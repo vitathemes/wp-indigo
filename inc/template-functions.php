@@ -26,10 +26,11 @@ function wp_indigo_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'wp_indigo_body_classes' );
 
-/**
- * Add a pingback url auto-discovery header for single posts, pages, or attachments.
- */
+
 function wp_indigo_pingback_header() {
+	/**
+	 * Add a pingback url auto-discovery header for single posts, pages, or attachments.
+	 */
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
 	}
@@ -83,6 +84,7 @@ function wp_indigo_show_description() {
 	 */
 	if ( get_bloginfo( 'description' ) !== '' ) { 
 
+		/** translator %s: Blog info description */
 		echo sprintf('<h4 class="description">%s</h4>' ,  esc_html(get_bloginfo( 'description' )));// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
@@ -97,12 +99,6 @@ function wp_indigo_dashicons(){
 }
 add_action('wp_enqueue_scripts', 'wp_indigo_dashicons', 999);
 
-
-
-if( true == get_theme_mod( 'portfolios_control', true ) ) {
-  /**
-	* Check if portfolios Part is activated
-	*/
 
 
   function wp_indigo_modify_libwp_post_type($wp_indigo_postTypeName){
@@ -197,7 +193,7 @@ function wp_indigo_modify_libwp_taxonomy_argument($wp_indigo_taxonomyArguments){
   
 add_filter('libwp_taxonomy_1_arguments', 'wp_indigo_modify_libwp_taxonomy_argument');
 
-}
+
 
 function wp_indigo_add_menu_link_class( $wp_indigo_atts, $wp_indigo_item, $wp_indigo_args ) {
 	/**
