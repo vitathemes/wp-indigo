@@ -2024,7 +2024,8 @@ ol.children {
     padding-left: 0px;
     margin-left: 0px;
     font-family: "overpass";
-    font-weight: 300; }
+    font-weight: 300;
+    margin-bottom: 0px; }
   .widget li {
     margin-bottom: 10px;
     line-height: 21px; }

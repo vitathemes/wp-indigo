@@ -121,7 +121,6 @@ if( function_exists( 'kirki' ) ) {
 		'priority'       => 200,
 	) );
 
-
 	/* Footer Options */
 	Kirki::add_section( 'footer_styles', array(
 		'title'          => esc_html__( 'Footer', 'wp-indigo' ),
