@@ -130,7 +130,7 @@ Dashicons by WordPress
 License: GNU GPLv2
 Source: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
-Social Icons, Arrow icons, Reply Icons,Magnifier Icons & close icons by iconify
+Social Icons, Arrow icons, Reply Icons, Magnifier Icons, close icons, Picture icon in no-thumbnail by iconify
 License: Apache 2.0, http://www.apache.org/licenses/LICENSE-2.0
 Source: https://iconify.design/
 
@@ -154,3 +154,6 @@ Image for theme screenshot, Credit pxhere
 License: CC0 1.0 Universal (CC0 1.0)
 License URL: https://creativecommons.org/publicdomain/zero/1.0/
 Source: https://pxhere.com/en/photo/1259448
+
+masonry.jpg, normal.jpg, no-thumbnail.jpg are created by VitaThemes (Theme Creator)
+License: CC0 1.0 Universal (CC0 1.0)
