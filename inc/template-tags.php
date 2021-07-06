@@ -560,9 +560,9 @@ endif;
 
 if ( ! function_exists( 'wp_indigo_show_categories' ) ) :
 	function wp_indigo_show_categories() {
-		$categories_list = get_the_category_list( esc_html__( ', ', 'wp-notes' ) );
+		$categories_list = get_the_category_list( esc_html__( ', ', 'wp-indigo' ) );
 		if ( $categories_list ) {/* translators: 1: list of categories. */
-			printf( '<span class="c-single__cats__list h6">' . esc_html__( '%1$s', 'wp-notes' ) . '</span>',
+			printf( '<span class="c-single__cats__list h6">%s</span>',
 				$categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 	}
