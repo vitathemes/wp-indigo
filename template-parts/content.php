@@ -12,7 +12,7 @@
 
     <section class="c-post__entry-header">
 
-        <div class="c-post__entry-meta">
+        <div class="c-post__entry-meta <?php wp_indigo_get_entry_meta_class(); ?>">
 
             <?php
                 if ( is_singular() ) :
@@ -22,21 +22,24 @@
                 endif;			            
             ?>
 
+
+            <div class="c-post__date">
+                <span>
+                    <a class="h6" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
+                        <?php echo esc_html( get_the_date() ) ?>
+                    </a>
+                </span>
+            </div><!-- c-post__date -->
+
             <?php if( get_theme_mod( 'archives_posts_category' , true ) ) : ?>
-                <div class="c-post__category">
-                    <?php  wp_indigo_get_custom_category('' , 'c-post__cat c-post__cat--blog u-link--secondary h6'); ?>
-                </div>
+            <div class="c-post__category">
+                <?php  wp_indigo_get_custom_category('' , 'c-post__cat c-post__cat--blog u-link--secondary h6'); ?>
+            </div>
             <?php endif; ?>
+
 
         </div><!-- c-post__entry-meta -->
 
-        <div class="c-post__date">
-            <span>
-                <a class="h6" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
-                    <?php echo esc_html( get_the_date() ) ?>
-                </a>
-            </span>
-        </div><!-- c-post__date -->
 
     </section><!-- c-post__entry-header -->
 

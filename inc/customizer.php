@@ -619,6 +619,27 @@ if( function_exists( 'kirki' ) ) {
 			'one-widget' => esc_html__( 'One Column Widgets', 'wp-indigo' ),
 			'two-widget'  => esc_html__( 'Two Column Widgets', 'wp-indigo' ),
 		],
+		'active_callback' => [
+			[
+				'setting'  => 'archives_category',
+				'operator' => '===',
+				'value'    => true,
+			],
+		]
+	]);
+
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'radio-buttonset',
+		'settings'    => 'footer_menu_pos',
+		'label'       => esc_html__( 'Menu Position', 'wp-indigo' ),
+		'section'     => 'footer_styles',
+		'default'     => 'center',
+		'priority'    => 14,
+		'choices'     => [
+			'top'   => esc_html__( 'Top', 'wp-indigo' ),
+			'center' => esc_html__( 'Next to the copy', 'wp-indigo' ),
+			'bottom'  => esc_html__( 'Bottom', 'wp-indigo' ),
+		],
 	] );
 
 	// Custom Post type Archive title
@@ -712,6 +733,15 @@ if( function_exists( 'kirki' ) ) {
 		'priority'    => 70,
 	] );
 
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'toggle',
+		'settings'    => 'show_single_cat',
+		'label'       => esc_html__( 'Display Category', 'wp-indigo' ),
+		'section'     => 'single_options',
+		'default'     => '1',
+		'priority'    => 80,
+	] );
+
 	/*------------------------------------*\
 	  #Archive Options
 	\*------------------------------------*/
@@ -795,7 +825,19 @@ if( function_exists( 'kirki' ) ) {
 		]
 	]);
 
-
+	// change footer style
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'radio-buttonset',
+		'settings'    => 'blog_date_alignment',
+		'label'       => esc_html__( 'Blog Page Date Alignment', 'wp-indigo' ),
+		'section'     => 'blog_options',
+		'default'     => 'front_title',
+		'priority'    => 40,
+		'choices'     => [
+			'front_category' => esc_html__( 'Front of Category', 'wp-indigo' ),
+			'front_title'  => esc_html__( 'Front of  Title', 'wp-indigo' ),
+		]
+	]);
 
 
 }

@@ -631,3 +631,53 @@ if ( ! function_exists( 'wp_indigo_get_sidebar_class' ) ) :
 	}
 	
 endif;
+
+
+if ( ! function_exists( 'wp_indigo_get_footer_menu_class' ) ) :
+	/**
+	  * Get Sidebar class
+	  */
+	function wp_indigo_get_footer_menu_class() {
+	
+		if( get_theme_mod( 'footer_menu_pos' , 'center') == 'top' ) {
+			echo esc_attr( 'c-footer__copy--top' );
+		}
+		elseif( get_theme_mod( 'footer_menu_pos' , 'center') == 'bottom'  ){
+			echo esc_attr( 'c-footer__copy--bottom' );
+		}
+		else{
+		}
+		
+	}
+endif;
+
+
+if ( ! function_exists( 'wp_indigo_get_entry_meta_class' ) ) :
+	/**
+	  * Get Entry Meta class
+	  */
+	function wp_indigo_get_entry_meta_class() {
+	
+		if( get_theme_mod( 'blog_date_alignment' , 'front_title') == 'front_category' ) {
+			echo esc_attr( 'c-post__entry-meta--right' );
+		}
+		elseif( get_theme_mod( 'blog_date_alignment' , 'front_title') == 'front_title'  ){
+			echo esc_attr( 'c-post__entry-meta--bottom' );
+		}
+	}
+endif;
+
+
+if ( ! function_exists( 'wp_indigo_show_categories' ) ) :
+	
+	function wp_indigo_show_categories() {
+			if( get_theme_mod('show_single_cat' , true) ){
+				
+				$categories_list = get_the_category_list( esc_html__( ', ', 'wp-indigo' ) );
+				if ( $categories_list ) {/* translators: 1: list of categories. */
+					printf( '<span class="c-single__cats__list h6">%s</span>',
+						$categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				}
+		}
+	}
+endif;

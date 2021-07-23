@@ -25,7 +25,6 @@
   .c-post__entry-meta {
     position: absolute;
     z-index: 4;
-    // background-color: $wp_indigo_quaternary_color;
     top: 0;
     width: 100%;
     height: 100%;
@@ -90,15 +89,66 @@
 
 .c-post__entry-header {
   @include media(tablet) {
+    position: relative;
     display: flex;
     justify-content: space-between;
   }
 }
 
 .c-post__entry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 100%;
+
   @include media(tablet) {
     display: inline-block;
-    max-width: 70%;
+  }
+}
+
+.c-post__entry-meta--right {
+  display: flex;
+  flex-wrap: wrap;
+
+  .c-post__entry-title {
+    order: 1;
+  }
+  .c-post__category {
+    width: 64%;
+    order: 2;
+  }
+
+  .c-post__date {
+    width: 35%;
+    text-align: right;
+    order: 3;
+  }
+}
+
+.c-post__entry-meta--bottom {
+  .c-post__entry-title {
+    width: calc(100% - 35%);
+    display: inline-block;
+    vertical-align: top;
+
+    @include media(tablet) {
+      width: 79%;
+    }
+  }
+
+  .c-post__category {
+    width: 100%;
+  }
+
+  .c-post__date {
+    width: 34%;
+    text-align: right;
+
+    @include media(tablet) {
+      width: 20%;
+    }
   }
 }
 
@@ -110,15 +160,14 @@
   max-width: 100%;
   color: $color_background_body;
   text-transform: capitalize;
-
   word-wrap: break-word;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-
   z-index: 50;
+  width: 100%;
 }
 
 .c-post__category {
@@ -127,6 +176,7 @@
   color: $wp_indigo_secondary_color;
   max-width: 95%;
   z-index: 50;
+
   @include media(tablet) {
     max-width: 100%;
   }

@@ -42,9 +42,16 @@
 .c-single__entry-meta {
   width: auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   font-size: 0px;
+}
+
+.c-single__cats {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 16px;
 }
 
 .c-single__author {
