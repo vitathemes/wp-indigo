@@ -645,8 +645,6 @@ if ( ! function_exists( 'wp_indigo_get_footer_menu_class' ) ) :
 		elseif( get_theme_mod( 'footer_menu_pos' , 'center') == 'bottom'  ){
 			echo esc_attr( 'c-footer__copy--bottom' );
 		}
-		else{
-		}
 		
 	}
 endif;

@@ -33,6 +33,15 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 
 == Changelog ==
 
+= 2.1.1 =
+* Fix update conflict issue
+* Remove Src folder
+
+= 2.1.0 =
+* Added the category link to single
+* Added the position options to the footer menu
+* Updated the place of the blog posts date in mobile
+
 = 2.0.0 =
 * Redesign Theme ( Initial version )
 
