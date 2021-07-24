@@ -3,7 +3,7 @@ Contributors: vitathemes, veronalabs, kashani, mrmolaei, mostafas1990, nimaprmdi
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 2.0.0
+Stable tag: 1.0.0
 License: GPL-3.0-or-later
 License URI: https://opensource.org/licenses/GPL-3.0
 
