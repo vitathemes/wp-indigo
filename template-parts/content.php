@@ -17,24 +17,24 @@
             <?php
                 if ( is_singular() ) :
                     the_title( '<h4 class="c-post__entry-title">', '</h4>' );
-                else :
+                else :              
                     the_title( '<h4 class="c-post__entry-title"><a  href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
-                endif;
+                endif;			            
             ?>
 
             <div class="c-post__category">
                 <?php  wp_indigo_get_custom_category('' , 'c-post__cat c-post__cat--blog u-link--secondary h6'); ?>
             </div>
 
-            <div class="c-post__date">
+        </div><!-- c-post__entry-meta -->
+
+        <div class="c-post__date">
             <span>
                 <a class="h6" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
                     <?php echo esc_html( get_the_date() ) ?>
                 </a>
             </span>
-            </div><!-- c-post__date -->
-
-        </div><!-- c-post__entry-meta -->
+        </div><!-- c-post__date -->
 
     </section><!-- c-post__entry-header -->
 

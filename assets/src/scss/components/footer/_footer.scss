@@ -57,7 +57,6 @@
   padding-bottom: 39px;
   width: 100%;
   display: inline-block;
-  flex-wrap: wrap;
 
   @include media(tablet) {
     display: flex;
@@ -156,26 +155,4 @@
 
 .c-footer__widget {
   width: 100%;
-}
-
-.c-footer__menu {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.s-footer-menu {
-
-  a {
-    margin: 0 8px;
-
-    @include media(tablet) {
-      margin: 0 12px;
-    }
-
-    &::before {
-      content: unset;
-    }
-  }
 }

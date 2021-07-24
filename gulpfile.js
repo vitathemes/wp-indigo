@@ -61,7 +61,7 @@ exports.default = () =>
 
 const browserSyncTask = (cb) => {
   browserSync.init({
-    proxy: "wpindigo.local/",
+    proxy: "indigo.local/",
     ui: false,
   });
   cb();

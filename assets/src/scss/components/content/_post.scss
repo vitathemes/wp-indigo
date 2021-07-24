@@ -80,26 +80,19 @@
 
 .c-post__entry-header {
   @include media(tablet) {
-    position: relative;
     display: flex;
     justify-content: space-between;
   }
 }
 
 .c-post__entry-meta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
   @include media(tablet) {
     display: inline-block;
     max-width: 70%;
-    width: 100%;
   }
 }
 
 .c-post__entry-title {
-  width: 100%;
   display: inline-block;
   word-wrap: break-word;
   white-space: normal;
@@ -118,7 +111,7 @@
   display: inline-block;
   padding-top: 4px;
   color: $wp_indigo_secondary_color;
-  max-width: 70%;
+  max-width: 95%;
 
   @include media(tablet) {
     max-width: 100%;
@@ -170,15 +163,11 @@
 .c-post__date {
   display: inline-block;
   color: $wp_indigo_secondary_color;
-  letter-spacing: 0;
+  letter-spacing: 0px;
   padding-top: 4px;
-  width: 30%;
 
   @include media(tablet) {
-    padding-top: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
+    padding-top: 0px;
   }
 
   span {
@@ -188,8 +177,6 @@
 
   a {
     color: $wp_indigo_secondary_color;
-    display: block;
-    text-align: right;
 
     &:hover {
       color: $wp_indigo_quaternary_color;

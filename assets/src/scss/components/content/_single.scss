@@ -159,31 +159,3 @@
   justify-content: space-between;
   width: 100%;
 }
-
-.c-single__cats {
-  margin-bottom: 24px;
-  color: $wp_indigo_secondary_color;
-}
-
-.s-single-cats {
-
-  .c-single__cats__list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  a {
-    color: inherit;
-    font-family: inherit;
-    margin-left: 4px;
-
-    &:first-of-type {
-      margin-left: 0;
-    }
-
-    &:hover {
-      color: $wp_indigo_quaternary_color
-    }
-  }
-}
