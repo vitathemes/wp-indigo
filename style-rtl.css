@@ -4,7 +4,7 @@ Theme URI: https://vitathemes.com/theme/wp-indigo/
 Author: VitaThemes
 Author URI: https://vitathemes.com
 Description: WP-Indigo (Version 2) is a minimal WordPress theme with a simple yet elegant design. This multipurpose theme includes a demo and is suitable for almost any type of website, and perfect for Portfolios, Personal Blogs, CV & Resumes, Photographers, Designers, and Freelancers. While it is minimal and lightweight, it is responsive, flexible, customizable with WordPress customizer, and has a clean optimized code.
-Version: 2.0.0
+Version: 2.1.1
 Tested up to: 5.7
 Requires PHP: 5.6
 License: GPL-3.0-or-later
@@ -2576,7 +2576,7 @@ input[type="checkbox"]:checked:before {
 /*------------------------------------*\
     #SearchForm
   \*------------------------------------*/
-/* Wordpress Default class */
+/* WordPress Default class */
 .search-form {
   position: relative;
 }
@@ -2740,7 +2740,7 @@ input[type="checkbox"]:checked:before {
     #Blocks
   \*------------------------------------*/
 /*------------------------------------*\
-    #Buttons + (wordpress defaults)
+    #Buttons + (WordPress defaults)
   \*------------------------------------*/
 button,
 .wp-block-button__link,
@@ -2780,7 +2780,7 @@ input[type="submit"]:focus {
 }
 
 /*------------------------------------*\
-    #Wordpress defaults
+    #WordPress defaults
   \*------------------------------------*/
 .wp-block-button {
   margin: 1rem 0;

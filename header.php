@@ -27,7 +27,7 @@
             <?php esc_html_e( 'Skip to content', 'wp-indigo' ); ?>
         </a>
 
-        <header id="masthead" class="c-header site-header">
+        <header id="masthead" class="c-header site-header <?php wp_indigo_get_fade_in_down_animation(); ?>">
 
             <div class="c-header__main" id="site-navigation">
 
@@ -35,7 +35,7 @@
                     <?php wp_indigo_branding(); ?>
                 </div>
 
-                <button class="c-header__menu js-header__menu" aria-label="<?php esc_attr_e('Primary menu', 'wp-indigo'); ?>" aria-controls="primary-menu" aria-expanded="false">
+                <button class="c-header__menu js-header__menu" aria-label="<?php esc_attr_e('Primary menu', 'wp-indigo'); ?>" aria-controls="wp-indigo-primary-menu" aria-expanded="false">
                     <span class="c-header__menu__icon">
                         <span class="hamburger"></span>
                     </span>
@@ -43,18 +43,18 @@
 
                 <nav class="c-header__navigation">
                     <?php
-                        if ( has_nav_menu( 'primary-menu' ) ) {
+                        if ( has_nav_menu( 'wp-indigo-primary-menu' ) ) {
                             wp_nav_menu(
                                 array(
                                     'walker'          => new Wp_indigo_walker_nav_menu(),
-                                    'theme_location'  => 'primary-menu',
-                                    'menu_id'         => 'primary-menu',
+                                    'theme_location'  => 'wp-indigo-primary-menu',
+                                    'menu_id'         => 'wp-indigo-primary-menu',
                                     'menu_class'      => 's-nav nav-menu',
                                     'container_class' => 'c-nav',
                                 )
                             );
                         }
-                        ?>
+                    ?>
                 </nav><!-- #site-navigation -->
 
             </div><!--c-header__main -->

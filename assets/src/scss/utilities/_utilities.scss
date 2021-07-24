@@ -60,3 +60,31 @@
     outline: 0;
   }
 }
+
+/* Animations */
+
+.u-has-fadein-animation {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+.u-has-fadein-animation-delay {
+  animation-delay: 1s;
+}
+
+.u-has-fadeinDown-animation {
+  opacity: 0;
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.u-has-fadeinUp-animation {
+  opacity: 0;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}

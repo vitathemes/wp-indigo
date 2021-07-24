@@ -44,13 +44,13 @@ if ( ! function_exists( 'wp_indigo_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'primary-menu' => esc_html__( 'Primary', 'wp-indigo' ),
+				'wp-indigo-primary-menu' => esc_html__( 'Primary', 'wp-indigo' ),
 			)
 		);
 
 		register_nav_menus(
 			array(
-				'primary-footer' => esc_html__( 'Footer', 'wp-indigo' ),
+				'wp-indigo-primary-footer' => esc_html__( 'Footer', 'wp-indigo' ),
 			)
 		);
 
@@ -116,7 +116,7 @@ function wp_indigo_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'wp-indigo' ),
-			'id'            => 'primary-sidebar',
+			'id'            => 'wp-indigo-primary-sidebar',
 			'description'   => esc_html__( 'Add widgets here.', 'wp-indigo' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -136,7 +136,7 @@ add_action( 'widgets_init', 'wp_indigo_widgets_init' );
 function wp_indigo_footer_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer Widgets', 'wp-indigo' ),
+			'name'          => esc_html__( 'Footer', 'wp-indigo' ),
 			'id'            => 'footer-widget',
 			'description'   => esc_html__( 'Add Footer widgets here.', 'wp-indigo' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -147,8 +147,6 @@ function wp_indigo_footer_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'wp_indigo_footer_widgets_init' );
-
-
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -169,10 +167,12 @@ add_action( 'after_setup_theme', 'wp_indigo_content_width', 0 );
 function wp_indigo_scripts() {
 	wp_enqueue_style( 'wp-indigo-style', get_stylesheet_uri(), array(), WP_INDIGO_VERSION );
 	wp_style_add_data( 'wp-indigo-style', 'rtl', 'replace' );
+	wp_enqueue_script('jquery');
 
 	wp_enqueue_style( 'wp-indigo-main-style', get_template_directory_uri() . '/assets/css/style.css' );
 
 	wp_enqueue_script( 'wp-indigo-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), WP_INDIGO_VERSION , true );
+	wp_enqueue_script( 'wp-indigo-vendor-script', get_template_directory_uri() . '/assets/js/vendor.js', array(), false, true);
 	wp_enqueue_script( 'wp-indigo-script', get_template_directory_uri() . '/assets/js/script.js', array(), false, true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

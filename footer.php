@@ -10,11 +10,11 @@
  */
 ?>
 
-<footer id="colophon" class="c-footer site-footer">
+<footer id="colophon" class="c-footer site-footer <?php wp_indigo_get_fade_in_animation(); ?>">
 
     <div class="c-footer__wrapper">
 
-        <?php wp_indigo_socials_links( false ); ?>        
+        <?php wp_indigo_socials_links( false ); ?>
 
         <div class="c-footer__content">
 
@@ -28,35 +28,23 @@
                 </div>
                 <?php endif; ?>
 
-                <div class="c-footer__copy">
+                <div class="c-footer__copy <?php wp_indigo_get_footer_menu_class(); ?>">
 
-                    <?php echo esc_html(get_theme_mod( 'copytext' , esc_html__( 'WP-Indigo by', 'wp-indigo' ) )); ?>
-                    
-                    <a class="c-footer__link h5 u-link--secondary" href="<?php echo esc_url( get_theme_mod( 'copylink', esc_url('http://vitathemes.com/') ) ); ?>">
-                        <?php echo esc_html(get_theme_mod( 'copylink_text', esc_html__( 'VitaThemes' , 'wp-indigo') ) ) ; ?>
-                    </a>
+                    <div class="c-footer__copy__author-info">
+                        <?php echo esc_html__( 'WP-Indigo by', 'wp-indigo' ); ?>
 
-                    <?php
-                    if ( has_nav_menu( 'primary-footer' ) ) {
-                
-                        $wp_indigo_menuParameters = array(
+                        <a class="c-footer__link h5 u-link--secondary"
+                            href="<?php echo esc_url( 'http://vitathemes.com/' ); ?>">
+                            <?php echo esc_html__( 'VitaThemes' , 'wp-indigo'); ?>
+                        </a>
+                    </div>
 
-                            'theme_location'  => 'primary-footer',
-                            'container'       => false,
-                            'echo'            => false,
-                            'items_wrap'      => '%3$s',
-                            'depth'           => 0,
-                            'link_class'      => 'c-footer__link c-footer__link--nav'
+                    <div class="c-footer__menu">
+                        <?php wp_indigo_get_footer_menu('wp-indigo-primary-footer'); ?>
+                    </div>
 
-                        );
+                </div>
 
-                        echo wp_kses_post(strip_tags(wp_nav_menu( $wp_indigo_menuParameters ), '<a>' ));
-                        
-                    }
-                    ?>
-
-                </div>   
-                    
             </div><!-- .site-info -->
 
         </div>

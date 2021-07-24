@@ -27,14 +27,9 @@
     margin-top: 0px;
   }
 
-  /*  */
-
   .c-main {
     padding-bottom: 0px;
-
-    @include media(tablet) {
-      padding-top: 0px;
-    }
+    padding-top: 0px;
   }
 
   .c-social-share {

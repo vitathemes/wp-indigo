@@ -33,6 +33,15 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 
 == Changelog ==
 
+= 2.1.1 =
+* Fix update conflict issue
+* Remove Src folder
+
+= 2.1.0 =
+* Added the category link to single
+* Added the position options to the footer menu
+* Updated the place of the blog posts date in mobile
+
 = 2.0.0 =
 * Redesign Theme ( Initial version )
 
@@ -130,16 +139,20 @@ Dashicons by WordPress
 License: GNU GPLv2
 Source: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
-Social Icons, Arrow icons, Reply Icons,Magnifier Icons & close icons by iconify
+Social Icons, Arrow icons, Reply Icons, Magnifier Icons, close icons, Picture icon in no-thumbnail by iconify
 License: Apache 2.0, http://www.apache.org/licenses/LICENSE-2.0
 Source: https://iconify.design/
 
+Masonry by desandro (David DeSandro)
+License: MIT, https://opensource.org/licenses/MIT
+Source: https://desandro.mit-license.org/
+
 Source Serif Pro Font by Frank Grießhammer
-License: Apache, http://www.apache.org/licenses/LICENSE-2.0
+License: Apache 2.0, http://www.apache.org/licenses/LICENSE-2.0
 Source: https://fonts.google.com/specimen/Source+Serif+Pro?query=source+serif#about
 
 Overpass Font by Delve Withrington
-License: Apache, http://www.apache.org/licenses/LICENSE-2.0
+License: Apache 2.0, http://www.apache.org/licenses/LICENSE-2.0
 Source: https://fonts.google.com/specimen/Overpass?query=Overpass#about
 
 TGMPA by Thomas Griffin, Gary Jones, Juliette
@@ -150,3 +163,6 @@ Image for theme screenshot, Credit pxhere
 License: CC0 1.0 Universal (CC0 1.0)
 License URL: https://creativecommons.org/publicdomain/zero/1.0/
 Source: https://pxhere.com/en/photo/1259448
+
+masonry.jpg, normal.jpg, no-thumbnail.jpg are created by VitaThemes (Theme Creator)
+License: CC0 1.0 Universal (CC0 1.0)

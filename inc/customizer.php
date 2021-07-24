@@ -82,27 +82,19 @@ if( function_exists( 'kirki' ) ) {
 
 	// Typography
 	Kirki::add_panel( 'typography', array(
-		'priority' => 180,
+		'priority' => 50,
 		'title'    => esc_html__( 'Typography', 'wp-indigo' ),
 	) );
-	
-	// Footer
-	Kirki::add_panel( 'footer', array(
-		'priority' => 180,
-		'title'    => esc_html__( 'Footer', 'wp-indigo' ),
-	) );
 
+	// Typography
+	Kirki::add_panel( 'elements', array(
+		'priority' => 75,
+		'title'    => esc_html__( 'Elements', 'wp-indigo' ),
+	) );
 	
 	/*
 	 *	Kirki -> Sections
 	 */
-
-	/* Social medias */
-	Kirki::add_section( 'socials', array(
-		'title'    => esc_html__( 'Social Networks', 'wp-indigo' ),
-		'panel'    => '',
-		'priority' => 6,
-	) );
 
 	/* Typography Fonts */
 	Kirki::add_section( 'typography_fonts', array(
@@ -120,31 +112,68 @@ if( function_exists( 'kirki' ) ) {
 		'priority'       => 160,
 	) );
 
-	/* Elements */
-	Kirki::add_section( 'elements', array(
-		'title'          => esc_html__( 'Elements', 'wp-indigo' ),
-		'description'    => esc_html__( 'Change Custom Options of theme.', 'wp-indigo' ),
-		'panel'          => '',
-		'priority'       => 160,
+
+
+	/* Portfolios Options */
+	Kirki::add_section( 'portfolios_options', array(
+		'title'          => esc_html__( 'Portfolios Options', 'wp-indigo' ),
+		'panel'          => 'elements',
+		'priority'       => 200,
 	) );
 
 	/* Footer Options */
-	Kirki::add_section( 'copyrights', array(
-		'title'          => esc_html__( 'Copyright', 'wp-indigo' ),
-		'panel'          => 'footer',
-		'priority'       => 170,
-	) );
-
 	Kirki::add_section( 'footer_styles', array(
-		'title'          => esc_html__( 'Footer Styles', 'wp-indigo' ),
-		'panel'          => 'footer',
-		'priority'       => 170,
+		'title'          => esc_html__( 'Footer', 'wp-indigo' ),
+		'panel'          => '',
+		'priority'       => 70,
 	) );
 
+	/* Social medias */
+	Kirki::add_section( 'socials', array(
+		'title'    => esc_html__( 'Social Networks', 'wp-indigo' ),
+		'panel'    => '',
+		'priority' => 80,
+	) );
+
+	/* Single Options */
+	Kirki::add_section( 'single_options', array(
+		'title'          => esc_html__( 'Single Options', 'wp-indigo' ),
+		'panel'          => 'elements',
+		'priority'       => 100,
+	) );
+	
+	/* Archive Options */
+	Kirki::add_section( 'archive_options', array(
+		'title'          => esc_html__( 'Archive Options', 'wp-indigo' ),
+		'panel'          => 'elements',
+		'priority'       => 110,
+	) );
+
+	/* SideBar Options */
+	Kirki::add_section( 'sidebar_options', array(
+		'title'          => esc_html__( 'Sidebar Options', 'wp-indigo' ),
+		'panel'          => 'elements',
+		'priority'       => 120,
+	) );
+
+	/* Blog  Options */
+	Kirki::add_section( 'blog_options', array(
+		'title'          => esc_html__( 'Blog Options', 'wp-indigo' ),
+		'panel'          => 'elements',
+		'priority'       => 130,
+	) );
+
+	/* Animation  Options */
+	Kirki::add_section( 'theme_animation', array(
+		'title'          => esc_html__( 'Animation', 'wp-indigo' ),
+		'panel'          => '',
+		'priority'       => 76,
+	) );
 
  	/*
      *	Kirki -> fields
 	 */
+
 	// -- Socials --
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'     => 'link',
@@ -302,11 +331,13 @@ if( function_exists( 'kirki' ) ) {
 
 
 
-	// -- Typography Colors --
+	/*------------------------------------*\
+	  #Theme Colors
+	\*------------------------------------*/
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'     => 'color',
 		'settings' => 'typography_primary_color',
-		'label'    => __( 'Primary Color', 'wp-indigo' ),
+		'label'    => __( 'Headings Color', 'wp-indigo' ),
 		'section'  => 'colors',
 		'default'  => '#1a1a1a',
 		'priority' => 9,
@@ -316,7 +347,7 @@ if( function_exists( 'kirki' ) ) {
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'     => 'color',
 		'settings' => 'typography_secondary_color',
-		'label'    => __( 'Secondary  Color', 'wp-indigo' ),
+		'label'    => __( 'Primary Texts Color', 'wp-indigo' ),
 		'section'  => 'colors',
 		'default'  => '#555555',
 		'priority' => 9
@@ -325,7 +356,7 @@ if( function_exists( 'kirki' ) ) {
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'     => 'color',
 		'settings' => 'wp_indigo_tertiary_color',
-		'label'    => __( 'Tertiary Color', 'wp-indigo' ),
+		'label'    => __( 'Secondary Texts Color', 'wp-indigo' ),
 		'section'  => 'colors',
 		'default'  => '#C4C4C4',
 		'priority' => 9
@@ -334,13 +365,16 @@ if( function_exists( 'kirki' ) ) {
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'     => 'color',
 		'settings' => 'wp_indigo_quaternary_color',
-		'label'    => __( 'Quaternary Color', 'wp-indigo' ),
+		'label'    => __( 'Primary Accent Color', 'wp-indigo' ),
 		'section'  => 'colors',
 		'default'  => '#3F51B5',
 		'priority' => 9
 	] );
 
-	// -- Typography --
+
+	/*------------------------------------*\
+	  #Typography 
+	\*------------------------------------*/
 
 	//Headings typography 
 	Kirki::add_field( 'wp_indigo_theme', [
@@ -357,12 +391,12 @@ if( function_exists( 'kirki' ) ) {
 				'element' => array( 'h1' , '.h1' , 'h2' , '.h2' ,'h3' , '.h3' , ),
 			],
 		],
-		'priority'    => 11,
+		'priority'    => 4,
 		'transport'   => 'auto',
 	] );
 
 
-	//  typography font text 
+	// typography font text 
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'        => 'typography',
 		'settings'    => 'typography_texts_font',
@@ -377,7 +411,7 @@ if( function_exists( 'kirki' ) ) {
 				'element' => array( 'p' , '.h4' , '.h4' , 'h5' ,'.h5' , '.comment-replly-link' , '.submenu .menu-item' , 'body' ),
 			],
 		],
-		'priority'    => 11,
+		'priority'    => 5,
 		'transport'   => 'auto',
 	] );
 
@@ -385,7 +419,7 @@ if( function_exists( 'kirki' ) ) {
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'        => 'typography',
 		'settings'    => 'typography_text_secondary_font',
-		'label'       => esc_html__( 'Texts Secondary fonts', 'wp-indigo' ),
+		'label'       => esc_html__( 'Meta Text Fonts', 'wp-indigo' ),
 		'section'     => 'typography_fonts',
 		'default'     => [
 			'font-family'   	 => 'Overpass',
@@ -396,11 +430,31 @@ if( function_exists( 'kirki' ) ) {
 				'element' => array( 'h6' , '.h6' , '.page-numbers' , '.menu-item' , '.widget ul' , '.btn'),
 			],
 		],
-		'priority'    => 11,
+		'priority'    => 6,
 		'transport'   => 'auto',
 	] );
 	
 
+
+	// Body
+	Kirki::add_field( 'wp_indigo_theme' , [
+		'type'        => 'typography',
+		'settings'    => 'typography_body',
+		'label'       => esc_html__( 'Base Font', 'wp-indigo' ),
+		'section'     => 'typography_size',
+		'default'     => [
+			'font-size'			  => '13px',
+			'line-height'     	  => '21px',
+		],
+		'priority'    => 3,
+		'transport'   => 'auto',
+		'output'      => [
+			[
+				'element' => array( 'body' ),
+			],
+		],
+	] );
+	
 	// Headings typography h1
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'        => 'typography',
@@ -411,7 +465,7 @@ if( function_exists( 'kirki' ) ) {
 			'font-size'			  => '26px',
 			'line-height' 		  => '40px'
 		],
-		'priority'    => 12,
+		'priority'    => 7,
 		'transport'   => 'auto',
 		'output'      => [
 			[
@@ -431,7 +485,7 @@ if( function_exists( 'kirki' ) ) {
 			'font-size'			  => '20px',
 			'line-height' 		  => '31px'
 		],
-		'priority'    => 12,
+		'priority'    => 8,
 		'transport'   => 'auto',
 		'output'      => [
 			[
@@ -451,7 +505,7 @@ if( function_exists( 'kirki' ) ) {
 			'font-size'			  => '16px',
 			'line-height'     	  => '24px',
 		],
-		'priority'    => 12,
+		'priority'    => 9,
 		'transport'   => 'auto',
 		'output'      => [
 			[
@@ -471,7 +525,7 @@ if( function_exists( 'kirki' ) ) {
 			'font-size'			  => '16px',
 			'line-height'     	  => '27px',
 		],
-		'priority'    => 12,
+		'priority'    => 10,
 		'transport'   => 'auto',
 		'output'      => [
 			[
@@ -491,7 +545,7 @@ if( function_exists( 'kirki' ) ) {
 			'font-size'			  => '13px',
 			'line-height'     	  => '16px',
 		],
-		'priority'    => 12,
+		'priority'    => 11,
 		'transport'   => 'auto',
 		'output'      => [
 			[
@@ -524,13 +578,13 @@ if( function_exists( 'kirki' ) ) {
 	Kirki::add_field( 'wp_indigo_theme' , [
 		'type'        => 'typography',
 		'settings'    => 'typography_p',
-		'label'       => esc_html__( 'p', 'wp-indigo' ),
+		'label'       => esc_html__( 'Paragraph', 'wp-indigo' ),
 		'section'     => 'typography_size',
 		'default'     => [
 			'font-size'			  => '16px',
 			'line-height'     	  => '27px',
 		],
-		'priority'    => 12,
+		'priority'    => 13,
 		'transport'   => 'auto',
 		'output'      => [
 			[
@@ -539,96 +593,251 @@ if( function_exists( 'kirki' ) ) {
 		],
 	] );
 
+	
+	// Profile Image
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'image',
+		'settings'    => 'profile_image',
+		'label'       => esc_html__( 'Profile Image', 'wp-indigo' ),
+		'description' => esc_html__( 'Add Profile Image here', 'wp-indigo' ),
+		'section'     => 'title_tagline',
+		'priority'    => 9,
+		'choices' => array(
+			'save_as' => 'array',
+		),
+	] );
+
+	// change footer style
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'radio-buttonset',
+		'settings'    => 'footer_style',
+		'label'       => esc_html__( 'Footer Widgets style', 'wp-indigo' ),
+		'section'     => 'footer_styles',
+		'default'     => 'one-widget',
+		'priority'    => 13,
+		'choices'     => [
+			'one-widget' => esc_html__( 'One Column Widgets', 'wp-indigo' ),
+			'two-widget'  => esc_html__( 'Two Column Widgets', 'wp-indigo' ),
+		],
+		'active_callback' => [
+			[
+				'setting'  => 'archives_category',
+				'operator' => '===',
+				'value'    => true,
+			],
+		]
+	]);
+
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'radio-buttonset',
+		'settings'    => 'footer_menu_pos',
+		'label'       => esc_html__( 'Menu Position', 'wp-indigo' ),
+		'section'     => 'footer_styles',
+		'default'     => 'center',
+		'priority'    => 14,
+		'choices'     => [
+			'top'   => esc_html__( 'Top', 'wp-indigo' ),
+			'center' => esc_html__( 'Next to the copy', 'wp-indigo' ),
+			'bottom'  => esc_html__( 'Bottom', 'wp-indigo' ),
+		],
+	] );
+
+	// Custom Post type Archive title
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'     => 'text',
+		'settings' => 'post_type_archive_custom_title',
+		'label'    => esc_html__( 'Post Type Archive title', 'wp-indigo' ),
+		'section'  => 'portfolios_options',
+		'priority' => 10,
+	] );
+
+	// Portfolios Items Style
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'radio-image',
+		'settings'    => 'portfolios_item_style',
+		'label'       => esc_html__( 'Portfolios Items Style', 'wp-indigo' ),
+		'section'     => 'portfolios_options',
+		'default'     => 'masonry',
+		'priority'    => 10,
+		'choices'     => [
+			'normal'   => get_template_directory_uri() . '/assets/images/normal.jpg',
+			'masonry' => get_template_directory_uri() . '/assets/images/masonry.jpg',
+			
+		],
+	] );
+
+	/*------------------------------------*\
+	  #Single Options
+	\*------------------------------------*/
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'toggle',
+		'settings'    => 'publish_date',
+		'label'       => esc_html__( 'Show Publish Date', 'wp-indigo' ),
+		'section'     => 'single_options',
+		'default'     => '1',
+		'priority'    => 10,
+	] );
+	
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'toggle',
+		'settings'    => 'author_name',
+		'label'       => esc_html__( 'Show Author Name', 'wp-indigo' ),
+		'section'     => 'single_options',
+		'default'     => '1',
+		'priority'    => 20,
+	] );
+
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'toggle',
+		'settings'    => 'comment_count',
+		'label'       => esc_html__( 'Show Comments Count', 'wp-indigo' ),
+		'section'     => 'single_options',
+		'default'     => '0',
+		'priority'    => 30,
+	] );
+
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'toggle',
+		'settings'    => 'post_category',
+		'label'       => esc_html__( 'Show Posts Categories', 'wp-indigo' ),
+		'section'     => 'single_options',
+		'default'     => '1',
+		'priority'    => 40,
+	] );
+
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'toggle',
+		'settings'    => 'post_tags',
+		'label'       => esc_html__( 'Show Posts Tags', 'wp-indigo' ),
+		'section'     => 'single_options',
+		'default'     => '1',
+		'priority'    => 50,
+	] );
 
 	// Post Share icons Checkbox
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'        => 'toggle',
 		'settings'    => 'post_share_icons',
 		'label'       => esc_html__( 'Display Share icons for posts', 'wp-indigo' ),
-		'section'     => 'elements',
+		'section'     => 'single_options',
 		'default'     => '1',
-		'priority'    => 10,
+		'priority'    => 60,
 	] );
 
-	// Custom Category  in sidebar Checkbox
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'        => 'toggle',
-		'settings'    => 'sidebar_related_tags',
-		'label'       => esc_html__( 'Display Related Tags in side bar', 'wp-indigo' ),
-		'section'     => 'elements',
+		'settings'    => 'post_thumbnail',
+		'label'       => esc_html__( 'Show Post Thumbnail', 'wp-indigo' ),
+		'section'     => 'single_options',
 		'default'     => '1',
-		'priority'    => 10,
+		'priority'    => 70,
 	] );
 
-	// Control for portfolio Area Checkbox
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'        => 'toggle',
-		'settings'    => 'portfolios_control',
-		'label'       => esc_html__( 'Portfolios section control', 'wp-indigo' ),
-		'section'     => 'elements',
+		'settings'    => 'show_single_cat',
+		'label'       => esc_html__( 'Display Category', 'wp-indigo' ),
+		'section'     => 'single_options',
 		'default'     => '1',
-		'priority'    => 11,
+		'priority'    => 80,
 	] );
 
+	/*------------------------------------*\
+	  #Archive Options
+	\*------------------------------------*/
+	// Show Archives Posts Categories
 	Kirki::add_field( 'wp_indigo_theme', [
-		'type'        => 'image',
-		'settings'    => 'profile_image',
-		'label'       => esc_html__( 'Profile Image', 'wp-indigo' ),
-		'description' => esc_html__( 'Add Profile Image here', 'wp-indigo' ),
-		'section'     => 'elements',
-		'priority'    => 12,
+		'type'        => 'toggle',
+		'settings'    => 'archives_posts_category',
+		'label'       => esc_html__( 'Show Archives Posts Categories', 'wp-indigo' ),
+		'section'     => 'archive_options',
+		'default'     => '1',
+		'priority'    => 20,
 	] );
-	
+
+	// Enable Portfolios (Custom Post type) Category
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'        => 'toggle',
 		'settings'    => 'portfolio_category',
-		'label'       => esc_html__( 'Enable Portfolios Category', 'wp-indigo' ),
-		'section'     => 'elements',
+		'label'       => esc_html__( 'Show Portfolios Category', 'wp-indigo' ),
+		'section'     => 'archive_options',
 		'default'     => '1',
-		'priority'    => 13,
+		'priority'    => 30,
 	] );
 
-	
+	/*------------------------------------*\
+	  #Sidebar Options
+	\*------------------------------------*/
+	// Show SiedBar
 	Kirki::add_field( 'wp_indigo_theme', [
-		'type'     => 'text',
-		'settings' => 'copytext',
-		'label'    => esc_html__( 'Copyright text', 'wp-indigo' ),
-		'section'  => 'copyrights',
-		'default'  => esc_html__( 'wp-indigo Theme by', 'wp-indigo' ),
-		'priority' => 10,
+		'type'        => 'toggle',
+		'settings'    => 'sidebar_display',
+		'label'       => esc_html__( 'Show Siedbar', 'wp-indigo' ),
+		'section'     => 'sidebar_options',
+		'default'     => '1',
+		'priority'    => 10,
 	] );
 
+	/*------------------------------------*\
+	  #Animation Options
+	\*------------------------------------*/
+	// Theme Animation
 	Kirki::add_field( 'wp_indigo_theme', [
-		'type'     => 'text',
-		'settings' => 'copylink_text',
-		'label'    => __( 'Copyright link text (like your company name)', 'wp-indigo' ),
-		'default'  => esc_html__( 'VitaThemes', 'wp-indigo' ),
-		'section'  => 'copyrights',
-		'priority' => 11,
+		'type'        => 'toggle',
+		'settings'    => 'fade_in_animation',
+		'label'       => esc_html__( 'Enable Animation Option', 'wp-indigo' ),
+		'section'     => 'theme_animation',
+		'default'     => '1',
+		'priority'    => 10,
 	] );
 
+	/*------------------------------------*\
+	  #Blog Options
+	\*------------------------------------*/
+	// Show Categories
 	Kirki::add_field( 'wp_indigo_theme', [
-		'type'     => 'link',
-		'settings' => 'copylink',
-		'label'    => __( 'Copyright link text', 'wp-indigo' ),
-		'section'  => 'copyrights',
-		'default'  => esc_url('http://vitathemes.com/'),
-		'priority' => 12,
+		'type'        => 'toggle',
+		'settings'    => 'archives_category',
+		'label'       => esc_html__( 'Show Categories', 'wp-indigo' ),
+		'section'     => 'blog_options',
+		'default'     => '1',
+		'priority'    => 20,
 	] );
 
+	// Categories Style
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'        => 'radio-buttonset',
-		'settings'    => 'footer_style',
-		'label'       => esc_html__( 'Change footer style', 'wp-indigo' ),
-		'section'     => 'footer_styles',
-		'default'     => 'no-widget',
-		'priority'    => 13,
+		'settings'    => 'blog_category_style',
+		'label'       => esc_html__( 'Categories style', 'wp-indigo' ),
+		'section'     => 'blog_options',
+		'default'     => 'list',
+		'priority'    => 30,
 		'choices'     => [
-			'no-widget'   => esc_html__( 'No Widgets', 'wp-indigo' ),
-			'one-widget' => esc_html__( 'One Column Widgets', 'wp-indigo' ),
-			'two-widget'  => esc_html__( 'Two Column Widgets', 'wp-indigo' ),
+			'list'   => esc_html__( 'List', 'wp-indigo' ),
+			'dropdown' => esc_html__( 'Drop Down', 'wp-indigo' ),
 		],
-	] );
+		'active_callback' => [
+			[
+				'setting'  => 'archives_category',
+				'operator' => '===',
+				'value'    => true,
+			],
+		]
+	]);
+
+	// change footer style
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'radio-buttonset',
+		'settings'    => 'blog_date_alignment',
+		'label'       => esc_html__( 'Blog Page Date Alignment', 'wp-indigo' ),
+		'section'     => 'blog_options',
+		'default'     => 'front_title',
+		'priority'    => 40,
+		'choices'     => [
+			'front_category' => esc_html__( 'Front of Category', 'wp-indigo' ),
+			'front_title'  => esc_html__( 'Front of  Title', 'wp-indigo' ),
+		]
+	]);
 
 
 }

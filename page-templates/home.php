@@ -14,7 +14,7 @@ get_header();
 ?>
 <section class="o-page__content o-page__content--center">
 
-    <div id="primary" class="c-main site-main">
+    <div id="primary" class="c-main c-main <?php wp_indigo_get_fade_in_animation(); ?> site-main">
 
         <section class="c-main__content">
 
@@ -23,6 +23,5 @@ get_header();
         </section>
 
     </div><!-- #main -->
-
 
     <?php get_footer();

@@ -5,6 +5,9 @@
   word-wrap: break-word;
   white-space: normal;
   transition: $global-transition;
+
+  // Developer Option
+  // outline: red solid 1px !important;
 }
 
 p {

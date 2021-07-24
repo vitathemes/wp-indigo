@@ -20,18 +20,18 @@ input[type="submit"] {
   letter-spacing: 0.05em;
 
   &:hover {
-    background-color: $wp-indigo_main_accent_color;
+    background-color: $wp_indigo_quaternary_color;
     color: $color_background_body;
   }
 
   &:focus {
-    background-color: $wp-indigo_main_accent_color;
+    background-color: $wp_indigo_quaternary_color;
     color: $color_background_body;
   }
 }
 
 /*------------------------------------*\
-  #Wordpress defaults
+  #WordPress defaults
 \*------------------------------------*/
 .wp-block-button {
   margin: 1rem 0;

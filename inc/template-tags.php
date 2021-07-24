@@ -43,7 +43,6 @@ if ( ! function_exists( 'wp_indigo_get_custom_category' ) ) :
 	/**
 	 * Get category lists
 	 *
-	 * @link https://core.trac.wordpress.org/ticket/12563
 	 */ 
 
 	function wp_indigo_get_custom_category($wp_indigo_seprator = " ", $wp_indigo_custom_class = "c-post__cat", $wp_indigo_is_limited = false) {
@@ -104,9 +103,7 @@ if ( ! function_exists( 'wp_indigo_share_links' ) ) {
 
 
 			if($wp_indigo_share_title){
-				printf('<span class="c-social-share__title h6 u-letter-space-regular">');// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				echo esc_html_e( 'Share on:' , 'wp-indigo' );
-				printf( '</span>' );// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				echo sprintf('<span class="c-social-share__title h6 u-letter-space-regular">%s</span>', esc_html__( 'Share on:' , 'wp-indigo' ));
 			}
 
 			echo '<div class="c-social-share__items">';
@@ -188,7 +185,7 @@ if ( ! function_exists( 'wp_indigo_socials_links' ) ) :
 			}
 
 			if ( $wp_indigo_mail ) {
-				echo sprintf( '<a href="%s" aria-label="%s" class="c-social-share__item" target="_blank"><span class="iconify" data-icon="ant-design:mail-outlined" data-inline="false"></span></a>', esc_url( $wp_indigo_mail ), esc_html__( 'Mail', 'wp-indigo' ) );
+				echo sprintf( '<a href="mailto:%s" aria-label="%s" class="c-social-share__item" target="_blank"><span class="iconify" data-icon="ant-design:mail-outlined" data-inline="false"></span></a>', esc_attr(sanitize_email( $wp_indigo_mail)), esc_html__( 'Mail', 'wp-indigo' ) );
 			}
 			
 			if ( $wp_indigo_pinterest ) {
@@ -286,7 +283,7 @@ if ( ! function_exists( 'wp_indigo_taxonomy_filter' ) ) :
 		global $wp_query;
 		
 		$taxonomies = get_terms( array(
-			'taxonomy' => $wp_indigo_taxonomy,
+			'taxonomy' 	 => $wp_indigo_taxonomy,
 			'hide_empty' => false
 		) );
 		
@@ -299,7 +296,7 @@ if ( ! function_exists( 'wp_indigo_taxonomy_filter' ) ) :
 		}
 
 		echo '<a class="'.esc_attr( $wp_indigo_className ).' '.esc_attr( $wp_indigo_all_active_class ).'" href='.esc_url(site_url().'/'.get_post_type()).'>';
-		echo esc_html_e( 'All ', 'wp-indigo' );
+	    esc_html_e( 'All ', 'wp-indigo' );
 		echo '</a>';
 
 		if ( !empty($taxonomies) ) {
@@ -340,32 +337,42 @@ if ( ! function_exists( 'wp_indigo_category_filter' ) ) :
 	  */
 	function wp_indigo_category_filter( $wp_indigo_className = "" ) {
 		$categories = get_categories();
+		
 		global $wp_query;
+		global $wp;
 	
 		$wp_indigo_all_active_class = "";
+
 		if(empty($wp_query->query['category_name'])){
 			$wp_indigo_all_active_class = "active";
 		}
 		
-		echo '<a class="'.esc_attr( $wp_indigo_className ).' '.esc_attr( $wp_indigo_all_active_class ).'" href='.esc_url(site_url()).'/blog>';
-		echo esc_html_e( 'All ', 'wp-indigo' );
-		echo '</a>';
+		$wp_indigo_current_url =  home_url( $wp->request );
+
+		if(get_theme_mod( 'blog_category_style', 'list' ) === 'dropdown' ) {
 		
-		foreach($categories as $category) {
-			$classactive = "";
-			
-			// Check not empty 
-			if(!empty($wp_query->query['category_name'])){
-				// get current category 
-				$current_category = $wp_query->query['category_name'];				
+			get_template_part( 'template-parts/components/categories-list' );
+
+		}else{ 
+
+			echo sprintf('<a class="%s %s" href="%s">%s</a>', esc_attr($wp_indigo_all_active_class),  esc_attr($wp_indigo_className), esc_url($wp_indigo_current_url) , esc_html__( 'All', 'wp-indigo' ) );
+
+			foreach($categories as $category) {
+				$classactive = "";
+				// Check not empty 
+				if(!empty($wp_query->query['category_name'])){
+					// get current category 
+					$current_category = $wp_query->query['category_name'];				
+				}
+				// Check if current category match with url (and add active class) 
+				if($category != null && !empty($wp_query->query['category_name'])  && $category->slug == $current_category) {
+					$classactive = "active";
+				}
+				// The output
+				echo '<a class="'.esc_attr( $wp_indigo_className.' '.$classactive ).'" href="' . esc_attr($wp_indigo_current_url) . '/?category_name=' . esc_attr( $category->slug ) . '">' . esc_html($category->name) . '</a>';
 			}
-			// Check if current category match with url (and add active class) 
-			if($category != null && !empty($wp_query->query['category_name'])  && $category->slug == $current_category){
-				$classactive = "active";
-			}
-			// The output
-			echo '<a class="'.esc_attr( $wp_indigo_className.' '.$classactive ).'" href="'.esc_url(site_url()) . '/blog/?category_name=' . esc_html( $category->slug ) . '">' . esc_html($category->name) . '</a>';
 		}
+
 	}	
 endif;
 
@@ -403,18 +410,14 @@ if ( ! function_exists( 'wp_indigo_branding' ) ) :
 			the_custom_logo();
 		}
 		else{
-			?>
-
-			<h1 class="c-header__title site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php esc_html(bloginfo( 'name' )); ?></a>
-			</h1>
-
-			<?php
+			/** trnslator %s: link address, translator %s 2: Site title  */
+			echo sprintf('<h1 class="c-header__title site-title"><a href="%s" rel="home">%s</a></h1>',esc_url( home_url( '/' ) ), esc_html(get_bloginfo( 'name' )));
 		}
 		
 	}
 	
 endif;
+
 
 if (! function_exists('wp_indigo_get_archives_class')) :
 	/**
@@ -427,23 +430,6 @@ if (! function_exists('wp_indigo_get_archives_class')) :
 	}
 endif;
 
-if (! function_exists('wp_indigo_get_archives_title')) :
-	/**
-	  * Display archive title 
-	  */
-	function wp_indigo_get_archives_title() {
-		if ( 'portfolios' == get_post_type() ) {
-			$wp_indigo_archive_title = esc_html__( 'Portfolios', 'wp-indigo' );
-		}
-		else{
-			$wp_indigo_archive_title = wp_kses_post( get_the_archive_title() );
-		}
-
-		echo wp_kses_post( $wp_indigo_archive_title );
-
-
-	}
-endif;
 
 if ( ! function_exists('wp_indigo_get_post_tags')) :
 	/**
@@ -455,34 +441,241 @@ if ( ! function_exists('wp_indigo_get_post_tags')) :
             foreach($wp_indigo_post_tags as $wp_indigo_post_tag) {
 				
 				/* translator 1: %s class name , translator 2: %s post tag link, translator 3: %s aria label, translator 4: %s the content of a element ,     */
-				echo sprintf('<a class="%s" href="%s" aria-label="%s" >%s</a>' , esc_attr( $wp_indigo_class_name ) ,esc_url( get_tag_link( $wp_indigo_post_tag->term_id ) ) , esc_html( $wp_indigo_post_tag->name ) , esc_html( $wp_indigo_post_tag->name ) );
+				echo sprintf('<a class="%s" href="%s" aria-label="%s" >%s</a>' , esc_attr( $wp_indigo_class_name ) ,esc_url( get_tag_link( $wp_indigo_post_tag->term_id ) ) , esc_attr( $wp_indigo_post_tag->name ) , esc_html( $wp_indigo_post_tag->name ) );
 
             }
         }
 	}
 endif;
 
+
 if ( ! function_exists('wp_indigo_is_footer_widget_active')) :
 	/**
-	  * Get Post tags 
+	  * Get Footer Classes
 	  */
-	function wp_indigo_is_footer_widget_active() {
-	
-		if( is_active_sidebar( 'footer-widget' ) ){
-			if( get_theme_mod( 'footer_style' , 'no-widget') == 'one-widget' ){
+	function wp_indigo_is_footer_widget_active( $wp_indigo_is_class = true ) {
+		
+			if($wp_indigo_is_class){
 
-				echo esc_attr( 'c-footer__site-info--wide' );
+				if(is_active_sidebar( 'footer-widget' )) {
+
+					if( get_theme_mod( 'footer_style' , 'two-widget') == 'one-widget' ) {
+						echo esc_attr( ' c-footer__site-info--wide ' );
+					}
+					elseif( get_theme_mod( 'footer_style' , 'two-widget') == 'two-widget' ) {
+						echo esc_attr( ' c-footer__site-info--extra-wide ' );
+					}
+					else{
+						echo esc_attr( '' );
+					}
+				}
 			}
-			elseif( get_theme_mod( 'footer_style' , 'no-widget') == 'two-widget' ){
+			else{
 
-				echo esc_attr( 'c-footer__site-info--extra-wide' );
+				if(is_active_sidebar( 'footer-widget' )) {
+
+					wp_indigo_get_footer_widget();
+
+				}
+
+			}
+	}
+endif;
+
+
+if ( ! function_exists('wp_indigo_get_footer_widget')) :
+	/**
+	  * Get footer widget
+	  */
+	function wp_indigo_get_footer_widget() {	
+		/** translator %s: Display footer widgets */
+		echo sprintf('<div class="c-footer__widgets"><div id="header-widget-area" class="c-footer__widget widget-area" role="complementary">%s</div></div>' , wp_kses_post(dynamic_sidebar( 'footer-widget' )) );
+	}
+endif;
+
+
+if ( ! function_exists('wp_indigo_get_footer_menu')) :
+	/**
+	  * Get Footer menu
+	  */
+	function wp_indigo_get_footer_menu( $wp_indigo_menu_name_slug = "" ) {
+
+		if ( has_nav_menu( $wp_indigo_menu_name_slug ) ) {
+
+			$wp_indigo_menu_name = $wp_indigo_menu_name_slug;
+	
+			if ( ( $wp_indigo_locations = get_nav_menu_locations() ) && isset( $wp_indigo_locations[ $wp_indigo_menu_name ] ) ) {
+				$wp_indigo_menu = wp_get_nav_menu_object( $wp_indigo_locations[ $wp_indigo_menu_name ] );
+			
+				$wp_indigo_menu_items = wp_get_nav_menu_items($wp_indigo_menu->term_id);
+			
+				$wp_indigo_menu_list = "";
+
+				foreach ( (array) $wp_indigo_menu_items as $key => $menu_item ) {
+					$title = $menu_item->title;
+					$url = $menu_item->url;
+					$wp_indigo_menu_list .= '<a class="c-footer__link c-footer__link--nav" href="' . esc_url($url) . '">' . esc_html($title) . '</a>';
+				}
+			}
+			echo wp_kses_post($wp_indigo_menu_list);
+
+		}
+
+	}
+endif;
+
+
+if ( ! function_exists('wp_indigo_get_fade_in_animation')) :
+	/**
+	  * Get fade in Up Animation from kirki ( Handled by css using BEM )
+	  */
+	function wp_indigo_get_fade_in_animation($wp_indigo_animation_delay = true) {
+		if( get_theme_mod( 'fade_in_animation', true ) ){
+			echo esc_attr( " u-has-fadein-animation " );
+			if($wp_indigo_animation_delay === false){
+				echo esc_attr( " u-has-fadein-animation-delay " );
 			}
 		}
-		else{
+	}
+endif;
 
-			if( get_theme_mod( 'footer_style' , 'no-widget') == 'no-widget' ){
-				echo esc_attr( '' );
+
+if ( ! function_exists('wp_indigo_get_fade_in_down_animation')) :
+	/**
+	  * Get fade in Down Animation from kirki ( Handled by css using BEM )
+	  */
+	function wp_indigo_get_fade_in_down_animation( ) {
+	
+		if( get_theme_mod( 'fade_in_animation', true ) ){
+			echo esc_attr( " u-has-fadeinDown-animation " );
+			
+		}
+	}
+endif;
+
+
+if ( ! function_exists('wp_indigo_get_fade_in_up_animation')) :
+	/**
+	  * Get fade in Up Animation from kirki ( Handled by css using BEM )
+	  */
+	function wp_indigo_get_fade_in_up_animation() {
+	
+		if( get_theme_mod( 'fade_in_animation', true ) ){
+			echo esc_attr( " u-has-fadeinUp-animation " );
+		}
+	}
+endif;
+
+
+if ( ! function_exists('wp_indigo_get_profile_image')) :
+	/**
+	  * Get Profile image 
+	  */
+	function wp_indigo_get_profile_image() {
+
+		$wp_indigo_image = wp_get_attachment_image_src(get_theme_mod( 'profile_image' )["id"] , 'thumbnail');
+        
+		/** translator %s: image src, translator %s 2: image srcset */
+		echo sprintf('<img alt="%s" src="%s" />', esc_attr__( 'Profile image' , 'wp-indigo' ) ,esc_attr($wp_indigo_image[0]) );
+       
+	}
+endif;
+
+
+if ( ! function_exists('wp_indigo_get_portfolios_style')) :
+	/**
+	  * Get Portfolios page Grid style 
+	  */
+	function wp_indigo_get_portfolios_style() {
+		
+		if( get_theme_mod( 'portfolios_item_style' , 'masonry') == 'masonry' ) {
+			return esc_attr( 'c-main__portfolios--masonry' );
+		}
+		else{
+			return esc_attr( 'c-main__portfolios--normal' );
+		}
+		
+	}
+endif;
+
+
+if ( ! function_exists( 'wp_indigo_get_index_title' ) ) :
+	/**
+	  * Get index.php Title 
+	  */
+	function wp_indigo_get_index_title() {
+		if (is_home()) {
+			if (get_option('page_for_posts')) {
+				echo esc_html(get_the_title(get_option('page_for_posts')));
 			}
+			else{
+				echo esc_html__( "Blog" , "wp-indigo" );
+			}
+		} 
+	}
+	
+endif;
+
+
+if ( ! function_exists( 'wp_indigo_get_sidebar_class' ) ) :
+	/**
+	  * Get Sidebar class
+	  */
+	function wp_indigo_get_sidebar_class() {
+	
+		if(is_active_sidebar( 'wp-indigo-primary-sidebar' )) {
+			if(get_theme_mod( 'sidebar_display' ,true )) {
+				echo esc_attr( ' c-main--wide ' );
+			}
+		}
+	}
+	
+endif;
+
+
+if ( ! function_exists( 'wp_indigo_get_footer_menu_class' ) ) :
+	/**
+	  * Get Sidebar class
+	  */
+	function wp_indigo_get_footer_menu_class() {
+	
+		if( get_theme_mod( 'footer_menu_pos' , 'center') == 'top' ) {
+			echo esc_attr( 'c-footer__copy--top' );
+		}
+		elseif( get_theme_mod( 'footer_menu_pos' , 'center') == 'bottom'  ){
+			echo esc_attr( 'c-footer__copy--bottom' );
+		}
+		
+	}
+endif;
+
+
+if ( ! function_exists( 'wp_indigo_get_entry_meta_class' ) ) :
+	/**
+	  * Get Entry Meta class
+	  */
+	function wp_indigo_get_entry_meta_class() {
+	
+		if( get_theme_mod( 'blog_date_alignment' , 'front_title') == 'front_category' ) {
+			echo esc_attr( 'c-post__entry-meta--right' );
+		}
+		elseif( get_theme_mod( 'blog_date_alignment' , 'front_title') == 'front_title'  ){
+			echo esc_attr( 'c-post__entry-meta--bottom' );
+		}
+	}
+endif;
+
+
+if ( ! function_exists( 'wp_indigo_show_categories' ) ) :
+	
+	function wp_indigo_show_categories() {
+			if( get_theme_mod('show_single_cat' , true) ){
+				
+				$categories_list = get_the_category_list( esc_html__( ', ', 'wp-indigo' ) );
+				if ( $categories_list ) {/* translators: 1: list of categories. */
+					printf( '<span class="c-single__cats__list h6">%s</span>',
+						$categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				}
 		}
 	}
 endif;

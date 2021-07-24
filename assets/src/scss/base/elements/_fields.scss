@@ -33,12 +33,12 @@ textarea {
   }
 
   &:focus {
-    border: 1px solid $wp-indigo_main_accent_color;
+    border: 1px solid $wp_indigo_quaternary_color;
     outline: none;
   }
 
   &:active {
-    border: 1px solid $wp-indigo_main_accent_color;
+    border: 1px solid $wp_indigo_quaternary_color;
     outline: none;
   }
 }
@@ -110,4 +110,12 @@ input[type="checkbox"]:checked {
     display: inline-block;
     max-height: 16px;
   }
+}
+
+select {
+  color: $wp_indigo_primary_color;
+  border: none;
+  border-radius: $global-radius;
+  background-color: $wp-indigo_neutral_gray_light_second_color;
+  padding: 10px 14px;
 }

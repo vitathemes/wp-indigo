@@ -7,12 +7,7 @@
   padding-bottom: 0px;
   min-height: 100%;
   height: max-content;
-
-  opacity: 0;
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
+  opacity: $global-animation-opacity;
 
   @include media(tablet) {
     width: 555px;
@@ -94,7 +89,6 @@
 
 .c-main__content {
   padding-top: 25px;
-  font-size: 0px;
 }
 
 .c-main__content--search {
@@ -109,41 +103,68 @@
 
 .c-main__category {
   margin-top: 39px;
-  font-size: 0px;
 }
 
-.c-main__portfolios {
-  @include media(tablet) {
-    padding-top: 0px;
-    display: grid;
-    grid-template-columns: 263px 263px;
-    grid-template-rows: 173px 175px 364px;
-    gap: 32px 29px;
-    grid-template-areas:
-      "a1 a2"
-      "a3 a2"
-      "a4 a4";
+.c-main__search-form {
+  position: relative;
+  margin-bottom: 32px;
+
+  .search-submit {
+    position: absolute;
+    top: 15%;
+    right: 0;
   }
 }
 
-.c-main__portfolios--md {
+/* Grid */
+.c-main__portfolios--normal {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   @include media(tablet) {
-    display: grid;
-    grid-template-columns: 263px 263px;
-    grid-template-rows: 173px 175px;
-    gap: 32px 29px;
-    grid-template-areas:
-      "a1 a2"
-      "a3 a2";
+    justify-content: space-between;
+  }
+
+  .c-post--portfolios {
+    max-width: 263px;
+    width: 263px;
+    height: 173px;
+    object-fit: cover;
+    display: inline-block;
+    object-position: top;
+
+    margin: 5px;
+
+    @include media(tablet) {
+      margin: 0px;
+      margin-bottom: 25px;
+    }
+
+    img {
+      object-position: center;
+    }
   }
 }
 
-.c-main__portfolios--sm {
-  @include media(tablet) {
-    display: grid;
-    grid-template-columns: 263px 263px;
-    grid-template-rows: 173px;
-    gap: 32px 29px;
-    grid-template-areas: "a1 a2";
+.c-main__portfolios--masonry {
+  max-width: 1200px;
+  counter-reset: grid-item;
+  margin: 0 auto;
+
+  /* ---- grid-item ---- */
+  .c-post--portfolios {
+    width: 263px;
   }
+
+  .c-post__link {
+    height: calc(100% - 6px);
+  }
+}
+
+.c-main__portfolios--masonry:after {
+  content: "";
+  display: block;
+  clear: both;
 }

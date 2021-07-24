@@ -42,9 +42,16 @@
 .c-single__entry-meta {
   width: auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   font-size: 0px;
+}
+
+.c-single__cats {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 16px;
 }
 
 .c-single__author {
@@ -105,11 +112,8 @@
 }
 
 /* Content */
-
 .c-single__entry-content {
   ul {
-    font-size: 16px;
-    line-height: 27px;
     letter-spacing: 0.03em;
   }
 }
@@ -123,7 +127,8 @@
 
   img {
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
   }
 }
 
@@ -143,6 +148,8 @@
   padding-top: 16px;
   margin-bottom: 24px;
   color: $wp_indigo_secondary_color;
+  width: 100%;
+  display: inline-block;
 }
 
 .c-single__tag {

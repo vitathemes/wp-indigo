@@ -8,10 +8,7 @@
   display: flex;
   justify-content: center;
 
-  opacity: 0;
-  animation-name: fadeInDown;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  opacity: $global-animation-opacity;
 
   z-index: 100;
 
@@ -20,7 +17,7 @@
   }
 }
 
-.c-header__main {
+.c-header .c-header__main {
   width: calc(100%);
   min-height: 32px;
 
