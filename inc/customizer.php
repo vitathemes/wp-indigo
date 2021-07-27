@@ -79,7 +79,6 @@ if( function_exists( 'kirki' ) ) {
 	/*
 	 *	Kirki -> Panels
 	 */
-
 	// Typography
 	Kirki::add_panel( 'typography', array(
 		'priority' => 50,
@@ -90,7 +89,7 @@ if( function_exists( 'kirki' ) ) {
 	Kirki::add_panel( 'elements', array(
 		'priority' => 75,
 		'title'    => esc_html__( 'Elements', 'wp-indigo' ),
-	) );
+	));
 	
 	/*
 	 *	Kirki -> Sections
@@ -99,7 +98,7 @@ if( function_exists( 'kirki' ) ) {
 	/* Typography Fonts */
 	Kirki::add_section( 'typography_fonts', array(
 		'title'          => esc_html__( 'Typography Fonts', 'wp-indigo' ),
-		'description'    => esc_html__( 'Change Typography and customize theme.', 'wp-indigo' ),
+		'description'    => esc_html__( 'Change typography fonts and customize theme.', 'wp-indigo' ),
 		'panel'          => 'typography',
 		'priority'       => 160,
 	) );
@@ -107,11 +106,10 @@ if( function_exists( 'kirki' ) ) {
 	/* Typography Size*/
 	Kirki::add_section( 'typography_size', array(
 		'title'          => esc_html__( 'Typography Size', 'wp-indigo' ),
-		'description'    => esc_html__( 'Change Typography color and customize theme.', 'wp-indigo' ),
+		'description'    => esc_html__( 'Change typography size and customize theme.', 'wp-indigo' ),
 		'panel'          => 'typography',
 		'priority'       => 160,
 	) );
-
 
 
 	/* Portfolios Options */
