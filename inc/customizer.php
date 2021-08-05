@@ -327,6 +327,23 @@ if( function_exists( 'kirki' ) ) {
 		'priority' => 10,
 	] );
 
+	
+	Kirki::add_field( 'cavatina', [
+		'type'     => 'link',
+		'settings' => 'codepen',
+		'label'    => __( 'Codepen', 'cavatina' ),
+		'section'  => 'socials',
+		'priority' => 28,
+	] );
+
+	Kirki::add_field( 'cavatina', [
+		'type'     => 'link',
+		'settings' => 'telegram',
+		'label'    => __( 'Telegram', 'cavatina' ),
+		'section'  => 'socials',
+		'priority' => 29,
+	] );
+
 
 
 	/*------------------------------------*\

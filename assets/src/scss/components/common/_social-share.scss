@@ -9,6 +9,17 @@
   gap: 12px;
 }
 
+.c-social-share__icon {
+  transition: 0s;
+
+  g {
+    transition: 0s;
+  }
+  path {
+    transition: 0s all;
+  }
+}
+
 .c-social-share__title {
   text-transform: uppercase;
   color: $wp_indigo_secondary_color;

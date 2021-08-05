@@ -2395,6 +2395,13 @@ ol.children {
   flex-wrap: wrap;
   gap: 12px; }
 
+.c-social-share__icon {
+  transition: 0s; }
+  .c-social-share__icon g {
+    transition: 0s; }
+  .c-social-share__icon path {
+    transition: 0s all; }
+
 .c-social-share__title {
   text-transform: uppercase;
   color: var(--wp_indigo_secondary-color); }
