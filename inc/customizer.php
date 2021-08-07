@@ -328,10 +328,10 @@ if( function_exists( 'kirki' ) ) {
 	] );
 
 	
-	Kirki::add_field( 'cavatina', [
+	Kirki::add_field( 'wp_indigo_theme', [
 		'type'     => 'link',
 		'settings' => 'codepen',
-		'label'    => __( 'Codepen', 'cavatina' ),
+		'label'    => __( 'Codepen', 'wp-indigo' ),
 		'section'  => 'socials',
 		'priority' => 28,
 	] );
@@ -339,11 +339,10 @@ if( function_exists( 'kirki' ) ) {
 	Kirki::add_field( 'cavatina', [
 		'type'     => 'link',
 		'settings' => 'telegram',
-		'label'    => __( 'Telegram', 'cavatina' ),
+		'label'    => __( 'Telegram', 'wp-indigo' ),
 		'section'  => 'socials',
 		'priority' => 29,
 	] );
-
 
 
 	/*------------------------------------*\

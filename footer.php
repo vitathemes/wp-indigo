@@ -39,9 +39,16 @@
                         </a>
                     </div>
 
+
+                    <?php if( get_theme_mod('footer_menu_pos' , 'center') !== 'center' ) :?>
                     <div class="c-footer__menu">
+                        <?php endif; ?>
+
                         <?php wp_indigo_get_footer_menu('wp-indigo-primary-footer'); ?>
+
+                        <?php if( get_theme_mod('footer_menu_pos' , 'center') !== 'center' ) : ?>
                     </div>
+                    <?php endif; ?>
 
                 </div>
 
