@@ -35,7 +35,8 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 
 = 2.1.2 =
 * Improve Customizer description
-* Update Wordpress Tested up to
+* Add new items to social share
+* Improve theme styling 
 
 = 2.1.1 =
 * Fix update conflict issue

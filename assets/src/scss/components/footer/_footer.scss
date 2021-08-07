@@ -47,13 +47,14 @@
 }
 
 .c-footer__site-info {
-  text-align: center;
+  width: 100%;
   justify-content: center;
+  text-align: center;
   align-items: flex-start;
   margin-top: 34px;
   padding-bottom: 39px;
-  width: 100%;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 
   @include media(tablet) {
     display: flex;
@@ -94,15 +95,23 @@
 }
 
 .c-footer__copy {
-  margin: 0px;
+  width: max-content;
   height: max-content;
-  letter-spacing: 0.03em;
+  margin: 0px;
   margin: 0px 4px;
   color: $wp_indigo_secondary_color;
-  width: max-content;
   display: flex;
   max-width: 100%;
   text-transform: capitalize;
+  letter-spacing: 0.03em;
+
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include media(tablet) {
+    flex-wrap: nowrap;
+  }
+
   .c-footer__menu {
     margin-left: 8px;
   }

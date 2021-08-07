@@ -327,6 +327,22 @@ if( function_exists( 'kirki' ) ) {
 		'priority' => 10,
 	] );
 
+	
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'     => 'link',
+		'settings' => 'codepen',
+		'label'    => __( 'Codepen', 'wp-indigo' ),
+		'section'  => 'socials',
+		'priority' => 28,
+	] );
+
+	Kirki::add_field( 'cavatina', [
+		'type'     => 'link',
+		'settings' => 'telegram',
+		'label'    => __( 'Telegram', 'wp-indigo' ),
+		'section'  => 'socials',
+		'priority' => 29,
+	] );
 
 
 	/*------------------------------------*\
