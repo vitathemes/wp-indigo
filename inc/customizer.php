@@ -839,7 +839,7 @@ if( function_exists( 'kirki' ) ) {
 		]
 	]);
 
-	// change footer style
+	// change blog page alignment 
 	Kirki::add_field( 'wp_indigo_theme', [
 		'type'        => 'radio-buttonset',
 		'settings'    => 'blog_date_alignment',
@@ -850,6 +850,20 @@ if( function_exists( 'kirki' ) ) {
 		'choices'     => [
 			'front_category' => esc_html__( 'Front of Category', 'wp-indigo' ),
 			'front_title'  => esc_html__( 'Front of  Title', 'wp-indigo' ),
+		]
+	]);
+
+	// text transform option 
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'radio-buttonset',
+		'settings'    => 'blog_title_transform',
+		'label'       => esc_html__( 'Titles Text Transform Style', 'wp-indigo' ),
+		'section'     => 'blog_options',
+		'default'     => 'none',
+		'priority'    => 40,
+		'choices'     => [
+			'none' => esc_html__( 'No transform', 'wp-indigo' ),
+			'capitalize'  => esc_html__( 'Capitalize', 'wp-indigo' ),
 		]
 	]);
 

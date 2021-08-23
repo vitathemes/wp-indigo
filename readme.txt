@@ -34,7 +34,7 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 == Changelog ==
 
 = 2.1.2 =
-* Improve Customizer description
+* Improve Customizer options and descriptions
 * Add new items to social share
 * Improve theme styling 
 

@@ -15,10 +15,19 @@
         <div class="c-post__entry-meta <?php wp_indigo_get_entry_meta_class(); ?>">
 
             <?php
+
+                if( get_theme_mod( 'blog_title_transform' , 'none') == 'capitalize' ) { 
+                    $wp_indigo_title_class = "c-post__entry-title c-post__entry-title--capitalize";
+                }
+                else{
+                    $wp_indigo_title_class = "c-post__entry-title";
+                }
+
+
                 if ( is_singular() ) :
-                    the_title( '<h4 class="c-post__entry-title">', '</h4>' );
+                    the_title( '<h4 class="'.$wp_indigo_title_class.'">', '</h4>' );
                 else :              
-                    the_title( '<h4 class="c-post__entry-title"><a  href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
+                    the_title( '<h4 class="'.$wp_indigo_title_class.'"><a  href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
                 endif;			            
             ?>
 
