@@ -25,14 +25,19 @@ if ( ! function_exists( 'wp_indigo_posted_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
-	function wp_indigo_posted_by() {
+	function wp_indigo_posted_by( $wp_indigo_is_echo = true) {
 
 		/* translators: %s: post author. */
 		$byline = sprintf(
 			'<span class="byline"><span class="author vcard"><a class="c-single__author__link h6 url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '"> ' . esc_html(get_the_author()) . ' </a></span></span>'
 		);
 
-		echo  wp_kses_post( $byline ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		if($wp_indigo_is_echo === true){
+			echo  wp_kses_post( $byline ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+		else{
+			return wp_kses_post( $byline ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
 
 	}
 endif;
@@ -687,5 +692,38 @@ if ( ! function_exists( 'wp_indigo_show_categories' ) ) :
 						$categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				}
 		}
+	}
+endif;
+
+
+if ( ! function_exists( 'wp_indigo_show_post_nav' ) ) :
+	
+	function wp_indigo_show_post_nav() {
+		 the_post_navigation(
+			array(
+				'prev_text' => '
+				<div class="c-single__nav">
+					<div class="c-single__nav-context">
+						<span class="c-single__nav-title h2">%title</span>
+						<div class="c-single__nav-meta">
+							<div class="c-single__nav-author"><span class="h6">'.wp_indigo_posted_by(false).'</span></div>
+							<div class="c-single__nav-date h5"><span class="h6">'.get_the_date().'</span></div>
+						</div>
+					</div>
+				</div>',
+
+				'next_text' => '
+				<div class="c-single__nav c-single__nav--right">
+					<div class="c-single__nav-context">
+						<span class="c-single__nav-title h2">%title</span>
+						<div class="c-single__nav-meta">
+						<div class="c-single__nav-author"><span class="h6">'.wp_indigo_posted_by(false).'</span></div>
+						<div class="c-single__nav-date h5"><span class="h6">'.get_the_date().'</span></div>
+						</div>
+					</div>
+				  
+				</div>',
+			)
+		);
 	}
 endif;

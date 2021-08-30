@@ -756,6 +756,15 @@ if( function_exists( 'kirki' ) ) {
 		'priority'    => 80,
 	] );
 
+	Kirki::add_field( 'wp_indigo_theme', [
+		'type'        => 'toggle',
+		'settings'    => 'show_post_nav',
+		'label'       => esc_html__( 'Display Post Navigation', 'wp-indigo' ),
+		'section'     => 'single_options',
+		'default'     => '0',
+		'priority'    => 90,
+	] );
+
 	/*------------------------------------*\
 	  #Archive Options
 	\*------------------------------------*/

@@ -120,13 +120,16 @@
 
     </section><!-- c-single__entry-content -->
 
-
+    <?php if(get_theme_mod( 'show_post_nav', false ) === true ) : ?>
+        <div class="c-single__post-nav">
+            <?php wp_indigo_show_post_nav(); ?>
+        </div><!-- c-single__post-nav -->
+    <?php endif; ?>
 
     <?php 
         if ( comments_open() || get_comments_number() ) :
             comments_template();
         endif;
     ?>
-
 
 </article><!-- #post-<?php the_ID(); ?> -->
