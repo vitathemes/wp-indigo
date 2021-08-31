@@ -2,44 +2,26 @@
 @font-face {
   font-family: "SourceSerifPro";
   font-weight: 300;
-  src: url("../fonts/sourceserifpro-light.woff2") format("woff2"),
-    url("../fonts/sourceserifpro-light.woff") format("woff");
+  src: url("../fonts/sourceserifpro-light.woff2") format("woff2"), url("../fonts/sourceserifpro-light.woff") format("woff");
 }
 
 @font-face {
   font-family: "SourceSerifPro";
   font-weight: 400;
-  src: url("../fonts/SourceSerifPro-regular.woff2") format("woff2"),
-    url("../fonts/SourceSerifPro-regular.woff") format("woff");
+  src: url("../fonts/SourceSerifPro-regular.woff2") format("woff2"), url("../fonts/SourceSerifPro-regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "overpass";
   font-weight: 300;
-  src: url("../fonts/overpass-light.woff2") format("woff2"),
-    url("../fonts/overpass-light.woff") format("woff");
+  src: url("../fonts/overpass-light.woff2") format("woff2"), url("../fonts/overpass-light.woff") format("woff");
 }
 
 @font-face {
   font-family: "overpass";
   font-weight: 400;
-  src: url("../fonts/Overpass.woff2") format("woff2"),
-    url("../fonts/Overpass.woff") format("woff");
+  src: url("../fonts/Overpass.woff2") format("woff2"), url("../fonts/Overpass.woff") format("woff");
 }
-
-// // Root html variables
-// $wp_indigo_headings_font: var(--wp_indigo_headings_font); // Overpass
-// $wp_indigo_texts_font: var(--wp_indigo_texts_font); // SourceSerif
-// $wp_indigo_texts_secondary_font: var(
-//   --wp_indigo_texts_secondary_font
-// ); // Overpass - light
 
 $wp_indigo_primary_font: "overpass";
 $wp_indigo_secondary_font: "SourceSerifPro";
-
-// // Main Fonts
-// $wp_indigo_primary_font_regular: $wp_indigo_headings_font; // overpass
-// $wp_indigo_primary_font_light: $wp_indigo_texts_secondary_font; // overpass light
-
-// // Secondary Fonts
-// $wp_indigo_secondary_font_regular: $wp_indigo_texts_font; // source serfi

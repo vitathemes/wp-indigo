@@ -33,6 +33,10 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 
 == Changelog ==
 
+= 2.1.3 =
+* Add post navigation feature to Customizer
+* Remove unused comments
+
 = 2.1.2 =
 * Improve Customizer options and descriptions
 * Add new items to social share
