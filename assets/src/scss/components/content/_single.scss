@@ -138,6 +138,10 @@
   overflow: auto;
   max-width: 100%;
 
+  @include media(tablet-only) {
+    max-width: 555px;
+  }
+
   ul {
     letter-spacing: 0.03em;
   }

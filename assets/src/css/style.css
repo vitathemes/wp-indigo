@@ -1807,6 +1807,9 @@ select {
 .c-single__entry-content {
   overflow: auto;
   max-width: 100%; }
+  @media only screen and (min-width: 590px) and (max-width: 979px) {
+    .c-single__entry-content {
+      max-width: 555px; } }
   .c-single__entry-content ul {
     letter-spacing: 0.03em; }
 

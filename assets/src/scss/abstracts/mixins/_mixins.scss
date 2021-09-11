@@ -27,7 +27,7 @@
   }
 
   @if tablet-only == $res {
-    @media only screen and (min-width: 590px) and (max-width: #{$breakpoint_md - 1}) {
+    @media only screen and (min-width: #{$breakpoint_xsm}) and (max-width: #{$breakpoint_md - 1}) {
       @content;
     }
   }
