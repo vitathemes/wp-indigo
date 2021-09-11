@@ -1877,7 +1877,8 @@ select {
   @media only screen and (min-width: 980px) {
     .nav-previous {
       border-right: 1px solid #e6e6e6;
-      width: 50%; } }
+      width: 50%;
+      padding-right: 10px; } }
 
 .nav-next {
   width: calc(50% - 24px); }
