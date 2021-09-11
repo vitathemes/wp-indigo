@@ -204,6 +204,14 @@
   margin-top: 48px;
   border-top: 1px solid #e6e6e6;
 
+  @include media(tablet-only) {
+    width: 555px;
+  }
+
+  @include media(tablet) {
+    width: 555px;
+  }
+
   nav {
     width: 100%;
   }
@@ -226,6 +234,13 @@
 .nav-previous {
   width: 100%;
   margin-bottom: 32px;
+
+  @include media(tablet-only) {
+    border-right: 1px solid #e6e6e6;
+    width: 50%;
+    padding-right: 10px;
+  }
+
   @include media(tablet) {
     border-right: 1px solid #e6e6e6;
     width: 50%;
@@ -252,7 +267,10 @@
 }
 
 .c-single__nav-author {
-  margin-right: 5px;
+  @include media(tablet) {
+    margin-right: 5px;
+  }
+
   &::after {
     content: " / ";
   }
