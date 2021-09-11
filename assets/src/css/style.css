@@ -151,86 +151,44 @@ Requires PHP: 5.6
   --responsive--aligndefault-width: 100%;
   --responsive--alignwide-width: 100%;
   --responsive--alignfull-width: 100%;
-  --responsive--alignwide-width-multiplier: calc(
-    16 * var(--global--spacing-horizontal)
-  );
+  --responsive--alignwide-width-multiplier: calc(16 * var(--global--spacing-horizontal));
   --responsive--alignright-margin: var(--global--spacing-horizontal);
   --responsive--alignleft-margin: var(--global--spacing-horizontal); }
 
 @media only screen and (min-width: 720px) {
   :root {
-    --responsive--aligndefault-width: calc(
-      720px - var(--responsive--spacing-horizontal)
-    );
-    --responsive--alignwide-width: calc(
-      720px - var(--responsive--spacing-horizontal)
-    );
-    --responsive--alignright-margin: calc(
-      0.5 * (100vw - var(--responsive--aligndefault-width))
-    );
-    --responsive--alignleft-margin: calc(
-      0.5 * (100vw - var(--responsive--aligndefault-width))
-    ); } }
+    --responsive--aligndefault-width: calc(720px - var(--responsive--spacing-horizontal));
+    --responsive--alignwide-width: calc(720px - var(--responsive--spacing-horizontal));
+    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 @media only screen and (min-width: 980px) {
   :root {
-    --responsive--aligndefault-width: calc(
-      980px - var(--responsive--spacing-horizontal)
-    );
-    --responsive--alignwide-width: calc(
-      1140px - var(--responsive--spacing-horizontal)
-    );
-    --responsive--alignright-margin: calc(
-      0.5 * (100vw - var(--responsive--aligndefault-width))
-    );
-    --responsive--alignleft-margin: calc(
-      0.5 * (100vw - var(--responsive--aligndefault-width))
-    ); } }
+    --responsive--aligndefault-width: calc(980px - var(--responsive--spacing-horizontal));
+    --responsive--alignwide-width: calc(1140px - var(--responsive--spacing-horizontal));
+    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 @media only screen and (min-width: 1140px) {
   :root {
-    --responsive--aligndefault-width: calc(
-      980px - var(--responsive--spacing-horizontal)
-    );
-    --responsive--alignwide-width: calc(
-      1140px - var(--responsive--spacing-horizontal)
-    );
-    --responsive--alignright-margin: calc(
-      0.5 * (100vw - var(--responsive--aligndefault-width))
-    );
-    --responsive--alignleft-margin: calc(
-      0.5 * (100vw - var(--responsive--aligndefault-width))
-    ); } }
+    --responsive--aligndefault-width: calc(980px - var(--responsive--spacing-horizontal));
+    --responsive--alignwide-width: calc(1140px - var(--responsive--spacing-horizontal));
+    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 @media only screen and (min-width: 1200px) {
   :root {
-    --responsive--aligndefault-width: calc(
-      1140px - var(--responsive--spacing-horizontal)
-    );
-    --responsive--alignwide-width: calc(
-      1200px - var(--responsive--spacing-horizontal)
-    );
-    --responsive--alignright-margin: calc(
-      0.5 * (100vw - var(--responsive--aligndefault-width))
-    );
-    --responsive--alignleft-margin: calc(
-      0.5 * (100vw - var(--responsive--aligndefault-width))
-    ); } }
+    --responsive--aligndefault-width: calc(1140px - var(--responsive--spacing-horizontal));
+    --responsive--alignwide-width: calc(1200px - var(--responsive--spacing-horizontal));
+    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 @media only screen and (min-width: 1400px) {
   :root {
-    --responsive--aligndefault-width: calc(
-      1140px - var(--responsive--spacing-horizontal)
-    );
-    --responsive--alignwide-width: calc(
-      1200px - var(--responsive--spacing-horizontal)
-    );
-    --responsive--alignright-margin: calc(
-      0.5 * (100vw - var(--responsive--aligndefault-width))
-    );
-    --responsive--alignleft-margin: calc(
-      0.5 * (100vw - var(--responsive--aligndefault-width))
-    ); } }
+    --responsive--aligndefault-width: calc(1140px - var(--responsive--spacing-horizontal));
+    --responsive--alignwide-width: calc(1200px - var(--responsive--spacing-horizontal));
+    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 /**
  * Extends
@@ -650,16 +608,6 @@ html {
 /*------------------------------------*\
   #Base
 \*------------------------------------*/
-/* Typography
---------------------------------------------- */
-/*------------------------------------*\
-  #Default Theme fonts 
-*-------------------------------------*/
-/*
-*   Source Serif Pro
-*   https://fonts.google.com/specimen/Source+Serif+Pro?query=Source+Serif+Pro&preview.text_type=custom#about
-*
-*/
 /* Typography
 --------------------------------------------- */
 /*------------------------------------*\
@@ -1754,22 +1702,39 @@ select {
   #Single
 \*------------------------------------*/
 .c-single {
-  width: 555px;
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100%; }
+  @media only screen and (min-width: 590px) and (max-width: 979px) {
+    .c-single {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; } }
+  @media only screen and (min-width: 980px) {
+    .c-single {
+      width: 555px; } }
 
 /* Entry Header */
 .c-single__entry-header {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 39px; }
+  @media only screen and (min-width: 590px) and (max-width: 979px) {
+    .c-single__entry-header {
+      justify-content: center; } }
   @media only screen and (min-width: 980px) {
     .c-single__entry-header {
       margin-bottom: 48px;
       width: 100%; } }
 
 .c-single__entry-header__content {
-  width: 555px;
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100%; }
+  @media only screen and (min-width: 590px) and (max-width: 979px) {
+    .c-single__entry-header__content {
+      width: 555px; } }
+  @media only screen and (min-width: 980px) {
+    .c-single__entry-header__content {
+      width: 555px; } }
 
 .c-single__entry-title {
   text-align: center;
@@ -1839,8 +1804,11 @@ select {
     color: var(--wp_indigo_secondary-color) !important; }
 
 /* Content */
-.c-single__entry-content ul {
-  letter-spacing: 0.03em; }
+.c-single__entry-content {
+  overflow: auto;
+  max-width: 100%; }
+  .c-single__entry-content ul {
+    letter-spacing: 0.03em; }
 
 .c-single__thumbnail {
   margin-bottom: 39px;
@@ -1870,7 +1838,8 @@ select {
 
 .c-single__tag {
   margin-right: 8px;
-  color: var(--wp_indigo_secondary-color); }
+  color: var(--wp_indigo_secondary-color);
+  display: inline-block; }
   .c-single__tag::before {
     content: "#"; }
 
@@ -1966,10 +1935,16 @@ select {
   #Comments
 \*------------------------------------*/
 .comments-area {
-  width: 555px;
+  width: 100%;
   max-width: 100%;
   display: flex;
   flex-wrap: wrap; }
+  @media only screen and (min-width: 590px) and (max-width: 979px) {
+    .comments-area {
+      width: 555px; } }
+  @media only screen and (min-width: 980px) {
+    .comments-area {
+      width: 555px; } }
 
 .comment {
   margin-top: 30px; }
@@ -2272,6 +2247,15 @@ ol.children {
       max-width: 555px;
       padding: 98px 0px 64px 0px; } }
 
+.c-main--centered {
+  display: block; }
+  @media only screen and (min-width: 590px) and (max-width: 979px) {
+    .c-main--centered {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 100%; } }
+
 @media only screen and (min-width: 980px) {
   .c-main--wide {
     padding: 109px 0px 64px 0px;
@@ -2312,11 +2296,21 @@ ol.children {
   width: 100%;
   text-align: center;
   margin-bottom: 39px; }
+  @media only screen and (min-width: 590px) and (max-width: 979px) {
+    .c-main__header {
+      display: flex;
+      justify-content: center; } }
 
 .c-main__page-title {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 0px; }
+  @media only screen and (min-width: 590px) and (max-width: 979px) {
+    .c-main__page-title {
+      max-width: 555px; } }
+  @media only screen and (min-width: 980px) {
+    .c-main__page-title {
+      max-width: 100%; } }
 
 .c-main__cat {
   display: inline-block;
@@ -2328,6 +2322,9 @@ ol.children {
 
 .c-main__content {
   padding-top: 25px; }
+  @media only screen and (min-width: 590px) and (max-width: 979px) {
+    .c-main__content {
+      max-width: 555px; } }
 
 @media only screen and (min-width: 980px) {
   .c-main__content--search {

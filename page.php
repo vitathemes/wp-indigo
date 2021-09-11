@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-<main id="primary" class="c-main <?php wp_indigo_get_fade_in_animation(); ?> site-main">
+<main id="primary" class="c-main c-main--centered <?php wp_indigo_get_fade_in_animation(); ?> site-main">
 
     <header class="c-main__header">
         <h1 class="c-main__page-title"><?php echo esc_html(get_the_title()); ?></h1>

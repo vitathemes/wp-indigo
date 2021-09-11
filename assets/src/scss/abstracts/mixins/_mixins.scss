@@ -10,8 +10,7 @@
 
 // Column width with margin
 @mixin column-width($numberColumns: 3) {
-  width: map-get($columns, $numberColumns) -
-    (($columns__margin * ($numberColumns - 1)) / $numberColumns);
+  width: map-get($columns, $numberColumns) - (($columns__margin * ($numberColumns - 1)) / $numberColumns);
 }
 
 @mixin media($res) {
@@ -28,7 +27,7 @@
   }
 
   @if tablet-only == $res {
-    @media only screen and (max-width: #{$breakpoint_md - 1}) {
+    @media only screen and (min-width: 590px) and (max-width: #{$breakpoint_md - 1}) {
       @content;
     }
   }
@@ -88,8 +87,7 @@
 @function str-replace($string, $search, $replace: "") {
   $index: str-index($string, $search);
   @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace +
-      str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
   }
   @return $string;
 }

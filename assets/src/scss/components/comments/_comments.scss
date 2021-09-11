@@ -2,11 +2,19 @@
   #Comments
 \*------------------------------------*/
 .comments-area {
-  width: 555px;
+  width: 100%;
   max-width: 100%;
 
   display: flex;
   flex-wrap: wrap;
+
+  @include media(tablet-only) {
+    width: 555px;
+  }
+
+  @include media(tablet) {
+    width: 555px;
+  }
 }
 .comment {
   margin-top: 30px;
