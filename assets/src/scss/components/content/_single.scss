@@ -3,8 +3,18 @@
 \*------------------------------------*/
 
 .c-single {
-  width: 555px;
   max-width: 100%;
+  width: 100%;
+
+  @include media(tablet-only) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @include media(tablet) {
+    width: 555px;
+  }
 }
 
 /* Entry Header */
@@ -13,6 +23,10 @@
   justify-content: flex-start;
   margin-bottom: 39px;
 
+  @include media(tablet-only) {
+    justify-content: center;
+  }
+
   @include media(tablet) {
     margin-bottom: 48px;
     width: 100%;
@@ -20,8 +34,16 @@
 }
 
 .c-single__entry-header__content {
-  width: 555px;
   max-width: 100%;
+  width: 100%;
+
+  @include media(tablet-only) {
+    width: 555px;
+  }
+
+  @include media(tablet) {
+    width: 555px;
+  }
 }
 
 .c-single__entry-title {
@@ -113,6 +135,13 @@
 
 /* Content */
 .c-single__entry-content {
+  overflow: auto;
+  max-width: 100%;
+
+  @include media(tablet-only) {
+    max-width: 555px;
+  }
+
   ul {
     letter-spacing: 0.03em;
   }
@@ -155,6 +184,7 @@
 .c-single__tag {
   margin-right: 8px;
   color: $wp_indigo_secondary_color;
+  display: inline-block;
 
   &::before {
     content: "#";
@@ -173,6 +203,14 @@
   padding-top: 64px; //qa-
   margin-top: 48px;
   border-top: 1px solid #e6e6e6;
+
+  @include media(tablet-only) {
+    width: 555px;
+  }
+
+  @include media(tablet) {
+    width: 555px;
+  }
 
   nav {
     width: 100%;
@@ -196,9 +234,17 @@
 .nav-previous {
   width: 100%;
   margin-bottom: 32px;
+
+  @include media(tablet-only) {
+    border-right: 1px solid #e6e6e6;
+    width: 50%;
+    padding-right: 10px;
+  }
+
   @include media(tablet) {
     border-right: 1px solid #e6e6e6;
     width: 50%;
+    padding-right: 10px;
   }
 }
 
@@ -221,7 +267,10 @@
 }
 
 .c-single__nav-author {
-  margin-right: 5px;
+  @include media(tablet) {
+    margin-right: 5px;
+  }
+
   &::after {
     content: " / ";
   }

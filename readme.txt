@@ -35,6 +35,8 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 
 = 2.1.3 =
 * Add post navigation feature to Customizer
+* Improve responsive for landscape ipad users
+* Fix words break for tags 
 * Remove unused comments
 
 = 2.1.2 =
