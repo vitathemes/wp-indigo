@@ -4,12 +4,12 @@ Theme URI: https://vitathemes.com/theme/wp-indigo/
 Author: VitaThemes
 Author URI: https://vitathemes.com
 Description: WP-Indigo (Version 2) is a minimal WordPress theme with a simple yet elegant design. This multipurpose theme includes a demo and is suitable for almost any type of website, and perfect for Portfolios, Personal Blogs, CV & Resumes, Photographers, Designers, and Freelancers. While it is minimal and lightweight, it is responsive, flexible, customizable with WordPress customizer, and has a clean optimized code.
-Version: 2.1.3
+Version: 2.0.0
 License: GNU General Public License v3 or later
 License URI: https://opensource.org/licenses/GPL-3.0
 Tags: blog, translation-ready, featured-images, theme-options
 Text Domain: wp-indigo
-Tested up to: 5.8
+Tested up to: 5.7
 Requires PHP: 5.6
 */
 /*------------------------------------*\
@@ -1267,6 +1267,12 @@ select {
       animation-duration: 1s;
       animation-delay: 0.2s;
       animation-fill-mode: forwards; } }
+  @media screen and (orientation: landscape) {
+    .c-header__main.is-open .s-nav .menu-item {
+      animation-name: fadeIn;
+      animation-duration: 1s;
+      animation-delay: 0.2s;
+      animation-fill-mode: forwards; } }
   .c-header__main.is-open .c-header__menu__icon .hamburger {
     background-color: transparent;
     -webkit-box-shadow: transparent;
@@ -2317,6 +2323,9 @@ ol.children {
     .c-main__header {
       display: flex;
       justify-content: center; } }
+  @media screen and (orientation: landscape) {
+    .c-main__header {
+      flex-wrap: wrap; } }
 
 .c-main__page-title {
   text-transform: uppercase;
@@ -2327,6 +2336,10 @@ ol.children {
       max-width: 555px; } }
   @media only screen and (min-width: 980px) {
     .c-main__page-title {
+      max-width: 100%; } }
+  @media screen and (orientation: landscape) {
+    .c-main__page-title {
+      width: 100%;
       max-width: 100%; } }
 
 .c-main__cat {
@@ -2342,6 +2355,10 @@ ol.children {
   @media only screen and (min-width: 590px) and (max-width: 979px) {
     .c-main__content {
       max-width: 555px; } }
+  @media screen and (orientation: landscape) {
+    .c-main__content {
+      max-width: 100%;
+      margin-top: 64px; } }
 
 @media only screen and (min-width: 980px) {
   .c-main__content--search {
@@ -2352,6 +2369,9 @@ ol.children {
 
 .c-main__category {
   margin-top: 39px; }
+  @media screen and (orientation: landscape) {
+    .c-main__category {
+      width: 100%; } }
 
 .c-main__search-form {
   position: relative;
