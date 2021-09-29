@@ -1,6 +1,6 @@
 === WP Indigo v2 ===
 Contributors: vitathemes, veronalabs, kashani, mrmolaei, mostafas1990, nimaprmdi
-Requires at least: 5.0
+Requires at least: 5.6
 Tested up to: 5.8
 Requires PHP: 5.6
 Stable tag: 1.0.0
@@ -32,6 +32,9 @@ WP-Indigo is a minimal WordPress theme with a simple yet elegant design. This mu
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
 
 == Changelog ==
+
+= 2.1.4 =
+* Improve landscape issue
 
 = 2.1.3 =
 * Add post navigation feature to Customizer
