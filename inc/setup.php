@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 if ( ! defined( 'WP_INDIGO_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
@@ -180,3 +180,68 @@ function wp_indigo_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'wp_indigo_scripts' );
+
+
+// OCDI - Demo Importer Config
+function wp_indigo_register_plugins( $plugins ) {
+	$theme_plugins = [
+		[ // A WordPress.org plugin repository example.
+			'name'     => __( 'LibWp', 'wp-indigo' ),
+			'slug'     => 'libwp',
+			'required' => false,
+		],
+		[
+			'name'     => __( 'Kirki Customizer Framework', 'wp-indigo' ),
+			'slug'     => 'kirki',
+			'required' => false,
+		]
+	];
+
+	return array_merge( $plugins, $theme_plugins );
+}
+add_filter( 'ocdi/register_plugins', 'wp_indigo_register_plugins' );
+
+
+function wp_indigo_import_files() {
+	return [
+		[
+			'import_file_name'           => 'Default Demo',
+			'import_file_url'            => 'https://demo.vitathemes.com/ocdi/wp-indigo/wp-indigo.xml',
+			'import_widget_file_url'     => 'https://demo.vitathemes.com/ocdi/wp-indigo/demo.vitathemes.com-indigo-widgets.wie',
+			'import_customizer_file_url' => 'https://demo.vitathemes.com/ocdi/wp-indigo/indigo-export.dat',
+			'import_preview_image_url'   => 'https://demo.vitathemes.com/ocdi/wp-indigo/screenshot.png',
+			'preview_url'                => 'https://demo.vitathemes.com/indigo',
+		],
+	];
+}
+add_filter( 'ocdi/import_files', 'wp_indigo_import_files' );
+
+function wp_indigo_after_import_setup() {
+	// Assign menus to their locations.
+	$primary_menu = get_term_by( 'name', 'Primary', 'nav_menu' );
+	$footer_menu = get_term_by( 'name', 'Footer', 'nav_menu' );
+	set_theme_mod( 'nav_menu_locations', [
+			'wp-indigo-primary-menu' => $primary_menu->term_id,
+			'wp-indigo-primary-footer' => $footer_menu->term_id,
+		]
+	);
+
+	// Assign front page and posts page (blog page).
+	$front_page_id = get_page_by_title( 'Home' );
+	$blog_page_id  = get_page_by_title( 'Blog' );
+	update_option( 'show_on_front', 'page' );
+	update_option( 'page_on_front', $front_page_id->ID );
+	update_option( 'page_for_posts', $blog_page_id->ID );
+
+	// Unset Logo
+	set_theme_mod( 'custom_logo', 0);
+
+	// Social Networks
+	set_theme_mod( 'facebook', '#' );
+	set_theme_mod( 'twitter', 'https://twitter.com/veronalabs' );
+	set_theme_mod( 'instagram', 'https://www.instagram.com/veronalabs/' );
+	set_theme_mod( 'linkedin', 'https://www.linkedin.com/company/veronalabs/' );
+	set_theme_mod( 'github', 'https://github.com/vitathemes/' );
+	set_theme_mod( 'mail', 'hi@veronalabs.com' );
+}
+add_action( 'ocdi/after_import', 'wp_indigo_after_import_setup' );
