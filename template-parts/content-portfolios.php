@@ -21,18 +21,15 @@
         ?>
     </div>
 
-    
+
     <a class="c-post__link" href="<?php echo esc_url(get_permalink()); ?>">
         <div class="c-post__entry-meta">
-            
             <div class="c-post__entry-meta__overlay"></div>
-            
-
             <?php the_title( '<h2 class="c-post__entry-title">', '</h2>' ); ?>
             <?php if(get_theme_mod( 'portfolio_category' , true )) : ?>
-                <div class="c-post__category">
-                    <?php wp_indigo_get_taxonomy( "portfolio_category" , "c-post__cat u-link--secondary h6"  , "span" , ", " ); ?>
-                </div>
+            <div class="c-post__category">
+                <?php wp_indigo_get_taxonomy( "portfolio_category" , "c-post__cat u-link--secondary h6"  , "span" , ", " ); ?>
+            </div>
             <?php endif; ?>
         </div>
     </a>
