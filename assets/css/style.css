@@ -816,7 +816,12 @@ figure {
   #Tables
 \*------------------------------------*/
 table {
-  text-align: left; }
+  text-align: left;
+  margin: 16px 0px;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto; }
 
 /* Links
 --------------------------------------------- */
@@ -2349,7 +2354,7 @@ ol.children {
 
 .c-main__content {
   padding-top: 25px; }
-  @media only screen and (min-width: 590px) and (max-width: 979px) {
+  @media only screen and (min-width: 980px) {
     .c-main__content {
       max-width: 555px; } }
   @media screen and (orientation: landscape) {

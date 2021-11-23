@@ -2,5 +2,10 @@
   #Tables
 \*------------------------------------*/
 table {
-  text-align: left;
+    text-align: left;
+    margin: 16px 0px;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
 }
