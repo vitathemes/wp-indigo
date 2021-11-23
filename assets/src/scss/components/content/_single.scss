@@ -261,6 +261,7 @@
     display: flex;
     align-items: center;
     margin-top: 16px;
+    width: max-content;
 }
 
 .c-single__nav-author {
@@ -276,4 +277,5 @@
 .c-single__nav-date {
     color: $wp_indigo_secondary_color;
     text-transform: uppercase;
+    margin-left: 4px;
 }

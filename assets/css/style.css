@@ -816,7 +816,12 @@ figure {
   #Tables
 \*------------------------------------*/
 table {
-  text-align: left; }
+  text-align: left;
+  margin: 16px 0px;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto; }
 
 /* Links
 --------------------------------------------- */
@@ -1619,7 +1624,7 @@ select {
   vertical-align: top; }
   @media only screen and (min-width: 980px) {
     .c-post__entry-meta--bottom .c-post__entry-title {
-      width: 75%; } }
+      width: 70%; } }
 
 .c-post__entry-meta--bottom .c-post__category {
   width: 100%; }
@@ -1629,7 +1634,7 @@ select {
   text-align: right; }
   @media only screen and (min-width: 980px) {
     .c-post__entry-meta--bottom .c-post__date {
-      width: 24%; } }
+      width: 25%; } }
 
 .c-post__entry-title {
   word-wrap: break-word;
@@ -1905,7 +1910,8 @@ select {
 .c-single__nav-meta {
   display: flex;
   align-items: center;
-  margin-top: 16px; }
+  margin-top: 16px;
+  width: max-content; }
 
 @media only screen and (min-width: 980px) {
   .c-single__nav-author {
@@ -1916,7 +1922,8 @@ select {
 
 .c-single__nav-date {
   color: var(--wp_indigo_secondary-color);
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-left: 4px; }
 
 /* Profile
 --------------------------------------------- */
@@ -2316,9 +2323,9 @@ ol.children {
   width: 100%;
   text-align: center;
   margin-bottom: 39px; }
-  @media only screen and (min-width: 590px) and (max-width: 979px) {
+  @media only screen and (min-width: 980px) {
     .c-main__header {
-      display: flex;
+      display: block;
       justify-content: center; } }
   @media screen and (orientation: landscape) {
     .c-main__header {
@@ -2328,7 +2335,7 @@ ol.children {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 0px; }
-  @media only screen and (min-width: 590px) and (max-width: 979px) {
+  @media only screen and (min-width: 980px) {
     .c-main__page-title {
       max-width: 555px; } }
   @media only screen and (min-width: 980px) {
@@ -2349,9 +2356,6 @@ ol.children {
 
 .c-main__content {
   padding-top: 25px; }
-  @media only screen and (min-width: 590px) and (max-width: 979px) {
-    .c-main__content {
-      max-width: 555px; } }
   @media screen and (orientation: landscape) {
     .c-main__content {
       max-width: 100%;
