@@ -336,14 +336,13 @@ if( function_exists( 'kirki' ) ) {
 		'priority' => 28,
 	] );
 
-	Kirki::add_field( 'cavatina', [
+	Kirki::add_field( 'wp_indigo_theme', [
 		'type'     => 'link',
 		'settings' => 'telegram',
 		'label'    => __( 'Telegram', 'wp-indigo' ),
 		'section'  => 'socials',
 		'priority' => 29,
 	] );
-
 
 	/*------------------------------------*\
 	  #Theme Colors
