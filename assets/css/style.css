@@ -1624,7 +1624,7 @@ select {
   vertical-align: top; }
   @media only screen and (min-width: 980px) {
     .c-post__entry-meta--bottom .c-post__entry-title {
-      width: 75%; } }
+      width: 70%; } }
 
 .c-post__entry-meta--bottom .c-post__category {
   width: 100%; }
@@ -1634,7 +1634,7 @@ select {
   text-align: right; }
   @media only screen and (min-width: 980px) {
     .c-post__entry-meta--bottom .c-post__date {
-      width: 24%; } }
+      width: 25%; } }
 
 .c-post__entry-title {
   word-wrap: break-word;
