@@ -1922,7 +1922,8 @@ select {
 
 .c-single__nav-date {
   color: var(--wp_indigo_secondary-color);
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-left: 4px; }
 
 /* Profile
 --------------------------------------------- */
