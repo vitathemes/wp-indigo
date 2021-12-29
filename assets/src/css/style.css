@@ -1071,6 +1071,11 @@ select {
     border-radius: 7.5px;
     border: 1px solid #f0f0f0;
     margin: 0px 19px; }
+  @media only screen and (max-width: 719px) {
+    .u-ellipse {
+      display: block;
+      width: 100%;
+      text-align: center; } }
 
 /* Letter spacing */
 .u-letter-space-medium {
@@ -1832,6 +1837,10 @@ select {
     object-fit: contain;
     object-position: center; }
 
+.c-single__thumbnail--centerd {
+  height: max-content;
+  text-align: center; }
+
 .c-single__content a {
   border-bottom: 1px solid var(--wp_indigo_quaternary_color);
   padding-bottom: 3px; }
@@ -2412,7 +2421,9 @@ ol.children {
   margin: 0 auto;
   /* ---- grid-item ---- */ }
   .c-main__portfolios--masonry .c-post--portfolios {
-    width: 263px; }
+    width: 263px;
+    max-height: 380px;
+    overflow: hidden; }
   .c-main__portfolios--masonry .c-post__link {
     height: calc(100% - 6px); }
 

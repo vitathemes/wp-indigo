@@ -201,6 +201,8 @@
     /* ---- grid-item ---- */
     .c-post--portfolios {
         width: 263px;
+        max-height: 380px;
+        overflow: hidden;
     }
 
     .c-post__link {

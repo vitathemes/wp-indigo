@@ -79,7 +79,7 @@
 
         <!-- Get the post thumbnail -->
         <?php if ( has_post_thumbnail() && get_theme_mod( 'post_thumbnail' , true )) : ?>
-        <div class="c-single__thumbnail">
+        <div class="c-single__thumbnail c-single__thumbnail--centerd">
             <?php the_post_thumbnail( 'full' ); ?>
         </div>
         <?php endif; ?>
@@ -121,9 +121,9 @@
     </section><!-- c-single__entry-content -->
 
     <?php if(get_theme_mod( 'show_post_nav', false ) === true ) : ?>
-        <div class="c-single__post-nav">
-            <?php wp_indigo_show_post_nav(); ?>
-        </div><!-- c-single__post-nav -->
+    <div class="c-single__post-nav">
+        <?php wp_indigo_show_post_nav(); ?>
+    </div><!-- c-single__post-nav -->
     <?php endif; ?>
 
     <?php 
