@@ -33,6 +33,9 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 
 == Changelog ==
 
+= 2.1.6 =
+* Fix Minor style issues
+
 = 2.1.5 =
 * Fix image width issues
 
