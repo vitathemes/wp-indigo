@@ -157,37 +157,67 @@ Requires PHP: 5.6
 
 @media only screen and (min-width: 720px) {
   :root {
-    --responsive--aligndefault-width: calc(720px - var(--responsive--spacing-horizontal));
-    --responsive--alignwide-width: calc(720px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--aligndefault-width: calc(
+            720px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignwide-width: calc(
+            720px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignright-margin: calc(
+            0.5 * (100vw - var(--responsive--aligndefault-width))
+        );
     --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 @media only screen and (min-width: 980px) {
   :root {
-    --responsive--aligndefault-width: calc(980px - var(--responsive--spacing-horizontal));
-    --responsive--alignwide-width: calc(1140px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--aligndefault-width: calc(
+            980px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignwide-width: calc(
+            1140px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignright-margin: calc(
+            0.5 * (100vw - var(--responsive--aligndefault-width))
+        );
     --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 @media only screen and (min-width: 1140px) {
   :root {
-    --responsive--aligndefault-width: calc(980px - var(--responsive--spacing-horizontal));
-    --responsive--alignwide-width: calc(1140px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--aligndefault-width: calc(
+            980px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignwide-width: calc(
+            1140px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignright-margin: calc(
+            0.5 * (100vw - var(--responsive--aligndefault-width))
+        );
     --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 @media only screen and (min-width: 1200px) {
   :root {
-    --responsive--aligndefault-width: calc(1140px - var(--responsive--spacing-horizontal));
-    --responsive--alignwide-width: calc(1200px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--aligndefault-width: calc(
+            1140px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignwide-width: calc(
+            1200px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignright-margin: calc(
+            0.5 * (100vw - var(--responsive--aligndefault-width))
+        );
     --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 @media only screen and (min-width: 1400px) {
   :root {
-    --responsive--aligndefault-width: calc(1140px - var(--responsive--spacing-horizontal));
-    --responsive--alignwide-width: calc(1200px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--aligndefault-width: calc(
+            1140px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignwide-width: calc(
+            1200px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignright-margin: calc(
+            0.5 * (100vw - var(--responsive--aligndefault-width))
+        );
     --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 /**
@@ -1350,8 +1380,12 @@ select {
     line-height: 31px;
     font-family: "overpass";
     font-weight: 400;
+    letter-spacing: 0.05em;
     opacity: 0;
-    letter-spacing: 0.05em; }
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards; }
     @media only screen and (max-width: 719px) {
       .s-nav .menu-item {
         font-size: 20px;

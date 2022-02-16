@@ -5,7 +5,7 @@ Author: VitaThemes
 Author URI: https://vitathemes.com
 Description: WP-Indigo (Version 2) is a minimal WordPress theme with a simple yet elegant design. This multipurpose theme includes a demo and is suitable for almost any type of website, and perfect for Portfolios, Personal Blogs, CV & Resumes, Photographers, Designers, and Freelancers. While it is minimal and lightweight, it is responsive, flexible, customizable with WordPress customizer, and has a clean optimized code.
 Version: 2.1.6
-Tested up to: 5.8
+Tested up to: 5.9
 Requires PHP: 5.6
 License: GPL-3.0-or-later
 License URI: https://opensource.org/licenses/GPL-3.0
@@ -174,95 +174,63 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
     --responsive--aligndefault-width: 100%;
     --responsive--alignwide-width: 100%;
     --responsive--alignfull-width: 100%;
-    --responsive--alignwide-width-multiplier: calc(
-        16 * var(--global--spacing-horizontal)
-    );
+    --responsive--alignwide-width-multiplier: calc(16 * var(--global--spacing-horizontal));
     --responsive--alignright-margin: var(--global--spacing-horizontal);
     --responsive--alignleft-margin: var(--global--spacing-horizontal);
 }
 
 @media only screen and (min-width: 720px) {
     :root {
-        --responsive--aligndefault-width: calc(
-            720px - var(--responsive--spacing-horizontal)
-        );
-        --responsive--alignwide-width: calc(
-            720px - var(--responsive--spacing-horizontal)
-        );
+        --responsive--aligndefault-width: calc(720px - var(--responsive--spacing-horizontal));
+        --responsive--alignwide-width: calc(720px - var(--responsive--spacing-horizontal));
         --responsive--alignright-margin: calc(
             0.5 * (100vw - var(--responsive--aligndefault-width))
         );
-        --responsive--alignleft-margin: calc(
-            0.5 * (100vw - var(--responsive--aligndefault-width))
-        );
+        --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
     }
 }
 
 @media only screen and (min-width: 980px) {
     :root {
-        --responsive--aligndefault-width: calc(
-            980px - var(--responsive--spacing-horizontal)
-        );
-        --responsive--alignwide-width: calc(
-            1140px - var(--responsive--spacing-horizontal)
-        );
+        --responsive--aligndefault-width: calc(980px - var(--responsive--spacing-horizontal));
+        --responsive--alignwide-width: calc(1140px - var(--responsive--spacing-horizontal));
         --responsive--alignright-margin: calc(
             0.5 * (100vw - var(--responsive--aligndefault-width))
         );
-        --responsive--alignleft-margin: calc(
-            0.5 * (100vw - var(--responsive--aligndefault-width))
-        );
+        --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
     }
 }
 
 @media only screen and (min-width: 1140px) {
     :root {
-        --responsive--aligndefault-width: calc(
-            980px - var(--responsive--spacing-horizontal)
-        );
-        --responsive--alignwide-width: calc(
-            1140px - var(--responsive--spacing-horizontal)
-        );
+        --responsive--aligndefault-width: calc(980px - var(--responsive--spacing-horizontal));
+        --responsive--alignwide-width: calc(1140px - var(--responsive--spacing-horizontal));
         --responsive--alignright-margin: calc(
             0.5 * (100vw - var(--responsive--aligndefault-width))
         );
-        --responsive--alignleft-margin: calc(
-            0.5 * (100vw - var(--responsive--aligndefault-width))
-        );
+        --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
     }
 }
 
 @media only screen and (min-width: 1200px) {
     :root {
-        --responsive--aligndefault-width: calc(
-            1140px - var(--responsive--spacing-horizontal)
-        );
-        --responsive--alignwide-width: calc(
-            1200px - var(--responsive--spacing-horizontal)
-        );
+        --responsive--aligndefault-width: calc(1140px - var(--responsive--spacing-horizontal));
+        --responsive--alignwide-width: calc(1200px - var(--responsive--spacing-horizontal));
         --responsive--alignright-margin: calc(
             0.5 * (100vw - var(--responsive--aligndefault-width))
         );
-        --responsive--alignleft-margin: calc(
-            0.5 * (100vw - var(--responsive--aligndefault-width))
-        );
+        --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
     }
 }
 
 @media only screen and (min-width: 1400px) {
     :root {
-        --responsive--aligndefault-width: calc(
-            1140px - var(--responsive--spacing-horizontal)
-        );
-        --responsive--alignwide-width: calc(
-            1200px - var(--responsive--spacing-horizontal)
-        );
+        --responsive--aligndefault-width: calc(1140px - var(--responsive--spacing-horizontal));
+        --responsive--alignwide-width: calc(1200px - var(--responsive--spacing-horizontal));
         --responsive--alignright-margin: calc(
             0.5 * (100vw - var(--responsive--aligndefault-width))
         );
-        --responsive--alignleft-margin: calc(
-            0.5 * (100vw - var(--responsive--aligndefault-width))
-        );
+        --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
     }
 }
 
@@ -2298,8 +2266,8 @@ input[type="checkbox"]:checked:before {
 }
 .c-widget .search-submit:hover {
     background-color: transparent;
-    background: url("https://api.iconify.design/bx:bx-search-alt-2.svg?color=%233f51b5")
-        no-repeat center center/contain;
+    background: url("https://api.iconify.design/bx:bx-search-alt-2.svg?color=%233f51b5") no-repeat
+        center center/contain;
     background-size: 20px;
 }
 .c-widget .search-submit:focus {

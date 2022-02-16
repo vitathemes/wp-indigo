@@ -401,7 +401,7 @@ if( function_exists( 'kirki' ) ) {
 		],
 		'output'      => [
 			[
-				'element' => array( 'h1' , '.h1' , 'h2' , '.h2' ,'h3' , '.h3' , ),
+				'element' => array( 'h1' , '.h1' , 'h2' , '.h2' ,'h3' , '.h3' ),
 			],
 		],
 		'priority'    => 4,

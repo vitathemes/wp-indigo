@@ -25,9 +25,9 @@
 
 
                 if ( is_singular() ) :
-                    the_title( '<h4 class="'.$wp_indigo_title_class.'">', '</h4>' );
+                    the_title( '<h4 class="'.esc_attr($wp_indigo_title_class).'">', '</h4>' );
                 else :              
-                    the_title( '<h4 class="'.$wp_indigo_title_class.'"><a  href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
+                    the_title( '<h4 class="'.esc_attr($wp_indigo_title_class).'"><a  href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
                 endif;			            
             ?>
 
