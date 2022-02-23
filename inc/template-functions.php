@@ -106,17 +106,16 @@ if ( ! function_exists('wp_indigo_dashicons')) {
 }
 
 
-if ( ! function_exists('wp_indigo_modify_libwp_post_type')) {
+if ( ! function_exists('wp_indigo_modify_libwp_post_type') ) {
   function wp_indigo_modify_libwp_post_type( $wp_indigo_postTypeName ) {
 	/**
-	* Modify LibWP post type name (If libwp plugin exist)
-	*/
+	 * Modify LibWP post type name (If libwp plugin exist)
+	 */
 	$wp_indigo_postTypeName = 'portfolios';
 	return $wp_indigo_postTypeName;
   }  
   add_filter('libwp_post_type_1_name', 'wp_indigo_modify_libwp_post_type');
 }
-
 
 if ( ! function_exists('wp_indigo_modify_libwp_post_type_argument')) {
 	
@@ -154,7 +153,6 @@ if ( ! function_exists('wp_indigo_modify_libwp_post_type_argument')) {
   add_filter('libwp_post_type_1_arguments', 'wp_indigo_modify_libwp_post_type_argument');
 
 }
-  
   
 if ( ! function_exists('wp_indigo_modify_libwp_taxonomy_name')) {
 	function wp_indigo_modify_libwp_taxonomy_name($wp_indigo_taxonomyName) {

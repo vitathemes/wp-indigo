@@ -158,6 +158,11 @@
     }
 }
 
+.c-single__thumbnail--centerd {
+    height: max-content;
+    text-align: center;
+}
+
 .c-single__content {
     a {
         border-bottom: 1px solid $wp_indigo_quaternary_color;

@@ -1,7 +1,7 @@
 === WP Indigo v2 ===
 Contributors: vitathemes, veronalabs, kashani, mrmolaei, mostafas1990, nimaprmdi
 Requires at least: 5.6
-Tested up to: 5.8
+Tested up to: 5.9
 Requires PHP: 5.6
 Stable tag: 1.0.0
 License: GPL-3.0-or-later
@@ -32,6 +32,13 @@ WP-Indigo is a minimal WordPress theme with a simple yet elegant design. This mu
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
 
 == Changelog ==
+
+= 2.1.6 =
+* Fix Minor Style Issues
+* Update Kirki to V4.0
+* Customizer Improvements
+* Style Improvements
+* Mobile Menu Opacity Bug Fix
 
 = 2.1.5 =
 * Fix image width issues

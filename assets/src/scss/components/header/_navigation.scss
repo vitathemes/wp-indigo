@@ -2,278 +2,277 @@
   #Navigations
 \*------------------------------------*/
 .c-nav {
-  width: 100%;
+    width: 100%;
 }
 
 .s-nav {
-  width: 100%;
-  margin: 0px;
-  padding: 59px 0px 0px 0px;
-  text-align: center;
-
-  @include media(tablet) {
-    padding: 0px;
-  }
-
-  li {
-    display: block;
-    position: relative;
-    margin-bottom: 39px;
-    text-transform: uppercase;
-
-    @include media(tablet) {
-      display: inline-block;
-      margin-left: 39px;
-      margin-bottom: 0px;
-    }
-
-    &:last-child {
-      // Edit position of last sub menu items
-      .sub-menu {
-        .sub-menu {
-          z-index: 5;
-          .sub-menu {
-            margin-left: 0px;
-            display: block !important;
-            position: absolute;
-            top: 60%;
-            left: 0% !important;
-            transform: translate(0%, 0%);
-            .sub-menu {
-              margin-left: 0px;
-            }
-          }
-        }
-      }
-    }
-    //
-  } //li
-
-  .menu-item {
     width: 100%;
-    margin-bottom: 34px;
-    display: inline-block;
-    line-height: 31px;
-    font-family: $wp_indigo_primary_font;
-    font-weight: 400;
-    opacity: 0;
-    letter-spacing: 0.05em;
-
-    @include media(mobile-only) {
-      font-size: 20px;
-      line-height: 31px;
-    }
+    margin: 0px;
+    padding: 59px 0px 0px 0px;
+    text-align: center;
 
     @include media(tablet) {
-      max-width: 160px;
-      font-weight: 300;
-      margin-left: 48px;
-      margin-bottom: 0px;
-      width: max-content;
-      opacity: 1;
+        padding: 0px;
     }
 
-    &:hover {
-      /* First Level From menu */
-      .sub-menu:first-child {
-        opacity: 1;
-        visibility: visible;
-      }
+    li {
+        display: block;
+        position: relative;
+        margin-bottom: 39px;
+        text-transform: uppercase;
+
+        @include media(tablet) {
+            display: inline-block;
+            margin-left: 39px;
+            margin-bottom: 0px;
+        }
+
+        &:last-child {
+            // Edit position of last sub menu items
+            .sub-menu {
+                .sub-menu {
+                    z-index: 5;
+                    .sub-menu {
+                        margin-left: 0px;
+                        display: block !important;
+                        position: absolute;
+                        top: 60%;
+                        left: 0% !important;
+                        transform: translate(0%, 0%);
+                        .sub-menu {
+                            margin-left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+        //
+    } //li
+
+    .menu-item {
+        width: 100%;
+        margin-bottom: 34px;
+        display: inline-block;
+        line-height: 31px;
+        font-family: $wp_indigo_primary_font;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        opacity: 0;
+
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+
+        @include media(mobile-only) {
+            font-size: 20px;
+            line-height: 31px;
+        }
+
+        @include media(tablet) {
+            max-width: 160px;
+            font-weight: 300;
+            margin-left: 48px;
+            margin-bottom: 0px;
+            width: max-content;
+            opacity: 1;
+        }
+
+        &:hover {
+            /* First Level From menu */
+            .sub-menu:first-child {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
-  }
 }
 
 /* Global Submenus */
 .sub-menu {
-  display: none;
-  height: max-content;
-  left: 20%;
-  top: -5px;
-  min-width: 100%;
-  max-width: max-content;
-  transition: 0.3s all;
-  position: static;
-  margin-left: 0px;
-  margin-top: 24px;
-  padding-left: 0px;
-  padding-right: 23px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  text-align: center;
-  z-index: 150;
-
-  @include media(tablet) {
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: left;
-    margin-left: 0px;
-    visibility: hidden;
-    opacity: 0;
-    top: 16px;
-    left: auto;
-    border: 1px solid $wp-indigo_neutral_gray_light_second_color;
-    padding: 0px;
-  }
-
-  .menu-item {
-    margin-left: 0px;
+    display: none;
+    height: max-content;
+    left: 20%;
+    top: -5px;
     min-width: 100%;
-    background-color: $color_background_body;
-    text-transform: capitalize;
-    font-family: $wp_indigo_secondary_font;
-    font-weight: 400;
-    display: inline-block;
+    max-width: max-content;
+    transition: 0.3s all;
+    position: static;
+    margin-left: 0px;
+    margin-top: 24px;
+    padding-left: 0px;
+    padding-right: 23px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    z-index: 150;
 
     @include media(tablet) {
-      display: flex;
-      align-items: center;
-      padding-right: 8px;
-    }
-  }
-
-  li {
-    margin-left: 15px;
-    padding-top: 0px;
-    display: block;
-    line-height: 0px;
-    margin-bottom: 16px;
-
-    @include media(tablet) {
-      margin-left: 0px;
-      margin-bottom: 0px;
-      width: 100%;
-      // padding: 16px 16px;
-      display: flex;
-      justify-content: space-between;
-
-      &:hover {
-        background-color: #f4f4f4;
-      }
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: left;
+        margin-left: 0px;
+        visibility: hidden;
+        opacity: 0;
+        top: 16px;
+        left: auto;
+        border: 1px solid $wp-indigo_neutral_gray_light_second_color;
+        padding: 0px;
     }
 
-    a {
-      padding: 8px 16px;
-      width: 100%;
-      height: 100%;
+    .menu-item {
+        margin-left: 0px;
+        min-width: 100%;
+        background-color: $color_background_body;
+        text-transform: capitalize;
+        font-family: $wp_indigo_secondary_font;
+        font-weight: 400;
+        display: inline-block;
+
+        @include media(tablet) {
+            display: flex;
+            align-items: center;
+            padding-right: 8px;
+        }
     }
-  }
 
-  .sub-menu {
-    top: 32px;
-    display: none !important;
-    z-index: 900;
+    li {
+        margin-left: 15px;
+        padding-top: 0px;
+        display: block;
+        line-height: 0px;
+        margin-bottom: 16px;
 
-    @include media(tablet) {
-      margin-left: 0px;
-      display: block !important;
-      position: absolute;
-      top: 0%;
-      left: 100% !important;
-      transform: translate(0%, 0%);
+        @include media(tablet) {
+            margin-left: 0px;
+            margin-bottom: 0px;
+            width: 100%;
+            // padding: 16px 16px;
+            display: flex;
+            justify-content: space-between;
+
+            &:hover {
+                background-color: #f4f4f4;
+            }
+        }
+
+        a {
+            padding: 8px 16px;
+            width: 100%;
+            height: 100%;
+        }
     }
-  }
 
-  .c-nav__arrow-icon {
-    line-height: 20px !important;
-  }
+    .sub-menu {
+        top: 32px;
+        display: none !important;
+        z-index: 900;
+
+        @include media(tablet) {
+            margin-left: 0px;
+            display: block !important;
+            position: absolute;
+            top: 0%;
+            left: 100% !important;
+            transform: translate(0%, 0%);
+        }
+    }
+
+    .c-nav__arrow-icon {
+        line-height: 20px !important;
+    }
+}
+
+.s-nav > .menu-item:last-child > .sub-menu > .menu-item > .sub-menu > .menu-item > .sub-menu {
+    transform: translate(40%, -5%);
+
+    .sub-menu {
+        transform: translate(0%, 100%);
+        top: 50% !important;
+    }
 }
 
 .s-nav
-  > .menu-item:last-child
-  > .sub-menu
-  > .menu-item
-  > .sub-menu
-  > .menu-item
-  > .sub-menu {
-  transform: translate(40%, -5%);
+    > .menu-item:last-child
+    > .sub-menu
+    > .menu-item
+    > .sub-menu
+    > .menu-item
+    > .sub-menu
+    > .menu-item
+    > .sub-menu
+    > .menu-item
+    > .sub-menu {
+    transform: translate(0%, 0%);
+    top: 50%;
 
-  .sub-menu {
-    transform: translate(0%, 100%);
-    top: 50% !important;
-  }
+    .sub-menu {
+        transform: translate(0%, 00%);
+        top: 100%;
+    }
 }
 
 .s-nav
-  > .menu-item:last-child
-  > .sub-menu
-  > .menu-item
-  > .sub-menu
-  > .menu-item
-  > .sub-menu
-  > .menu-item
-  > .sub-menu
-  > .menu-item
-  > .sub-menu {
-  transform: translate(0%, 0%);
-  top: 50%;
-
-  .sub-menu {
-    transform: translate(0%, 00%);
-    top: 100%;
-  }
-}
-
-.s-nav
-  > .menu-item
-  > .sub-menu
-  > .menu-item
-  > .sub-menu
-  > .menu-item
-  > .sub-menu
-  > .menu-item
-  > .sub-menu
-  > .menu-item
-  > .sub-menu {
-  transform: translate(0%, 100%);
-  top: 50%;
-
-  .sub-menu {
+    > .menu-item
+    > .sub-menu
+    > .menu-item
+    > .sub-menu
+    > .menu-item
+    > .sub-menu
+    > .menu-item
+    > .sub-menu
+    > .menu-item
+    > .sub-menu {
     transform: translate(0%, 100%);
     top: 50%;
-  }
+
+    .sub-menu {
+        transform: translate(0%, 100%);
+        top: 50%;
+    }
 }
 
 .menu-item {
-  list-style-type: none;
+    list-style-type: none;
 
-  // Hover on li and change sub Menus
-  &:hover > .sub-menu {
-    display: block;
-    padding-right: 0px;
+    // Hover on li and change sub Menus
+    &:hover > .sub-menu {
+        display: block;
+        padding-right: 0px;
 
-    @include media(tablet) {
-      opacity: 1;
-      visibility: visible;
+        @include media(tablet) {
+            opacity: 1;
+            visibility: visible;
+        }
     }
-  }
 
-  // focus on li and change sub Menus
-  &:focus-within > .sub-menu {
-    display: block;
-    padding-right: 0px;
+    // focus on li and change sub Menus
+    &:focus-within > .sub-menu {
+        display: block;
+        padding-right: 0px;
 
-    opacity: 1;
-    visibility: visible;
-  }
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 .current-menu-item {
-  a {
-    color: $wp_indigo_quaternary_color;
-  }
+    a {
+        color: $wp_indigo_quaternary_color;
+    }
 }
 
 .c-nav__arrow-icon {
-  margin-top: 5px;
-  margin-left: 8px;
-  font-size: 15px !important;
-  line-height: 27px !important;
-  display: none !important ;
+    margin-top: 5px;
+    margin-left: 8px;
+    font-size: 15px !important;
+    line-height: 27px !important;
+    display: none !important ;
 
-  @include media(tablet) {
-    margin-top: 2px;
-    display: inline-block !important;
-  }
+    @include media(tablet) {
+        margin-top: 2px;
+        display: inline-block !important;
+    }
 }

@@ -157,37 +157,67 @@ Requires PHP: 5.6
 
 @media only screen and (min-width: 720px) {
   :root {
-    --responsive--aligndefault-width: calc(720px - var(--responsive--spacing-horizontal));
-    --responsive--alignwide-width: calc(720px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--aligndefault-width: calc(
+            720px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignwide-width: calc(
+            720px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignright-margin: calc(
+            0.5 * (100vw - var(--responsive--aligndefault-width))
+        );
     --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 @media only screen and (min-width: 980px) {
   :root {
-    --responsive--aligndefault-width: calc(980px - var(--responsive--spacing-horizontal));
-    --responsive--alignwide-width: calc(1140px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--aligndefault-width: calc(
+            980px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignwide-width: calc(
+            1140px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignright-margin: calc(
+            0.5 * (100vw - var(--responsive--aligndefault-width))
+        );
     --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 @media only screen and (min-width: 1140px) {
   :root {
-    --responsive--aligndefault-width: calc(980px - var(--responsive--spacing-horizontal));
-    --responsive--alignwide-width: calc(1140px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--aligndefault-width: calc(
+            980px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignwide-width: calc(
+            1140px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignright-margin: calc(
+            0.5 * (100vw - var(--responsive--aligndefault-width))
+        );
     --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 @media only screen and (min-width: 1200px) {
   :root {
-    --responsive--aligndefault-width: calc(1140px - var(--responsive--spacing-horizontal));
-    --responsive--alignwide-width: calc(1200px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--aligndefault-width: calc(
+            1140px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignwide-width: calc(
+            1200px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignright-margin: calc(
+            0.5 * (100vw - var(--responsive--aligndefault-width))
+        );
     --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 @media only screen and (min-width: 1400px) {
   :root {
-    --responsive--aligndefault-width: calc(1140px - var(--responsive--spacing-horizontal));
-    --responsive--alignwide-width: calc(1200px - var(--responsive--spacing-horizontal));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--aligndefault-width: calc(
+            1140px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignwide-width: calc(
+            1200px - var(--responsive--spacing-horizontal)
+        );
+    --responsive--alignright-margin: calc(
+            0.5 * (100vw - var(--responsive--aligndefault-width))
+        );
     --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width))); } }
 
 /**
@@ -1071,6 +1101,11 @@ select {
     border-radius: 7.5px;
     border: 1px solid #f0f0f0;
     margin: 0px 19px; }
+  @media only screen and (max-width: 719px) {
+    .u-ellipse {
+      display: block;
+      width: 100%;
+      text-align: center; } }
 
 /* Letter spacing */
 .u-letter-space-medium {
@@ -1345,8 +1380,12 @@ select {
     line-height: 31px;
     font-family: "overpass";
     font-weight: 400;
+    letter-spacing: 0.05em;
     opacity: 0;
-    letter-spacing: 0.05em; }
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards; }
     @media only screen and (max-width: 719px) {
       .s-nav .menu-item {
         font-size: 20px;
@@ -1705,6 +1744,9 @@ select {
     .c-post__date a:hover {
       color: var(--wp_indigo_quaternary_color); }
 
+.c-post__date.c-post__date--full-width {
+  width: 100%; }
+
 /*------------------------------------*\
   #Page
 \*------------------------------------*/
@@ -1831,6 +1873,10 @@ select {
     height: 100%;
     object-fit: contain;
     object-position: center; }
+
+.c-single__thumbnail--centerd {
+  height: max-content;
+  text-align: center; }
 
 .c-single__content a {
   border-bottom: 1px solid var(--wp_indigo_quaternary_color);
@@ -2412,7 +2458,9 @@ ol.children {
   margin: 0 auto;
   /* ---- grid-item ---- */ }
   .c-main__portfolios--masonry .c-post--portfolios {
-    width: 263px; }
+    width: 263px;
+    max-height: 380px;
+    overflow: hidden; }
   .c-main__portfolios--masonry .c-post__link {
     height: calc(100% - 6px); }
 
@@ -2564,6 +2612,8 @@ ol.children {
   justify-content: space-evenly; }
   .c-footer__site-info--wide .c-footer__copy {
     margin-top: 30px; }
+  .c-footer__site-info--wide .c-footer__copy--normal .c-footer__link {
+    display: flex; }
 
 .c-footer__site-info--extra-wide {
   flex-wrap: wrap; }
@@ -2572,7 +2622,8 @@ ol.children {
   .c-footer__site-info--extra-wide .c-footer__widget {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    column-gap: 5px; }
   .c-footer__site-info--extra-wide .c-footer__copy {
     margin-top: 0px; }
   .c-footer__site-info--extra-wide .widget:first-child {

@@ -18,11 +18,11 @@ get_header();
 
     <header class="c-main__header">
         <h1 class="c-main__page-title"><?php wp_indigo_get_index_title(); ?></h1>
-		<?php if( get_theme_mod( 'archives_category', true ) ) : ?>
-			<div class="c-main__category">
-				<?php wp_indigo_category_filter("c-main__cat h3" , "" , true  ); ?>
-			</div>
-		<?php endif; ?>
+        <?php if( get_theme_mod( 'archives_category', true ) ) : ?>
+        <div class="c-main__category">
+            <?php wp_indigo_category_filter( "c-main__cat h3" , "" , true  ); ?>
+        </div>
+        <?php endif; ?>
     </header>
 
     <section class="c-main__content">
