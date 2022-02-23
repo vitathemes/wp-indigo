@@ -31,8 +31,7 @@
                 endif;			            
             ?>
 
-
-            <div class="c-post__date">
+            <div class="c-post__date <?php wp_indigo_get_date_class(); ?>">
                 <span>
                     <a class="h6" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
                         <?php echo esc_html( get_the_date() ) ?>

@@ -660,6 +660,9 @@ if ( ! function_exists( 'wp_indigo_get_footer_menu_class' ) ) :
 		elseif( get_theme_mod( 'footer_menu_pos' , 'center') == 'bottom'  ){
 			echo esc_attr( 'c-footer__copy--bottom' );
 		}
+		else { 
+			echo esc_attr( 'c-footer__copy--normal' );
+		}
 
 	}
 endif;
@@ -677,6 +680,20 @@ if ( ! function_exists( 'wp_indigo_get_entry_meta_class' ) ) :
 		elseif( get_theme_mod( 'blog_date_alignment' , 'front_title') == 'front_title'  ){
 			echo esc_attr( 'c-post__entry-meta--bottom' );
 		}
+	}
+endif;
+
+
+if ( ! function_exists( 'wp_indigo_get_date_class' ) ) :
+	/**
+	  * Get Entry Meta class
+	  */
+	function wp_indigo_get_date_class() {
+
+		if( get_theme_mod( 'blog_date_alignment' , 'front_title') == 'front_category' && get_theme_mod( 'archives_posts_category', true ) === false ) {
+			echo esc_attr( 'c-post__date--full-width' );
+		}
+		
 	}
 endif;
 

@@ -23,15 +23,22 @@
         <div class="c-single__entry-meta">
 
             <?php 
-                if ( 'portfolios' == get_post_type() &&  get_theme_mod( 'post_category', true )  ){ 
-                    wp_indigo_get_taxonomy( "portfolio_category" , "c-single__cat c-single__cat--sep u-link--secondary h6" , "a" );
+                if ( 'portfolios' == get_post_type() ) {
+                    if(get_theme_mod( 'post_category', true )) { 
+                        wp_indigo_get_taxonomy( "portfolio_category" , "c-single__cat c-single__cat--sep u-link--secondary h6" , "a" );
+                    }
                 }
-                else {  
             ?>
 
+            <?php if( (get_theme_mod( 'post_category', true ) && get_theme_mod( 'author_name', true )) || (get_theme_mod( 'post_category', true ) && get_theme_mod( 'publish_date', true ))  && 'portfolios' == get_post_type() ) :  ?>
+            <span class="u-ellipse"></span>
+            <?php endif; ?>
+
+            <?php if ( 'portfolios' !== get_post_type() ) : ?>
             <div class="c-single__cats">
                 <?php wp_indigo_show_categories(); ?>
             </div><!-- c-single__date -->
+            <?php endif; ?>
 
             <?php  if( get_theme_mod( 'author_name', true ) ) : ?>
             <div class="c-single__author">
@@ -46,10 +53,8 @@
                 </div>
             </div>
             <?php
-                    endif;
-                }
+                endif;
             ?>
-
 
             <?php if( get_theme_mod( 'publish_date', true ) == true && get_theme_mod( 'author_name', true ) == true ) : ?>
             <span class="u-ellipse"></span>

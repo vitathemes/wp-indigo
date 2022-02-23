@@ -1744,6 +1744,9 @@ select {
     .c-post__date a:hover {
       color: var(--wp_indigo_quaternary_color); }
 
+.c-post__date.c-post__date--full-width {
+  width: 100%; }
+
 /*------------------------------------*\
   #Page
 \*------------------------------------*/
@@ -2609,6 +2612,8 @@ ol.children {
   justify-content: space-evenly; }
   .c-footer__site-info--wide .c-footer__copy {
     margin-top: 30px; }
+  .c-footer__site-info--wide .c-footer__copy--normal .c-footer__link {
+    display: flex; }
 
 .c-footer__site-info--extra-wide {
   flex-wrap: wrap; }
@@ -2617,7 +2622,8 @@ ol.children {
   .c-footer__site-info--extra-wide .c-footer__widget {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    column-gap: 5px; }
   .c-footer__site-info--extra-wide .c-footer__copy {
     margin-top: 0px; }
   .c-footer__site-info--extra-wide .widget:first-child {
