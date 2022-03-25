@@ -199,6 +199,7 @@
 .c-footer__link--nav {
     &::before {
         content: " | ";
+        margin-left: 4px;
     }
 }
 
