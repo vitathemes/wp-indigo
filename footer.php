@@ -33,8 +33,8 @@
                     <div class="c-footer__copy__author-info">
                         <?php echo esc_html__( 'WP-Indigo by', 'wp-indigo' ); ?>
 
-                        <a class="c-footer__link h5 u-link--secondary"
-                            href="<?php echo esc_url( 'http://vitathemes.com/' ); ?>">
+                        <a target="_blank" class="c-footer__link h5 u-link--secondary"
+                            href="<?php echo esc_url( 'https://vitathemes.com/' ); ?>">
                             <?php echo esc_html__( 'VitaThemes' , 'wp-indigo'); ?>
                         </a>
                     </div>
