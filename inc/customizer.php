@@ -418,6 +418,26 @@ if( function_exists( 'kirki' ) ) {
 		]
 	);
 
+	new \Kirki\Field\Color(
+		[
+			'settings' => 'wp_indigo_border_color',
+			'label'    => __( 'Primary Border Color', 'wp-indigo' ),
+			'section'  => 'colors',
+			'default'  => '#e6e6e6',
+			'priority' => 40
+		]
+	);
+
+	new \Kirki\Field\Color(
+		[
+			'settings' => 'wp_indigo_border_secondary_color',
+			'label'    => __( 'Secondary Border Color', 'wp-indigo' ),
+			'section'  => 'colors',
+			'default'  => '#d8d8d8',
+			'priority' => 50
+		]
+	);
+
 	/*------------------------------------*\
 	  #Typography 
 	\*------------------------------------*/
@@ -691,11 +711,10 @@ if( function_exists( 'kirki' ) ) {
 			'section'     => 'portfolios_options',
 			'default'     => 'masonry',
 			'priority'    => 10,
-			'choices'     => [
+			'choices'     => apply_filters( 'wp_indigo_portfolios_items_styles', array(
 				'normal'   => get_template_directory_uri() . '/assets/images/normal.jpg',
-				'masonry' => get_template_directory_uri() . '/assets/images/masonry.jpg',
-				
-			],
+				'masonry'  => get_template_directory_uri() . '/assets/images/masonry.jpg',
+			) ),
 		]
 	);
 

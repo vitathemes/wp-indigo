@@ -204,7 +204,7 @@
     justify-content: space-between;
     padding-top: 64px; //qa-
     margin-top: 48px;
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid $wp_indigo_border_color;
 
     @include media(tablet-only) {
         width: 555px;
@@ -238,13 +238,13 @@
     margin-bottom: 32px;
 
     @include media(tablet-only) {
-        border-right: 1px solid #e6e6e6;
+        border-right: 1px solid $wp_indigo_border_color;
         width: 50%;
         padding-right: 10px;
     }
 
     @include media(tablet) {
-        border-right: 1px solid #e6e6e6;
+        border-right: 1px solid $wp_indigo_border_color;
         width: 50%;
         padding-right: 10px;
     }

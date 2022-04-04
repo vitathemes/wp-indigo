@@ -869,6 +869,12 @@ a {
   a:hover, a:active {
     outline: 0; }
 
+article .entry-content a,
+.comment-content a,
+.widget-area .widget_text a {
+  border-bottom: 1px solid var(--wp_indigo_quaternary_color);
+  padding-bottom: 3px; }
+
 /* Forms
 --------------------------------------------- */
 /*------------------------------------*\
@@ -1910,7 +1916,7 @@ select {
   justify-content: space-between;
   padding-top: 64px;
   margin-top: 48px;
-  border-top: 1px solid #e6e6e6; }
+  border-top: 1px solid var(--wp_indigo_border_color); }
   @media only screen and (min-width: 590px) and (max-width: 979px) {
     .c-single__post-nav {
       width: 555px; } }
@@ -1936,12 +1942,12 @@ select {
   margin-bottom: 32px; }
   @media only screen and (min-width: 590px) and (max-width: 979px) {
     .nav-previous {
-      border-right: 1px solid #e6e6e6;
+      border-right: 1px solid var(--wp_indigo_border_color);
       width: 50%;
       padding-right: 10px; } }
   @media only screen and (min-width: 980px) {
     .nav-previous {
-      border-right: 1px solid #e6e6e6;
+      border-right: 1px solid var(--wp_indigo_border_color);
       width: 50%;
       padding-right: 10px; } }
 
@@ -2022,13 +2028,13 @@ select {
 .comment {
   margin-top: 30px; }
   .comment:not(.comment.depth-1) {
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid var(--wp_indigo_border_color);
     padding-top: 30px; }
   .comment .children {
     list-style-type: none; }
 
 .comment.depth-1 {
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid var(--wp_indigo_border_color);
   padding-bottom: 27px; }
   .comment.depth-1:last-child {
     border-bottom: none; }
@@ -2580,14 +2586,14 @@ ol.children {
 .c-footer__content {
   width: 100%;
   position: relative;
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid var(--wp_indigo_border_color);
   margin-top: 35px; }
   .c-footer__content::before {
     display: block;
     content: " ";
     width: 9px;
     height: 9px;
-    border: 1px solid #e6e6e6;
+    border: 1px solid var(--wp_indigo_border_color);
     position: absolute;
     top: -5px;
     left: 50%;
@@ -2767,9 +2773,6 @@ input[type="submit"] {
 \*------------------------------------*/
 .wp-block-button {
   margin: 1rem 0; }
-
-.wp-block-button__link {
-  padding-top: 5px; }
 
 .wp-block-button.is-style-outline .wp-block-button__link {
   border: 1px solid var(--wp_indigo_primary-color);
