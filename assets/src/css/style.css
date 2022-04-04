@@ -2692,7 +2692,8 @@ ol.children {
   color: var(--wp_indigo_secondary-color); }
 
 .c-footer__link--nav::before {
-  content: " | "; }
+  content: " | ";
+  margin-left: 4px; }
 
 .s-footer__nav {
   padding: 0;
