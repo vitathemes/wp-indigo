@@ -21,3 +21,10 @@ a {
         outline: 0;
     }
 }
+
+article .entry-content a,
+.comment-content a,
+.widget-area .widget_text a {
+    border-bottom: 1px solid $wp_indigo_quaternary_color;
+    padding-bottom: 3px;
+}

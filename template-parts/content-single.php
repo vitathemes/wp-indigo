@@ -30,7 +30,7 @@
                 }
             ?>
 
-            <?php if( (get_theme_mod( 'post_category', true ) && get_theme_mod( 'author_name', true )) || (get_theme_mod( 'post_category', true ) && get_theme_mod( 'publish_date', true ))  && 'portfolios' == get_post_type() ) :  ?>
+            <?php if( 'portfolios' == get_post_type() ) :  ?>
             <span class="u-ellipse"></span>
             <?php endif; ?>
 

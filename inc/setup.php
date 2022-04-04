@@ -129,7 +129,7 @@ add_action( 'widgets_init', 'wp_indigo_widgets_init' );
 
 
 /**
- * Register footer widget area.
+ * Register footer widget Area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */

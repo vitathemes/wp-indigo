@@ -28,7 +28,7 @@
 .c-footer__content {
     width: 100%;
     position: relative;
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid $wp_indigo_border_color;
     margin-top: 35px;
 
     &::before {
@@ -36,7 +36,7 @@
         content: " ";
         width: 9px;
         height: 9px;
-        border: 1px solid #e6e6e6;
+        border: 1px solid $wp_indigo_border_color;
         position: absolute;
         top: -5px;
         left: 50%;
@@ -199,6 +199,7 @@
 .c-footer__link--nav {
     &::before {
         content: " | ";
+        margin-left: 4px;
     }
 }
 
