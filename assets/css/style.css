@@ -1889,6 +1889,9 @@ select {
   border-bottom: 1px solid var(--wp_indigo_quaternary_color);
   padding-bottom: 3px; }
 
+.c-single__content .wp-block-button__link {
+  padding-bottom: 12.5px; }
+
 .c-single__content li {
   font-size: 16px;
   line-height: 27px; }
@@ -2658,6 +2661,9 @@ ol.children {
   .c-footer__copy .c-footer__menu {
     margin-left: 8px; }
 
+.c-footer__copy__author-info {
+  color: var(--wp_indigo_primary-color); }
+
 .c-footer__copy--top {
   display: flex;
   flex-direction: column-reverse;
@@ -2779,7 +2785,6 @@ input[type="submit"] {
   margin: 1rem 0; }
 
 .wp-block-button__link {
-  padding-top: 5px;
   border-radius: 0px; }
 
 .wp-block-button.is-style-outline .wp-block-button__link {
