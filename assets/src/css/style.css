@@ -2110,7 +2110,8 @@ select {
 
 .comment-author-name {
   letter-spacing: 0.03em;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  border-bottom: none !important; }
 
 .comment-reply-link {
   font-size: 16px;
