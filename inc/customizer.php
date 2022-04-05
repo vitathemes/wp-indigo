@@ -420,6 +420,16 @@ if( function_exists( 'kirki' ) ) {
 
 	new \Kirki\Field\Color(
 		[
+			'settings' => 'wp_indigo_accent_light_color',
+			'label'    => __( 'Accent Light Color', 'wp-indigo' ),
+			'section'  => 'colors',
+			'default'  => '#FBFBFF',
+			'priority' => 35
+		]
+	);
+
+	new \Kirki\Field\Color(
+		[
 			'settings' => 'wp_indigo_border_color',
 			'label'    => __( 'Primary Border Color', 'wp-indigo' ),
 			'section'  => 'colors',

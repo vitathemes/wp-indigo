@@ -135,6 +135,8 @@
 
 /* Content */
 .c-single__entry-content {
+    width: 100%;
+
     @include media(tablet-only) {
         max-width: 555px;
     }

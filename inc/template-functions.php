@@ -52,6 +52,8 @@ if ( ! function_exists('wp_indigo_typography')) {
 
 		(get_theme_mod( 'wp_indigo_quaternary_color' ) == "" ) ? $wp_indigo_quaternary_color = "#3F51B5" : $wp_indigo_quaternary_color = get_theme_mod( 'wp_indigo_quaternary_color' ); 
 
+		(get_theme_mod( 'wp_indigo_accent_light_color' ) == "" ) ? $wp_indigo_accent_light_color = "#FBFBFF" : $wp_indigo_accent_light_color = get_theme_mod( 'wp_indigo_accent_light_color' ); 
+
 		(get_theme_mod( 'wp_indigo_border_color' ) == "" ) ? $wp_indigo_border_color = "#e6e6e6" : $wp_indigo_border_color = get_theme_mod( 'wp_indigo_border_color' ); 
 
 		(get_theme_mod( 'wp_indigo_border_secondary_color' ) == "" ) ? $wp_indigo_border_secondary_color = "#d8d8d8" : $wp_indigo_border_secondary_color = get_theme_mod( 'wp_indigo_border_secondary_color' ); 
@@ -64,6 +66,7 @@ if ( ! function_exists('wp_indigo_typography')) {
 					--wp_indigo_secondary-color: '.$wp_indigo_secondary_color.';
 					--wp_indigo_tertiary_color: '.$wp_indigo_tertiary_color.';
 					--wp_indigo_quaternary_color: '.$wp_indigo_quaternary_color.';
+					--wp_indigo_accent_light_color: '.$wp_indigo_accent_light_color.';
 					--wp_indigo_border_color: '.$wp_indigo_border_color.';
 					--wp_indigo_border_secondary_color: '.$wp_indigo_border_secondary_color.';
 					--wp_indigo_animation: '.$wp_indigo_animation.';
