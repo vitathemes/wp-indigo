@@ -2604,7 +2604,7 @@ ol.children {
     top: -5px;
     left: 50%;
     margin-left: -5px;
-    background: transparent;
+    background: var(--wp_indigo_background-color);
     border-radius: 50%; }
 
 .c-footer__site-info {
