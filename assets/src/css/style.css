@@ -2820,7 +2820,8 @@ input[type="submit"] {
   background-color: var(--wp_indigo_quaternary_color) !important;
   padding: 12px 16px !important;
   height: max-content !important;
-  margin-top: 8px; }
+  margin-top: 8px;
+  font-family: "overpass"; }
 
 .wp-block-file .wp-block-file__button {
   background-color: var(--wp_indigo_quaternary_color) !important;
