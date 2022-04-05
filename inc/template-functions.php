@@ -44,6 +44,8 @@ if ( ! function_exists('wp_indigo_pingback_header')) {
 if ( ! function_exists('wp_indigo_typography')) {
 	function wp_indigo_typography() {
 		
+		(get_theme_support( 'custom-background' ) == "" ) ? $wp_indigo_baclground_color = "#ffffff" : $wp_indigo_baclground_color = get_theme_support( 'custom-background' ); 
+
 		(get_theme_mod( 'typography_primary_color' ) == "" ) ? $wp_indigo_primary_color = "#1A1A1A" : $wp_indigo_primary_color = get_theme_mod( 'typography_primary_color' ); 
 
 		(get_theme_mod( 'typography_secondary_color' ) == "" ) ? $wp_indigo_secondary_color = "#555555" : $wp_indigo_secondary_color = get_theme_mod( 'typography_secondary_color' ); 
@@ -64,6 +66,7 @@ if ( ! function_exists('wp_indigo_typography')) {
 
 		
 		$html = ':root {	
+					--wp_indigo_background-color: '.$wp_indigo_baclground_color.';
 					--wp_indigo_primary-color: '.$wp_indigo_primary_color.';
 					--wp_indigo_secondary-color: '.$wp_indigo_secondary_color.';
 					--wp_indigo_tertiary_color: '.$wp_indigo_tertiary_color.';
