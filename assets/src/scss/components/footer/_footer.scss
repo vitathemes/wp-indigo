@@ -204,6 +204,7 @@
     &::before {
         content: " | ";
         margin-left: 4px;
+        color: $wp_indigo_tertiary_color !important;
     }
 }
 

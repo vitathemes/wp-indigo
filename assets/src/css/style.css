@@ -2702,7 +2702,8 @@ ol.children {
 
 .c-footer__link--nav::before {
   content: " | ";
-  margin-left: 4px; }
+  margin-left: 4px;
+  color: var(--wp_indigo_tertiary_color) !important; }
 
 .s-footer__nav {
   padding: 0;
