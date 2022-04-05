@@ -410,6 +410,16 @@ if( function_exists( 'kirki' ) ) {
 
 	new \Kirki\Field\Color(
 		[
+			'settings' => 'wp_indigo_light_gray_color',
+			'label'    => __( 'Light Gray Color', 'wp-indigo' ),
+			'section'  => 'colors',
+			'default'  => '#f0f0f0',
+			'priority' => 50
+		]
+	);
+
+	new \Kirki\Field\Color(
+		[
 			'settings' => 'wp_indigo_quaternary_color',
 			'label'    => __( 'Primary Accent Color', 'wp-indigo' ),
 			'section'  => 'colors',
@@ -447,6 +457,8 @@ if( function_exists( 'kirki' ) ) {
 			'priority' => 50
 		]
 	);
+
+
 
 	/*------------------------------------*\
 	  #Typography 

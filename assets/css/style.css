@@ -1019,7 +1019,7 @@ select {
   color: var(--wp_indigo_primary-color);
   border: none;
   border-radius: 3px;
-  background-color: #f0f0f0;
+  background-color: var(--wp_indigo_light_gray_color);
   padding: 10px 14px; }
 
 /*--------------------------------------------------------------
@@ -1440,7 +1440,7 @@ select {
       opacity: 0;
       top: 16px;
       left: auto;
-      border: 1px solid #f0f0f0;
+      border: 1px solid var(--wp_indigo_light_gray_color);
       padding: 0px; } }
   .sub-menu .menu-item {
     margin-left: 0px;
