@@ -786,9 +786,12 @@ big {
 \*------------------------------------*/
 body {
   height: 100vh;
-  background-color: #ffffff;
   font-size: 13px;
+  background-color: var(--wp_indigo_background-color);
   color: var(--wp_indigo_secondary-color); }
+
+body.custom-background {
+  background-color: var(--wp_indigo_background-color) !important; }
 
 /*------------------------------------*\
   #HR
