@@ -135,6 +135,8 @@
 
 /* Content */
 .c-single__entry-content {
+    width: 100%;
+
     @include media(tablet-only) {
         max-width: 555px;
     }
@@ -167,6 +169,10 @@
     a {
         border-bottom: 1px solid $wp_indigo_quaternary_color;
         padding-bottom: 3px;
+    }
+
+    .wp-block-button__link {
+        padding-bottom: 12.5px;
     }
 
     li {

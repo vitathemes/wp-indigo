@@ -128,6 +128,7 @@
 .comment-author-name {
     letter-spacing: 0.03em;
     text-transform: capitalize;
+    border-bottom: none !important;
 }
 
 .comment-reply-link {
@@ -135,6 +136,7 @@
     line-height: 27px;
     font-family: $wp_indigo_secondary_font;
     font-weight: 400;
+    border-bottom: none !important;
 }
 
 .comment-time {
@@ -161,6 +163,7 @@
 #cancel-comment-reply-link {
     letter-spacing: 0px;
     margin-top: 16px;
+    border-bottom: none !important;
 }
 
 ol.children {

@@ -410,11 +410,31 @@ if( function_exists( 'kirki' ) ) {
 
 	new \Kirki\Field\Color(
 		[
+			'settings' => 'wp_indigo_light_gray_color',
+			'label'    => __( 'Light Gray Color', 'wp-indigo' ),
+			'section'  => 'colors',
+			'default'  => '#f0f0f0',
+			'priority' => 50
+		]
+	);
+
+	new \Kirki\Field\Color(
+		[
 			'settings' => 'wp_indigo_quaternary_color',
 			'label'    => __( 'Primary Accent Color', 'wp-indigo' ),
 			'section'  => 'colors',
 			'default'  => '#3F51B5',
 			'priority' => 30
+		]
+	);
+
+	new \Kirki\Field\Color(
+		[
+			'settings' => 'wp_indigo_accent_light_color',
+			'label'    => __( 'Accent Light Color', 'wp-indigo' ),
+			'section'  => 'colors',
+			'default'  => '#FBFBFF',
+			'priority' => 35
 		]
 	);
 
@@ -437,6 +457,8 @@ if( function_exists( 'kirki' ) ) {
 			'priority' => 50
 		]
 	);
+
+
 
 	/*------------------------------------*\
 	  #Typography 
