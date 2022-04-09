@@ -3,7 +3,11 @@
 \*------------------------------------*/
 body {
     height: 100vh;
-    background-color: $color_background_body;
     font-size: 13px;
+    background-color: $wp_indigo_background_color;
     color: $wp_indigo_secondary_color;
+}
+
+body.custom-background {
+    background-color: $wp_indigo_background_color !important;
 }
