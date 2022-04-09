@@ -63,14 +63,43 @@
 
 .c-footer__site-info--wide {
     justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    @include media(tablet) {
+        flex-wrap: nowrap;
+    }
 
     .c-footer__copy {
         margin-top: 30px;
     }
 
     .c-footer__copy--normal {
+        flex-wrap: wrap;
+        display: flex;
+
+        @include media(tablet) {
+            max-width: 260px;
+            margin-top: 0px;
+        }
+
         .c-footer__link {
             display: flex;
+        }
+
+        .c-footer__link--nav {
+            &::before {
+                margin-right: 4px;
+            }
+        }
+
+        .c-footer__copy__author-info {
+            display: flex;
+            width: max-content;
+            align-items: center;
+
+            .c-footer__link {
+                margin-left: 4px;
+            }
         }
     }
 }
