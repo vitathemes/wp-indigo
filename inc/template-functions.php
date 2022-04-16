@@ -26,8 +26,8 @@ if ( ! function_exists('wp_indigo_body_classes'))  {
 
 		return $classes;
 	}
-	add_filter( 'body_class', 'wp_indigo_body_classes' );
 }
+add_filter( 'body_class', 'wp_indigo_body_classes' );
 
 if ( ! function_exists('wp_indigo_pingback_header')) {
 	function wp_indigo_pingback_header() {

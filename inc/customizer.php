@@ -36,30 +36,37 @@ function wp_indigo_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'wp_indigo_customize_register' );
 
-/**
- * Render the site title for the selective refresh partial.
- *
- * @return void
- */
-function wp_indigo_customize_partial_blogname() {
-	bloginfo( 'name' );
-}
+if( ! function_exists( 'wp_indigo_customize_partial_blogname' ) ) : 
+	/**
+	 * Render the site title for the selective refresh partial.
+	 *
+	 * @return void
+	 */
+	function wp_indigo_customize_partial_blogname() {
+		bloginfo( 'name' );
+	}
+endif;
 
-/**
- * Render the site tagline for the selective refresh partial.
- *
- * @return void
- */
-function wp_indigo_customize_partial_blogdescription() {
-	bloginfo( 'description' );
-}
+if( ! function_exists('wp_indigo_customize_partial_blogdescription') ) : 
+	/**
+	 * Render the site tagline for the selective refresh partial.
+	 *
+	 * @return void
+	 */
+	function wp_indigo_customize_partial_blogdescription() {
+		bloginfo( 'description' );
+	}
+endif;
 
-/**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- */
-function wp_indigo_customize_preview_js() {
-	wp_enqueue_script( 'wp-indigo-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), WP_INDIGO_VERSION, true );
-}
+
+if( ! function_exists('wp_indigo_customize_preview_js') ) : 
+	/**
+	 * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+	 */
+	function wp_indigo_customize_preview_js() {
+		wp_enqueue_script( 'wp-indigo-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), WP_INDIGO_VERSION, true );
+	}
+endif;
 add_action( 'customize_preview_init', 'wp_indigo_customize_preview_js' );
 
 
