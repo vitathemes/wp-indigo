@@ -2416,12 +2416,10 @@ ol.children {
 .c-main__cat.active {
   color: var(--wp_indigo_quaternary_color); }
 
-.c-main__content {
-  padding-top: 25px; }
-  @media screen and (orientation: landscape) {
-    .c-main__content {
-      max-width: 100%;
-      margin-top: 64px; } }
+@media screen and (orientation: landscape) {
+  .c-main__content {
+    max-width: 100%;
+    margin-top: 64px; } }
 
 @media only screen and (min-width: 980px) {
   .c-main__content--search {

@@ -120,12 +120,6 @@
 }
 
 .c-main__content {
-    padding-top: 25px;
-
-    @include media(tablet) {
-        // max-width: 555px;
-    }
-
     @include media(landscape) {
         max-width: 100%;
         margin-top: 64px;
