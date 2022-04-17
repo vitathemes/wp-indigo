@@ -744,3 +744,15 @@ if ( ! function_exists( 'wp_indigo_show_post_nav' ) ) :
 		);
 	}
 endif;
+
+if ( ! function_exists('wp_indigo_show_description')) {
+	function wp_indigo_show_description() {
+		/**
+		 * Display Description for profile section 
+		 */
+		if ( get_bloginfo( 'description' ) !== '' ) { 
+			/** translator %s: Blog info description */
+			echo sprintf('<h4 class="description">%s</h4>' ,  esc_html(get_bloginfo( 'description' )));// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+	}
+}
