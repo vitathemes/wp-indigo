@@ -36,6 +36,7 @@ function wp_indigo_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'wp_indigo_customize_register' );
 
+
 if( ! function_exists( 'wp_indigo_customize_partial_blogname' ) ) : 
 	/**
 	 * Render the site title for the selective refresh partial.
@@ -46,6 +47,7 @@ if( ! function_exists( 'wp_indigo_customize_partial_blogname' ) ) :
 		bloginfo( 'name' );
 	}
 endif;
+
 
 if( ! function_exists('wp_indigo_customize_partial_blogdescription') ) : 
 	/**
