@@ -764,7 +764,7 @@ if( ! function_exists('wp_indigo_get_search') ) :
 			echo sprintf( '<div class="c-header__search">
 			<button class="c-header__search-icon-btn js-header__search-icon-btn" aria-label="%s" aria-controls="c-header__search__form-box" aria-expanded="false">
 			<span class="u-link--secondary c-header__search-icon iconify" data-icon="bx:search-alt-2"></span></button></div>' ,
-			esc_attr__('Primary menu', 'wp-indigo') );
+			esc_attr__('Primary search', 'wp-indigo') );
 		}
 	}
 endif;

@@ -1357,12 +1357,24 @@ select {
 
 /* Search Box */
 .c-header__search {
-  width: max-content; }
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  @media only screen and (min-width: 980px) {
+    .c-header__search {
+      width: max-content; } }
 
 .c-header__search-icon-btn {
-  margin-left: 41px;
   background-color: transparent !important;
-  padding: 16px; }
+  padding: 16px;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 0.2s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards; }
+  @media only screen and (min-width: 980px) {
+    .c-header__search-icon-btn {
+      margin-left: 41px; } }
 
 .c-header__search-icon {
   font-size: 15px;
@@ -1395,10 +1407,11 @@ select {
     width: 100%;
     height: max-content;
     position: relative;
-    margin-top: 32px; }
+    margin: 0px 16px;
+    margin-top: 32px;
+    max-width: 555px; }
     @media only screen and (min-width: 980px) {
       .c-header__search__form-box .search-form {
-        max-width: 555px;
         margin-top: 88px; } }
   .c-header__search__form-box .search-submit {
     position: absolute;

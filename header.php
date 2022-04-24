@@ -65,6 +65,7 @@
 
         </header><!-- #masthead -->
 
+        <?php if( get_theme_mod( 'display_search_icon' , false ) === true  ) : ?>
         <div id="c-header__search__form-box" class="c-header__search__form-box js-header__search__form-box">
             <div class="c-header__close-search">
                 <button class="c-hedaer__close-search__btn js-hedaer__close-search__btn" aria-label="<?php esc_attr_e('Close Search', 'wp-indigo'); ?>"
@@ -72,8 +73,8 @@
                     <span class="c-hedaer__close-search__icon iconify" data-icon="ei:close"></span>
                 </button>
             </div>
-
             <div class="c-header__search__form">
                 <?php get_search_form() ?>
             </div>
         </div>
+        <?php endif; ?>
