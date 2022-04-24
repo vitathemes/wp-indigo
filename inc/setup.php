@@ -2,7 +2,7 @@
 
 if ( ! defined( 'WP_INDIGO_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'WP_INDIGO_VERSION', '2.1.7' );
+	define( 'WP_INDIGO_VERSION', '2.1.8' );
 }
 
 

@@ -57,12 +57,8 @@
         font-family: $wp_indigo_primary_font;
         font-weight: 400;
         letter-spacing: 0.05em;
-        opacity: 0;
 
-        animation-name: fadeIn;
-        animation-duration: 0.5s;
-        animation-delay: 0.5s;
-        animation-fill-mode: forwards;
+        opacity: 0;
 
         @include media(mobile-only) {
             font-size: 20px;

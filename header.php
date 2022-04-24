@@ -35,7 +35,8 @@
                     <?php wp_indigo_branding(); ?>
                 </div>
 
-                <button class="c-header__menu js-header__menu" aria-label="<?php esc_attr_e('Primary menu', 'wp-indigo'); ?>" aria-controls="wp-indigo-primary-menu" aria-expanded="false">
+                <button class="c-header__menu js-header__menu" aria-label="<?php esc_attr_e('Primary menu', 'wp-indigo'); ?>" aria-controls="wp-indigo-primary-menu"
+                    aria-expanded="false">
                     <span class="c-header__menu__icon">
                         <span class="hamburger"></span>
                     </span>
@@ -55,8 +56,24 @@
                             );
                         }
                     ?>
+
+                    <?php wp_indigo_get_search(); ?>
                 </nav><!-- #site-navigation -->
 
-            </div><!--c-header__main -->
+            </div>
+            <!--c-header__main -->
 
         </header><!-- #masthead -->
+
+        <div id="c-header__search__form-box" class="c-header__search__form-box js-header__search__form-box">
+            <div class="c-header__close-search">
+                <button class="c-hedaer__close-search__btn js-hedaer__close-search__btn" aria-label="<?php esc_attr_e('Close Search', 'wp-indigo'); ?>"
+                    aria-controls="c-header__search__form-box">
+                    <span class="c-hedaer__close-search__icon iconify" data-icon="ei:close"></span>
+                </button>
+            </div>
+
+            <div class="c-header__search__form">
+                <?php get_search_form() ?>
+            </div>
+        </div>
