@@ -612,7 +612,7 @@ if( function_exists( 'kirki' ) ) {
 				'transport'   => 'auto',
 				'output'      => [
 					[
-						'element' => array( 'h3' , '.h3' ),
+						'element' => array( 'h3' , '.h3' , '.page-numbers'),
 					],
 				],
 			]
@@ -669,7 +669,7 @@ if( function_exists( 'kirki' ) ) {
 				'transport'   => 'auto',
 				'output'      => [
 					[
-						'element' => array( 'h6' , '.h6' , '.page-numbers' ),
+						'element' => array( 'h6' , '.h6' ),
 					],
 				],
 			]

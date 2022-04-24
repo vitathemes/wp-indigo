@@ -46,7 +46,6 @@
                 }
             }
         }
-        //
     } //li
 
     .menu-item {
@@ -57,7 +56,6 @@
         font-family: $wp_indigo_primary_font;
         font-weight: 400;
         letter-spacing: 0.05em;
-
         opacity: 0;
 
         @include media(mobile-only) {
@@ -261,14 +259,15 @@
 }
 
 .c-nav__arrow-icon {
-    margin-top: 5px;
-    margin-left: 8px;
-    font-size: 15px !important;
     line-height: 27px !important;
-    display: none !important ;
+    display: none !important;
+    margin-left: 2px;
+    margin-top: 0px;
+    font-size: 12px !important;
 
     @include media(tablet) {
-        margin-top: 2px;
+        margin-top: 1px;
         display: inline-block !important;
+        color: $wp_indigo_primary_color !important;
     }
 }

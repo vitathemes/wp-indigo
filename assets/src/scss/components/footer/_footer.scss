@@ -7,15 +7,17 @@
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 48px;
+    padding-bottom: 36px;
     width: 100%;
     opacity: $global-animation-opacity;
-
-    height: 150px;
+    height: auto;
 
     @include media(tablet) {
+        min-height: 150px;
         margin-top: auto;
-        height: 250px;
+        height: auto;
         padding: 0px 17px;
+        padding-bottom: 40px;
     }
 }
 
@@ -52,7 +54,6 @@
     text-align: center;
     align-items: flex-start;
     margin-top: 34px;
-    padding-bottom: 39px;
     display: flex;
     justify-content: center;
 

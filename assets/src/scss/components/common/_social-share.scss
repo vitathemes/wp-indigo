@@ -2,36 +2,41 @@
   #Social Share
 \*---------------------------------*/
 .c-social-share {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .c-social-share__icon {
-  transition: 0s;
-
-  g {
     transition: 0s;
-  }
-  path {
-    transition: 0s all;
-  }
+
+    g {
+        transition: 0s;
+    }
+    path {
+        transition: 0s all;
+    }
 }
 
 .c-social-share__title {
-  text-transform: uppercase;
-  color: $wp_indigo_secondary_color;
+    text-transform: uppercase;
+    color: $wp_indigo_secondary_color;
+    margin-top: 4px;
 }
 
 .c-social-share__items {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 .c-social-share__item {
-  margin: 0px 12.5px;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
+    margin: 0px 5px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+        margin-left: 4px;
+    }
 }

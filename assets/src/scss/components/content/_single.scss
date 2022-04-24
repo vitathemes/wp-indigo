@@ -197,7 +197,7 @@
 
 .c-single__share {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
 }
 
@@ -233,27 +233,34 @@
     @include media(tablet) {
         flex-wrap: nowrap;
     }
+
+    div {
+        &:first-child {
+            border-left: none !important;
+            padding-left: 0px;
+        }
+    }
 }
 
 .nav-previous {
-    width: 100%;
+    width: calc(50% - 24px);
     margin-bottom: 32px;
-
-    @include media(tablet-only) {
-        border-right: 1px solid $wp_indigo_border_color;
-        width: 50%;
-        padding-right: 10px;
-    }
-
-    @include media(tablet) {
-        border-right: 1px solid $wp_indigo_border_color;
-        width: 50%;
-        padding-right: 10px;
-    }
 }
 
 .nav-next {
-    width: calc(50% - 24px);
+    width: 100%;
+
+    @include media(tablet-only) {
+        border-left: 1px solid $wp_indigo_border_color;
+        padding-left: 24px;
+        width: 50%;
+    }
+
+    @include media(tablet) {
+        border-left: 1px solid $wp_indigo_border_color;
+        padding-left: 24px;
+        width: 50%;
+    }
 }
 
 .c-single__nav-title {
@@ -267,7 +274,7 @@
 .c-single__nav-meta {
     display: flex;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 8px;
     width: max-content;
 }
 
