@@ -19,13 +19,11 @@ get_header();
                 <?php esc_html_e( '404', 'wp-indigo' ); ?>
             </h1>
 
-            <h4 class="c-main__desc c-main__desc--404">
+            <p class="c-main__desc c-main__desc--404">
                 <?php esc_html_e( 'Page Not Found!', 'wp-indigo' ); ?>
-            </h4>
+            </p>
 
-            <p class="c-main__desc h3 c-main__desc--404">
-                <?php esc_html_e( 'This page not found (deleted or never exists).', 'wp-indigo' ); ?>
-                <br />
+            <p class="c-main__desc c-main__desc--404">
                 <?php esc_html_e( 'Try a phrase in search box or back to home and start again.', 'wp-indigo' ); ?>
             </p>
 
