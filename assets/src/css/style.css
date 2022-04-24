@@ -1913,9 +1913,6 @@ select {
   @media only screen and (min-width: 590px) and (max-width: 979px) {
     .c-single__entry-header__content {
       width: 555px; } }
-  @media only screen and (min-width: 980px) {
-    .c-single__entry-header__content {
-      width: 555px; } }
 
 .c-single__entry-title {
   text-align: center;
@@ -1925,10 +1922,10 @@ select {
   max-width: 100vw;
   -ms-word-wrap: break-word;
   padding: 0px 16px;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  width: 100%; }
   @media only screen and (min-width: 980px) {
     .c-single__entry-title {
-      max-width: 555px;
       margin-bottom: 24px; } }
 
 .c-single__entry-meta {

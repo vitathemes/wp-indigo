@@ -40,10 +40,6 @@
     @include media(tablet-only) {
         width: 555px;
     }
-
-    @include media(tablet) {
-        width: 555px;
-    }
 }
 
 .c-single__entry-title {
@@ -55,9 +51,9 @@
     -ms-word-wrap: break-word;
     padding: 0px 16px;
     text-transform: capitalize;
+    width: 100%;
 
     @include media(tablet) {
-        max-width: 555px;
         margin-bottom: 24px;
     }
 }
