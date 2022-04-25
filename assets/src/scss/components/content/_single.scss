@@ -55,6 +55,8 @@
 
     @include media(tablet) {
         margin-bottom: 24px;
+        max-width: 555px;
+        margin: 0 auto;
     }
 }
 .c-single__entry-meta {

@@ -1955,7 +1955,9 @@ select {
   width: 100%; }
   @media only screen and (min-width: 980px) {
     .c-single__entry-title {
-      margin-bottom: 24px; } }
+      margin-bottom: 24px;
+      max-width: 555px;
+      margin: 0 auto; } }
 
 .c-single__entry-meta {
   width: auto;
