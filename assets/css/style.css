@@ -2512,6 +2512,7 @@ ol.children {
 
 .c-main--404 {
   width: 100%;
+  max-width: 100%;
   height: max-content;
   padding: 0; }
   .c-main--404 .c-main__content {
@@ -2525,6 +2526,8 @@ ol.children {
     color: var(--wp_indigo_primary-color);
     margin-bottom: 8px;
     width: 100%; }
+  .c-main--404 .search-form {
+    max-width: 100%; }
 
 .c-main__search--404 .search-submit {
   position: absolute;
