@@ -1377,7 +1377,7 @@ select {
       margin-left: 41px; } }
 
 .c-header__search-icon {
-  font-size: 15px;
+  font-size: 18px;
   color: var(--wp_indigo_primary-color);
   cursor: pointer; }
   .c-header__search-icon path {
@@ -1510,7 +1510,6 @@ select {
     width: 100%;
     margin-bottom: 34px;
     display: inline-block;
-    line-height: 31px;
     font-family: "overpass";
     font-weight: 400;
     letter-spacing: 0.05em;
@@ -1571,6 +1570,8 @@ select {
     background-color: #ffffff;
     text-transform: capitalize;
     font-family: "SourceSerifPro";
+    font-size: 13px;
+    line-height: 31px;
     font-weight: 400;
     display: inline-block; }
     @media only screen and (min-width: 980px) {
@@ -1608,7 +1609,11 @@ select {
         position: absolute;
         top: 0%;
         left: 100% !important;
-        transform: translate(0%, 0%); } }
+        transform: translate(0%, 0%);
+        margin-top: -1px; } }
+    @media only screen and (min-width: 980px) {
+      .sub-menu .sub-menu .sub-menu {
+        margin-top: 24px; } }
   .sub-menu .c-nav__arrow-icon {
     line-height: 20px !important; }
 
@@ -1658,7 +1663,7 @@ select {
   font-size: 12px !important; }
   @media only screen and (min-width: 980px) {
     .c-nav__arrow-icon {
-      margin-top: 1px;
+      margin-top: -1px;
       display: inline-block !important;
       color: var(--wp_indigo_primary-color) !important; } }
 
@@ -2675,13 +2680,13 @@ ol.children {
   margin-right: 24px; }
 
 .page-numbers {
-  margin: 0px 4px;
   font-family: "overpass";
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.1em;
-  color: var(--wp_indigo_primary-color); }
+  color: var(--wp_indigo_primary-color);
+  padding: 0px 4px; }
 
 /* Social Share
 --------------------------------------------- */

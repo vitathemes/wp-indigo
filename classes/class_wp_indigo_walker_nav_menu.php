@@ -9,7 +9,7 @@ class Wp_indigo_walker_nav_menu extends Walker_Nav_Menu {
 		$permalink   = $item->url;
 
 
-		$output .= "<li class='" . esc_attr(implode( " ", $item->classes )) . "'>";
+		$output .= "<li class='h3 u-letter-space-medium " . esc_attr(implode( " ", $item->classes )) . "'>";
 
 		//Add SPAN if no Permalink
 		if ( $permalink ) {
