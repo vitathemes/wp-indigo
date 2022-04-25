@@ -57,6 +57,10 @@
         letter-spacing: 0.05em;
         opacity: 0;
 
+        animation-name: fadeIn;
+        animation-duration: $global-transition;
+        animation-fill-mode: forwards;
+
         @include media(mobile-only) {
             font-size: 20px;
             line-height: 31px;

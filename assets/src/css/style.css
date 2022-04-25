@@ -1529,7 +1529,10 @@ select {
     font-family: "overpass";
     font-weight: 400;
     letter-spacing: 0.05em;
-    opacity: 0; }
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards; }
     @media only screen and (max-width: 719px) {
       .s-nav .menu-item {
         font-size: 20px;
