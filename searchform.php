@@ -13,6 +13,5 @@
     </label>
 
     <button aria-label="<?php esc_attr_e('Search', 'wp-indigo'); ?>" type="submit" class="c-search-form__submit search-submit c-btn--sm">
-        <?php echo esc_html__( 'Serach', 'wp-indigo' ); ?>
     </button>
 </form>

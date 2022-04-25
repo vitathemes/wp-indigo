@@ -1063,7 +1063,7 @@ select {
     position: absolute;
     top: 50%;
     left: 90%;
-    transform: translate(-100%, -50%); }
+    transform: translate(-100%, 0%); }
   .search-submit:hover, .search-submit:focus, .search-submit:active {
     background-color: transparent;
     color: transparent; }
