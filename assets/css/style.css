@@ -2601,12 +2601,10 @@ ol.children {
     max-width: 100%;
     margin-top: 64px; } }
 
-.c-main__content--search {
-  text-align: center; }
-  @media only screen and (min-width: 980px) {
-    .c-main__content--search {
-      padding-top: 16px;
-      padding-bottom: 32px; } }
+@media only screen and (min-width: 980px) {
+  .c-main__content--search {
+    padding-top: 16px;
+    padding-bottom: 32px; } }
 
 .c-main__content--page {
   padding-top: 0px; }
