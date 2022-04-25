@@ -1411,7 +1411,7 @@ select {
 
 .c-header__search-icon-btn {
   background-color: transparent !important;
-  padding: 16px;
+  padding: 0px 16px;
   opacity: 0;
   animation-name: fadeIn;
   animation-duration: 0.2s;
