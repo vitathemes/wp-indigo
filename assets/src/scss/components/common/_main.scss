@@ -60,6 +60,10 @@
     height: max-content;
     padding: 0;
 
+    @include media(tablet) {
+        width: 555px;
+    }
+
     .c-main__content {
         height: 100%;
         text-align: center;

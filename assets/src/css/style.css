@@ -2515,6 +2515,9 @@ ol.children {
   max-width: 100%;
   height: max-content;
   padding: 0; }
+  @media only screen and (min-width: 980px) {
+    .c-main--404 {
+      width: 555px; } }
   .c-main--404 .c-main__content {
     height: 100%;
     text-align: center; }
