@@ -273,6 +273,12 @@
     @include media(tablet) {
         padding-top: 48px;
     }
+
+    .search-form {
+        @include media(tablet) {
+            margin-top: 88px;
+        }
+    }
 }
 
 .c-header__search__form {

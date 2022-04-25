@@ -129,7 +129,6 @@ select {
     text-align: center;
 
     @include media(tablet) {
-        margin-top: 88px;
         max-width: 555px;
     }
 }
@@ -163,6 +162,9 @@ select {
     &:hover,
     &:focus,
     &:active {
+        background-color: transparent;
+        color: transparent;
+
         &::before {
             background-color: $wp_indigo_quaternary_color;
         }
