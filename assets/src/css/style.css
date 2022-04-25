@@ -2558,7 +2558,7 @@ ol.children {
     position: absolute;
     top: 50%;
     left: 90%;
-    transform: translate(-100%, -100%); }
+    transform: translate(-100%, -50%); }
   .c-main__search--404 .search-submit:hover::before, .c-main__search--404 .search-submit:focus::before, .c-main__search--404 .search-submit:active::before {
     background-color: var(--wp_indigo_quaternary_color); }
 
