@@ -1222,6 +1222,10 @@ select {
   animation-delay: 0.5s;
   animation-fill-mode: forwards; }
 
+.dashicons,
+.dashicons-before:before {
+  transition: none !important; }
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
