@@ -1448,9 +1448,12 @@ select {
   @media only screen and (min-width: 980px) {
     .c-header__search__form-box {
       padding-top: 48px; } }
-  @media only screen and (min-width: 980px) {
-    .c-header__search__form-box .search-form {
-      margin-top: 88px; } }
+  .c-header__search__form-box .search-form {
+    margin: 0px 16px; }
+    @media only screen and (min-width: 980px) {
+      .c-header__search__form-box .search-form {
+        margin: 0;
+        margin-top: 88px; } }
 
 .c-header__search__form {
   width: 100%;

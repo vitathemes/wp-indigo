@@ -275,7 +275,10 @@
     }
 
     .search-form {
+        margin: 0px 16px;
+
         @include media(tablet) {
+            margin: 0;
             margin-top: 88px;
         }
     }
