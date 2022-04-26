@@ -1047,7 +1047,8 @@ select {
   top: 0;
   background-color: transparent;
   color: transparent;
-  margin-top: 9px; }
+  margin-top: 1px;
+  height: calc(100% - 1px); }
   .search-submit::before {
     content: " ";
     width: 20px;
@@ -1063,7 +1064,7 @@ select {
     position: absolute;
     top: 50%;
     left: 90%;
-    transform: translate(-100%, 0%); }
+    transform: translate(-100%, -50%); }
   .search-submit:hover, .search-submit:focus, .search-submit:active {
     background-color: transparent;
     color: transparent; }
@@ -1074,7 +1075,8 @@ select {
   display: block; }
 
 .search-field {
-  width: calc(100% - 32px); }
+  width: calc(100% - 32px);
+  margin: 0 !important; }
 
 /*--------------------------------------------------------------
 # Plugins
@@ -2544,7 +2546,7 @@ ol.children {
   top: 0;
   background-color: transparent;
   color: transparent;
-  margin-top: 9px; }
+  margin-top: 1px; }
   .c-main__search--404 .search-submit::before {
     content: " ";
     width: 20px;
@@ -2624,10 +2626,6 @@ ol.children {
 .c-main__search-form {
   position: relative;
   margin-bottom: 32px; }
-  .c-main__search-form .search-submit {
-    position: absolute;
-    top: 15%;
-    right: 0; }
 
 /* Grid */
 .c-main__portfolios--normal {

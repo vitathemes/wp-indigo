@@ -139,7 +139,8 @@ select {
     top: 0;
     background-color: transparent;
     color: transparent;
-    margin-top: 9px;
+    margin-top: 1px;
+    height: calc(100% - 1px);
 
     &::before {
         content: " ";
@@ -156,7 +157,7 @@ select {
         position: absolute;
         top: 50%;
         left: 90%;
-        transform: translate(-100%, 0%);
+        transform: translate(-100%, -50%);
     }
 
     &:hover,
@@ -177,4 +178,5 @@ select {
 
 .search-field {
     width: calc(100% - 32px);
+    margin: 0 !important;
 }

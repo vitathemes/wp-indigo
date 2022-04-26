@@ -91,7 +91,7 @@
         top: 0;
         background-color: transparent;
         color: transparent;
-        margin-top: 9px;
+        margin-top: 1px;
 
         &::before {
             content: " ";
@@ -198,12 +198,6 @@
 .c-main__search-form {
     position: relative;
     margin-bottom: 32px;
-
-    .search-submit {
-        position: absolute;
-        top: 15%;
-        right: 0;
-    }
 }
 
 /* Grid */
