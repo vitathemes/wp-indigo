@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 09:32+0430\n"
+"POT-Creation-Date: 2022-04-30 10:16+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
@@ -27,14 +27,10 @@ msgid "Page Not Found!"
 msgstr ""
 
 #: 404.php:27
-msgid "This page not found (deleted or never exists)."
-msgstr ""
-
-#: 404.php:29
 msgid "Try a phrase in search box or back to home and start again."
 msgstr ""
 
-#: 404.php:40
+#: 404.php:38
 msgid "HOMEPAGE"
 msgstr ""
 
@@ -111,7 +107,7 @@ msgstr ""
 msgid "WP-Indigo by"
 msgstr ""
 
-#: footer.php:37
+#: footer.php:38
 msgid "VitaThemes"
 msgstr ""
 
@@ -123,8 +119,24 @@ msgstr ""
 msgid "Primary menu"
 msgstr ""
 
+#: header.php:71
+msgid "Close Search"
+msgstr ""
+
 #: search.php:16
 msgid "Search Result"
+msgstr ""
+
+#: searchform.php:10 searchform.php:12
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:11
+msgid "Search…"
+msgstr ""
+
+#: searchform.php:15
+msgid "Search"
 msgstr ""
 
 #: classes/class_wp_indigo_walker_comment.php:56
@@ -135,458 +147,554 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: inc/customizer.php:86
+#: inc/customizer.php:87
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer.php:92
+#: inc/customizer.php:95
 msgid "Elements"
 msgstr ""
 
-#: inc/customizer.php:101
+#: inc/customizer.php:106
 msgid "Typography Fonts"
 msgstr ""
 
-#: inc/customizer.php:102
-msgid "Change Typography and customize theme."
+#: inc/customizer.php:107
+msgid "Change typography fonts and customize theme."
 msgstr ""
 
-#: inc/customizer.php:109
+#: inc/customizer.php:116
 msgid "Typography Size"
 msgstr ""
 
-#: inc/customizer.php:110
-msgid "Change Typography color and customize theme."
+#: inc/customizer.php:117
+msgid "Change typography size and customize theme."
 msgstr ""
 
-#: inc/customizer.php:119
+#: inc/customizer.php:126
 msgid "Portfolios Options"
 msgstr ""
 
-#: inc/customizer.php:126 inc/setup.php:53 inc/setup.php:139
+#: inc/customizer.php:135 inc/setup.php:53 inc/setup.php:143
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer.php:133
+#: inc/customizer.php:144
 msgid "Social Networks"
 msgstr ""
 
-#: inc/customizer.php:140
+#: inc/customizer.php:153
 msgid "Single Options"
 msgstr ""
 
-#: inc/customizer.php:147
+#: inc/customizer.php:162
 msgid "Archive Options"
 msgstr ""
 
-#: inc/customizer.php:154
+#: inc/customizer.php:171
 msgid "Sidebar Options"
 msgstr ""
 
-#: inc/customizer.php:161
+#: inc/customizer.php:180
 msgid "Blog Options"
 msgstr ""
 
-#: inc/customizer.php:168
+#: inc/customizer.php:189
 msgid "Animation"
 msgstr ""
 
-#: inc/customizer.php:181 inc/template-tags.php:169
+#: inc/customizer.php:198
+msgid "Header Options"
+msgstr ""
+
+#: inc/customizer.php:211 inc/template-tags.php:175
 msgid "Facebook"
 msgstr ""
 
-#: inc/customizer.php:189 inc/template-tags.php:173
+#: inc/customizer.php:220 inc/template-tags.php:179
 msgid "Twitter"
 msgstr ""
 
-#: inc/customizer.php:197 inc/template-tags.php:177
+#: inc/customizer.php:229 inc/template-tags.php:183
 msgid "Instagram"
 msgstr ""
 
-#: inc/customizer.php:205 inc/template-tags.php:181
+#: inc/customizer.php:238 inc/template-tags.php:187
 msgid "Linkedin"
 msgstr ""
 
-#: inc/customizer.php:213 inc/template-tags.php:185
+#: inc/customizer.php:247 inc/template-tags.php:191
 msgid "Github"
 msgstr ""
 
-#: inc/customizer.php:221
+#: inc/customizer.php:256
 msgid "Email"
 msgstr ""
 
-#: inc/customizer.php:230
+#: inc/customizer.php:265
 msgid "Pinterest"
 msgstr ""
 
-#: inc/customizer.php:239
+#: inc/customizer.php:274
 msgid "Youtube"
 msgstr ""
 
-#: inc/customizer.php:247
+#: inc/customizer.php:283
 msgid "Spotify"
 msgstr ""
 
-#: inc/customizer.php:255
+#: inc/customizer.php:292
 msgid "Gitlab"
 msgstr ""
 
-#: inc/customizer.php:263
+#: inc/customizer.php:301
 msgid "Lastfm"
 msgstr ""
 
-#: inc/customizer.php:271
+#: inc/customizer.php:310
 msgid "Stackoverflow"
 msgstr ""
 
-#: inc/customizer.php:279
+#: inc/customizer.php:319
 msgid "Quora"
 msgstr ""
 
-#: inc/customizer.php:287
+#: inc/customizer.php:328
 msgid "Reddit"
 msgstr ""
 
-#: inc/customizer.php:295
+#: inc/customizer.php:337
 msgid "Medium"
 msgstr ""
 
-#: inc/customizer.php:303
+#: inc/customizer.php:346
 msgid "Vimeo"
 msgstr ""
 
-#: inc/customizer.php:311
+#: inc/customizer.php:355
 msgid "Lanyrd"
 msgstr ""
 
-#: inc/customizer.php:319
+#: inc/customizer.php:364
 msgid "Dribbble"
 msgstr ""
 
-#: inc/customizer.php:327
+#: inc/customizer.php:373
 msgid "Behance"
 msgstr ""
 
-#: inc/customizer.php:340
+#: inc/customizer.php:382 inc/template-tags.php:255
+msgid "Codepen"
+msgstr ""
+
+#: inc/customizer.php:391 inc/template-tags.php:251
+msgid "Telegram"
+msgstr ""
+
+#: inc/customizer.php:403
 msgid "Headings Color"
 msgstr ""
 
-#: inc/customizer.php:350
+#: inc/customizer.php:413
 msgid "Primary Texts Color"
 msgstr ""
 
-#: inc/customizer.php:359
+#: inc/customizer.php:423
 msgid "Secondary Texts Color"
 msgstr ""
 
-#: inc/customizer.php:368
+#: inc/customizer.php:433
+msgid "Light Gray Color"
+msgstr ""
+
+#: inc/customizer.php:443
 msgid "Primary Accent Color"
 msgstr ""
 
-#: inc/customizer.php:386
-msgid "Headings fonts"
+#: inc/customizer.php:453
+msgid "Accent Light Color"
 msgstr ""
 
-#: inc/customizer.php:406
-msgid "Texts fonts"
+#: inc/customizer.php:463
+msgid "Primary Border Color"
 msgstr ""
 
-#: inc/customizer.php:425
+#: inc/customizer.php:473
+msgid "Secondary Border Color"
+msgstr ""
+
+#: inc/customizer.php:488
+msgid "Headings Fonts"
+msgstr ""
+
+#: inc/customizer.php:507
+msgid "Texts Fonts"
+msgstr ""
+
+#: inc/customizer.php:526
 msgid "Meta Text Fonts"
 msgstr ""
 
-#: inc/customizer.php:446
+#: inc/customizer.php:547
 msgid "Base Font"
 msgstr ""
 
-#: inc/customizer.php:465
+#: inc/customizer.php:567
 msgid "H1"
 msgstr ""
 
-#: inc/customizer.php:485
+#: inc/customizer.php:586
 msgid "H2"
 msgstr ""
 
-#: inc/customizer.php:505
+#: inc/customizer.php:605
 msgid "H3"
 msgstr ""
 
-#: inc/customizer.php:525
+#: inc/customizer.php:624
 msgid "H4"
 msgstr ""
 
-#: inc/customizer.php:545
+#: inc/customizer.php:643
 msgid "H5"
 msgstr ""
 
-#: inc/customizer.php:565
+#: inc/customizer.php:662
 msgid "H6"
 msgstr ""
 
-#: inc/customizer.php:584
+#: inc/customizer.php:681
 msgid "Paragraph"
 msgstr ""
 
-#: inc/customizer.php:606
+#: inc/customizer.php:700
 msgid "Profile Image"
 msgstr ""
 
-#: inc/customizer.php:607
+#: inc/customizer.php:701
 msgid "Add Profile Image here"
 msgstr ""
 
-#: inc/customizer.php:619
+#: inc/customizer.php:713
 msgid "Footer Widgets style"
 msgstr ""
 
-#: inc/customizer.php:624
+#: inc/customizer.php:718
 msgid "One Column Widgets"
 msgstr ""
 
-#: inc/customizer.php:625
+#: inc/customizer.php:719
 msgid "Two Column Widgets"
 msgstr ""
 
-#: inc/customizer.php:633
+#: inc/customizer.php:727
+msgid "Menu Position"
+msgstr ""
+
+#: inc/customizer.php:732
+msgid "Top"
+msgstr ""
+
+#: inc/customizer.php:733
+msgid "Next to the copy"
+msgstr ""
+
+#: inc/customizer.php:734
+msgid "Bottom"
+msgstr ""
+
+#: inc/customizer.php:742
 msgid "Post Type Archive title"
 msgstr ""
 
-#: inc/customizer.php:642
+#: inc/customizer.php:751
 msgid "Portfolios Items Style"
 msgstr ""
 
-#: inc/customizer.php:660
+#: inc/customizer.php:769
 msgid "Show Publish Date"
 msgstr ""
 
-#: inc/customizer.php:669
+#: inc/customizer.php:779
 msgid "Show Author Name"
 msgstr ""
 
-#: inc/customizer.php:678
+#: inc/customizer.php:789
 msgid "Show Comments Count"
 msgstr ""
 
-#: inc/customizer.php:687
-msgid "Show Posts Categories"
+#: inc/customizer.php:799
+msgid "Show Portfolios Posts Categories"
 msgstr ""
 
-#: inc/customizer.php:696
+#: inc/customizer.php:809
 msgid "Show Posts Tags"
 msgstr ""
 
-#: inc/customizer.php:706
+#: inc/customizer.php:819
 msgid "Display Share icons for posts"
 msgstr ""
 
-#: inc/customizer.php:715
+#: inc/customizer.php:829
 msgid "Show Post Thumbnail"
 msgstr ""
 
-#: inc/customizer.php:728
+#: inc/customizer.php:839
+msgid "Display Category"
+msgstr ""
+
+#: inc/customizer.php:849
+msgid "Display Post Navigation"
+msgstr ""
+
+#: inc/customizer.php:863
 msgid "Show Archives Posts Categories"
 msgstr ""
 
-#: inc/customizer.php:738
+#: inc/customizer.php:874
 msgid "Show Portfolios Category"
 msgstr ""
 
-#: inc/customizer.php:751
-msgid "Show Siedbar"
+#: inc/customizer.php:888
+msgid "Show Sidebar"
 msgstr ""
 
-#: inc/customizer.php:764
+#: inc/customizer.php:902
 msgid "Enable Animation Option"
 msgstr ""
 
-#: inc/customizer.php:777
+#: inc/customizer.php:916
 msgid "Show Categories"
 msgstr ""
 
-#: inc/customizer.php:787
+#: inc/customizer.php:927
 msgid "Categories style"
 msgstr ""
 
-#: inc/customizer.php:792
+#: inc/customizer.php:932
 msgid "List"
 msgstr ""
 
-#: inc/customizer.php:793
+#: inc/customizer.php:933
 msgid "Drop Down"
+msgstr ""
+
+#: inc/customizer.php:949
+msgid "Blog Page Date Alignment"
+msgstr ""
+
+#: inc/customizer.php:954
+msgid "Front of Category"
+msgstr ""
+
+#: inc/customizer.php:955
+msgid "Front of  Title"
+msgstr ""
+
+#: inc/customizer.php:964
+msgid "Titles Text Transform Style"
+msgstr ""
+
+#: inc/customizer.php:969
+msgid "No transform"
+msgstr ""
+
+#: inc/customizer.php:970
+msgid "Capitalize"
+msgstr ""
+
+#: inc/customizer.php:981
+msgid "Display Search Icon"
 msgstr ""
 
 #: inc/setup.php:47
 msgid "Primary"
 msgstr ""
 
-#: inc/setup.php:118
+#: inc/setup.php:119
 msgid "Sidebar"
 msgstr ""
 
-#: inc/setup.php:120
+#: inc/setup.php:121
 msgid "Add widgets here."
 msgstr ""
 
-#: inc/setup.php:141
+#: inc/setup.php:145
 msgid "Add Footer widgets here."
 msgstr ""
 
-#: inc/template-functions.php:123
+#: inc/setup.php:198 inc/tgmpa/tgmpa-config.php:48
+msgid "LibWp"
+msgstr ""
+
+#: inc/setup.php:203 inc/tgmpa/tgmpa-config.php:43
+msgid "Kirki Customizer Framework"
+msgstr ""
+
+#: inc/template-functions.php:127
 msgctxt "Post type general name"
 msgid "Portfolios"
 msgstr ""
 
-#: inc/template-functions.php:124
+#: inc/template-functions.php:128
 msgctxt "Post type singular name"
 msgid "Portfolio"
 msgstr ""
 
-#: inc/template-functions.php:125
+#: inc/template-functions.php:129
 msgctxt "Admin Menu text"
 msgid "Portfolios"
 msgstr ""
 
-#: inc/template-functions.php:126
+#: inc/template-functions.php:130
 msgid "Add New"
 msgstr ""
 
-#: inc/template-functions.php:127
+#: inc/template-functions.php:131
 msgid "Edit Portfolio"
 msgstr ""
 
-#: inc/template-functions.php:128
+#: inc/template-functions.php:132
 msgid "View Portfolio"
 msgstr ""
 
-#: inc/template-functions.php:129
+#: inc/template-functions.php:133
 msgid "All Portfolios"
 msgstr ""
 
-#: inc/template-functions.php:182
+#: inc/template-functions.php:187
 msgctxt "taxonomy general name"
 msgid "Portfolio Categories"
 msgstr ""
 
-#: inc/template-functions.php:183
+#: inc/template-functions.php:188
 msgctxt "taxonomy singular name"
 msgid "Portfolio Category"
 msgstr ""
 
-#: inc/template-functions.php:184
+#: inc/template-functions.php:189
 msgid "Search Portfolio Categories"
 msgstr ""
 
-#: inc/template-functions.php:185
+#: inc/template-functions.php:190
 msgid "All Portfolio Categories"
 msgstr ""
 
-#: inc/template-functions.php:186
+#: inc/template-functions.php:191
 msgid "Edit Portfolio Category"
 msgstr ""
 
-#: inc/template-functions.php:187
+#: inc/template-functions.php:192
 msgid "Add New Portfolio Category"
 msgstr ""
 
-#: inc/template-functions.php:188
+#: inc/template-functions.php:193
 msgid "New Portfolio Category Name"
 msgstr ""
 
-#: inc/template-functions.php:189
+#: inc/template-functions.php:194
 msgid "Portfolio Categories"
 msgstr ""
 
-#: inc/template-functions.php:224
+#: inc/template-functions.php:231
 msgid "portfolios"
 msgstr ""
 
-#: inc/template-tags.php:68 inc/template-tags.php:326
+#: inc/template-tags.php:72 inc/template-tags.php:340
 #, php-format
 msgid "View all posts in %s"
 msgstr ""
 
-#: inc/template-tags.php:86
+#: inc/template-tags.php:90
 msgid "Previous"
 msgstr ""
 
-#: inc/template-tags.php:87
+#: inc/template-tags.php:91
 msgid "Next"
 msgstr ""
 
-#: inc/template-tags.php:107
+#: inc/template-tags.php:111
 msgid "Share on:"
 msgstr ""
 
-#: inc/template-tags.php:189
+#: inc/template-tags.php:195
 msgid "Mail"
 msgstr ""
 
-#: inc/template-tags.php:193
+#: inc/template-tags.php:199
 msgid "pinterest"
 msgstr ""
 
-#: inc/template-tags.php:197
+#: inc/template-tags.php:203
 msgid "youtube"
 msgstr ""
 
-#: inc/template-tags.php:201
+#: inc/template-tags.php:207
 msgid "spotify"
 msgstr ""
 
-#: inc/template-tags.php:205
+#: inc/template-tags.php:211
 msgid "lastfm"
 msgstr ""
 
-#: inc/template-tags.php:209
+#: inc/template-tags.php:215
 msgid "gitlab"
 msgstr ""
 
-#: inc/template-tags.php:213
+#: inc/template-tags.php:219
 msgid "stackoverflow"
 msgstr ""
 
-#: inc/template-tags.php:217
+#: inc/template-tags.php:223
 msgid "reddit"
 msgstr ""
 
-#: inc/template-tags.php:221
+#: inc/template-tags.php:227
 msgid "quora"
 msgstr ""
 
-#: inc/template-tags.php:225
+#: inc/template-tags.php:231
 msgid "medium"
 msgstr ""
 
-#: inc/template-tags.php:229
+#: inc/template-tags.php:235
 msgid "vimeo"
 msgstr ""
 
-#: inc/template-tags.php:233
+#: inc/template-tags.php:239
 msgid "dribbble"
 msgstr ""
 
-#: inc/template-tags.php:237
+#: inc/template-tags.php:243
 msgid "behance"
 msgstr ""
 
-#: inc/template-tags.php:241
+#: inc/template-tags.php:247
 msgid "lanyrd"
 msgstr ""
 
-#: inc/template-tags.php:300
+#: inc/template-tags.php:314
 msgid "All "
 msgstr ""
 
-#: inc/template-tags.php:359
+#: inc/template-tags.php:373
 msgid "All"
 msgstr ""
 
-#: inc/template-tags.php:579
+#: inc/template-tags.php:594
 msgid "Profile image"
 msgstr ""
 
-#: inc/template-tags.php:612
+#: inc/template-tags.php:627
 msgid "Blog"
+msgstr ""
+
+#: inc/template-tags.php:706
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:767
+msgid "Primary search"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:327
@@ -1011,396 +1119,529 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/tgmpa/tgmpa-config.php:43
-msgid "Kirki Customizer Framework"
-msgstr ""
-
-#: inc/tgmpa/tgmpa-config.php:48
-msgid "LibWp"
-msgstr ""
-
-#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:51
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:51
+#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:53
 msgid "\n"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:78
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:78
+#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:82
 msgid "<"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:84
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:84
 #, python-format
 msgid " %s=\"%s\""
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:87
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:87
+#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:91
 msgid ">"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:101
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:101
 #, python-format
 msgid "</%s>%s"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:103
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:103
+#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:107
 #, python-format
 msgid "/>%s"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/input.py:1837
-#: node_modules/node-gyp/gyp/pylib/gyp/input.py:1898
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/input.py:1837
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/input.py:1898
+#: node_modules/node-gyp/gyp/pylib/gyp/input.py:1999
+#: node_modules/node-gyp/gyp/pylib/gyp/input.py:2061
 #, python-format
 msgid "Cycle: %s"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:358
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:358
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:407
 msgid "_MBCS"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:423
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:423
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:476
 msgid "/safeseh"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:473
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:473
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:552
 msgid "/FS"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:543
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:543
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:633
 #, python-format
 msgid "/DEF:\"%s\""
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:575
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:575
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:682
 msgid "/OUT:"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:578
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:578
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:685
 msgid "/PDB:"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:581
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:581
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:688
 msgid "/PGD:"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:604
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:604
 #, python-format
 msgid "/STACK:%s%s"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:643
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:643
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:755
 msgid "/DYNAMICBASE"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:650
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:650
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:762
 msgid "/NXCOMPAT"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:692
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:692
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:813
 msgid "/MANIFESTUAC:NO"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:740
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:740
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:868
 msgid "/ALLOWISOLATION"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:785
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:785
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:916
 msgid "/I"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/ninja_syntax.py:72
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/ninja_syntax.py:72
+#: node_modules/node-gyp/gyp/pylib/gyp/ninja_syntax.py:84
 msgid "|"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/ninja_syntax.py:76
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/ninja_syntax.py:76
+#: node_modules/node-gyp/gyp/pylib/gyp/ninja_syntax.py:88
 msgid "||"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:276
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:276
+#: node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:275
 #, python-format
 msgid "\\U%04x"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:988
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:988
+#: node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:1046
 msgid ".name"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:999
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:999
+#: node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:1057
 msgid ".path"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:1066
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:1066
+#: node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:1130
 msgid "$("
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:481
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:481
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:582
 #, python-format
 msgid "-isysroot %s"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:484
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:484
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:588
 msgid "-Wconstant-conversion"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:487
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:487
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:591
 msgid "-funsigned-char"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:490
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:490
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:594
 msgid "-fasm-blocks"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:494
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:494
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:598
 msgid "-mdynamic-no-pic"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:502
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:502
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:606
 msgid "-mpascal-strings"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:509
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:513
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:509
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:513
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:613
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:617
 msgid "-gdwarf-2"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:518
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:518
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:622
 msgid "-fstrict-aliasing"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:520
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:520
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:624
 msgid "-fno-strict-aliasing"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:523
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:523
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:627
 msgid "-fvisibility=hidden"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:526
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:526
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:630
 msgid "-Werror"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:529
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:529
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:633
 msgid "-Wnewline-eof"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:536
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:536
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:640
 msgid "-flto"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:559
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:822
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:559
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:822
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:667
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:952
 msgid "-arch "
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:563
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:563
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:671
 msgid "-msse3"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:566
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:566
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:675
 msgid "-mssse3"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:568
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:568
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:677
 msgid "-msse4.1"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:570
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:570
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:679
 msgid "-msse4.2"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:577
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:586
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:840
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:845
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:577
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:586
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:840
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:845
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:686
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:695
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:971
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:976
 msgid "-F"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:596
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:596
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:705
 msgid "-ansi"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:613
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:613
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:723
 #, python-format
 msgid "-std=%s"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:618
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:618
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:728
 msgid "-fno-rtti"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:620
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:620
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:730
 msgid "-fno-exceptions"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:622
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:622
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:732
 msgid "-fvisibility-inlines-hidden"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:624
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:624
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:734
 msgid "-fno-threadsafe-statics"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:627
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:627
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:737
 msgid "-Wno-invalid-offsetof"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:647
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:647
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:757
 msgid "-fobjc-gc"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:649
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:649
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:759
 msgid "-fobjc-gc-only"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:653
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:653
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:763
 msgid "-fobjc-arc"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:658
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:658
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:769
 msgid "-Wobjc-missing-property-synthesis"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:678
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:678
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:789
 msgid "-fobjc-call-cxx-cdtors"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:790
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:790
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:917
 msgid "-Wl,-dead_strip"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:793
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:793
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:920
 msgid "-Wl,-prebind"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:803
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:803
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:930
 msgid "-isysroot "
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:806
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:825
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:806
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:825
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:933
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:956
 msgid "-L"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:809
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:809
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:937
 msgid "-Wl,-order_file "
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:829
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:829
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:960
 msgid "-install_name "
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:832
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:832
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:963
 msgid "-Wl,-rpath,"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:853
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:853
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:987
 msgid "-lpkstart"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:856
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:856
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:990
 msgid "/System/Library/PrivateFrameworks/PlugInKit.framework/PlugInKit"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:857
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:857
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:994
 msgid "-fapplication-extension"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:858
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:858
 msgid "-Xlinker -rpath -Xlinker @executable_path/../../Frameworks"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:950
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:950
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:1087
 #, python-format
 msgid "echo STRIP\\(%s\\)"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:951
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:951
 #, python-format
 msgid "strip %s %s"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:969
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:969
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:1109
 #, python-format
 msgid "echo DSYMUTIL\\(%s\\)"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:970
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:970
 #, python-format
 msgid "dsymutil %s -o %s"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:1618
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:1618
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:1901
 #, python-format
 msgid "echo POSTBUILD\\(%s\\) %s"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/__init__.py:364
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/__init__.py:364
+#: node_modules/node-gyp/gyp/pylib/gyp/__init__.py:470
 msgid "USERPROFILE"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/analyzer.py:663
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/analyzer.py:663
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/analyzer.py:716
 msgid "all"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/android.py:450
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:982
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1108
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1150
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/android.py:450
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:982
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1108
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1150
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/android.py:498
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1027
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1169
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1213
 #, python-format
 msgid "$(%s)"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/cmake.py:376
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/cmake.py:377
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/cmake.py:376
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/cmake.py:377
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/cmake.py:387
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/cmake.py:388
 msgid "${"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/eclipse.py:223
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/eclipse.py:223
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/eclipse.py:230
 msgid "1"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1279
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1279
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1373
 msgid "$(OBJS)"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1501
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1501
 #, python-format
 msgid "-Wl,-rpath=\\$$ORIGIN/lib.%s/"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1502
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1502
 #, python-format
 msgid "-Wl,-rpath-link=\\$(builddir)/lib.%s/"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1530
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1530
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1660
 msgid "$(TARGET_POSTBUILDS_$(BUILDTYPE))"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1994
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1994
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:2225
 msgid "BUILDTYPE="
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/msvs.py:2946
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/msvs.py:2946
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/msvs.py:3271
 msgid "Label"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/msvs.py:3109
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/msvs.py:3109
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/msvs.py:3454
 #, python-format
 msgid "%%(%s)"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/ninja.py:1181
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/ninja.py:1181
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/ninja.py:1471
 #, python-format
 msgid "-Wl,-rpath=\\$$ORIGIN/%s"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/ninja.py:1182
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/ninja.py:1182
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/ninja.py:1474
 #, python-format
 msgid "-Wl,-rpath-link=%s"
 msgstr ""
 
-#: node_modules/node-gyp/gyp/pylib/gyp/generator/ninja.py:1415
+#: node_modules/gulp-sass/node_modules/node-gyp/gyp/pylib/gyp/generator/ninja.py:1415
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/ninja.py:1778
 #, python-format
 msgid "export %s=%s;"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/test_gyp.py:216
+msgid "({test}) {fmt}"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:88
+msgid " {at}=\"{_XmlEscape(val, attr=True)}\""
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:105
+msgid "</{name}>{new_line}"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:717
+msgid "/STACK:{stack_reserve_size}{stack_commit_size}"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:585
+#, python-format
+msgid "-I%s"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:977
+msgid "-framework XCTest"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:993
+msgid "-e _NSExtensionMain"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:1088
+msgid "strip {strip_flags} {output_binary}"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:1110
+msgid "dsymutil {} -o {}"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1626
+msgid "-Wl,-rpath=\\$$ORIGIN/"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1627
+msgid "-Wl,-rpath-link=\\$(builddir)/"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/ninja.py:1473
+#, python-format
+msgid "-Wl,-rpath=%s"
 msgstr ""
 
 #: template-parts/content-none.php:14
@@ -1438,7 +1679,7 @@ msgstr ""
 msgid "No thumbnail"
 msgstr ""
 
-#: template-parts/content-single.php:89
+#: template-parts/content-single.php:99
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
