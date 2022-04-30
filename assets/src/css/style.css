@@ -2151,9 +2151,6 @@ select {
   @media only screen and (min-width: 980px) {
     .c-profile__image {
       margin-top: 100px; } }
-  @media only screen and (min-width: 1400px) {
-    .c-profile__image {
-      margin-top: 0px; } }
   .c-profile__image img {
     border-radius: 50%;
     height: 100% !important;
