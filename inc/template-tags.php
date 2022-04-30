@@ -744,3 +744,27 @@ if ( ! function_exists( 'wp_indigo_show_post_nav' ) ) :
 		);
 	}
 endif;
+
+if ( ! function_exists('wp_indigo_show_description')) {
+	function wp_indigo_show_description() {
+		/**
+		 * Display Description for profile section 
+		 */
+		if ( get_bloginfo( 'description' ) !== '' ) { 
+			/** translator %s: Blog info description */
+			echo sprintf('<h4 class="description">%s</h4>' ,  esc_html(get_bloginfo( 'description' )));// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+	}
+}
+
+
+if( ! function_exists('wp_indigo_get_search') ) : 
+	function wp_indigo_get_search() { 
+		if( get_theme_mod( 'display_search_icon', false ) === true  ) { 
+			echo sprintf( '<div class="c-header__search">
+			<button class="c-header__search-icon-btn js-header__search-icon-btn" aria-label="%s" aria-controls="c-header__search__form-box" aria-expanded="false">
+			<span class="u-link--secondary c-header__search-icon iconify" data-icon="bx:search-alt-2"></span></button></div>' ,
+			esc_attr__('Primary search', 'wp-indigo') );
+		}
+	}
+endif;

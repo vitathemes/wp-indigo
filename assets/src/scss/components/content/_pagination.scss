@@ -2,33 +2,33 @@
   #Pagination
 \*------------------------------------*/
 .c-pagination {
-  width: 100%;
-  padding-top: 13px;
-  display: flex;
-  justify-content: center;
+    width: 100%;
+    padding-top: 13px;
+    display: flex;
+    justify-content: center;
 
-  @include media(tablet) {
-    padding-top: 23px;
-  }
+    @include media(tablet) {
+        padding-top: 23px;
+    }
 }
 
 .page-numbers.current {
-  color: $wp_indigo_quaternary_color;
-  margin-right: 24px;
+    color: $wp_indigo_quaternary_color;
+    margin-right: 20px;
 }
 
 .next.page-numbers {
-  margin-left: 24px;
+    margin-left: 24px;
 }
 .prev.page-numbers {
-  margin-right: 24px;
+    margin-right: 24px;
 }
 .page-numbers {
-  margin: 0px 4px;
-  font-family: $wp_indigo_primary_font;
-  font-weight: 300;
-  font-size: 13px;
-  line-height: 21px;
-  letter-spacing: 0.05em;
-  color: $wp_indigo_primary_color;
+    font-family: $wp_indigo_primary_font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: $wp_indigo_primary_color;
+    padding: 0px 4px;
 }

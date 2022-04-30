@@ -46,22 +46,19 @@
                 }
             }
         }
-        //
     } //li
 
     .menu-item {
         width: 100%;
         margin-bottom: 34px;
         display: inline-block;
-        line-height: 31px;
         font-family: $wp_indigo_primary_font;
         font-weight: 400;
         letter-spacing: 0.05em;
         opacity: 0;
 
         animation-name: fadeIn;
-        animation-duration: 0.5s;
-        animation-delay: 0.5s;
+        animation-duration: $global-transition;
         animation-fill-mode: forwards;
 
         @include media(mobile-only) {
@@ -128,6 +125,8 @@
         background-color: $color_background_body;
         text-transform: capitalize;
         font-family: $wp_indigo_secondary_font;
+        font-size: 13px;
+        line-height: 31px;
         font-weight: 400;
         display: inline-block;
 
@@ -149,7 +148,6 @@
             margin-left: 0px;
             margin-bottom: 0px;
             width: 100%;
-            // padding: 16px 16px;
             display: flex;
             justify-content: space-between;
 
@@ -177,6 +175,13 @@
             top: 0%;
             left: 100% !important;
             transform: translate(0%, 0%);
+            margin-top: -1px;
+        }
+
+        .sub-menu {
+            @include media(tablet) {
+                margin-top: 24px;
+            }
         }
     }
 
@@ -265,14 +270,15 @@
 }
 
 .c-nav__arrow-icon {
-    margin-top: 5px;
-    margin-left: 8px;
-    font-size: 15px !important;
     line-height: 27px !important;
-    display: none !important ;
+    display: none !important;
+    margin-left: 2px;
+    margin-top: 0px;
+    font-size: 12px !important;
 
     @include media(tablet) {
-        margin-top: 2px;
+        margin-top: -1px;
         display: inline-block !important;
+        color: $wp_indigo_primary_color !important;
     }
 }

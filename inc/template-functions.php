@@ -26,8 +26,9 @@ if ( ! function_exists('wp_indigo_body_classes'))  {
 
 		return $classes;
 	}
-	add_filter( 'body_class', 'wp_indigo_body_classes' );
 }
+add_filter( 'body_class', 'wp_indigo_body_classes' );
+
 
 if ( ! function_exists('wp_indigo_pingback_header')) {
 	function wp_indigo_pingback_header() {
@@ -38,8 +39,9 @@ if ( ! function_exists('wp_indigo_pingback_header')) {
 			printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
 		}
 	}
-	add_action( 'wp_head', 'wp_indigo_pingback_header' );
 }
+add_action( 'wp_head', 'wp_indigo_pingback_header' );
+
 
 if ( ! function_exists('wp_indigo_typography')) {
 	function wp_indigo_typography() {
@@ -85,30 +87,12 @@ if ( ! function_exists('wp_indigo_typography')) {
 if ( ! function_exists('wp_indigo_theme_settings')) {
 	function wp_indigo_theme_settings() {
 		$wp_indigo_theme_typography = wp_indigo_typography();
-
-	?>
-<style>
-<?php echo esc_html($wp_indigo_theme_typography);
-?>
-</style>
-<?php
-	}
-		add_action( 'admin_head', 'wp_indigo_theme_settings' );
-		add_action( 'wp_head', 'wp_indigo_theme_settings' );
-}
-
-
-if ( ! function_exists('wp_indigo_show_description')) {
-	function wp_indigo_show_description() {
-		/**
-		 * Display Description for profile section 
-		 */
-		if ( get_bloginfo( 'description' ) !== '' ) { 
-			/** translator %s: Blog info description */
-			echo sprintf('<h4 class="description">%s</h4>' ,  esc_html(get_bloginfo( 'description' )));// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		}
+		echo sprintf( '<style>%s</style>' , esc_html($wp_indigo_theme_typography) );
 	}
 }
+add_action( 'admin_head', 'wp_indigo_theme_settings' );
+add_action( 'wp_head', 'wp_indigo_theme_settings' );
+
 
 if ( ! function_exists('wp_indigo_dashicons')) {
 	function wp_indigo_dashicons() {
@@ -117,8 +101,8 @@ if ( ! function_exists('wp_indigo_dashicons')) {
 		 */
 		wp_enqueue_style('dashicons');
 	}
-	add_action('wp_enqueue_scripts', 'wp_indigo_dashicons', 999);
 }
+add_action('wp_enqueue_scripts', 'wp_indigo_dashicons', 999);
 
 
 if ( ! function_exists('wp_indigo_modify_libwp_post_type') ) {
@@ -129,8 +113,9 @@ if ( ! function_exists('wp_indigo_modify_libwp_post_type') ) {
 	$wp_indigo_postTypeName = 'portfolios';
 	return $wp_indigo_postTypeName;
   }  
-  add_filter('libwp_post_type_1_name', 'wp_indigo_modify_libwp_post_type');
 }
+add_filter('libwp_post_type_1_name', 'wp_indigo_modify_libwp_post_type');
+
 
 if ( ! function_exists('wp_indigo_modify_libwp_post_type_argument')) {
 	
@@ -165,10 +150,10 @@ if ( ! function_exists('wp_indigo_modify_libwp_post_type_argument')) {
 
 	return $wp_indigo_postTypeArguments;
   }  
-  add_filter('libwp_post_type_1_arguments', 'wp_indigo_modify_libwp_post_type_argument');
-
 }
+add_filter('libwp_post_type_1_arguments', 'wp_indigo_modify_libwp_post_type_argument');
   
+
 if ( ! function_exists('wp_indigo_modify_libwp_taxonomy_name')) {
 	function wp_indigo_modify_libwp_taxonomy_name($wp_indigo_taxonomyName) {
 		/**
@@ -177,8 +162,8 @@ if ( ! function_exists('wp_indigo_modify_libwp_taxonomy_name')) {
 		$wp_indigo_taxonomyName = 'portfolio_category';
 		return $wp_indigo_taxonomyName;
 	}
-	add_filter('libwp_taxonomy_1_name', 'wp_indigo_modify_libwp_taxonomy_name');
 }
+add_filter('libwp_taxonomy_1_name', 'wp_indigo_modify_libwp_taxonomy_name');
 
 
 if ( ! function_exists('wp_indigo_modify_libwp_taxonomy_post_type_name')) {
@@ -189,8 +174,8 @@ if ( ! function_exists('wp_indigo_modify_libwp_taxonomy_post_type_name')) {
 		$wp_indigo_taxonomyPostTypeName = 'portfolios';
 		return $wp_indigo_taxonomyPostTypeName;
 	}
-	add_filter('libwp_taxonomy_1_post_type', 'wp_indigo_modify_libwp_taxonomy_post_type_name');
 }
+add_filter('libwp_taxonomy_1_post_type', 'wp_indigo_modify_libwp_taxonomy_post_type_name');
   
   
 if ( ! function_exists('wp_indigo_modify_libwp_taxonomy_argument')) {
@@ -214,8 +199,9 @@ function wp_indigo_modify_libwp_taxonomy_argument($wp_indigo_taxonomyArguments) 
 		return $wp_indigo_taxonomyArguments;
 		
 	}
-	add_filter('libwp_taxonomy_1_arguments', 'wp_indigo_modify_libwp_taxonomy_argument');
 }
+add_filter('libwp_taxonomy_1_arguments', 'wp_indigo_modify_libwp_taxonomy_argument');
+
 
 if ( ! function_exists('wp_indigo_add_menu_link_class')) {
 	function wp_indigo_add_menu_link_class( $wp_indigo_atts, $wp_indigo_item, $wp_indigo_args ) {
@@ -227,8 +213,9 @@ if ( ! function_exists('wp_indigo_add_menu_link_class')) {
 		}
 		return $wp_indigo_atts;
 	}
-	add_filter( 'nav_menu_link_attributes', 'wp_indigo_add_menu_link_class', 1, 3 );
 }
+add_filter( 'nav_menu_link_attributes', 'wp_indigo_add_menu_link_class', 1, 3 );
+
 
 if ( ! function_exists('wp_indigo_modify_archive_title')) {
 	function wp_indigo_modify_archive_title( $wp_indigo_title ) {
@@ -247,6 +234,6 @@ if ( ! function_exists('wp_indigo_modify_archive_title')) {
 		
 		return wp_kses_post( $wp_indigo_title );
 	}
-	add_filter( 'wp_title', 'wp_indigo_modify_archive_title' );
-	add_filter( 'get_the_archive_title', 'wp_indigo_modify_archive_title' );
 }
+add_filter( 'wp_title', 'wp_indigo_modify_archive_title' );
+add_filter( 'get_the_archive_title', 'wp_indigo_modify_archive_title' );
