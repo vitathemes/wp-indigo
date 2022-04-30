@@ -885,7 +885,7 @@ if( function_exists( 'kirki' ) ) {
 		new \Kirki\Field\Toggle(
 			[
 				'settings'    => 'sidebar_display',
-				'label'       => esc_html__( 'Show Siedbar', 'wp-indigo' ),
+				'label'       => esc_html__( 'Show Sidebar', 'wp-indigo' ),
 				'section'     => 'sidebar_options',
 				'default'     => '1',
 				'priority'    => 10,
