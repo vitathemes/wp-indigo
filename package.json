@@ -17,7 +17,7 @@
     "url": "https://github.com/vitathemes/wp-indigo/issues"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^12.1.0",
+    "@wordpress/scripts": "^25.0.0",
     "dir-archiver": "^1.1.1",
     "node-sass": "^7.0.1",
     "rtlcss": "^2.5.0"
