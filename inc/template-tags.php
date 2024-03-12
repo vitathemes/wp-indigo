@@ -149,12 +149,14 @@ if ( ! function_exists( 'wp_indigo_socials_links' ) ) :
 		$wp_indigo_behance    		=  get_theme_mod( 'behance', "" );
 		$wp_indigo_telegram    		=  get_theme_mod( 'telegram', "" );
 		$wp_indigo_codepen    		=  get_theme_mod( 'codepen', "" );
+		$wp_indigo_mastodon    		=  get_theme_mod( 'mastodon', "" );
+		$wp_indigo_bluesky    		=  get_theme_mod( 'bluesky', "" );
 
 
 		// If variable was not empty will display the icons
 		$wp_indigo_social_variables  = array($wp_indigo_facebook,$wp_indigo_twitter,$wp_indigo_instagram,$wp_indigo_linkedin,$wp_indigo_github,
 		$wp_indigo_mail, $wp_indigo_pinterest ,$wp_indigo_youtube ,$wp_indigo_spotify , $wp_indigo_gitlab,$wp_indigo_lastfm ,$wp_indigo_stackoverflow ,$wp_indigo_quora ,$wp_indigo_reddit ,$wp_indigo_medium ,
-		$wp_indigo_vimeo, $wp_indigo_lanyrd,$wp_indigo_dribbble ,$wp_indigo_behance,$wp_indigo_telegram,$wp_indigo_codepen
+		$wp_indigo_vimeo, $wp_indigo_lanyrd,$wp_indigo_dribbble ,$wp_indigo_behance,$wp_indigo_telegram,$wp_indigo_codepen,$wp_indigo_mastodon,$wp_indigo_bluesky
 		) ;
 
 		// Check if one of the variables are not empty
@@ -254,6 +256,14 @@ if ( ! function_exists( 'wp_indigo_socials_links' ) ) :
 			if ( $wp_indigo_codepen ) {
 				echo sprintf( '<a href="%s" aria-label="%s" class="c-social-share__item" target="_blank"><span class=" c-social-share__icon iconify" data-icon="akar-icons:codepen-fill" data-inline="false"></span></a>', esc_url( $wp_indigo_codepen ), esc_html__( 'Codepen', 'wp-indigo' ) );
 			}
+
+            if ( $wp_indigo_mastodon ) {
+                echo sprintf( '<a href="%s" aria-label="%s" class="c-social-share__item" target="_blank"><span class=" c-social-share__icon iconify" data-icon="ri:mastodon-fill" data-inline="false"></span></a>', esc_url( $wp_indigo_mastodon ), esc_html__( 'Mastodon', 'wp-indigo' ) );
+            }
+
+            if ( $wp_indigo_bluesky ) {
+                echo sprintf( '<a href="%s" aria-label="%s" class="c-social-share__item" target="_blank"><span class=" c-social-share__icon iconify" data-icon="ri:bluesky-fill" data-inline="false"></span></a>', esc_url( $wp_indigo_bluesky ), esc_html__( 'Bluesky', 'wp-indigo' ) );
+            }
 
 			echo '</div>';
 		}
