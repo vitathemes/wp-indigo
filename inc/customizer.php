@@ -394,6 +394,24 @@ if( function_exists( 'kirki' ) ) {
 			]
 		);
 
+        new \Kirki\Field\URL(
+            [
+                'settings' => 'mastodon',
+                'label'    => __( 'Mastodon', 'wp-indigo' ),
+                'section'  => 'socials',
+                'priority' => 220,
+            ]
+        );
+
+        new \Kirki\Field\URL(
+            [
+                'settings' => 'bluesky',
+                'label'    => __( 'Bluesky', 'wp-indigo' ),
+                'section'  => 'socials',
+                'priority' => 230,
+            ]
+        );
+
 		/*------------------------------------*\
 		  #Theme Colors
 		\*------------------------------------*/
