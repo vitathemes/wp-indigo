@@ -1,9 +1,9 @@
 === WP Indigo v2 ===
 Contributors: vitathemes, veronalabs, kashani, mrmolaei, mostafas1990, nimaprmdi
 Requires at least: 5.6
-Tested up to: 5.9
+Tested up to: 6.5
 Requires PHP: 5.6
-Stable tag: 1.0.0
+Stable tag: 2.0.0
 License: GPL-3.0-or-later
 License URI: https://opensource.org/licenses/GPL-3.0
 
@@ -32,6 +32,12 @@ WP-Indigo is a minimal WordPress theme with a simple yet elegant design. This mu
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
 
 == Changelog ==
+
+= 2.2.1 =
+* Fix gallery block issue
+
+= 2.2.0 =
+* Add new social networks
 
 = 2.1.8 =
 * Add customizer version handler
